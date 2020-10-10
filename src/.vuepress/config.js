@@ -20,7 +20,8 @@ module.exports = {
 
   themeConfig: {
     repo: 'https://github.com/ChartsCSS/ChartsCSS.org',
-    docsDir: '',
+    docsBranch: 'main',
+    docsDir: 'src',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: false,
