@@ -1,0 +1,19 @@
+{
+  "name": "chartscss.org",
+  "version": "1.0.0",
+  "description": "Documentation website for charts.css",
+  "main": "index.js",
+  "authors": {
+    "name": "Rami Yushuvaev",
+    "email": "rami.yu@gmail.com"
+  },
+  "repository": "https://github.com/ChartsCSS/ChartsCSS.org",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
