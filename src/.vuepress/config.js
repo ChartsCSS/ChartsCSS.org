@@ -13,6 +13,7 @@ module.exports = {
   description: description,
 
   head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css' }],
     ['meta', { name: 'theme-color', content: '#f57' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
