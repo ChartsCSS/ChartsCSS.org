@@ -31,7 +31,7 @@ module.exports = {
     search: false,
     nav: [
       {
-        text: 'Docs',
+        text: 'Get Started',
         link: '/docs/',
       },
       {
@@ -41,6 +41,10 @@ module.exports = {
       {
         text: 'Charts',
         link: '/charts/'
+      },
+      {
+        text: 'Examples',
+        link: '/examples/'
       },
       {
         text: 'GitHub repo',
@@ -56,6 +60,7 @@ module.exports = {
         children: [
           '/docs/installation',
           '/docs/usage',
+          '/docs/concepts',
         ]
       },
       {
@@ -68,7 +73,6 @@ module.exports = {
           '/components/legend',
           '/components/wrapper',
           '/components/axes',
-          // '/components/annotations',
           '/components/tooltips',
           '/components/motion-effects',
           '/components/animations',
@@ -86,8 +90,8 @@ module.exports = {
           '/charts/bubble',
           '/charts/pie',
           '/charts/donut',
-          '/charts/radar',
           '/charts/polar',
+          '/charts/radar',
         ]
       },
       {

@@ -37,3 +37,9 @@ To transform it to a column chart we need to add the `.column` class.
 ```
 
 Only then you can start adding some inner components like [axes](/charts/axes), [tooltips](/charts/tooltip) etc.
+
+```html
+<table class="charts-css column show-main-axis show-x-axes show-4-y-axes">
+    ...
+</table>
+```

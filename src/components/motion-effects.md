@@ -58,7 +58,7 @@ Wrap your data with a `<span>` element with `.data` class:
 
 ```html
 <tr>
-    <th scope="row"> Data set label </th>
+    <th scope="row"> Dataset label </th>
     <td> <span class="data"> 10 </span> </td>
     <td> <span class="data"> 20 </span> </td>
     <td> <span class="data"> 30 </span> </td>

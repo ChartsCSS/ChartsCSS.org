@@ -1,5 +1,5 @@
 ---
-prev: ../docs/usage
+prev: ../docs/concepts
 next: ./title
 ---
 
@@ -11,7 +11,7 @@ With decoupled components you have more flexibility to choose where to display e
 
 ## External Components
 
-With semantic markup in mind, some components can be displayed using separate HTML tags. You are not required to display them with the chart, but if you do, you can choose where to display them.
+With semantic markup in mind, some components can be displayed using separate HTML tags. You are not required to display those components with the chart, but if you do, you can choose where to display them.
 
 * [Title](./title/)
 * [Legend](./legend/)
@@ -22,7 +22,6 @@ Chart components add visual elements to the chart itself. You can enhance the ch
 
 * [Wrapper](./wrapper/)
 * [Axes](./axes/)
-<!-- * [Annotations](./annotations/) -->
 * [Tooltips](./tooltips/)
 * [Motion Effects](./motion-effects/)
 * [Animations](./animations/)

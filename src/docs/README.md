@@ -20,7 +20,7 @@ With a few simple CSS classes applied on the container element you can turn your
 
 ## Get Started
 
-To start using **Charts.css** see the [installation](/docs/installation/) page and read the [usage](/docs/usage/) page explaining how to structure your data and apply CSS classes.
+To start using **Charts.css** see the [installation](/docs/installation/) page and read the [usage](/docs/usage/) page explaining how to structure your data and apply CSS classes. Finally, read the framework [concepts](/docs/contepts/) to learn about the fundamentals and the best practices.
 
 ## License
 

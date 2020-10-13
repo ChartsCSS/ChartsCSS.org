@@ -16,7 +16,7 @@ Simple data `<table>` with only the data:
 
 ```html
 <tr>
-    <th scope="row"> Data set label </th>
+    <th scope="row"> Dataset label </th>
     <td> 10 </td>
     <td> 20 </td>
     <td> 30 </td>
@@ -29,23 +29,25 @@ To add tooltips, simply add a `<span>` tag with a `.tooltip` class.
 
 ```html{5}
 <tr>
-    <th scope="row"> Data set label </th>
+    <th scope="row"> Dataset label </th>
     <td> 10 </td>
     <td> 20 </td>
     <td> 30 <span class="tooltip"> Data: 30 <br> More info... </span> </td>
 </tr>
 ```
 
-You can add tooltip to a specific data like you see in the example above, or to all your data elements.
+You can add tooltips to a specific data like you see in the example above, or to all your data elements as shown bellow.
 
 ```html{3-5}
 <tr>
-    <th scope="row"> Data set label </th>
+    <th scope="row"> Dataset label </th>
     <td> 10 <span class="tooltip"> Data: 10 <br> More info... </span> </td>
     <td> 20 <span class="tooltip"> Data: 20 <br> More info... </span> </td>
     <td> 30 <span class="tooltip"> Data: 30 <br> More info... </span> </td>
 </tr>
 ```
+
+You can add links, images and other elements to your tooltips.
 
 ### Best Practice
 
@@ -53,7 +55,7 @@ It's not required but it's recommended to wrap your data with a `<span>` element
 
 ```html
 <tr>
-    <th scope="row"> Data set label </th>
+    <th scope="row"> Dataset label </th>
     <td>
         <span class="data"> 10 </span>
         <span class="tooltip"> Data: 10 <br> More info... </span>
@@ -69,4 +71,172 @@ It's not required but it's recommended to wrap your data with a `<span>` element
 </tr>
 ```
 
-This markup will help you target the data selector for other purposes like adding [motion effects](/motion-effects/) and [animations](/animations/).
+This markup will help you target the data selector for other purposes like adding [motion effects](/components/motion-effects/) and [animations](/components/animations/).
+
+### Example
+
+A simple example of a column chart with tooltips:
+
+<code-example>
+<style>
+#tooltips-example {
+    /* Custom colors */
+    --color-1: #FEE101;
+    --color-2: #D7D7D7;
+    --color-3: #A77044;
+
+    /* Chart size */
+    height: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#tooltips-example tr {
+    padding: 0 15px;
+}
+</style>
+
+<table class="charts-css column multiple show-main-axis" id="tooltips-example">
+
+  <caption> 2016 Summer Olympics Medal Table </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Country </th>
+      <th scope="col"> Gold </th>
+      <th scope="col"> Silver </th>
+      <th scope="col"> Silver </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> USA </th>
+      <td style="--size: calc( 46 / 50 );">
+        <span class="data"> 46 <br> 🥇 </span>
+        <span class="tooltip"> United States took <br> home 46 gold medals </span>
+      </td>
+      <td style="--size: calc( 37 / 50 );">
+        <span class="data"> 37 <br> 🥈 </span>
+        <span class="tooltip"> United States took <br> home 37 silver medals </span>
+      </td>
+      <td style="--size: calc( 38 / 50 );">
+        <span class="data"> 38 <br> 🥉 </span>
+        <span class="tooltip"> United States took <br> home 38 bronze medals </span>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"> GBR </th>
+      <td style="--size: calc( 27 / 50 );">
+        <span class="data"> 27 </span>
+        <span class="tooltip"> Great Britain took <br> home 27 gold medals </span>
+      </td>
+      <td style="--size: calc( 23 / 50 );">
+        <span class="data"> 23 </span>
+        <span class="tooltip"> Great Britain took <br> home 23 silver medals </span>
+      </td>
+      <td style="--size: calc( 17 / 50 );">
+        <span class="data"> 17 </span>
+        <span class="tooltip"> Great Britain took <br> home 17 bronze medals </span>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"> CHN </th>
+      <td style="--size: calc( 26 / 50 );">
+        <span class="data"> 26 </span>
+        <span class="tooltip"> China took home <br> 26 gold medals </span>
+      </td>
+      <td style="--size: calc( 18 / 50 );">
+        <span class="data"> 18 </span>
+        <span class="tooltip"> China took home <br> 18 silver medals </span>
+      </td>
+      <td style="--size: calc( 26 / 50 );">
+        <span class="data"> 26 </span>
+        <span class="tooltip"> China took home <br> 26 bronze medals </span>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+```css
+#tooltips-example {
+    /* Custom colors */
+    --color-1: #FEE101;
+    --color-2: #D7D7D7;
+    --color-3: #A77044;
+
+    /* Chart size */
+    height: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#tooltips-example tr {
+    padding: 0 10px;
+}
+```
+
+```html
+<table class="charts-css column multiple show-main-axis" id="tooltips-example">
+
+  <caption> 2016 Summer Olympics Medal Table </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Country </th>
+      <th scope="col"> Gold </th>
+      <th scope="col"> Silver </th>
+      <th scope="col"> Silver </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> USA </th>
+      <td style="--size: calc( 46 / 50 );">
+        <span class="data"> 46 <br> 🥇 </span>
+        <span class="tooltip"> United States took <br> home 46 gold medals </span>
+      </td>
+      <td style="--size: calc( 37 / 50 );">
+        <span class="data"> 37 <br> 🥈 </span>
+        <span class="tooltip"> United States took <br> home 37 silver medals </span>
+      </td>
+      <td style="--size: calc( 38 / 50 );">
+        <span class="data"> 38 <br> 🥉 </span>
+        <span class="tooltip"> United States took <br> home 38 bronze medals </span>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"> GBR </th>
+      <td style="--size: calc( 27 / 50 );">
+        <span class="data"> 27 </span>
+        <span class="tooltip"> Great Britain took <br> home  gold medals </span>
+      </td>
+      <td style="--size: calc( 23 / 50 );">
+        <span class="data"> 23 </span>
+        <span class="tooltip"> Great Britain took <br> home 23 silver medals </span>
+      </td>
+      <td style="--size: calc( 17 / 50 );">
+        <span class="data"> 17 </span>
+        <span class="tooltip"> Great Britain took <br> home 17 bronze medals </span>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"> CHN </th>
+      <td style="--size: calc( 26 / 50 );">
+        <span class="data"> 26 </span>
+        <span class="tooltip"> China took home <br> 26 gold medals </span>
+      </td>
+      <td style="--size: calc( 18 / 50 );">
+        <span class="data"> 18 </span>
+        <span class="tooltip"> China took home <br> 18 silver medals </span>
+      </td>
+      <td style="--size: calc( 26 / 50 );">
+        <span class="data"> 26 </span>
+        <span class="tooltip"> China took home <br> 26 bronze medals </span>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+```

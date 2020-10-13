@@ -1,15 +1,14 @@
 ---
 permalink: /docs/usage/
-next: ../../components/
 ---
 
 # Usage
 
 **Charts.css** visualize data by applying **CSS classes** on HTML tags. The data is structured using semantic HTML tags and styled using CSS classes which change the visual representation displayed to the end user.
 
-## Data
+## Data Table
 
-The raw data placed in the document as HTML tags, making it visible to search engines and screen readers. This improve accessibility and SEO.
+The raw data placed in the document as HTML `<table>` tag, making it visible to search engines and screen readers. This will improve accessibility and SEO.
 
 Example data table:
 
@@ -95,7 +94,7 @@ To display the data table as a chart just add the `.charts-css` class to the `<t
 
 ```html
 <table class="charts-css">
-    ...
+  ...
 </table>
 ```
 
@@ -105,7 +104,7 @@ Next, choose one of the **[chart types](/charts/)** and apply it to your data us
 
 ```html
 <table class="charts-css bar">
-    ...
+  ...
 </table>
 ```
 
