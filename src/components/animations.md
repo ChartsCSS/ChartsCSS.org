@@ -1,92 +1,119 @@
 ---
 permalink: /components/animations/
-next: ../../charts/
 ---
 
 # Animations
 
-By animating the chart you can add smooth interactions to make your even more interactive. Use CSS `@keyframes` to animate elements without using JavaScript.
+By animating the chart you can add smooth interactions to make your chart even more interactive. Use CSS `@keyframes` to animate elements without using JavaScript.
 
-## Examples
+## Jumping Bars
 
-Here are some basic examples leveraging CSS animations.
-
-### Spin Your Data
-
-Wrap your data with a `<span>` element with `.data` class:
-
-```html
-<tr>
-    <th scope="row"> Dataset label </th>
-    <td> <span class="data"> 10 </span> </td>
-    <td> <span class="data"> 20 </span> </td>
-    <td> <span class="data"> 30 </span> </td>
-</tr>
-```
-
-Rotate the data every 6 seconds:
+Here is a basic example where the bars are jumping every 3 seconds.
 
 ```css
-.charts-css.bar span.data {
-    animation: spin 6s linear infinite;
+#animations-example-1 td {
+  animation: jumping 3s linear infinite;
 }
-@keyframes spin {
-    0% {
-        transform: rotateX(0deg);
-    }
-    10% {
-        transform: rotateX(360deg);
-    }
-    100% {
-        transform: rotateX(360deg);
-    }
+#animations-example-1 tr:nth-of-type(even) td {
+  animation-delay: 300ms;
 }
-```
-
-You can improve the animation by adding animation delays:
-
-```css
-.charts-css.bar tr:nth-of-type(odd) span.data {
-    animation-delay: 3s;
-}
-.charts-css.bar tr:nth-of-type(even) span.data {
-    animation-delay: 6s;
+@keyframes jumping {
+  0% { transform: translateY(   0px ); }
+  2% { transform: translateY( -10px ); }
+  4% { transform: translateY(   0px ); }
 }
 ```
 
 <code-example>
 <style>
-#animations-example {
-    --bar-labels-size: 160px;
-    max-width: 500px;
-    margin: 0 auto;
+#animations-example-1 {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
 }
-#animations-example tr {
-    padding: 6px 0;
+#animations-example-1 td {
+  animation: jumping 3s linear infinite;
+  animation-delay: 0;
 }
-#animations-example span.data {
-    animation: spin 6s linear infinite;
+#animations-example-1 tr:nth-of-type(even) td {
+  animation-delay: 300ms;
 }
-#animations-example tr:nth-of-type(odd) span.data {
-    animation-delay: 3s;
-}
-#animations-example tr:nth-of-type(even) span.data {
-    animation-delay: 6s;
-}
-@keyframes spin {
-    0% {
-        transform: rotateX(0deg);
-    }
-    10% {
-        transform: rotateX(360deg);
-    }
-    100% {
-        transform: rotateX(360deg);
-    }
+@keyframes jumping {
+  0% { transform: translateY(   0px ); }
+  2% { transform: translateY( -10px ); }
+  4% { transform: translateY(   0px ); }
 }
 </style>
+<table class="charts-css column show-primary-axis data-spacing-6" id="animations-example-1">
 
-<table class="charts-css bar" id="animations-example">
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+## Spinning Labels
+
+Here is another simple examples with spinning labels every 3 seconds.
+
+```css
+#animations-example-2 th {
+  animation: spin-labels 3s linear infinite;
+}
+@keyframes spin-labels {
+  0%   { transform: rotateX(   0deg ); }
+  10%  { transform: rotateX( 360deg ); }
+  100% { transform: rotateX( 360deg ); }
+}
+```
+
+<code-example>
+<style>
+#animations-example-2 {
+  --labels-size: 160px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#animations-example-2 td {
+  line-height: 1.5;
+}
+#animations-example-2 th {
+  animation: spin-labels 3s linear infinite;
+}
+@keyframes spin-labels {
+  0%   { transform: rotateX(   0deg ); }
+  10%  { transform: rotateX( 360deg ); }
+  100% { transform: rotateX( 360deg ); }
+}
+</style>
+<table class="charts-css bar data-spacing-5 show-primary-axis show-data-axes" id="animations-example-2">
 
   <caption> The Richest People In America - Forbes 1918 </caption>
 

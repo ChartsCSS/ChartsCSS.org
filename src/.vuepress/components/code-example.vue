@@ -20,5 +20,7 @@ export default {
 <style>
 .code-example {
     margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 </style>

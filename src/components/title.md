@@ -1,6 +1,5 @@
 ---
 permalink: /components/title/
-prev: ../
 ---
 
 # Title
@@ -26,9 +25,9 @@ When displaying data in a `<table>`, use the `<caption>` tag to define the chart
 
 ```html{2,4}
 <table>
-    <caption> Caption above the chart </caption>
-    ...
-    <caption> Caption below the chart </caption>
+  <caption> Caption above the chart </caption>
+  ...
+  <caption> Caption below the chart </caption>
 </table>
 ```
 
@@ -38,9 +37,9 @@ When displaying data in a `<figure>`, use the `<figcaption>` tag to define the c
 
 ```html{2,4}
 <figure>
-    <figcaption> Caption above the chart </figcaption>
-    ...
-    <figcaption> Caption below the chart </figcaption>
+  <figcaption> Caption above the chart </figcaption>
+  ...
+  <figcaption> Caption below the chart </figcaption>
 </figure>
 ```
 

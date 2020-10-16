@@ -3,21 +3,35 @@ permalink: /charts/bar/
 prev: ../
 ---
 
-# Bar <Badge type="tip" vertical="top" text="Beta" />
-
-::: tip Note
-Documentation will be available soon.
-:::
+# Bar
 
 Bar charts display raw data as horizontal bars.
 
 ## Usage
 
-To visualize your data, the main `.charts-css` class should be followed by the `.bar` class.
+To visualize your data with bar chart, the main `.charts-css` class should be followed by the `.bar` class.
 
 ```html
 <table class="charts-css bar">
-    ...
+  ...
+</table>
+```
+
+## Dimensions
+
+To control the chart dimensions you can use regular CSS. You can use media queries to set different dimensions for smaller devices.
+
+```css
+#my-bar-chart {
+  width: 80%;
+  height: 200px;
+  margin: 0 auto;
+}
+```
+
+```html
+<table class="charts-css bar" id="my-bar-chart">
+  ...
 </table>
 ```
 
@@ -27,119 +41,986 @@ You can control the labels positions and size.
 
 ### Labels Position
 
-The chart displays horizontal bars. By default the labels are displayed before the chart (depending on the document direction, LTR or RTL). To display the labels after the chart, simply add `.labels-after` class.
+By default the labels are displayed before the chart. To display the labels after the chart use the `.labels-after` class.
 
 ```html
 <table class="charts-css bar labels-after">
-    ...
+  ...
 </table>
 ```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-1 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar" id="bar-example-1">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-2 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar labels-after" id="bar-example-2">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
 
 ### Labels Size
 
-Some chart use long labels others use short ones. To customize the label size use the `--bar-labels-size` variable.
+Some chart use long labels others use short ones. To customize the label size use the `--labels-size` variable.
+
+```css
+#my-bar-chart {
+  --labels-size: 50px;
+}
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-3 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+  --labels-size: 50px;
+}
+</style>
+<table class="charts-css bar" id="bar-example-3">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-4 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+  --labels-size: 50px;
+}
+</style>
+<table class="charts-css bar labels-after" id="bar-example-4">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+## Axes
+
+You can control the axes that will be displayed on the chart.
+
+### Primary Axis
+
+To add a primary axis to separate the labels from the chart itself use the `.show-primary-axis` class.
 
 ```html
-<table class="charts-css bar labels-after" style="--bar-labels-size: 200px">
-    ...
+<table class="charts-css bar show-primary-axis">
+  ...
 </table>
 ```
 
-## Order
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-5 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar" id="bar-example-5">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-6 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis" id="bar-example-6">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+### Secondary Axes
+
+To add secondary axes, located inside the chart itself, use the `.show-*-secondary-axes` class.
+
+```html
+<table class="charts-css bar show-4-secondary-axes">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-7 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis show-4-secondary-axes" id="bar-example-7">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.25"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.5"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.125"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.75"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.25"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-8 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis show-10-secondary-axes" id="bar-example-8">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+### Data Axes
+
+To add data axes which are auto-generated based on the amount of rows (`<tr>` tags) you have. Use the `.show-data-axes` class to add them.
+
+```html
+<table class="charts-css bar show-data-axes">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-9 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis show-data-axes" id="bar-example-9">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.25"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.5"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.125"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.75"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.25"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-10 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes" id="bar-example-10">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+## Spacing
+
+You can control the space between the data items and between the datasets.
+
+### Data Spacing
+
+To add spacing between data items use the `.data-spacing-*` class.
+
+```html
+<table class="charts-css bar data-spacing-10">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-11 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis show-data-axes" id="bar-example-11">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-12 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-primary-axis show-data-axes data-spacing-10" id="bar-example-12">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+### Datasets Spacing
+
+To add spacing between data items use the `.datasets-spacing-*` class.
+
+```html
+<table class="charts-css bar multiple datasets-spacing-10">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-13 {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar multiple show-primary-axis show-data-axes" id="bar-example-13">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">2000</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row">2020</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-14 {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar multiple show-primary-axis show-data-axes datasets-spacing-10" id="bar-example-14">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">2000</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row">2020</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+## Reverse Order
 
 You can reverse the order of the elements without changing the HTML markup.
 
 ### Reverse Data Order
 
-You can change the order of the data with a simple class. To reverse the order use the `.reverse` class.
+To reverse thr data order use the `.reverse-data` class.
 
 ```html
-<table class="charts-css bar reverse">
-    ...
+<table class="charts-css bar reverse-data">
+  ...
 </table>
 ```
 
-### Reverse Datadets Order
+<v-row>
 
-You can also change the order of the datasets with a simple class. To reverse datasets order use the `.reverse-datasets` class.
+<v-col>
+
+<code-example>
+<style>
+#bar-example-15 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar" id="bar-example-15">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-16 {
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar reverse-data" id="bar-example-16">
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+### Reverse Datasets Order
+
+To reverse datasets order use the `.reverse-datasets` class.
 
 ```html
 <table class="charts-css bar reverse-datasets">
-    ...
+  ...
 </table>
 ```
 
-## Spacing
+<v-row>
 
-By default there is no space between the bars. Currently there are no utility class to control the spacing, but you can change this with simple CSS.
+<v-col>
 
-### Row Spacing
-
-To change the spacing between rows add `padding` to the `tr` element.
-
-```css
-.charts-css.bar tr {
-    padding-block-start: 4px;
-    padding-block-end: 4px;
+<code-example>
+<style>
+#bar-example-17 {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
 }
-```
+</style>
+<table class="charts-css bar multiple data-spacing-10 show-primary-axis show-data-axes" id="bar-example-17">
 
-### Datasets Spacing
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
 
-When the chart has multiple datasets in a single row, you can add spacing between datasets by add `padding` to the `td` element.
+  <tbody>
+    <tr>
+      <th scope="row">2000</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row">2020</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
 
-```css
-.charts-css.bar td {
-    padding-block-start: 2px;
-    padding-block-end: 2px;
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-18 {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
 }
-```
+</style>
+<table class="charts-css bar multiple data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="bar-example-18">
 
-## Axes
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
 
-All axes are hidden by default. To display axes you can use the built-in axes classes.
+  <tbody>
+    <tr>
+      <th scope="row">2000</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row">2020</th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
 
-### Main Axis
-
-The main axis separate the labels from the chart itself. To display the main axis use the `.show-main-axis` class.
-
-```html
-<table class="charts-css bar show-main-axis">
-    ...
 </table>
-```
+</code-example>
 
-### Horizontal Axes
+</v-col>
 
-Horizontal axes are based on the amount of rows (`<tr>` tags), therefor horizontal axes are auto-generated and you can either hide or show them. To display horizontal axes use the `.show-x-axes` class.
-
-```html
-<table class="charts-css bar show-x-axes">
-    ...
-</table>
-```
-
-### Vertical Axes
-
-Vertical axes are based on the data itself (the content of the `<td>` tags), therefor vertical axes are not auto generated and you need to decide how man axes to show. To display vertical axes use the `.show-*-y-axes` class.
-
-```html
-<table class="charts-css bar show-4-y-axes">
-    ...
-</table>
-```
-
-### Styling Axes
-
-To control the axes style you can change the following CSS variables.
-
-```css
-.custom-chart-style {
-    --main-axis-color: rgba(0, 0, 0, 1);
-    --main-axis-style: solid;
-    --main-axis-width: 1px;
-    --axis-color: rgba(0, 0, 0, 0.15);
-    --axis-style: solid;
-    --axis-width: 1px;
-}
-```
+</v-row>

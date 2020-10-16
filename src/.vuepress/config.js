@@ -60,7 +60,6 @@ module.exports = {
         children: [
           '/docs/installation',
           '/docs/usage',
-          '/docs/concepts',
         ]
       },
       {
@@ -69,13 +68,19 @@ module.exports = {
         collapsable: false,
         sidebarDepth: -1,
         children: [
-          '/components/title',
-          '/components/legend',
           '/components/wrapper',
+          '/components/data',
+          '/components/datasets',
+          '/components/labels',
           '/components/axes',
+          '/components/spacing',
+          '/components/reverse-order',
+          '/components/colors',
           '/components/tooltips',
           '/components/motion-effects',
           '/components/animations',
+          '/components/title',
+          '/components/legend',
         ]
       },
       {

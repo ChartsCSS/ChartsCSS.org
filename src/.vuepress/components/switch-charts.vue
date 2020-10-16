@@ -1,20 +1,40 @@
 <template>
     <div class="switch-charts">
 
-        <div class="charts-selector">
-            <button v-on:click="chartType=''"> None </button>
-            <button v-on:click="chartType='bar'"> Bar </button>
-            <button v-on:click="chartType='column'"> Column </button>
-            <button v-on:click="chartType='line'"> Line </button>
-            <button v-on:click="chartType='bubble'"> Bubble </button>
-            <button v-on:click="chartType='pie'"> Pie </button>
-            <button v-on:click="chartType='donut'"> Donut </button>
-            <button v-on:click="chartType='radar'"> Radar </button>
-            <button v-on:click="chartType='polar'"> Polar </button>
-        </div>
+        <form class="controls">
 
-        <div class="charts-class">
-            &lt;table class="{{chartType ? 'charts-css ' + chartType : ''}}"&gt;
+            <fieldset class="chart-type-controls">
+                <legend>Chart Type:</legend>
+                <button v-for="chart in controls.chartType" @click.prevent="selectedChartType=chart.id"> {{chart.label}} </button>
+            </fieldset>
+
+            <fieldset class="reverse-order-controls">
+                <legend>Reverse Order:</legend>
+                <button v-for="order in controls.reverseOrder" @click.prevent="toggleOrder(order.id)"> {{order.label}} </button>
+            </fieldset>
+
+            <fieldset class="labels-controls">
+                <legend>Labels:</legend>
+                <button v-for="label in controls.labels" @click.prevent="toggleLabels(label.id)"> {{label.label}} </button>
+            </fieldset>
+
+            <fieldset class="axes-controls">
+                <legend>Axes:</legend>
+                <button v-for="axes in controls.axes" @click.prevent="toggleAxes(axes.id)"> {{axes.label}} </button>
+            </fieldset>
+
+            <fieldset class="spacing-controls">
+                <legend>Spacing:</legend>
+                Data:
+                <input type="range" min="0" max="20" step="1" v-model.number="dataSpacing" />
+                Dataset:
+                <input type="range" min="0" max="20" step="1" v-model.number="datasetsSpacing" />
+            </fieldset>
+
+        </form>
+
+        <div class="chart-code">
+            &lt;table class="<strong>{{chartClass}}</strong>"&gt;
             <br>
             ...
             <br>
@@ -53,6 +73,18 @@
                     <td style="--size: 0.18"> 18 </td>
                     <td style="--size: 0.26"> 26 </td>
                 </tr>
+                <tr>
+                    <th scope="row"> RUS </th>
+                    <td style="--size: 0.19"> 19 </td>
+                    <td style="--size: 0.17"> 17 </td>
+                    <td style="--size: 0.20"> 20 </td>
+                </tr>
+                <tr>
+                    <th scope="row"> GER </th>
+                    <td style="--size: 0.17"> 17 </td>
+                    <td style="--size: 0.10"> 10 </td>
+                    <td style="--size: 0.15"> 15 </td>
+                </tr>
             </tbody>
 
         </table>
@@ -65,28 +97,81 @@ export default {
     name: 'SwitchCharts',
     data() {
         return {
-            chartType: {
-                type: String,
-                default: ' '
-            }
+            controls: {
+                chartType: [
+                    { id: '', label: 'None' },
+                    { id: 'bar', label: 'Bar' },
+                    { id: 'column', label: 'Column' },
+                    { id: 'line', label: 'Line' },
+                    { id: 'bubble', label: 'Bubble' },
+                    { id: 'pie', label: 'Pie' },
+                    { id: 'donut', label: 'Donut' },
+                    { id: 'radar', label: 'Radar' },
+                    { id: 'polar', label: 'Polar' },
+                ],
+                reverseOrder: [
+                    { id: 'reverse-data', label: 'Reverse Data' },
+                    { id: 'reverse-datasets', label: 'Reverse Datasets' },
+                ],
+                labels: [
+                    { id: 'labels-before', label: 'Label Before' },
+                    { id: 'labels-after', label: 'Label After' },
+                ],
+                axes: [
+                    { id: 'show-primary-axis', label: 'Primary Axis' },
+                    { id: 'show-data-axes', label: 'Data Axes' },
+                    // { id: 'show-dataset-axes', label: 'Dataset Axes' },
+                ]
+            },
+            selectedChartType: '',
+            selectedOrder: [],
+            selectedLabels: [],
+            selectedAxes: [],
+            dataSpacing: 0,
+            datasetsSpacing: 0,
         }
     },
     computed: {
         chartClass() {
-            return {
-                'charts-css bar multiple': this.chartType === 'bar',
-                'charts-css column multiple': this.chartType === 'column',
-                'charts-css line multiple': this.chartType === 'line',
-                'charts-css bubble multiple': this.chartType === 'bubble',
-                'charts-css pie multiple': this.chartType === 'pie',
-                'charts-css donut multiple': this.chartType === 'donut',
-                'charts-css radar multiple': this.chartType === 'radar',
-                'charts-css polar multiple': this.chartType === 'polar',
-            }
+            const inAllowed = this.controls.chartType.some( chart => chart.id === this.selectedChartType );
+
+            if ( this.selectedChartType === '' || !inAllowed )
+                return '';
+
+            return `charts-css ${this.selectedChartType} multiple ${this.selectedOrder.join(' ')} ${this.selectedLabels.join(' ')} ${this.selectedAxes.join(' ')} ${this.dataSpacingClass} ${this.datasetsSpacingClass}`;
+        },
+        dataSpacingClass() {
+            return ( this.dataSpacing > 0 ) ? `data-spacing-${this.dataSpacing}` : '';
+        },
+        datasetsSpacingClass() {
+            return ( this.datasetsSpacing > 0 ) ? `datasets-spacing-${this.datasetsSpacing}` : '';
         }
     },
-    mounted() {
-        this.chartType='';
+    methods: {
+        toggleOrder( value ) {
+            var index = this.selectedOrder.indexOf(value);
+            if (index === -1) {
+                this.selectedOrder.push(value);
+            } else {
+                this.selectedOrder.splice(index, 1);
+            }
+        },
+        toggleLabels( value ) {
+            var index = this.selectedLabels.indexOf(value);
+            if (index === -1) {
+                this.selectedLabels.push(value);
+            } else {
+                this.selectedLabels.splice(index, 1);
+            }
+        },
+        toggleAxes( value ) {
+            var index = this.selectedAxes.indexOf(value);
+            if (index === -1) {
+                this.selectedAxes.push(value);
+            } else {
+                this.selectedAxes.splice(index, 1);
+            }
+        },
     },
 }
 </script>
@@ -94,38 +179,68 @@ export default {
 <style>
 .switch-charts {
     margin: 0 auto;
-    max-width: 500px;
+    /* max-width: 600px; */
 }
-.charts-selector {
+.controls {
+    padding: 1rem;
+    border: 1px solid lightgrey;
+}
+.controls fieldset {
+    border: 1px solid lightgrey;
+}
+.controls button {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #f57;
+}
+.controls input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #d3d3d3;
+    outline: none;
+}
+.controls input[type="range"]::-webkit-slider-thumb,
+.controls input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 0;
+    border-radius: 50%;
+    background: #f57;
+    cursor: pointer;
+}
+.controls .chart-type-controls,
+.controls .reverse-order-controls,
+.controls .labels-controls,
+.controls .axes-controls {
     display: flex;
-    justify-content: space-between;
-    margin-block-start: 2rem;
-    margin-block-end: 2rem;
+    justify-content: center;
+    gap: 10px;
+    margin-block-end: 1rem;
 }
-.charts-selector button {
-    /* color: #fff; */
-    /* background-color: #f57; */
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border: 1px solid currentColor;
-    border-radius: 3px;
-    /* transition: background-color 0.1s ease; */
-    /* box-sizing: border-box; */
-}
-.charts-class {
+.chart-code {
     margin-block-start: 2rem;
     margin-block-end: 2rem;
     padding: 1rem;
     border: 1px solid lightgrey;
+}
+.chart-code strong {
     font-weight: bold;
 }
-.switch-charts table {
+table {
     margin: 0 auto;
 }
-.switch-charts table.bar {
+table.charts-css.bar {
     width: 100%;
 }
-.switch-charts table.column {
+table.charts-css.column {
     height: 200px;
 }
 </style>

@@ -1,5 +1,6 @@
 ---
 permalink: /components/legend/
+next: ../../charts/
 ---
 
 # Legend
@@ -18,17 +19,17 @@ Use the `.legend` class to style your chart legend.
 
 ```html
 <ul class="charts-css legend">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -40,17 +41,17 @@ To aligning legend dataset labels horizontally, use the `.legend-inline` class. 
 
 ```html
 <ul class="charts-css legend legend-inline">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="column">
 <ul class="charts-css legend legend-inline">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -62,17 +63,17 @@ Use the `.legend-circle` class to display a circular shape label.
 
 ```html
 <ul class="charts-css legend legend-circle">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend legend-circle">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -82,17 +83,17 @@ Use the `.legend-ellipse` class to display a circular shape label.
 
 ```html
 <ul class="charts-css legend legend-ellipse">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend legend-ellipse">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -102,17 +103,17 @@ Use the `.legend-square` class to display a square shape label.
 
 ```html
 <ul class="charts-css legend legend-square">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend legend-square">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -122,17 +123,17 @@ Use the `.legend-rectangle` class to display a rectangular shape label.
 
 ```html
 <ul class="charts-css legend legend-rectangle">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend legend-rectangle">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -142,17 +143,17 @@ Use the `.legend-rhombus` class to display a circular shape label.
 
 ```html
 <ul class="charts-css legend legend-rhombus">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend legend-rhombus">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -162,17 +163,17 @@ Use the `.legend-line` class to display a line shape label.
 
 ```html
 <ul class="charts-css legend legend-line">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 ```
 
 <legend-example orientation="row">
 <ul class="charts-css legend legend-line">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -184,24 +185,24 @@ For example, lets change the text color, the background color and add a box-shad
 
 ```css
 .legend {
-    color: #ccc;
-    background-color: #333;
-    box-shadow: 0 0 15px #000;
+  color: #ccc;
+  background-color: #333;
+  box-shadow: 0 0 15px #000;
 }
 ```
 
 <legend-example orientation="row">
 <style>
 #custom-legend-1 {
-    color: #ccc;
-    background-color: #333;
-    box-shadow: 0 0 15px #000;
+  color: #ccc;
+  background-color: #333;
+  box-shadow: 0 0 15px #000;
 }
 </style>
 <ul class="charts-css legend legend-square" id="custom-legend-1">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>
 
@@ -209,24 +210,24 @@ To target an individual legend element, we can do something like:
 
 ```css
 .legend > li:nth-of-type(2) {
-    color: red;
+  color: red;
 }
 ```
 
 <legend-example orientation="row">
 <style>
 #custom-legend-2 {
-    color: #ccc;
-    background-color: #333;
-    box-shadow: 0 0 15px #000;
+  color: #ccc;
+  background-color: #333;
+  box-shadow: 0 0 15px #000;
 }
 #custom-legend-2 > li:nth-of-type(2) {
-    color: red;
+  color: red;
 }
 </style>
 <ul class="charts-css legend legend-square" id="custom-legend-2">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </legend-example>

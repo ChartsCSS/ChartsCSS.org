@@ -10,5 +10,3 @@ next: false
 * [Chart Types Examples](/examples/charts)
 
 * [Legend Examples](/examples/legend)
-
-* [Tooltips Examples](/examples/tooltips)

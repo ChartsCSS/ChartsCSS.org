@@ -1,5 +1,5 @@
 ---
-prev: ../charts/polar
+prev: ../charts/radar
 next: ./design-principles
 ---
 
@@ -9,4 +9,4 @@ next: ./design-principles
 
 If you are a passionate frontend developer looking for a new open source project to contribute too, you a definitely welcome to suggest new idea and send pull request that improve and extend the framework.
 
-Make sure to read our [design principles](./design-principles/) and the [roadmap](./roadmap/) before sending new pull requests.
+Make sure to read our [design principles](/development/design-principles/) and the [roadmap](/development/roadmap/) before sending new pull requests.

@@ -6,32 +6,29 @@ permalink: /development/roadmap/
 
 This page shows the future development roadmap of the framework.
 
-## Planned Features
+## Time Table
 
-Add more [chart types](/charts/) visualizing raw data in a `<table>` tag.
+Planned development and the release of new chart types:
 
-| Type                     | Single <br> Dataset | Multiple <br> Datasets | Main <br> Axis | X <br> Axis  | Y <br> Axis  | Labels <br> Position | Reverse <br> Order |
-|:-------------------------|:--------------------|:-----------------------|:---------------|:-------------|:-------------|:---------------------|:-------------------|
-| [Bar](/charts/bar)       | <status-v />        | <status-v />           | <status-v />   | <status-v /> | <status-v /> | <status-v />         | <status-v />       |
-| [Column](/charts/column) | <status-v />        | <status-v />           | <status-v />   | <status-v /> | <status-v /> | <status-v />         | <status-v />       |
-| [Line](/charts/line)     | <status-x />        | <status-x />           | <status-x />   | <status-x /> | <status-x /> | <status-x />         | <status-x />       |
-| [Bubble](/charts/bubble) | <status-x />        | <status-x />           | <status-x />   | <status-x /> | <status-x /> | <status-x />         | <status-x />       |
-| [Pie](/charts/pie)       | <status-x />        | <status-x />           | <status-x />   | <status-x /> | <status-x /> | <status-x />         | <status-x />       |
-| [Donut](/charts/donut)   | <status-x />        | <status-x />           | <status-x />   | <status-x /> | <status-x /> | <status-x />         | <status-x />       |
-| [Radar](/charts/radar)   | <status-x />        | <status-x />           | <status-x />   | <status-x /> | <status-x /> | <status-x />         | <status-x />       |
-| [Polar](/charts/polar)   | <status-x />        | <status-x />           | <status-x />   | <status-x /> | <status-x /> | <status-x />         | <status-x />       |
+* **October 2020** - Bar chart & Column chart.
+
+* **November 2020** - Line Chart.
+
+* **December 2020** - Pie chart & Donut chart.
+
+* **2021** - Polar Chart.
+
+* **2021** - Radar Chart.
 
 ## Long Term Roadmap
 
-Not necessarily in that order:
+The framework should implement new features and components. Not necessarily in that order, the long term goals are:
 
-* **Chart types** - Support more types.
+* **Chart types** - Support other chart types, starting with radial charts.
 
-* **Other HTML Tags** - Support not only data in a `<table>` tag (for multiple datasets), but also `<ul>`, `<ol>` and `<dd>` tags (for single datasets).
+* **Stacked View** - For multiple datasets, allow `stacked` view.
 
-* **Stacked View** - For multiple datasets, allow `stacked` view and `relative` view.
-
-* **Dual-Y charts** - Support two independent Y-axes: a left axis for one series, and a right axis for another.
+* **Dual-Y charts** - Support two independent Y-axes: a left axis for one dataset, and a right axis for another dataset.
 
 * **Axis Title** - Support axis title, vertical and horizontal.
 

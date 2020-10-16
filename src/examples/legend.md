@@ -18,9 +18,9 @@ next: false
 
 <code-example>
 <ul class="charts-css legend">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </code-example>
 
@@ -33,9 +33,9 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-inline">
-    <li> Label 1 </li>
-    <li> Label 2 </li>
-    <li> Label 3 </li>
+  <li> Label 1 </li>
+  <li> Label 2 </li>
+  <li> Label 3 </li>
 </ul>
 </code-example>
 
@@ -54,16 +54,16 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-circle">
-    <li>Red</li>
-    <li>Orange</li>
-    <li>Yellow</li>
-    <li>Green</li>
-    <li>Blue</li>
-    <li>Violet</li>
-    <li>Ivory</li>
-    <li>Grey</li>
-    <li>Tan</li>
-    <li>Brown</li>
+  <li>Red</li>
+  <li>Orange</li>
+  <li>Yellow</li>
+  <li>Green</li>
+  <li>Blue</li>
+  <li>Violet</li>
+  <li>Ivory</li>
+  <li>Grey</li>
+  <li>Tan</li>
+  <li>Brown</li>
 </ul>
 </code-example>
 
@@ -76,16 +76,16 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-ellipse">
-    <li>Red</li>
-    <li>Orange</li>
-    <li>Yellow</li>
-    <li>Green</li>
-    <li>Blue</li>
-    <li>Violet</li>
-    <li>Ivory</li>
-    <li>Grey</li>
-    <li>Tan</li>
-    <li>Brown</li>
+  <li>Red</li>
+  <li>Orange</li>
+  <li>Yellow</li>
+  <li>Green</li>
+  <li>Blue</li>
+  <li>Violet</li>
+  <li>Ivory</li>
+  <li>Grey</li>
+  <li>Tan</li>
+  <li>Brown</li>
 </ul>
 </code-example>
 
@@ -104,16 +104,16 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-square">
-    <li>Red</li>
-    <li>Orange</li>
-    <li>Yellow</li>
-    <li>Green</li>
-    <li>Blue</li>
-    <li>Violet</li>
-    <li>Ivory</li>
-    <li>Grey</li>
-    <li>Tan</li>
-    <li>Brown</li>
+  <li>Red</li>
+  <li>Orange</li>
+  <li>Yellow</li>
+  <li>Green</li>
+  <li>Blue</li>
+  <li>Violet</li>
+  <li>Ivory</li>
+  <li>Grey</li>
+  <li>Tan</li>
+  <li>Brown</li>
 </ul>
 </code-example>
 
@@ -126,16 +126,16 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-rectangle">
-    <li>Red</li>
-    <li>Orange</li>
-    <li>Yellow</li>
-    <li>Green</li>
-    <li>Blue</li>
-    <li>Violet</li>
-    <li>Ivory</li>
-    <li>Grey</li>
-    <li>Tan</li>
-    <li>Brown</li>
+  <li>Red</li>
+  <li>Orange</li>
+  <li>Yellow</li>
+  <li>Green</li>
+  <li>Blue</li>
+  <li>Violet</li>
+  <li>Ivory</li>
+  <li>Grey</li>
+  <li>Tan</li>
+  <li>Brown</li>
 </ul>
 </code-example>
 
@@ -154,16 +154,16 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-rhombus">
-    <li>Red</li>
-    <li>Orange</li>
-    <li>Yellow</li>
-    <li>Green</li>
-    <li>Blue</li>
-    <li>Violet</li>
-    <li>Ivory</li>
-    <li>Grey</li>
-    <li>Tan</li>
-    <li>Brown</li>
+  <li>Red</li>
+  <li>Orange</li>
+  <li>Yellow</li>
+  <li>Green</li>
+  <li>Blue</li>
+  <li>Violet</li>
+  <li>Ivory</li>
+  <li>Grey</li>
+  <li>Tan</li>
+  <li>Brown</li>
 </ul>
 </code-example>
 
@@ -176,16 +176,16 @@ next: false
 
 <code-example>
 <ul class="charts-css legend legend-line">
-    <li>Red</li>
-    <li>Orange</li>
-    <li>Yellow</li>
-    <li>Green</li>
-    <li>Blue</li>
-    <li>Violet</li>
-    <li>Ivory</li>
-    <li>Grey</li>
-    <li>Tan</li>
-    <li>Brown</li>
+  <li>Red</li>
+  <li>Orange</li>
+  <li>Yellow</li>
+  <li>Green</li>
+  <li>Blue</li>
+  <li>Violet</li>
+  <li>Ivory</li>
+  <li>Grey</li>
+  <li>Tan</li>
+  <li>Brown</li>
 </ul>
 </code-example>
 

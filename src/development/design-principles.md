@@ -9,19 +9,23 @@ The framework development has several design principles act as philosophical gui
 
 ## Decoupled Components
 
-The chart should be broken down into as many building blocks as possible. Each components should either have its own HTML structure or its own CSS classes.
+The chart should be broken down into as many building blocks as possible. Each components should either have its own HTML (legend & titles) structure or its own CSS classes (axes, datasets, etc.).
 
 ## Building a Framework
 
 The main goal is to develop a framework for the masses, not a niche library used in a very specific use cases.
 
-## Globally Supported Features
+## Global Features
 
 When developing new components the thinking needs to be global. New components should work on all chart types, not on one or two chart types.
 
-## Use Intuitive Classes
+## Naming Convention
 
-The project aims to use intuitive class names to make it easy to implement all the components without even reading the documentation.
+Class names should be intuitive and self-explanatory to make it easy to implement without even reading the documentation.
+
+## Direction Free Classes
+
+When naming classes we should consider RTL, LTR and BTT languages. Class names should not use direction names (top, bottom, right, left, vertical, horizontal etc.). Direction free names like before and after are preferred.
 
 ## CSS Customization
 

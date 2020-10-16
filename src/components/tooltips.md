@@ -10,29 +10,29 @@ Tooltips allow you to display additional information about the data, using littl
 
 To add tooltips to your data, you need to change the HTML markup to include the tooltip content.
 
-### Display Only Data
+### Only Data
 
 Simple data `<table>` with only the data:
 
 ```html
 <tr>
-    <th scope="row"> Dataset label </th>
-    <td> 10 </td>
-    <td> 20 </td>
-    <td> 30 </td>
+  <th scope="row"> Dataset label </th>
+  <td> 10 </td>
+  <td> 20 </td>
+  <td> 30 </td>
 </tr>
 ```
 
-### Display Data With Tooltips
+### Data With Tooltips
 
 To add tooltips, simply add a `<span>` tag with a `.tooltip` class. 
 
 ```html{5}
 <tr>
-    <th scope="row"> Dataset label </th>
-    <td> 10 </td>
-    <td> 20 </td>
-    <td> 30 <span class="tooltip"> Data: 30 <br> More info... </span> </td>
+  <th scope="row"> Dataset label </th>
+  <td> 10 </td>
+  <td> 20 </td>
+  <td> 30 <span class="tooltip"> Data: 30 <br> More info... </span> </td>
 </tr>
 ```
 
@@ -40,10 +40,10 @@ You can add tooltips to a specific data like you see in the example above, or to
 
 ```html{3-5}
 <tr>
-    <th scope="row"> Dataset label </th>
-    <td> 10 <span class="tooltip"> Data: 10 <br> More info... </span> </td>
-    <td> 20 <span class="tooltip"> Data: 20 <br> More info... </span> </td>
-    <td> 30 <span class="tooltip"> Data: 30 <br> More info... </span> </td>
+  <th scope="row"> Dataset label </th>
+  <td> 10 <span class="tooltip"> Data: 10 <br> More info... </span> </td>
+  <td> 20 <span class="tooltip"> Data: 20 <br> More info... </span> </td>
+  <td> 30 <span class="tooltip"> Data: 30 <br> More info... </span> </td>
 </tr>
 ```
 
@@ -51,23 +51,23 @@ You can add links, images and other elements to your tooltips.
 
 ### Best Practice
 
-It's not required but it's recommended to wrap your data with a `<span>` element and a `.data` class. This way you can distinguish between the data and the tooltip.
+It's not required but it's recommended to wrap your data with a `<span>` element and a `.data` class. This way you can distinguish between the raw data and the tooltip.
 
 ```html
 <tr>
-    <th scope="row"> Dataset label </th>
-    <td>
-        <span class="data"> 10 </span>
-        <span class="tooltip"> Data: 10 <br> More info... </span>
-    </td>
-    <td>
-        <span class="data"> 20 </span>
-        <span class="tooltip"> Data: 20 <br> More info... </span>
-    </td>
-    <td>
-        <span class="data"> 30 </span>
-        <span class="tooltip"> Data: 30 <br> More info... </span>
-    </td>
+  <th scope="row"> Dataset label </th>
+  <td>
+    <span class="data"> 10 </span>
+    <span class="tooltip"> Data: 10 <br> More info... </span>
+  </td>
+  <td>
+    <span class="data"> 20 </span>
+    <span class="tooltip"> Data: 20 <br> More info... </span>
+  </td>
+  <td>
+    <span class="data"> 30 </span>
+    <span class="tooltip"> Data: 30 <br> More info... </span>
+  </td>
 </tr>
 ```
 
@@ -80,22 +80,19 @@ A simple example of a column chart with tooltips:
 <code-example>
 <style>
 #tooltips-example {
-    /* Custom colors */
-    --color-1: #FEE101;
-    --color-2: #D7D7D7;
-    --color-3: #A77044;
+  /* Custom colors */
+  --color-1: #FEE101;
+  --color-2: #D7D7D7;
+  --color-3: #A77044;
 
-    /* Chart size */
-    height: 300px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-#tooltips-example tr {
-    padding: 0 15px;
+  /* Custom chart size */
+  height: 300px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 </style>
 
-<table class="charts-css column multiple show-main-axis" id="tooltips-example">
+<table class="charts-css column multiple show-primary-axis data-spacing-20" id="tooltips-example">
 
   <caption> 2016 Summer Olympics Medal Table </caption>
 
@@ -113,45 +110,45 @@ A simple example of a column chart with tooltips:
       <th scope="row"> USA </th>
       <td style="--size: calc( 46 / 50 );">
         <span class="data"> 46 <br> 🥇 </span>
-        <span class="tooltip"> United States took <br> home 46 gold medals </span>
+        <span class="tooltip"> 🇺🇸 United States took <br> home 46 gold medals </span>
       </td>
       <td style="--size: calc( 37 / 50 );">
         <span class="data"> 37 <br> 🥈 </span>
-        <span class="tooltip"> United States took <br> home 37 silver medals </span>
+        <span class="tooltip"> 🇺🇸 United States took <br> home 37 silver medals </span>
       </td>
       <td style="--size: calc( 38 / 50 );">
         <span class="data"> 38 <br> 🥉 </span>
-        <span class="tooltip"> United States took <br> home 38 bronze medals </span>
+        <span class="tooltip"> 🇺🇸 United States took <br> home 38 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> GBR </th>
       <td style="--size: calc( 27 / 50 );">
         <span class="data"> 27 </span>
-        <span class="tooltip"> Great Britain took <br> home 27 gold medals </span>
+        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 27 gold medals </span>
       </td>
       <td style="--size: calc( 23 / 50 );">
         <span class="data"> 23 </span>
-        <span class="tooltip"> Great Britain took <br> home 23 silver medals </span>
+        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 23 silver medals </span>
       </td>
       <td style="--size: calc( 17 / 50 );">
         <span class="data"> 17 </span>
-        <span class="tooltip"> Great Britain took <br> home 17 bronze medals </span>
+        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 17 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> CHN </th>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> China took home <br> 26 gold medals </span>
+        <span class="tooltip"> 🇨🇳 China took home <br> 26 gold medals </span>
       </td>
       <td style="--size: calc( 18 / 50 );">
         <span class="data"> 18 </span>
-        <span class="tooltip"> China took home <br> 18 silver medals </span>
+        <span class="tooltip"> 🇨🇳 China took home <br> 18 silver medals </span>
       </td>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> China took home <br> 26 bronze medals </span>
+        <span class="tooltip"> 🇨🇳 China took home <br> 26 bronze medals </span>
       </td>
     </tr>
   </tbody>
@@ -166,18 +163,15 @@ A simple example of a column chart with tooltips:
     --color-2: #D7D7D7;
     --color-3: #A77044;
 
-    /* Chart size */
+    /* Custom chart size */
     height: 300px;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-}
-#tooltips-example tr {
-    padding: 0 10px;
 }
 ```
 
 ```html
-<table class="charts-css column multiple show-main-axis" id="tooltips-example">
+<table class="charts-css column multiple show-primary-axis data-spacing-20" id="tooltips-example">
 
   <caption> 2016 Summer Olympics Medal Table </caption>
 
@@ -195,45 +189,45 @@ A simple example of a column chart with tooltips:
       <th scope="row"> USA </th>
       <td style="--size: calc( 46 / 50 );">
         <span class="data"> 46 <br> 🥇 </span>
-        <span class="tooltip"> United States took <br> home 46 gold medals </span>
+        <span class="tooltip"> 🇺🇸 United States took <br> home 46 gold medals </span>
       </td>
       <td style="--size: calc( 37 / 50 );">
         <span class="data"> 37 <br> 🥈 </span>
-        <span class="tooltip"> United States took <br> home 37 silver medals </span>
+        <span class="tooltip"> 🇺🇸 United States took <br> home 37 silver medals </span>
       </td>
       <td style="--size: calc( 38 / 50 );">
         <span class="data"> 38 <br> 🥉 </span>
-        <span class="tooltip"> United States took <br> home 38 bronze medals </span>
+        <span class="tooltip"> 🇺🇸 United States took <br> home 38 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> GBR </th>
       <td style="--size: calc( 27 / 50 );">
         <span class="data"> 27 </span>
-        <span class="tooltip"> Great Britain took <br> home  gold medals </span>
+        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 27 gold medals </span>
       </td>
       <td style="--size: calc( 23 / 50 );">
         <span class="data"> 23 </span>
-        <span class="tooltip"> Great Britain took <br> home 23 silver medals </span>
+        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 23 silver medals </span>
       </td>
       <td style="--size: calc( 17 / 50 );">
         <span class="data"> 17 </span>
-        <span class="tooltip"> Great Britain took <br> home 17 bronze medals </span>
+        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 17 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> CHN </th>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> China took home <br> 26 gold medals </span>
+        <span class="tooltip"> 🇨🇳 China took home <br> 26 gold medals </span>
       </td>
       <td style="--size: calc( 18 / 50 );">
         <span class="data"> 18 </span>
-        <span class="tooltip"> China took home <br> 18 silver medals </span>
+        <span class="tooltip"> 🇨🇳 China took home <br> 18 silver medals </span>
       </td>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> China took home <br> 26 bronze medals </span>
+        <span class="tooltip"> 🇨🇳 China took home <br> 26 bronze medals </span>
       </td>
     </tr>
   </tbody>

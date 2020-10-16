@@ -25,7 +25,7 @@ Next, you need to load the CSS file in your HTML document. Paste the stylesheet 
 
 Alternatively, you can use a CDN. Copy one of the following `<link>` tags and paste it inside the document `<head>`.
 
-Use [jsdelivr](https://cdn.jsdelivr.net/npm/charts.css/) CDN:
+Use [jsdelivr](https://www.jsdelivr.com/package/npm/charts.css) CDN:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
