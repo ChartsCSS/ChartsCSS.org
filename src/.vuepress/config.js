@@ -139,7 +139,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: -1,
         children: [
-          'github'
+          '/examples/'
         ]
       }
     ]
