@@ -14,6 +14,8 @@ But in some unique cases you don't have access to the HTML markup. In other case
 
 You can use JS to alter the content, but **Chart.css** has two utility classes that can change displayed order without changing the HTML markup.
 
+Note: Before changing content order using CSS, make sure there are no focusable elements (`<button>`, `<a>` etc.). It can be very confusing for users using a keyboard.
+
 ## Reverse Data Order
 
 When using a single datasets, you can use the `.reverse-data` class to reverse the order of your data.
@@ -28,12 +30,14 @@ Original data:
 
 <code-example>
 <style>
-#reverse-example-1 {
+#reverse-data-example-1 {
   height: 250px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column hide-data" id="reverse-example-1">
+<table class="charts-css column hide-data" id="reverse-data-example-1">
+
+  <caption> Reverse Data Example #1 </caption>
 
   <thead>
     <tr>
@@ -44,51 +48,51 @@ Original data:
 
   <tbody>
     <tr>
-      <th scope="row">Jan</th>
+      <th scope="row"> Jan </th>
       <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Feb</th>
+      <th scope="row"> Feb </th>
       <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Mar</th>
+      <th scope="row"> Mar </th>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Apr</th>
+      <th scope="row"> Apr </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">May</th>
+      <th scope="row"> May </th>
       <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jun</th>
+      <th scope="row"> Jun </th>
       <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jul</th>
+      <th scope="row"> Jul </th>
       <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Aug</th>
+      <th scope="row"> Aug </th>
       <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Sep</th>
+      <th scope="row"> Sep </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Oct</th>
+      <th scope="row"> Oct </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Nov</th>
+      <th scope="row"> Nov </th>
       <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Dec</th>
+      <th scope="row"> Dec </th>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
   </tbody>
@@ -100,12 +104,14 @@ Reversed data:
 
 <code-example>
 <style>
-#reverse-example-2 {
+#reverse-data-example-2 {
   height: 250px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column hide-data reverse-data" id="reverse-example-2">
+<table class="charts-css column hide-data reverse-data" id="reverse-data-example-2">
+
+  <caption> Reverse Data Example #2 </caption>
 
   <thead>
     <tr>
@@ -116,51 +122,51 @@ Reversed data:
 
   <tbody>
     <tr>
-      <th scope="row">Jan</th>
+      <th scope="row"> Jan </th>
       <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Feb</th>
+      <th scope="row"> Feb </th>
       <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Mar</th>
+      <th scope="row"> Mar </th>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Apr</th>
+      <th scope="row"> Apr </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">May</th>
+      <th scope="row"> May </th>
       <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jun</th>
+      <th scope="row"> Jun </th>
       <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jul</th>
+      <th scope="row"> Jul </th>
       <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Aug</th>
+      <th scope="row"> Aug </th>
       <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Sep</th>
+      <th scope="row"> Sep </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Oct</th>
+      <th scope="row"> Oct </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Nov</th>
+      <th scope="row"> Nov </th>
       <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Dec</th>
+      <th scope="row"> Dec </th>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
   </tbody>
@@ -182,12 +188,14 @@ Original:
 
 <code-example>
 <style>
-#spacing-example-3 {
+#reverse-datasets-1 {
   height: 250px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="spacing-example-3">
+<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-datasets-1">
+
+  <caption> Reverse Datasets Example #1 </caption>
 
   <thead>
     <tr>
@@ -202,7 +210,7 @@ Original:
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
       <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
@@ -210,7 +218,7 @@ Original:
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2010</th>
+      <th scope="row"> 2010 </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
@@ -218,7 +226,7 @@ Original:
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
@@ -234,12 +242,14 @@ Reversed datasets:
 
 <code-example>
 <style>
-#spacing-example-4 {
+#reverse-datasets-2 {
   height: 250px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4 reverse-datasets" id="spacing-example-4">
+<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4 reverse-datasets" id="reverse-datasets-2">
+
+  <caption> Reverse Datasets Example #2 </caption>
 
   <thead>
     <tr>
@@ -254,7 +264,7 @@ Reversed datasets:
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
       <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
@@ -262,7 +272,7 @@ Reversed datasets:
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2010</th>
+      <th scope="row"> 2010 </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
@@ -270,7 +280,7 @@ Reversed datasets:
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
@@ -285,3 +295,118 @@ Reversed datasets:
 ## Reverse Data & Datasets Order
 
 You can combine the two classes to reverse data order and datasets order.
+
+
+```html
+<table class="charts-css column reverse-data reverse-datasets">
+  ...
+</table>
+```
+
+Original:
+
+<code-example>
+<style>
+#reverse-data-datasets-1 {
+  height: 250px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-data-datasets-1">
+
+  <caption> Reverse Data & Datasets Example #1 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1 </th>
+      <th scope="col"> Progress 2 </th>
+      <th scope="col"> Progress 3 </th>
+      <th scope="col"> Progress 4 </th>
+      <th scope="col"> Progress 5 </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2000 </th>
+      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2010 </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+Reversed datasets:
+
+<code-example>
+<style>
+#reverse-data-datasets-2 {
+  height: 250px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4 reverse-data reverse-datasets" id="reverse-data-datasets-2">
+
+  <caption> Reverse Data & Datasets Example #2 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1 </th>
+      <th scope="col"> Progress 2 </th>
+      <th scope="col"> Progress 3 </th>
+      <th scope="col"> Progress 4 </th>
+      <th scope="col"> Progress 5 </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2000 </th>
+      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2010 </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>

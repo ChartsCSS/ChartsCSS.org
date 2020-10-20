@@ -62,6 +62,8 @@ By default the labels are displayed after the chart. To display the labels befor
 </style>
 <table class="charts-css column" id="column-example-1">
 
+  <caption> Column Example #1 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -108,6 +110,8 @@ By default the labels are displayed after the chart. To display the labels befor
 }
 </style>
 <table class="charts-css column labels-before" id="column-example-2">
+
+  <caption> Column Example #2 </caption>
 
   <thead>
     <tr>
@@ -170,6 +174,8 @@ Some chart use long labels others use short ones. To customize the label size us
 </style>
 <table class="charts-css column" id="column-example-3">
 
+  <caption> Column Example #3 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -217,6 +223,8 @@ Some chart use long labels others use short ones. To customize the label size us
 }
 </style>
 <table class="charts-css column" id="column-example-4">
+
+  <caption> Column Example #4 </caption>
 
   <thead>
     <tr>
@@ -283,6 +291,8 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 </style>
 <table class="charts-css column" id="column-example-5">
 
+  <caption> Column Example #5 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -329,6 +339,8 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 }
 </style>
 <table class="charts-css column show-primary-axis" id="column-example-6">
+
+  <caption> Column Example #6 </caption>
 
   <thead>
     <tr>
@@ -391,6 +403,8 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 </style>
 <table class="charts-css column show-primary-axis show-4-secondary-axes" id="column-example-7">
 
+  <caption> Column Example #7 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -437,6 +451,8 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 }
 </style>
 <table class="charts-css column show-primary-axis show-10-secondary-axes" id="column-example-8">
+
+  <caption> Column Example #8 </caption>
 
   <thead>
     <tr>
@@ -499,6 +515,8 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 </style>
 <table class="charts-css column show-primary-axis show-data-axes" id="column-example-9">
 
+  <caption> Column Example #9 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -545,6 +563,8 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 }
 </style>
 <table class="charts-css column show-primary-axis show-4-secondary-axes show-data-axes" id="column-example-10">
+
+  <caption> Column Example #10 </caption>
 
   <thead>
     <tr>
@@ -611,6 +631,8 @@ To add spacing between data items use the `.data-spacing-*` class.
 </style>
 <table class="charts-css column show-primary-axis show-data-axes" id="column-example-11">
 
+  <caption> Column Example #11 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -657,6 +679,8 @@ To add spacing between data items use the `.data-spacing-*` class.
 }
 </style>
 <table class="charts-css column show-primary-axis show-data-axes data-spacing-20" id="column-example-12">
+
+  <caption> Column Example #12 </caption>
 
   <thead>
     <tr>
@@ -719,6 +743,8 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 </style>
 <table class="charts-css column multiple show-primary-axis show-data-axes" id="column-example-13">
 
+  <caption> Column Example #13 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -732,7 +758,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.5;"> </td>
       <td style="--size: 1.0;"> </td>
@@ -740,7 +766,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
       <td style="--size: 0.4;"> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.4;"> </td>
       <td style="--size: 0.6;"> </td>
@@ -766,6 +792,8 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 </style>
 <table class="charts-css column multiple show-primary-axis show-data-axes datasets-spacing-10" id="column-example-14">
 
+  <caption> Column Example #14 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -779,7 +807,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.5;"> </td>
       <td style="--size: 1.0;"> </td>
@@ -787,7 +815,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
       <td style="--size: 0.4;"> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.4;"> </td>
       <td style="--size: 0.6;"> </td>
@@ -830,6 +858,8 @@ To reverse thr data order use the `.reverse-data` class.
 }
 </style>
 <table class="charts-css column" id="column-example-15">
+
+  <caption> Column Example #15 </caption>
 
   <thead>
     <tr>
@@ -877,6 +907,8 @@ To reverse thr data order use the `.reverse-data` class.
 }
 </style>
 <table class="charts-css column reverse-data" id="column-example-16">
+
+  <caption> Column Example #16 </caption>
 
   <thead>
     <tr>
@@ -939,6 +971,8 @@ To reverse datasets order use the `.reverse-datasets` class.
 </style>
 <table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes" id="column-example-17">
 
+  <caption> Column Example #17 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -952,7 +986,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.5;"> </td>
       <td style="--size: 1.0;"> </td>
@@ -960,7 +994,7 @@ To reverse datasets order use the `.reverse-datasets` class.
       <td style="--size: 0.4;"> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.4;"> </td>
       <td style="--size: 0.6;"> </td>
@@ -986,6 +1020,8 @@ To reverse datasets order use the `.reverse-datasets` class.
 </style>
 <table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="column-example-18">
 
+  <caption> Column Example #18 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -999,7 +1035,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.5;"> </td>
       <td style="--size: 1.0;"> </td>
@@ -1007,7 +1043,7 @@ To reverse datasets order use the `.reverse-datasets` class.
       <td style="--size: 0.4;"> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> </td>
       <td style="--size: 0.4;"> </td>
       <td style="--size: 0.6;"> </td>

@@ -26,7 +26,7 @@ The framework should implement new features and components. Not necessarily in t
 
 * **Chart types** - Support other chart types, starting with radial charts.
 
-* **Stacked View** - For multiple datasets, allow `stacked` view.
+* ~~**Stacked View** - For multiple datasets, allow `stacked` view.~~
 
 * **Dual-Y charts** - Support two independent Y-axes: a left axis for one dataset, and a right axis for another dataset.
 

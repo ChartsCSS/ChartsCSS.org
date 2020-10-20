@@ -81,6 +81,8 @@ It works well with single datasets:
 </style>
 <table class="charts-css column hide-data" id="colors-example-1">
 
+  <caption> Colors Example #1 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Month </th>
@@ -90,43 +92,43 @@ It works well with single datasets:
 
   <tbody>
     <tr>
-      <th scope="row">Jan</th>
+      <th scope="row"> Jan </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Feb</th>
+      <th scope="row"> Feb </th>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Mar</th>
+      <th scope="row"> Mar </th>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Apr</th>
+      <th scope="row"> Apr </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
     </tr>
     <tr>
-      <th scope="row">May</th>
+      <th scope="row"> May </th>
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jun</th>
+      <th scope="row"> Jun </th>
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jul</th>
+      <th scope="row"> Jul </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Aug</th>
+      <th scope="row"> Aug </th>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Sep</th>
+      <th scope="row"> Sep </th>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Oct</th>
+      <th scope="row"> Oct </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
   </tbody>
@@ -156,6 +158,8 @@ And with multiple datasets:
 </style>
 <table class="charts-css column multiple data-spacing-10 show-data-axes hide-data" id="colors-example-2">
 
+  <caption> Colors Example #2 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Month </th>
@@ -165,7 +169,7 @@ And with multiple datasets:
 
   <tbody>
     <tr>
-      <th scope="row">1900</th>
+      <th scope="row"> 1900 </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
@@ -178,7 +182,7 @@ And with multiple datasets:
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
@@ -243,6 +247,8 @@ Three repeating colors in a single datasets table:
 </style>
 <table class="charts-css column hide-data" id="colors-example-3">
 
+  <caption> Colors Example #3 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Month </th>
@@ -252,51 +258,51 @@ Three repeating colors in a single datasets table:
 
   <tbody>
     <tr>
-      <th scope="row">Jan</th>
+      <th scope="row"> Jan </th>
       <td style="--size: 0.33;"> <span class="data"> 33 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Feb</th>
+      <th scope="row"> Feb </th>
       <td style="--size: 0.66;"> <span class="data"> 66 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Mar</th>
+      <th scope="row"> Mar </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Apr</th>
+      <th scope="row"> Apr </th>
       <td style="--size: 0.33;"> <span class="data"> 33 </span> </td>
     </tr>
     <tr>
-      <th scope="row">May</th>
+      <th scope="row"> May </th>
       <td style="--size: 0.66;"> <span class="data"> 66 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jun</th>
+      <th scope="row"> Jun </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jul</th>
+      <th scope="row"> Jul </th>
       <td style="--size: 0.33;"> <span class="data"> 33 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Aug</th>
+      <th scope="row"> Aug </th>
       <td style="--size: 0.66;"> <span class="data"> 66 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Sep</th>
+      <th scope="row"> Sep </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Oct</th>
+      <th scope="row"> Oct </th>
       <td style="--size: 0.33;"> <span class="data"> 33 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Nov</th>
+      <th scope="row"> Nov </th>
       <td style="--size: 0.66;"> <span class="data"> 66 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Dec</th>
+      <th scope="row"> Dec </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
   </tbody>
@@ -324,6 +330,8 @@ Three repeating colors in a multiple datasets table:
 </style>
 <table class="charts-css column multiple data-spacing-10 show-data-axes hide-data" id="colors-example-4">
 
+  <caption> Colors Example #4 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Month </th>
@@ -333,7 +341,7 @@ Three repeating colors in a multiple datasets table:
 
   <tbody>
     <tr>
-      <th scope="row">1900</th>
+      <th scope="row"> 1900 </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
@@ -346,7 +354,7 @@ Three repeating colors in a multiple datasets table:
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>

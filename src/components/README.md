@@ -20,8 +20,6 @@ Components add additional visual elements using nothing but CSS classes. You con
 * [Reverse Order](/components/reverse-order/)
 * [Colors](/components/colors/)
 * [Tooltips](/components/tooltips/)
-* [Motion Effects](/components/motion-effects/)
-* [Animations](/components/animations/)
 
 ## External Components
 

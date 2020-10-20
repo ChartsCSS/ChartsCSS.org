@@ -1,6 +1,6 @@
 ---
 permalink: /charts/radar/
-next: ../../development/
+next: ../../customization/
 ---
 
 # Radar <Badge type="warning" vertical="top" text="Under Development" />

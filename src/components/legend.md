@@ -13,6 +13,22 @@ The legend is a separate component with a separate HTML tag. You have the freedo
 
 Note: Currently legend required to use `<ul>` or `<ol>` tags. In the next versions you will have the freedom to use any HTML tag.
 
+## Legend Position
+
+So if you choose to display the chart legend. You can position it wherever you want. Just use with flexbox `flex-direction: columns;` or with grid `grid-template-columns: 100px 1fr;`, or any other layout.
+
+```html
+<div class="my-chart-container">
+
+  <ul class="charts-css legend">
+  </ul>
+
+  <table class="charts-css bar">
+  </table>
+
+</div>
+```
+
 ## Legend Class
 
 Use the `.legend` class to style your chart legend.

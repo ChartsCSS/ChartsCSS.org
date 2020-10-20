@@ -27,6 +27,8 @@ Note that it adds paddings to `<tr>` elements.
 </style>
 <table class="charts-css column data-spacing-5" id="spacing-example-1">
 
+  <caption> Spacing Example #1 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Month </th>
@@ -36,51 +38,51 @@ Note that it adds paddings to `<tr>` elements.
 
   <tbody>
     <tr>
-      <th scope="row">Jan</th>
+      <th scope="row"> Jan </th>
       <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Feb</th>
+      <th scope="row"> Feb </th>
       <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Mar</th>
+      <th scope="row"> Mar </th>
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Apr</th>
+      <th scope="row"> Apr </th>
       <td style="--size: 1;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">May</th>
+      <th scope="row"> May </th>
       <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jun</th>
+      <th scope="row"> Jun </th>
       <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Jul</th>
+      <th scope="row"> Jul </th>
       <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Aug</th>
+      <th scope="row"> Aug </th>
       <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Sep</th>
+      <th scope="row"> Sep </th>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Oct</th>
+      <th scope="row"> Oct </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Nov</th>
+      <th scope="row"> Nov </th>
       <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
     </tr>
     <tr>
-      <th scope="row">Dec</th>
+      <th scope="row"> Dec </th>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
   </tbody>
@@ -109,6 +111,8 @@ Note that it adds margins to `<td>` elements.
 </style>
 <table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="spacing-example-2">
 
+  <caption> Spacing Example #2 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -122,7 +126,7 @@ Note that it adds margins to `<td>` elements.
 
   <tbody>
     <tr>
-      <th scope="row">2000</th>
+      <th scope="row"> 2000 </th>
       <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
       <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
@@ -130,7 +134,7 @@ Note that it adds margins to `<td>` elements.
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2010</th>
+      <th scope="row"> 2010 </th>
       <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
@@ -138,7 +142,7 @@ Note that it adds margins to `<td>` elements.
       <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <th scope="row">2020</th>
+      <th scope="row"> 2020 </th>
       <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
       <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>

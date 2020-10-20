@@ -1,5 +1,5 @@
 ---
-prev: ../charts/radar
+prev: ../customization/animations
 next: ./design-principles
 ---
 

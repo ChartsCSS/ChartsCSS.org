@@ -28,7 +28,7 @@ To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
 
   <tbody>
     <tr>
-      <th scope="row">Europe</th>
+      <th scope="row"> Europe </th>
       <td style="--size: 0.15;"> <span class="data"> 40m </span> </td>
       <td style="--size: 0.21;"> <span class="data"> 90m </span> </td>
       <td style="--size: 0.24;"> <span class="data"> 111m </span> </td>
@@ -36,7 +36,7 @@ To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
       <td style="--size: 1.00;"> <span class="data"> 800m </span> </td>
     </tr>
     <tr>
-      <th scope="row">Asia</th>
+      <th scope="row"> Asia </th>
       <td style="--size: 0.15;"> <span class="data"> 183m </span> </td>
       <td style="--size: 0.18;"> <span class="data"> 284m </span> </td>
       <td style="--size: 0.20;"> <span class="data"> 379m </span> </td>
@@ -56,7 +56,7 @@ To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
 </style>
 <table class="charts-css column" id="datasets-example-1">
 
-  <caption> Historical Human Population by Continent </caption>
+  <caption> Datasets Example #1 - Historical Human Population by Continent </caption>
 
   <thead>
     <tr>
@@ -71,7 +71,7 @@ To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
 
   <tbody>
     <tr>
-      <th scope="row">Europe</th>
+      <th scope="row"> Europe </th>
       <td style="--size: 0.15;"> <span class="data"> 40m </span> </td>
       <td style="--size: 0.21;"> <span class="data"> 90m </span> </td>
       <td style="--size: 0.24;"> <span class="data"> 111m </span> </td>
@@ -79,7 +79,7 @@ To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
       <td style="--size: 1.00;"> <span class="data"> 800m </span> </td>
     </tr>
     <tr>
-      <th scope="row">Asia</th>
+      <th scope="row"> Asia </th>
       <td style="--size: 0.15;"> <span class="data"> 183m </span> </td>
       <td style="--size: 0.18;"> <span class="data"> 284m </span> </td>
       <td style="--size: 0.20;"> <span class="data"> 379m </span> </td>
@@ -111,7 +111,7 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 </style>
 <table class="charts-css column multiple" id="datasets-example-2">
 
-  <caption> Historical Human Population by Continent </caption>
+  <caption> Datasets Example #2 - Historical Human Population by Continent </caption>
 
   <thead>
     <tr>
@@ -126,7 +126,7 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 
   <tbody>
     <tr>
-      <th scope="row">Europe</th>
+      <th scope="row"> Europe </th>
       <td style="--size: 0.15;"> <span class="data"> 40m </span> </td>
       <td style="--size: 0.21;"> <span class="data"> 90m </span> </td>
       <td style="--size: 0.24;"> <span class="data"> 111m </span> </td>
@@ -134,7 +134,7 @@ On charts with multiple datasets you should add the `.multiple` class to make th
       <td style="--size: 1.00;"> <span class="data"> 800m </span> </td>
     </tr>
     <tr>
-      <th scope="row">Asia</th>
+      <th scope="row"> Asia </th>
       <td style="--size: 0.15;"> <span class="data"> 183m </span> </td>
       <td style="--size: 0.18;"> <span class="data"> 284m </span> </td>
       <td style="--size: 0.20;"> <span class="data"> 379m </span> </td>

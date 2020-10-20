@@ -50,7 +50,7 @@ Only then you can start adding some inner components like [axes](/charts/axes), 
 The wrapper element can be customized using CSS, here is a basic example:
 
 ```css
-#my-chart.charts-css {
+#my-chart {
   background-color: #eee;
   background-image: url(path/to/your/logo.svg);
   background-repeat: no-repeat;

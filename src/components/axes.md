@@ -66,6 +66,8 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 </style>
 <table class="charts-css column show-primary-axis" id="axes-example-1">
 
+  <caption> Axes Example #1 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -112,6 +114,8 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 }
 </style>
 <table class="charts-css column show-primary-axis labels-before" id="axes-example-2">
+
+  <caption> Axes Example #2 </caption>
 
   <thead>
     <tr>
@@ -166,6 +170,8 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 </style>
 <table class="charts-css bar show-primary-axis labels-after" id="axes-example-3">
 
+  <caption> Axes Example #3 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -212,6 +218,8 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 }
 </style>
 <table class="charts-css bar show-primary-axis" id="axes-example-4">
+
+  <caption> Axes Example #4 </caption>
 
   <thead>
     <tr>
@@ -284,6 +292,8 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 </style>
 <table class="charts-css column show-primary-axis show-2-secondary-axes" id="axes-example-5">
 
+  <caption> Axes Example #5 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -330,6 +340,8 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 }
 </style>
 <table class="charts-css column show-primary-axis show-6-secondary-axes labels-before" id="axes-example-6">
+
+  <caption> Axes Example #6 </caption>
 
   <thead>
     <tr>
@@ -384,6 +396,8 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 </style>
 <table class="charts-css bar show-primary-axis show-4-secondary-axes labels-after" id="axes-example-7">
 
+  <caption> Axes Example #7 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -430,6 +444,8 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 }
 </style>
 <table class="charts-css bar show-primary-axis show-10-secondary-axes" id="axes-example-8">
+
+  <caption> Axes Example #8 </caption>
 
   <thead>
     <tr>
@@ -502,6 +518,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 </style>
 <table class="charts-css column show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-9">
 
+  <caption> Axes Example #9 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -548,6 +566,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 }
 </style>
 <table class="charts-css column show-primary-axis show-4-secondary-axes show-data-axes labels-before" id="axes-example-10">
+
+  <caption> Axes Example #10 </caption>
 
   <thead>
     <tr>
@@ -602,6 +622,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 </style>
 <table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes labels-after" id="axes-example-11">
 
+  <caption> Axes Example #11 </caption>
+
   <thead>
     <tr>
       <th scope="col"> Year </th>
@@ -648,6 +670,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 }
 </style>
 <table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-12">
+
+  <caption> Axes Example #12 </caption>
 
   <thead>
     <tr>

@@ -14,9 +14,15 @@ module.exports = {
 
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css' }],
+    ['link', { rel: 'icon', href: '/assets/img/logo.svg' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'mask-icon', href: '/assets/img/logo.svg', color: '#f57' }],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/img/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#f57' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/assets/img/logo.svg' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
 
   themeConfig: {
@@ -41,6 +47,14 @@ module.exports = {
       {
         text: 'Charts',
         link: '/charts/'
+      },
+      {
+        text: 'Customization',
+        link: '/customization/'
+      },
+      {
+        text: 'Development',
+        link: '/development/'
       },
       {
         text: 'Examples',
@@ -76,9 +90,8 @@ module.exports = {
           '/components/spacing',
           '/components/reverse-order',
           '/components/colors',
+          '/components/stacked',
           '/components/tooltips',
-          '/components/motion-effects',
-          '/components/animations',
           '/components/title',
           '/components/legend',
         ]
@@ -100,6 +113,17 @@ module.exports = {
         ]
       },
       {
+        title: 'Customization',
+        path: '/customization/',
+        collapsable: false,
+        sidebarDepth: -1,
+        children: [
+          '/customization/3d-effects',
+          '/customization/motion-effects',
+          '/customization/animations',
+        ]
+      },
+      {
         title: 'Development',
         path: '/development/',
         collapsable: false,
@@ -108,16 +132,42 @@ module.exports = {
           '/development/design-principles',
           '/development/roadmap',
         ]
+      },
+      {
+        title: 'Examples',
+        path: '/examples/',
+        collapsable: false,
+        sidebarDepth: -1,
+        children: [
+          'github'
+        ]
       }
-    ],
+    ]
   },
 
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    toc: true
   },
 
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "New content is available.",
+          buttonText: "Refresh"
+        }
+      }
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-180916201-1'
+      }
+    ]
   ]
 }

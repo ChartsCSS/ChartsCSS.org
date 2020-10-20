@@ -53,7 +53,7 @@ You can add links, images and other elements to your tooltips.
 
 It's not required but it's recommended to wrap your data with a `<span>` element and a `.data` class. This way you can distinguish between the raw data and the tooltip.
 
-```html
+```html{4-5,8-9,12-13}
 <tr>
   <th scope="row"> Dataset label </th>
   <td>
@@ -71,7 +71,7 @@ It's not required but it's recommended to wrap your data with a `<span>` element
 </tr>
 ```
 
-This markup will help you target the data selector for other purposes like adding [motion effects](/components/motion-effects/) and [animations](/components/animations/).
+This markup will help you target the data selector for other purposes like adding [motion effects](/customization/motion-effects/) and [animations](/customization/animations/).
 
 ### Example
 
@@ -91,10 +91,9 @@ A simple example of a column chart with tooltips:
   margin: 0 auto;
 }
 </style>
-
 <table class="charts-css column multiple show-primary-axis data-spacing-20" id="tooltips-example">
 
-  <caption> 2016 Summer Olympics Medal Table </caption>
+  <caption> Tooltips Example - 2016 Summer Olympics Medal Table </caption>
 
   <thead>
     <tr>

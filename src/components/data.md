@@ -46,7 +46,7 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
 </style>
 <table class="charts-css column" id="data-example-1">
 
-  <caption> Front End Developer Salary </caption>
+  <caption> Data Example #1 - Front End Developer Salary </caption>
 
   <tbody>
     <tr>
@@ -121,7 +121,7 @@ For better accessibility and search engine visibility, you should always describ
 </style>
 <table class="charts-css column" id="data-example-2">
 
-  <caption> Front End Developer Salary </caption>
+  <caption> Data Example #2 - Front End Developer Salary </caption>
 
   <thead>
     <tr>
@@ -208,7 +208,7 @@ Raw data without a visual representation has no meaning in a chart. As visual fr
 </style>
 <table class="charts-css column" id="data-example-3">
 
-  <caption> Front End Developer Salary </caption>
+  <caption> Data Example #3 - Front End Developer Salary </caption>
 
   <thead>
     <tr>
@@ -297,7 +297,7 @@ Now, let's remove the raw data and see what happens.
 </style>
 <table class="charts-css column" id="data-example-4">
 
-  <caption> Front End Developer Salary </caption>
+  <caption> Data Example #4 - Front End Developer Salary </caption>
 
   <thead>
     <tr>
@@ -386,7 +386,7 @@ The example above presents problems with screen readers and search engines becau
 </style>
 <table class="charts-css column hide-data" id="data-example-5">
 
-  <caption> Front End Developer Salary </caption>
+  <caption> Data Example #5 - Front End Developer Salary </caption>
 
   <thead>
     <tr>
@@ -473,7 +473,7 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 </style>
 <table class="charts-css column show-data-on-hover" id="data-example-6">
 
-  <caption> Front End Developer Salary </caption>
+  <caption> Data Example #6 - Front End Developer Salary </caption>
 
   <thead>
     <tr>
