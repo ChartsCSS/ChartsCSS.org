@@ -36,4 +36,10 @@ export default {
 .v-row.column {
     flex-direction: column;
 }
+@media (max-width: 959px) {
+    .v-row.row {
+        flex-direction: column;
+    }
+}
+
 </style>
