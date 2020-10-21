@@ -25,7 +25,7 @@ A simple background color change when the user hovers over data items:
 <style>
 #motion-effect-example-1 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #motion-effect-example-1 tr {
@@ -90,7 +90,7 @@ Reverse opacity effect when hovering over datasets:
 <style>
 #motion-effect-example-2 {
   height: 200px;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
 }
 #motion-effect-example-2 td {
@@ -156,7 +156,7 @@ You can scale the data when hovering over the chart.
 <style>
 #motion-effect-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #motion-effect-example-3 td .data {
@@ -223,7 +223,7 @@ My favorite effect is the grayscale effect. The chart becomes colorful only when
 <style>
 #motion-effect-example-4 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   transition-duration: 1s;
   filter: grayscale(100%);

@@ -222,6 +222,7 @@ export default {
 .controls .axes-controls {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-block-end: 1rem;
 }

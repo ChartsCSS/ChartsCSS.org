@@ -22,8 +22,8 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 
 ```css
 #my-column-chart {
-  width: 300px;
   height: 200px;
+  max-width: 300px;
   margin: 0 auto;
 }
 ```
@@ -56,7 +56,7 @@ By default the labels are displayed after the chart. To display the labels befor
 <style>
 #column-example-1 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -105,7 +105,7 @@ By default the labels are displayed after the chart. To display the labels befor
 <style>
 #column-example-2 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -168,7 +168,7 @@ Some chart use long labels others use short ones. To customize the label size us
 <style>
 #column-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -217,7 +217,7 @@ Some chart use long labels others use short ones. To customize the label size us
 <style>
 #column-example-4 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   --labels-size: 3em;
 }
@@ -285,7 +285,7 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 <style>
 #column-example-5 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -334,7 +334,7 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 <style>
 #column-example-6 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -397,7 +397,7 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 <style>
 #column-example-7 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -446,7 +446,7 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 <style>
 #column-example-8 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -509,7 +509,7 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 <style>
 #column-example-9 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -558,7 +558,7 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 <style>
 #column-example-10 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -625,7 +625,7 @@ To add spacing between data items use the `.data-spacing-*` class.
 <style>
 #column-example-11 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -674,7 +674,7 @@ To add spacing between data items use the `.data-spacing-*` class.
 <style>
 #column-example-12 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -737,7 +737,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 <style>
 #column-example-13 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -786,7 +786,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 <style>
 #column-example-14 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -853,7 +853,7 @@ To reverse thr data order use the `.reverse-data` class.
 <style>
 #column-example-15 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -902,7 +902,7 @@ To reverse thr data order use the `.reverse-data` class.
 <style>
 #column-example-16 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -965,7 +965,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 <style>
 #column-example-17 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -1014,7 +1014,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 <style>
 #column-example-18 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>

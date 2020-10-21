@@ -170,7 +170,7 @@ It does not matter where you start writing in your language from, you know where
 <style>
 #labels-example-2 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -219,7 +219,7 @@ It does not matter where you start writing in your language from, you know where
 <style>
 #labels-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -274,7 +274,7 @@ It does not matter where you start writing in your language from, you know where
 <style>
 #labels-example-4 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -323,7 +323,7 @@ It does not matter where you start writing in your language from, you know where
 <style>
 #labels-example-5 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -488,7 +488,7 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 <style>
 #labels-example-7 {
   height: 250px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -537,7 +537,7 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 <style>
 #labels-example-8 {
   height: 250px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>

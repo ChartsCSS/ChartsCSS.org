@@ -40,7 +40,7 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
 <style>
 #data-example-1 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -115,7 +115,7 @@ For better accessibility and search engine visibility, you should always describ
 <style>
 #data-example-2 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -202,7 +202,7 @@ Raw data without a visual representation has no meaning in a chart. As visual fr
 <style>
 #data-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -291,7 +291,7 @@ Now, let's remove the raw data and see what happens.
 <style>
 #data-example-4 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -380,7 +380,7 @@ The example above presents problems with screen readers and search engines becau
 <style>
 #data-example-5 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -467,7 +467,7 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 <style>
 #data-example-6 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>

@@ -60,7 +60,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 <style>
 #axes-example-1 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -109,7 +109,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 <style>
 #axes-example-2 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -164,7 +164,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 <style>
 #axes-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -213,7 +213,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 <style>
 #axes-example-4 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -286,7 +286,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 <style>
 #axes-example-5 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -335,7 +335,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 <style>
 #axes-example-6 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -390,7 +390,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 <style>
 #axes-example-7 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -439,7 +439,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 <style>
 #axes-example-8 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -512,7 +512,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 <style>
 #axes-example-9 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -561,7 +561,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 <style>
 #axes-example-10 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -616,7 +616,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 <style>
 #axes-example-11 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -665,7 +665,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 <style>
 #axes-example-12 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>

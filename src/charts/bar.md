@@ -23,8 +23,8 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 
 ```css
 #my-bar-chart {
-  width: 80%;
   height: 200px;
+  max-width: 300px;
   margin: 0 auto;
 }
 ```
@@ -57,7 +57,7 @@ By default the labels are displayed before the chart. To display the labels afte
 <style>
 #bar-example-1 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -106,7 +106,7 @@ By default the labels are displayed before the chart. To display the labels afte
 <style>
 #bar-example-2 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -169,7 +169,7 @@ Some chart use long labels others use short ones. To customize the label size us
 <style>
 #bar-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   --labels-size: 50px;
 }
@@ -219,7 +219,7 @@ Some chart use long labels others use short ones. To customize the label size us
 <style>
 #bar-example-4 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   --labels-size: 50px;
 }
@@ -287,7 +287,7 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 <style>
 #bar-example-5 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -336,7 +336,7 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 <style>
 #bar-example-6 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -399,7 +399,7 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 <style>
 #bar-example-7 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -448,7 +448,7 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 <style>
 #bar-example-8 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -511,7 +511,7 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 <style>
 #bar-example-9 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -560,7 +560,7 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 <style>
 #bar-example-10 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -627,7 +627,7 @@ To add spacing between data items use the `.data-spacing-*` class.
 <style>
 #bar-example-11 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -676,7 +676,7 @@ To add spacing between data items use the `.data-spacing-*` class.
 <style>
 #bar-example-12 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -739,7 +739,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 <style>
 #bar-example-13 {
   height: 400px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -788,7 +788,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 <style>
 #bar-example-14 {
   height: 400px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -855,7 +855,7 @@ To reverse thr data order use the `.reverse-data` class.
 <style>
 #bar-example-15 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -904,7 +904,7 @@ To reverse thr data order use the `.reverse-data` class.
 <style>
 #bar-example-16 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -967,7 +967,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 <style>
 #bar-example-17 {
   height: 400px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>
@@ -1016,7 +1016,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 <style>
 #bar-example-18 {
   height: 400px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 </style>

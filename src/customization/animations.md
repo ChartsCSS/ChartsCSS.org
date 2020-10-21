@@ -28,8 +28,8 @@ Here is a basic example where the bars are jumping every 3 seconds.
 <code-example>
 <style>
 #animations-example-1 {
-  width: 300px;
   height: 200px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #animations-example-1 td {
@@ -102,7 +102,7 @@ Here is another simple examples with spinning labels every 3 seconds.
 #animations-example-2 {
   --labels-size: 160px;
   height: 250px;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
 }
 #animations-example-2 td {
@@ -181,7 +181,7 @@ Another example with moving bars. Revealing themselves from the bottom.
 <style>
 #animations-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #animations-example-3 tbody {
@@ -268,7 +268,7 @@ A useful example to highlighting individual items with animations.
 <style>
 #animations-example-4 {
   height: 200px;
-  width: 350px;
+  max-width: 350px;
   margin: 0 auto;
 }
 #animations-example-4 .highlighted {

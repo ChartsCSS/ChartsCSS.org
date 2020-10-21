@@ -33,7 +33,7 @@ To make the bars look like 3D bars is pretty simple. It can be done using CSS `b
 <style>
 #effect-example-1 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #effect-example-1 tbody td {
@@ -124,7 +124,7 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
 <style>
 #effect-example-2 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 #effect-example-2 tbody td {
@@ -221,7 +221,7 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
 <style>
 #effect-example-3 {
   height: 200px;
-  width: 300px;
+  max-width: 300px;
   margin: 1.5rem auto;
   transform: skewY(20deg);
 }
@@ -303,8 +303,8 @@ We can also use the webkit reflect effect to highlight the chart
 <code-example>
 <style>
 #effect-example-4 {
-  width: 300px;
   height: 200px;
+  max-width: 300px;
   margin: 0 auto 100px;
   -webkit-box-reflect:
     below
