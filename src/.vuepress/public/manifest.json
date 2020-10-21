@@ -3,7 +3,7 @@
   "short_name": "chartscss",
   "description": "The Progressive JavaScript Framework",
   "lang": "en-US",
-  "start_url": "hrrps://ChartsCSS.org",
+  "start_url": "https://ChartsCSS.org",
   "background_color": "#fff",
   "theme_color": "#f57",
   "display": "standalone",
