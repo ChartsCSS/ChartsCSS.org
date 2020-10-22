@@ -1,6 +1,5 @@
 ---
 permalink: /examples/column/
-sidebar: false
 editLink: false
 prev: false
 next: false

@@ -1,5 +1,4 @@
 ---
-# sidebar: false
 editLink: false
 prev: false
 next: false
@@ -15,16 +14,16 @@ Examples of different layouts for each chart type:
 
 * [Bar Chart Examples](/examples/bar/)
 * [Column Chart Examples](/examples/column/)
-* [Line Chart Examples](/examples/line/)
-* [Bubble Chart Examples](/examples/bubble/)
-* [Pie Chart Examples](/examples/pie/)
-* [Donut Chart Examples](/examples/donut/)
-* [Radar Chart Examples](/examples/radar/)
-* [Polar Chart Examples](/examples/polar/)
+* ~~[Line Chart Examples](/examples/line/)~~
+* ~~[Bubble Chart Examples](/examples/bubble/)~~
+* ~~[Pie Chart Examples](/examples/pie/)~~
+* ~~[Donut Chart Examples](/examples/donut/)~~
+* ~~[Radar Chart Examples](/examples/radar/)~~
+* ~~[Polar Chart Examples](/examples/polar/)~~
 
 ## Components Examples
 
-* [Legend Examples](/examples/legend)
+* [Legend Examples](/examples/legend/)
 
 ## Tools
 

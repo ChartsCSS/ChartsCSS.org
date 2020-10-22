@@ -1,6 +1,5 @@
 ---
 permalink: /examples/radar/
-sidebar: false
 editLink: false
 prev: false
 next: false

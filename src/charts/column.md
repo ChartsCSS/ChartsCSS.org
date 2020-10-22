@@ -21,7 +21,7 @@ To visualize your data with column chart, the main `.charts-css` class should be
 To control the chart dimensions you can use regular CSS. You can use media queries to set different dimensions for smaller devices.
 
 ```css
-#my-column-chart {
+#my-chart.column {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
@@ -155,7 +155,7 @@ By default the labels are displayed after the chart. To display the labels befor
 Some chart use long labels others use short ones. To customize the label size use the `--labels-size` variable.
 
 ```css
-#my-column-chart {
+#my-chart.column {
   --labels-size: 3em;
 }
 ```
@@ -1021,6 +1021,118 @@ To reverse datasets order use the `.reverse-datasets` class.
 <table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="column-example-18">
 
   <caption> Column Example #18 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2000 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+### Reverse Data & Datasets Order
+
+You can combine the two classes to reverse data order and datasets order.
+
+```html
+<table class="charts-css column reverse-data reverse-datasets">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#column-example-19 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes" id="column-example-19">
+
+  <caption> Column Example #19 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2000 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#column-example-20 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets" id="column-example-20">
+
+  <caption> Column Example #20 </caption>
 
   <thead>
     <tr>

@@ -6,8 +6,9 @@ permalink: /components/axes/
 
 Chart axes are used to visually categorize and measure the data.
 
-## Axes Types
+## Axis System
 
+<!--
 ### General Definitions
 
 There are 3 types of axes:
@@ -19,26 +20,23 @@ Different chart types use different axes systems. Here are some examples:
 * **Single axis charts** are used by Polar chart. 
 * **Dual axes charts** used by Column chart, Bar chart and Line chart. 
 * **Triple axes charts** are used by 3D column chart, 3D pyramid chart and 3D cone chart.
+-->
 
-### Chart.css Axes
+The axis system was designed as a separate component and contains several parts. **By default all axes are hidden**, you choose which axes to display using the CSS utility classes.
 
-Currently **Chart.css** supports only Y & X axis as there are no triple axes charts (yet).
+### Naming Conventions
 
-The axis system designed as a separate component. It has several CSS class. **All axes are hidden by default**. Using the utility classes you choose which axes to display.
+One of the framework philosophical guidelines is to use direction free class names. This way it can support all languages out-of-the-box, including left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB) languages.
 
-### Naming Convention
-
-One of the framework philosophical guidelines is to use direction free class names. This way can support out-of-the-box all languages, left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB).
-
-Class like `.show-x-axes` and `.show-y-axes` deprecated early-on in favor of `.show-primary-axis`, `.show-*-secondary-axes`, `.show-data-axes` and `.show-dataset-axes`. 
+Class like `.show-x-axes` and `.show-y-axes` deprecated early-on in favor of `.show-primary-axis`, `.show-*-secondary-axes` and `.show-data-axes`. 
 
 ### Supported Axes
 
-Currently, **Chart.css** axes system supports 3 types of axes:
+**Chart.css** axis system supports 3 types of axes:
 
-* **Primary Axis** separating the labels from the chart.
-* **Secondary Axes** located inside the chart itself, parallel to the primary axis.
-* **Data Axes** located inside the chart itself, crossing the primary axis.
+* **Primary Axis** (`.show-primary-axis`) separating the labels from the chart.
+* **Secondary Axes** (`.show-*-secondary-axes`) located inside the chart itself, parallel to the primary axis.
+* **Data Axes** (`.show-data-axes`) located inside the chart itself, crossing the primary axis.
 
 ## Add Primary Axis
 
@@ -261,7 +259,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 To customize the primary axis use the following CSS variable:
 
 ```css
-#primary-axis {
+#my-chart {
   --primary-axis-color: rgba(0, 0, 0, 1);
   --primary-axis-style: solid;
   --primary-axis-width: 1px;
@@ -487,7 +485,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 To customize the secondary axes use the following CSS variable:
 
 ```css
-#secondary-axes {
+#my-chart {
   --secondary-axes-color: rgba(0, 0, 0, 1);
   --secondary-axes-style: solid;
   --secondary-axes-width: 1px;
@@ -713,7 +711,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 To customize the data axes use the following CSS variable:
 
 ```css
-#data-axes {
+#my-chart {
   --data-axes-color: rgba(0, 0, 0, 0.15);
   --data-axes-style: solid;
   --data-axes-width: 1px;

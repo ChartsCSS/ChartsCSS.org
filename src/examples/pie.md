@@ -1,6 +1,5 @@
 ---
 permalink: /examples/pie/
-sidebar: false
 editLink: false
 prev: false
 next: false

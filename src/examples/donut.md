@@ -1,6 +1,5 @@
 ---
 permalink: /examples/donut/
-sidebar: false
 editLink: false
 prev: false
 next: false

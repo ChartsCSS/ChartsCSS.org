@@ -45,7 +45,7 @@ This method can be also applied on all the `<td>` elements.
 The framework has a set of 10 default color repeating themselves. You can override those colors to create your custom theme.
 
 ```css
-#my-chart-colors {
+#my-chart {
   --color-1: rgba(230, 30, 30, 0.2);
   --color-2: rgba(230, 30, 30, 0.4);
   --color-3: rgba(230, 30, 30, 0.5);
@@ -205,24 +205,24 @@ For more advanced use-cases there is an option to replace the current color syst
 
 ```css
 /* Multiple Datasets */
-#my-chart-colors.charts-css.multiple tbody tr td:nth-of-type(3n + 1) {
+#my-chart.charts-css.multiple tbody tr td:nth-of-type(3n + 1) {
   background-color: red;
 }
-#my-chart-colors.charts-css.multiple tbody tr td:nth-of-type(3n + 2) {
+#my-chart.charts-css.multiple tbody tr td:nth-of-type(3n + 2) {
   background-color: green;
 }
-#my-chart-colors.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
+#my-chart.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
   background-color: blue;
 }
 
 /* Single Dataset */
-#my-chart-colors.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 1) td {
+#my-chart.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 1) td {
   background-color: red;
 }
-#my-chart-colors.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 2) td {
+#my-chart.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 2) td {
   background-color: green;
 }
-#my-chart-colors.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
+#my-chart.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
   background-color: blue;
 }
 ```

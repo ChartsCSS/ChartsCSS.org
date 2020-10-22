@@ -1,6 +1,5 @@
 ---
 permalink: /examples/legend/
-sidebar: false
 editLink: false
 prev: false
 next: false

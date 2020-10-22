@@ -22,7 +22,7 @@ To visualize your data with bar chart, the main `.charts-css` class should be fo
 To control the chart dimensions you can use regular CSS. You can use media queries to set different dimensions for smaller devices.
 
 ```css
-#my-bar-chart {
+#my-chart.bar {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
@@ -156,7 +156,7 @@ By default the labels are displayed before the chart. To display the labels afte
 Some chart use long labels others use short ones. To customize the label size use the `--labels-size` variable.
 
 ```css
-#my-bar-chart {
+#my-chart.bar {
   --labels-size: 50px;
 }
 ```
@@ -1023,6 +1023,118 @@ To reverse datasets order use the `.reverse-datasets` class.
 <table class="charts-css bar multiple data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="bar-example-18">
 
   <caption> Bar Example #18 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2000 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+### Reverse Data & Datasets Order
+
+You can combine the two classes to reverse data order and datasets order.
+
+```html
+<table class="charts-css bar reverse-data reverse-datasets">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-19 {
+  height: 400px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar multiple data-spacing-10 show-primary-axis show-data-axes" id="bar-example-19">
+
+  <caption> Bar Example #19 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress 1</th>
+      <th scope="col"> Progress 2</th>
+      <th scope="col"> Progress 3</th>
+      <th scope="col"> Progress 4</th>
+      <th scope="col"> Progress 5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2000 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.5;"> </td>
+      <td style="--size: 1.0;"> </td>
+      <td style="--size: 0.7;"> </td>
+      <td style="--size: 0.4;"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#bar-example-20 {
+  height: 400px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar multiple data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets" id="bar-example-20">
+
+  <caption> Bar Example #20 </caption>
 
   <thead>
     <tr>

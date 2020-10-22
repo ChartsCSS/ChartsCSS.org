@@ -1,6 +1,5 @@
 ---
 permalink: /examples/bar/
-sidebar: false
 editLink: false
 prev: false
 next: false

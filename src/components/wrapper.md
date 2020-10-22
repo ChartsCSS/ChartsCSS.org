@@ -17,7 +17,7 @@ You need to add the `.charts-css` class on the `<table>` element itself:
 </table>
 ```
 
-This main class will reset, contain, pad and remove all other styles. But it won't transform the data table into chart, yet.
+This main class will reset, contain, pad and remove all other styles. But it won't transform the data table into a chart, yet.
 
 ## Chart Classes
 
@@ -47,11 +47,22 @@ Only then you can start adding some inner components like [axes](/charts/axes), 
 
 ## Customizing the Wrapper
 
-The wrapper element can be customized using CSS, here is a basic example:
+The simplest wrapper element customization is to set the height and width of you chart.
 
 ```css
 #my-chart {
-  background-color: #eee;
+  height: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+```
+
+(*) Media queries can be used to set different dimensions for different screen sizes.
+
+In addition you can add any CSS, for example you can add your brand logo in the background.
+
+```css
+#my-chart {
   background-image: url(path/to/your/logo.svg);
   background-repeat: no-repeat;
   background-position: center center;

@@ -24,14 +24,16 @@ Planned development and the release of new chart types:
 
 The framework should implement new features and components. Not necessarily in that order, the long term goals are:
 
-* **Chart types** - Support other chart types, starting with radial charts.
+* **More Chart types** - Currently only bar and column chart are supported. More types are required, starting with line and pie chart.
 
-* ~~**Stacked View** - For multiple datasets, allow `stacked` view.~~
+* **Secondary Axis Labels** - Currently only primary labels (x-axis) are supported. The secondary labels (y-axis) should be supported too.
 
-* **Dual-Y charts** - Support two independent Y-axes: a left axis for one dataset, and a right axis for another dataset.
+* **Dual Axes Labels** - Support two independent secondary labels (y-axis). A left axis for one dataset and a right axis for another.
 
-* **Axis Title** - Support axis title, vertical and horizontal.
+* **Axis Title** - Support axes titles. Primary axis title and secondary axis title.
 
 * **Table Caption** - Display table captions.
 
 * **Build Tools** - Add more build tools.
+
+* **Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.

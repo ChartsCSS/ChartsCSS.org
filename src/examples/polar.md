@@ -1,6 +1,5 @@
 ---
 permalink: /examples/polar/
-sidebar: false
 editLink: false
 prev: false
 next: false

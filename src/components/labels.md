@@ -375,7 +375,7 @@ Some chart use long labels others use short ones. To customize the label size us
 Custom labels size for bar charts:
 
 ```css
-#bar-chart-labels-size {
+#my-chart.bar {
   --labels-size: 200px;
 }
 ```
@@ -383,7 +383,7 @@ Custom labels size for bar charts:
 Custom labels size for column charts:
 
 ```css
-#column-chart-labels-size {
+#my-chart.column {
   --labels-size: 3rem;
 }
 ```
