@@ -8,23 +8,12 @@ Datasets are different series of data.
 
 ## Add Datasets
 
-To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
+To add multiple datasets simply add more than one `<td>` tag to each of your `<tr>` tags.
 
-```html{19-23,27-31}
-<table class="charts-css column">
+```html{8-12,16-20}
+<table class="charts-css column show-labels">
 
   <caption> Historical Human Population by Continent </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> 1000 </th>
-      <th scope="col"> 1500 </th>
-      <th scope="col"> 1600 </th>
-      <th scope="col"> 1700 </th>
-      <th scope="col"> 2000 </th>
-    </tr>
-  </thead>
 
   <tbody>
     <tr>
@@ -54,20 +43,9 @@ To add multiple datasets simply add more than one `<td>` to each of your `<td>`.
   height: 300px;
 }
 </style>
-<table class="charts-css column" id="datasets-example-1">
+<table class="charts-css column show-labels" id="datasets-example-1">
 
   <caption> Datasets Example #1 - Historical Human Population by Continent </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> 1000 </th>
-      <th scope="col"> 1500 </th>
-      <th scope="col"> 1600 </th>
-      <th scope="col"> 1700 </th>
-      <th scope="col"> 2000 </th>
-    </tr>
-  </thead>
 
   <tbody>
     <tr>
@@ -98,7 +76,7 @@ By default, **Chart.css** assumes you use a single dataset. The framework uses d
 On charts with multiple datasets you should add the `.multiple` class to make the framework use different color for each dataset.
 
 ```html{1}
-<table class="charts-css column multiple">
+<table class="charts-css column show-labels multiple">
   ...
 </table>
 ```
@@ -109,20 +87,9 @@ On charts with multiple datasets you should add the `.multiple` class to make th
   height: 300px;
 }
 </style>
-<table class="charts-css column multiple" id="datasets-example-2">
+<table class="charts-css column show-labels multiple" id="datasets-example-2">
 
   <caption> Datasets Example #2 - Historical Human Population by Continent </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> 1000 </th>
-      <th scope="col"> 1500 </th>
-      <th scope="col"> 1600 </th>
-      <th scope="col"> 1700 </th>
-      <th scope="col"> 2000 </th>
-    </tr>
-  </thead>
 
   <tbody>
     <tr>

@@ -91,7 +91,7 @@ A simple example of a column chart with tooltips:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-primary-axis data-spacing-20" id="tooltips-example">
+<table class="charts-css column multiple show-labels show-primary-axis data-spacing-20" id="tooltips-example">
 
   <caption> Tooltips Example - 2016 Summer Olympics Medal Table </caption>
 
@@ -170,7 +170,7 @@ A simple example of a column chart with tooltips:
 ```
 
 ```html
-<table class="charts-css column multiple show-primary-axis data-spacing-20" id="tooltips-example">
+<table class="charts-css column multiple show-labels show-primary-axis data-spacing-20" id="tooltips-example">
 
   <caption> 2016 Summer Olympics Medal Table </caption>
 

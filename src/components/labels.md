@@ -8,10 +8,10 @@ Labels are used to describe the data or the dataset over the primary axis.
 
 ## Add Labels
 
-To add labels to your primary axis, use `<th>` heading tags. To mark it as a row heading add the `scope="row"` attribute.
+To add labels to your primary axis, use `<th>` heading tags. To mark them as a row heading add the `scope="row"` attribute.
 
 ```html{12,16,20,24,28,32,36,40,44,48,52,56}
-<table class="charts-css column">
+<table class="charts-css column hide-data">
 
   <thead>
     <tr>
@@ -146,268 +146,27 @@ To add labels to your primary axis, use `<th>` heading tags. To mark it as a row
 </table>
 </code-example>
 
-## Label Position
+## Show Labels
 
-Direction free class names is a key philosophical guideline. It makes it easier to change the chart type without the need of changing the other class.
+**By default the labels are hidden**. To display the labels use the `.show-labels` class.
 
-Above all, this way we can support all language directions including left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB).
-
-Labels position can be controlled with `.labels-before` and `.labels-after` classes.
-
-```html
-<table class="charts-css bar labels-after">
-  ...
+```html{12,16,20,24,28,32,36,40,44,48,52,56}
+<table class="charts-css column hide-data show-labels">
+  ..
 </table>
 ```
-
-It does not matter where you start writing in your language from, you know where is "before" and where is "after". Displaying labels before or after the chart is relatively easy.
-
-<v-row>
-
-<v-col>
 
 <code-example>
 <style>
 #labels-example-2 {
-  height: 200px;
-  max-width: 300px;
+  height: 250px;
+  max-width: 100%;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column labels-after" id="labels-example-2">
+<table class="charts-css column hide-data show-labels" id="labels-example-2">
 
   <caption> Labels Example #2 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</code-example>
-
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
-#labels-example-3 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
-}
-</style>
-<table class="charts-css column labels-before" id="labels-example-3">
-
-  <caption> Labels Example #3 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</code-example>
-
-</v-col>
-
-</v-row>
-
-<br>
-
-<v-row>
-
-<v-col>
-
-<code-example>
-<style>
-#labels-example-4 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
-}
-</style>
-<table class="charts-css bar labels-before" id="labels-example-4">
-
-  <caption> Labels Example #4 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</code-example>
-
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
-#labels-example-5 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
-}
-</style>
-<table class="charts-css bar labels-after" id="labels-example-5">
-
-  <caption> Labels Example #5 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</code-example>
-
-</v-col>
-
-</v-row>
-
-## Label Size
-
-Some chart use long labels others use short ones. To customize the label size use the `--labels-size` CSS variables.
-
-Custom labels size for bar charts:
-
-```css
-#my-chart.bar {
-  --labels-size: 200px;
-}
-```
-
-Custom labels size for column charts:
-
-```css
-#my-chart.column {
-  --labels-size: 3rem;
-}
-```
-
-## Hide Labels
-
-There are two ways to hide your labels. You can delete `<th scope="row"></th>` tags, but as mentioned previously this is a bad practice. The other way is to use the `.labels-hide` class.
-
-```html
-<table class="charts-css column labels-hide">
-  ...
-</table>
-```
-
-<code-example>
-<style>
-#labels-example-6 {
-  height: 250px;
-  margin: 0 auto;
-}
-</style>
-<table class="charts-css column hide-data labels-hide" id="labels-example-6">
-
-  <caption> Labels Example #6 </caption>
 
   <thead>
     <tr>
@@ -470,12 +229,250 @@ There are two ways to hide your labels. You can delete `<th scope="row"></th>` t
 </table>
 </code-example>
 
+## Labels Position
+
+You can reverse to labels position. Use the `.reverse` class to change to position from bottom-to-top and from left-to-right, depending on the chart type.
+
+It does not matter what's your language writing direction, left-to-right (LTR), right-to-left (RTL) or top-to-bottom (TTB), the `.reverse` class will reverse the labels position.
+
+```html
+<table class="charts-css bar show-labels reverse">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#labels-example-3 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column show-labels " id="labels-example-3">
+
+  <caption> Labels Example #3 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#labels-example-4 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column show-labels reverse" id="labels-example-4">
+
+  <caption> Labels Example #4 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+<br>
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#labels-example-5 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-labels" id="labels-example-5">
+
+  <caption> Labels Example #5 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#labels-example-6 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css bar show-labels reverse" id="labels-example-6">
+
+  <caption> Labels Example #6 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+## Label Size
+
+Some chart use long labels others use short ones. To customize the label size use the `--labels-size` CSS variables.
+
+Custom labels size for bar charts:
+
+```css
+#my-chart.bar {
+  --labels-size: 200px;
+}
+```
+
+Custom labels size for column charts:
+
+```css
+#my-chart.column {
+  --labels-size: 3rem;
+}
+```
+
 ## Align Labels
 
 Lastly, you can play with the label text alignment. Use the `labels-align-start`, `labels-align-center` and `labels-align-end` classes.
 
 ```html{1,13}
-<table class="charts-css column multiple labels-align-start">
+<table class="charts-css column multiple show-labels labels-align-start">
   ...
 </table>
 ```
@@ -487,12 +484,12 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 <code-example>
 <style>
 #labels-example-7 {
-  height: 250px;
+  height: 150px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple hide-data labels-align-start" id="labels-example-7">
+<table class="charts-css column multiple show-labels hide-data labels-align-start" id="labels-example-7">
 
   <caption> Labels Example #7 </caption>
 
@@ -536,12 +533,12 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 <code-example>
 <style>
 #labels-example-8 {
-  height: 250px;
+  height: 150px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple hide-data  labels-align-end" id="labels-example-8">
+<table class="charts-css column multiple show-labels hide-data labels-align-end" id="labels-example-8">
 
   <caption> Labels Example #8 </caption>
 
@@ -585,7 +582,7 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 To override a specific label use the `--labels-align` variable on `<th>` or `<tr>` elements.
 
 ```html{1,13}
-<table class="charts-css column labels-align-start">
+<table class="charts-css column show-labels labels-align-start">
 
   <tbody>
     <tr>

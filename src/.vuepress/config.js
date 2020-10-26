@@ -83,6 +83,7 @@ module.exports = {
         sidebarDepth: -1,
         children: [
           '/components/wrapper',
+          '/components/heading',
           '/components/data',
           '/components/datasets',
           '/components/labels',
@@ -92,7 +93,6 @@ module.exports = {
           '/components/colors',
           '/components/stacked',
           '/components/tooltips',
-          '/components/title',
           '/components/legend',
         ]
       },

@@ -29,28 +29,10 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 ```
 
 ```html
-<table class="charts-css column" id="my-column-chart">
+<table class="charts-css column" id="my-chart">
   ...
 </table>
 ```
-
-## Labels
-
-You can control the labels positions and size.
-
-### Labels Position
-
-By default the labels are displayed after the chart. To display the labels before the chart use the `.labels-before` class.
-
-```html
-<table class="charts-css column labels-before">
-  ...
-</table>
-```
-
-<v-row>
-
-<v-col>
 
 <code-example>
 <style>
@@ -63,6 +45,256 @@ By default the labels are displayed after the chart. To display the labels befor
 <table class="charts-css column" id="column-example-1">
 
   <caption> Column Example #1 </caption>
+
+  <tbody>
+    <tr>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+## Orientation
+
+You can control the chart orientation, or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages). Using the `.reverse` class you can reverse the orientation.
+
+```html
+<table class="charts-css column reverse">
+  ...
+</table>
+```
+
+<code-example>
+<style>
+#column-example-2 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column reverse" id="column-example-2">
+
+  <caption> Column Example #2 </caption>
+
+  <tbody>
+    <tr>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+## Heading
+
+You can add a heading to your chart using the `<caption>` tag. By default the heading is hidden. To display the heading use the `.show-heading` class.
+
+```html
+<table class="charts-css column show-heading">
+  <caption> Descriptive Chart Heading </caption>
+  ...
+</table>
+```
+
+<code-example>
+<style>
+#column-example-3 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column show-heading" id="column-example-3">
+
+  <caption> Descriptive Chart Heading </caption>
+
+  <tbody>
+    <tr>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+## Multiple Datasets
+
+You can use a single dataset (one `<td>` tag in each `<td>`).
+
+```html{2}
+<tr>
+  <td> Data </td>
+</tr>
+```
+
+Or multiple datasets (many `<td>` tags in `<td>`).
+
+```html{2-4}
+<tr>
+  <td> Data </td>
+  <td> Data </td>
+  <td> Data </td>
+</tr>
+```
+
+But when using multiple datasets you should add the `.multiple` class.
+
+```html
+<table class="charts-css column multiple">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#column-example-4 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column" id="column-example-4">
+
+  <caption> Column Example #4 </caption>
+
+  <tbody>
+    <tr>
+      <td style="--size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.8"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 1"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+<v-col>
+
+<code-example>
+<style>
+#column-example-5 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column multiple data-spacing-3" id="column-example-5">
+
+  <caption> Column Example #5 </caption>
+
+  <tbody>
+    <tr>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+    <tr>
+      <td style="--size: 0.2;"> </td>
+      <td style="--size: 0.4;"> </td>
+      <td style="--size: 0.6;"> </td>
+      <td style="--size: 0.8;"> </td>
+      <td style="--size: 1.0;"> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+</v-col>
+
+</v-row>
+
+## Labels
+
+You can add labels to your data and control the labels positions and size. Labels added using `<th>` tag inside the `<tr>`
+
+```html{2}
+<tr>
+  <th scope="row"> Label </th>
+  <td> Data </td>
+  <td> Data </td>
+  <td> Data </td>
+</tr>
+```
+
+By default the labels are hidden. To display the labels use the `.show-labels` class.
+
+```html
+<table class="charts-css column show-labels">
+  ...
+</table>
+```
+
+<v-row>
+
+<v-col>
+
+<code-example>
+<style>
+#column-example-6 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css column show-labels" id="column-example-6">
+
+  <caption> Column Example #6 </caption>
 
   <thead>
     <tr>
@@ -103,15 +335,15 @@ By default the labels are displayed after the chart. To display the labels befor
 
 <code-example>
 <style>
-#column-example-2 {
+#column-example-7 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column labels-before" id="column-example-2">
+<table class="charts-css column show-labels reverse" id="column-example-7">
 
-  <caption> Column Example #2 </caption>
+  <caption> Column Example #7 </caption>
 
   <thead>
     <tr>
@@ -150,13 +382,11 @@ By default the labels are displayed after the chart. To display the labels befor
 
 </v-row>
 
-### Labels Size
-
-Some chart use long labels others use short ones. To customize the label size use the `--labels-size` variable.
+Some charts use long labels others use short ones. To customize the label size use the `--labels-size` variable.
 
 ```css
 #my-chart.column {
-  --labels-size: 3em;
+  --labels-size: 3rem;
 }
 ```
 
@@ -166,15 +396,16 @@ Some chart use long labels others use short ones. To customize the label size us
 
 <code-example>
 <style>
-#column-example-3 {
+#column-example-8 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
+  --labels-size: 3rem;
 }
 </style>
-<table class="charts-css column" id="column-example-3">
+<table class="charts-css column show-labels" id="column-example-8">
 
-  <caption> Column Example #3 </caption>
+  <caption> Column Example #8 </caption>
 
   <thead>
     <tr>
@@ -215,16 +446,16 @@ Some chart use long labels others use short ones. To customize the label size us
 
 <code-example>
 <style>
-#column-example-4 {
+#column-example-9 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
-  --labels-size: 3em;
+  --labels-size: 3rem;
 }
 </style>
-<table class="charts-css column" id="column-example-4">
+<table class="charts-css column show-labels reverse" id="column-example-9">
 
-  <caption> Column Example #4 </caption>
+  <caption> Column Example #9 </caption>
 
   <thead>
     <tr>
@@ -283,15 +514,15 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 
 <code-example>
 <style>
-#column-example-5 {
+#column-example-10 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column" id="column-example-5">
+<table class="charts-css column show-labels" id="column-example-10">
 
-  <caption> Column Example #5 </caption>
+  <caption> Column Example #10 </caption>
 
   <thead>
     <tr>
@@ -332,15 +563,15 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 
 <code-example>
 <style>
-#column-example-6 {
+#column-example-11 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis" id="column-example-6">
+<table class="charts-css column show-labels show-primary-axis" id="column-example-11">
 
-  <caption> Column Example #6 </caption>
+  <caption> Column Example #11 </caption>
 
   <thead>
     <tr>
@@ -395,15 +626,15 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 
 <code-example>
 <style>
-#column-example-7 {
+#column-example-12 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-4-secondary-axes" id="column-example-7">
+<table class="charts-css column show-labels show-primary-axis show-4-secondary-axes" id="column-example-12">
 
-  <caption> Column Example #7 </caption>
+  <caption> Column Example #12 </caption>
 
   <thead>
     <tr>
@@ -444,15 +675,15 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 
 <code-example>
 <style>
-#column-example-8 {
+#column-example-13 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-10-secondary-axes" id="column-example-8">
+<table class="charts-css column show-labels show-primary-axis show-10-secondary-axes" id="column-example-13">
 
-  <caption> Column Example #8 </caption>
+  <caption> Column Example #13 </caption>
 
   <thead>
     <tr>
@@ -507,15 +738,15 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 
 <code-example>
 <style>
-#column-example-9 {
+#column-example-14 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-data-axes" id="column-example-9">
+<table class="charts-css column show-labels show-primary-axis show-data-axes" id="column-example-14">
 
-  <caption> Column Example #9 </caption>
+  <caption> Column Example #14 </caption>
 
   <thead>
     <tr>
@@ -556,15 +787,15 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 
 <code-example>
 <style>
-#column-example-10 {
+#column-example-15 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-4-secondary-axes show-data-axes" id="column-example-10">
+<table class="charts-css column show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="column-example-15">
 
-  <caption> Column Example #10 </caption>
+  <caption> Column Example #15 </caption>
 
   <thead>
     <tr>
@@ -623,15 +854,15 @@ To add spacing between data items use the `.data-spacing-*` class.
 
 <code-example>
 <style>
-#column-example-11 {
+#column-example-16 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-data-axes" id="column-example-11">
+<table class="charts-css column show-labels show-primary-axis show-data-axes" id="column-example-16">
 
-  <caption> Column Example #11 </caption>
+  <caption> Column Example #16 </caption>
 
   <thead>
     <tr>
@@ -672,15 +903,15 @@ To add spacing between data items use the `.data-spacing-*` class.
 
 <code-example>
 <style>
-#column-example-12 {
+#column-example-17 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-data-axes data-spacing-20" id="column-example-12">
+<table class="charts-css column show-labels show-primary-axis show-data-axes data-spacing-20" id="column-example-17">
 
-  <caption> Column Example #12 </caption>
+  <caption> Column Example #17 </caption>
 
   <thead>
     <tr>
@@ -735,15 +966,15 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 
 <code-example>
 <style>
-#column-example-13 {
+#column-example-18 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-primary-axis show-data-axes" id="column-example-13">
+<table class="charts-css column show-labels multiple show-primary-axis show-data-axes" id="column-example-18">
 
-  <caption> Column Example #13 </caption>
+  <caption> Column Example #18 </caption>
 
   <thead>
     <tr>
@@ -784,15 +1015,15 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 
 <code-example>
 <style>
-#column-example-14 {
+#column-example-19 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-primary-axis show-data-axes datasets-spacing-10" id="column-example-14">
+<table class="charts-css column show-labels multiple show-primary-axis show-data-axes datasets-spacing-10" id="column-example-19">
 
-  <caption> Column Example #14 </caption>
+  <caption> Column Example #19 </caption>
 
   <thead>
     <tr>
@@ -851,15 +1082,15 @@ To reverse thr data order use the `.reverse-data` class.
 
 <code-example>
 <style>
-#column-example-15 {
+#column-example-20 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column" id="column-example-15">
+<table class="charts-css column show-labels" id="column-example-20">
 
-  <caption> Column Example #15 </caption>
+  <caption> Column Example #20 </caption>
 
   <thead>
     <tr>
@@ -900,15 +1131,15 @@ To reverse thr data order use the `.reverse-data` class.
 
 <code-example>
 <style>
-#column-example-16 {
+#column-example-21 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column reverse-data" id="column-example-16">
+<table class="charts-css column show-labels reverse-data" id="column-example-21">
 
-  <caption> Column Example #16 </caption>
+  <caption> Column Example #21 </caption>
 
   <thead>
     <tr>
@@ -963,15 +1194,15 @@ To reverse datasets order use the `.reverse-datasets` class.
 
 <code-example>
 <style>
-#column-example-17 {
+#column-example-22 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes" id="column-example-17">
+<table class="charts-css column multiple show-labels data-spacing-10 show-primary-axis show-data-axes" id="column-example-22">
 
-  <caption> Column Example #17 </caption>
+  <caption> Column Example #22 </caption>
 
   <thead>
     <tr>
@@ -1012,15 +1243,15 @@ To reverse datasets order use the `.reverse-datasets` class.
 
 <code-example>
 <style>
-#column-example-18 {
+#column-example-23 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="column-example-18">
+<table class="charts-css column multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="column-example-23">
 
-  <caption> Column Example #18 </caption>
+  <caption> Column Example #23 </caption>
 
   <thead>
     <tr>
@@ -1075,15 +1306,15 @@ You can combine the two classes to reverse data order and datasets order.
 
 <code-example>
 <style>
-#column-example-19 {
+#column-example-24 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes" id="column-example-19">
+<table class="charts-css column multiple show-labels data-spacing-10 show-primary-axis show-data-axes" id="column-example-24">
 
-  <caption> Column Example #19 </caption>
+  <caption> Column Example #24 </caption>
 
   <thead>
     <tr>
@@ -1124,15 +1355,15 @@ You can combine the two classes to reverse data order and datasets order.
 
 <code-example>
 <style>
-#column-example-20 {
+#column-example-25 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets" id="column-example-20">
+<table class="charts-css column multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets" id="column-example-25">
 
-  <caption> Column Example #20 </caption>
+  <caption> Column Example #25 </caption>
 
   <thead>
     <tr>

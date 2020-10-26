@@ -45,7 +45,7 @@ The primary axis separate the labels from the chart itself. To display the prima
 Note that in bar chart the primary axis is horizontal while in column chart it is vertical. If the change the labels position (before of after), the primary axis will change its position too.
 
 ```html
-<table class="charts-css bar show-primary-axis">
+<table class="charts-css bar show-labels show-primary-axis">
   ...
 </table>
 ```
@@ -62,7 +62,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis" id="axes-example-1">
+<table class="charts-css column show-labels show-primary-axis" id="axes-example-1">
 
   <caption> Axes Example #1 </caption>
 
@@ -111,7 +111,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis labels-before" id="axes-example-2">
+<table class="charts-css column show-labels show-primary-axis reverse" id="axes-example-2">
 
   <caption> Axes Example #2 </caption>
 
@@ -166,7 +166,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   margin: 0 auto;
 }
 </style>
-<table class="charts-css bar show-primary-axis labels-after" id="axes-example-3">
+<table class="charts-css bar show-labels show-primary-axis" id="axes-example-3">
 
   <caption> Axes Example #3 </caption>
 
@@ -215,7 +215,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   margin: 0 auto;
 }
 </style>
-<table class="charts-css bar show-primary-axis" id="axes-example-4">
+<table class="charts-css bar show-labels show-primary-axis reverse" id="axes-example-4">
 
   <caption> Axes Example #4 </caption>
 
@@ -256,7 +256,7 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 
 </v-row>
 
-To customize the primary axis use the following CSS variable:
+To customize the primary axis use the following CSS variables:
 
 ```css
 #my-chart {
@@ -271,7 +271,7 @@ To customize the primary axis use the following CSS variable:
 If the primary axis separate the labels from the chart, the secondary axes are located inside the chart itself. Therefor you can choose how much axes to display. Use the `.show-*-secondary-axes` class.
 
 ```html
-<table class="charts-css bar show-4-secondary-axes">
+<table class="charts-css bar show-labels show-4-secondary-axes">
   ...
 </table>
 ```
@@ -288,7 +288,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-2-secondary-axes" id="axes-example-5">
+<table class="charts-css column show-labels show-primary-axis show-2-secondary-axes" id="axes-example-5">
 
   <caption> Axes Example #5 </caption>
 
@@ -337,7 +337,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-6-secondary-axes labels-before" id="axes-example-6">
+<table class="charts-css column show-labels show-primary-axis show-6-secondary-axes reverse" id="axes-example-6">
 
   <caption> Axes Example #6 </caption>
 
@@ -392,7 +392,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   margin: 0 auto;
 }
 </style>
-<table class="charts-css bar show-primary-axis show-4-secondary-axes labels-after" id="axes-example-7">
+<table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes" id="axes-example-7">
 
   <caption> Axes Example #7 </caption>
 
@@ -441,7 +441,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   margin: 0 auto;
 }
 </style>
-<table class="charts-css bar show-primary-axis show-10-secondary-axes" id="axes-example-8">
+<table class="charts-css bar show-labels show-primary-axis show-10-secondary-axes reverse" id="axes-example-8">
 
   <caption> Axes Example #8 </caption>
 
@@ -482,7 +482,7 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 
 </v-row>
 
-To customize the secondary axes use the following CSS variable:
+To customize the secondary axes use the following CSS variables:
 
 ```css
 #my-chart {
@@ -497,7 +497,7 @@ To customize the secondary axes use the following CSS variable:
 Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are auto-generated using CSS border property. To display data axes use the `.show-data-axes` class.
 
 ```html
-<table class="charts-css bar show-data-axes">
+<table class="charts-css bar show-labels show-data-axes">
   ...
 </table>
 ```
@@ -514,7 +514,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-9">
+<table class="charts-css column show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-9">
 
   <caption> Axes Example #9 </caption>
 
@@ -563,7 +563,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column show-primary-axis show-4-secondary-axes show-data-axes labels-before" id="axes-example-10">
+<table class="charts-css column show-labels show-primary-axis show-4-secondary-axes show-data-axes reverse" id="axes-example-10">
 
   <caption> Axes Example #10 </caption>
 
@@ -618,7 +618,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   margin: 0 auto;
 }
 </style>
-<table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes labels-after" id="axes-example-11">
+<table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-11">
 
   <caption> Axes Example #11 </caption>
 
@@ -667,7 +667,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   margin: 0 auto;
 }
 </style>
-<table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-12">
+<table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes reverse" id="axes-example-12">
 
   <caption> Axes Example #12 </caption>
 
@@ -708,7 +708,7 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 
 </v-row>
 
-To customize the data axes use the following CSS variable:
+To customize the data axes use the following CSS variables:
 
 ```css
 #my-chart {

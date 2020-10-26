@@ -35,7 +35,7 @@ Original data:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column hide-data" id="reverse-data-example-1">
+<table class="charts-css column show-labels hide-data" id="reverse-data-example-1">
 
   <caption> Reverse Data Example #1 </caption>
 
@@ -109,7 +109,7 @@ Reversed data:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column hide-data reverse-data" id="reverse-data-example-2">
+<table class="charts-css column show-labels hide-data reverse-data" id="reverse-data-example-2">
 
   <caption> Reverse Data Example #2 </caption>
 
@@ -193,7 +193,7 @@ Original:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-datasets-1">
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-datasets-1">
 
   <caption> Reverse Datasets Example #1 </caption>
 
@@ -247,7 +247,7 @@ Reversed datasets:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4 reverse-datasets" id="reverse-datasets-2">
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4 reverse-datasets" id="reverse-datasets-2">
 
   <caption> Reverse Datasets Example #2 </caption>
 
@@ -312,7 +312,7 @@ Original:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-data-datasets-1">
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-data-datasets-1">
 
   <caption> Reverse Data & Datasets Example #1 </caption>
 
@@ -366,7 +366,7 @@ Reversed datasets:
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4 reverse-data reverse-datasets" id="reverse-data-datasets-2">
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4 reverse-data reverse-datasets" id="reverse-data-datasets-2">
 
   <caption> Reverse Data & Datasets Example #2 </caption>
 

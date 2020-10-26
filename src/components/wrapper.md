@@ -47,7 +47,7 @@ Only then you can start adding some inner components like [axes](/charts/axes), 
 
 ## Customizing the Wrapper
 
-The simplest wrapper element customization is to set the height and width of you chart.
+The simplest wrapper element customization is to set the height and width of your chart.
 
 ```css
 #my-chart {

@@ -61,10 +61,10 @@ The current state of supported feature:
 
   <tbody>
     <tr>
-      <th scope="row"> [single dataset]</th>
+      <th scope="row"> <code>show-heading</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
@@ -72,21 +72,10 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .multiple </th>
+      <th scope="row"> [single dataset] </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .hide-data </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
@@ -94,7 +83,7 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .show-data-on-hover </th>
+      <th scope="row"> <code>multiple</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-x /> </td>
@@ -105,76 +94,10 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .labels-before </th>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .labels-after </th>
-      <td> <status-x /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .labels-hide </th>
+      <th scope="row"> <code>hide-data</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .labels-align-start </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .labels-align-center </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .labels-align-end </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .show-primary-axis </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
@@ -182,10 +105,76 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .show-*-secondary-axes </th>
+      <th scope="row"> <code>show-data-on-hover</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>reverse</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>show-labels</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-start</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-center</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-end</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>show-primary-axis</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
@@ -193,43 +182,10 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .show-data-axes </th>
+      <th scope="row"> <code>show-*-secondary-axes</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .data-spacing-* </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .datasets-spacing-* </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> .reverse-data </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
@@ -237,7 +193,18 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .reverse-datasets </th>
+      <th scope="row"> <code>show-data-axes</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>data-spacing-*</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-x /> </td>
@@ -248,7 +215,40 @@ The current state of supported feature:
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> .stacked </th>
+      <th scope="row"> <code>datasets-spacing-*</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>reverse-data</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>reverse-datasets</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>stacked</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-x /> </td>
@@ -262,17 +262,6 @@ The current state of supported feature:
       <th scope="row"> [tooltips] </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> [table caption] </th>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>

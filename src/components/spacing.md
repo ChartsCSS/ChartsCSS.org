@@ -25,7 +25,7 @@ Note that it adds paddings to `<tr>` elements.
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column data-spacing-5" id="spacing-example-1">
+<table class="charts-css column show-labels hide-data data-spacing-5" id="spacing-example-1">
 
   <caption> Spacing Example #1 </caption>
 
@@ -109,7 +109,7 @@ Note that it adds margins to `<td>` elements.
   margin: 0 auto;
 }
 </style>
-<table class="charts-css column multiple show-data-axes data-spacing-20 datasets-spacing-4" id="spacing-example-2">
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="spacing-example-2">
 
   <caption> Spacing Example #2 </caption>
 

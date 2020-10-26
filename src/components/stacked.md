@@ -28,7 +28,7 @@ The Change display to stacked view simply use the `.stacked` class.
   --color-3: rgba(255, 50, 50, 0.5);
 }
 </style>
-<table class="charts-css bar show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-1">
+<table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-1">
 
   <caption> Stacked Example #1 </caption>
 
@@ -65,7 +65,6 @@ The Change display to stacked view simply use the `.stacked` class.
 </table>
 </code-example>
 
-
 <code-example>
 <style>
 #stacked-example-2 {
@@ -77,7 +76,7 @@ The Change display to stacked view simply use the `.stacked` class.
   --color-3: rgba(255, 50, 50, 0.5);
 }
 </style>
-<table class="charts-css column show-data-on-hover show-primary-axis show-4-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-2">
+<table class="charts-css column show-labels show-data-on-hover show-primary-axis show-4-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-2">
 
   <caption> Stacked Example #2 </caption>
 
