@@ -9,15 +9,15 @@ pageClass: example-page
 # Bar Examples
 
 <div class="examples">
-  <h2>Labels Before</h2>
-  <h2>Labels After</h2>
+  <h2>Regular</h2>
+  <h2>Reverse</h2>
 </div>
 
 <h3>Single</h3>
 
 <div class="examples">
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis" style="height: 200px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis" style="height: 200px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -49,7 +49,7 @@ pageClass: example-page
     </tbody>
   </table>
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis labels-after" style="height: 200px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis reverse" style="height: 200px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -83,11 +83,11 @@ pageClass: example-page
 
 </div>
 
-<h3>Single & Reverse</h3>
+<h3>Single & Reverse Data</h3>
 
 <div class="examples">
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis reverse-data" style="height: 200px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis reverse-data" style="height: 200px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -119,7 +119,7 @@ pageClass: example-page
     </tbody>
   </table>
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis reverse-data labels-after" style="height: 200px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis reverse-data reverse" style="height: 200px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -157,7 +157,7 @@ pageClass: example-page
 
 <div class="examples">
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10" style="height: 350px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10" style="height: 350px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -189,7 +189,7 @@ pageClass: example-page
     </tbody>
   </table>
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10 labels-after" style="height: 350px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10 reverse" style="height: 350px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -223,11 +223,11 @@ pageClass: example-page
 
 </div>
 
-<h3>Multiple & Reverse</h3>
+<h3>Multiple & Reverse Data + Dataset</h3>
 
 <div class="examples">
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10 reverse-data reverse-datasets" style="height: 350px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10 reverse-data reverse-datasets" style="height: 350px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -259,7 +259,7 @@ pageClass: example-page
     </tbody>
   </table>
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10 reverse-data reverse-datasets labels-after" style="height: 350px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-data-axes multiple data-spacing-10 reverse-data reverse-datasets reverse" style="height: 350px;">
     <caption>Years Compared</caption>
     <thead>
       <tr>
@@ -297,7 +297,7 @@ pageClass: example-page
 
 <div class="examples">
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked" style="height: 150px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked" style="height: 150px;">
     <caption>House Spending by Countries</caption>
     <thead>
       <tr>
@@ -328,7 +328,7 @@ pageClass: example-page
     </tbody>
   </table>
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked labels-after" style="height: 150px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked reverse" style="height: 150px;">
     <caption>House Spending by Countries</caption>
     <thead>
       <tr>
@@ -361,11 +361,11 @@ pageClass: example-page
 
 </div>
 
-<h3>Stacked & Reverse</h3>
+<h3>Stacked & Reverse Dataset</h3>
 
 <div class="examples">
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked reverse-datasets" style="height: 150px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked reverse-datasets" style="height: 150px;">
     <caption>House Spending by Countries</caption>
     <thead>
       <tr>
@@ -396,7 +396,7 @@ pageClass: example-page
     </tbody>
   </table>
 
-  <table class="charts-css bar show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked reverse-datasets labels-after" style="height: 150px;">
+  <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked reverse-datasets reverse" style="height: 150px;">
     <caption>House Spending by Countries</caption>
     <thead>
       <tr>

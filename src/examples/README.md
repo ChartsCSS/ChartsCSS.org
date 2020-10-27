@@ -27,4 +27,4 @@ Examples of different layouts for each chart type:
 
 ## Tools
 
-* [Chart Builder](/examples/charts)
+* [Chart Builder](/examples/chart-builder/)

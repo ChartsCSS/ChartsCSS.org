@@ -140,7 +140,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: -1,
         children: [
-          '/examples/'
+          '/examples/chart-builder'
         ]
       }
     ]
