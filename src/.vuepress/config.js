@@ -86,6 +86,7 @@ module.exports = {
           '/components/heading',
           '/components/data',
           '/components/datasets',
+          '/components/orientation',
           '/components/labels',
           '/components/axes',
           '/components/spacing',

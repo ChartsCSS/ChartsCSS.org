@@ -15,7 +15,7 @@ Note: Currently legend required to use `<ul>` or `<ol>` tags. In the next versio
 
 ## Legend Position
 
-So if you choose to display the chart legend. You can position it wherever you want. Use flexbox `flex-direction: row;`, grid `grid-template-columns: 100px 1fr;`, or any other layout.
+So if you choose to display the chart legend. You can position it wherever you want. Use float (`float: right;`), flexbox (`flex-direction: row;`), grid (`grid-template-columns: 100px 1fr;`), or any other method.
 
 ```html
 <div class="my-chart-container">

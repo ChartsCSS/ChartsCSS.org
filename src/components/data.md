@@ -29,7 +29,7 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
       <td> $ 90K </td>
     </tr>
     <tr>
-      <td> $ 100K <br> 👑 </td>
+      <td> $ 100K </td>
     </tr>
   </tbody>
 
@@ -62,7 +62,7 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
       <td> $ 90K </td>
     </tr>
     <tr>
-      <td> $ 100K <br> 👑 </td>
+      <td> $ 100K </td>
     </tr>
   </tbody>
 
@@ -92,7 +92,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
       <td style="--size: calc( 90 / 100 )"> $ 90K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> $ 100K <br> 👑 </td>
+      <td style="--size: calc( 100 / 100 )"> $ 100K </td>
     </tr>
   </tbody>
 
@@ -125,7 +125,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
       <td style="--size: calc( 90 / 100 )"> $ 90K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> $ 100K <br> 👑 </td>
+      <td style="--size: calc( 100 / 100 )"> $ 100K </td>
     </tr>
   </tbody>
 
@@ -157,7 +157,7 @@ Now, let's remove the raw data and see what happens.
       <td style="--size: 0.9"> </td>
     </tr>
     <tr>
-      <td style="--size: 1"> </td>
+      <td style="--size: 1.0"> </td>
     </tr>
   </tbody>
 
@@ -190,7 +190,7 @@ Now, let's remove the raw data and see what happens.
       <td style="--size: 0.9"> </td>
     </tr>
     <tr>
-      <td style="--size: 1"> </td>
+      <td style="--size: 1.0"> </td>
     </tr>
   </tbody>
 
@@ -210,19 +210,19 @@ The example above presents a significant problem. The solutions is to add the da
 
   <tbody>
     <tr>
-      <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.6"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.75"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.9"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 1"> <span class="data"> $ 100K <br> 👑 </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
     </tr>
   </tbody>
 
@@ -243,19 +243,19 @@ The example above presents a significant problem. The solutions is to add the da
 
   <tbody>
     <tr>
-      <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.6"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.75"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.9"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 1"> <span class="data"> $ 100K <br> 👑 </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
     </tr>
   </tbody>
 
@@ -273,19 +273,19 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 
   <tbody>
     <tr>
-      <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.6"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.75"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.9"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 1"> <span class="data"> $ 100K <br> 👑 </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
     </tr>
   </tbody>
 
@@ -306,21 +306,27 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 
   <tbody>
     <tr>
-      <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.6"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.75"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 0.9"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: 1"> <span class="data"> $ 100K <br> 👑 </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
     </tr>
   </tbody>
 
 </table>
 </code-example>
+
+## Size Variable 
+
+Your `--size` variable should always be a unitless number between `0` to `1`. Why unitless? Because it should you should be able to change chart types without changing all the variables.
+
+Rectangular charts use percentage as a unit of measurement while redial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated unit. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.
