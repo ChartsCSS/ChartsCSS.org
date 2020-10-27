@@ -14,14 +14,14 @@ module.exports = {
 
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@0.6.0/dist/charts.min.css' }],
-    ['link', { rel: 'icon', href: '/assets/img/logo.svg' }],
+    ['link', { rel: 'icon', href: '/assets/img/logo.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
-    ['link', { rel: 'mask-icon', href: '/assets/img/logo.svg', color: '#f57' }],
-    ['link', { rel: 'apple-touch-icon', href: '/assets/img/logo.svg' }],
+    ['link', { rel: 'mask-icon', href: '/assets/img/logo.png', color: '#f57' }],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/img/logo.png' }],
     ['meta', { name: 'theme-color', content: '#f57' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/assets/img/logo.svg' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/assets/img/logo.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
 
@@ -32,7 +32,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: false,
-    logo: '/assets/img/logo.svg',
+    logo: '/assets/img/logo.png',
     displayAllHeaders: true,
     search: false,
     nav: [

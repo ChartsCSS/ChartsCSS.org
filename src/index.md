@@ -1,7 +1,7 @@
 ---
 home: true
 navbar: false
-heroImage: /assets/img/logo.svg
+heroImage: /assets/img/logo.png
 tagline: CSS data visualization framework
 actionText: Quick Start
 actionLink: /docs/

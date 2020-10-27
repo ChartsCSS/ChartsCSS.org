@@ -46,7 +46,7 @@ export default {
     background-color: #aaa;
     width: 100%;
     min-height: 100px;
-    background-image: url(/assets/img/logo.svg);
+    background-image: url(/assets/img/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 30% 30%;
