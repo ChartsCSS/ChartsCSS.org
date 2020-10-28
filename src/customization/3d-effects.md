@@ -191,6 +191,72 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
 </table>
 </code-example>
 
+## 3D Cylinders
+
+To make the bars look like 3D cylinders yuo can use the `border-radius` property:
+
+```css
+#custom-effect tbody td {
+  margin-inline-start: 20%;
+  margin-inline-end: 20%;
+  border-radius: 50% / 8px;
+  box-shadow: 2px  2px 2px grey;
+  background: radial-gradient(black, grey);
+}
+```
+
+<code-example>
+<style>
+#effect-example-3 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#effect-example-3 tbody td {
+  margin-inline-start: 20%;
+  margin-inline-end: 20%;
+  border-radius: 50% / 8px;
+  box-shadow: 2px  2px 2px grey;
+  background: radial-gradient(black, grey);
+}
+</style>
+<table class="charts-css column hide-data show-data-axes" id="effect-example-3">
+
+  <caption> 3D Effect Example #3 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
 ## Tilt Chart
 
 Another way to make your chart look 3D is to tilt the entire `<table>` with css `skew()`.
@@ -219,13 +285,13 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
 
 <code-example>
 <style>
-#effect-example-3 {
+#effect-example-4 {
   height: 200px;
   max-width: 300px;
   margin: 1.5rem auto;
   transform: skewY(20deg);
 }
-#effect-example-3 tbody td {
+#effect-example-4 tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
   box-shadow:
@@ -241,9 +307,79 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
     10px -10px 1px lightgrey;
 }
 </style>
-<table class="charts-css column show-data-axes" id="effect-example-3">
+<table class="charts-css column show-data-axes" id="effect-example-4">
 
-  <caption> 3D Effect Example #3 </caption>
+  <caption> 3D Effect Example #4 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+Or tilting the other way the cylinder bars with a nice linear gradient and some shades:
+
+```css
+#custom-effect {
+  margin: 1.5rem auto;
+  transform: skewY(-8deg);
+}
+#custom-effect tbody td {
+  margin-inline-start: 20%;
+  margin-inline-start: 20%;
+  margin-inline-end: 20%;
+  border-radius: 50% / 8px;
+  box-shadow: 5px  5px 5px grey;
+  background: linear-gradient(to right, black, grey, black);
+}
+```
+
+<code-example>
+<style>
+#effect-example-5 {
+  height: 200px;
+  max-width: 300px;
+  margin: 1.5rem auto;
+  transform: skewY(-8deg);
+}
+#effect-example-5 tbody td {
+  margin-inline-start: 20%;
+  margin-inline-end: 20%;
+  border-radius: 50% / 8px;
+  box-shadow: 5px  5px 5px grey;
+  background: linear-gradient(to right, black, grey, black);
+}
+</style>
+<table class="charts-css column hide-data show-data-axes" id="effect-example-5">
+
+  <caption> 3D Effect Example #5 </caption>
 
   <thead>
     <tr>
@@ -302,7 +438,7 @@ We can also use the webkit reflect effect to highlight the chart
 
 <code-example>
 <style>
-#effect-example-4 {
+#effect-example-6 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto 100px;
@@ -319,9 +455,9 @@ We can also use the webkit reflect effect to highlight the chart
   );
 }
 </style>
-<table class="charts-css column labels-hide show-data-axes" id="effect-example-4">
+<table class="charts-css column labels-hide show-data-axes" id="effect-example-6">
 
-  <caption> 3D Effect Example #4 </caption>
+  <caption> 3D Effect Example #6 </caption>
 
   <thead>
     <tr>
