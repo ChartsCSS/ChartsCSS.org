@@ -15,11 +15,13 @@ Components add additional visual elements using nothing but CSS classes. You con
 * [Heading](/components/heading/)
 * [Data](/components/data/)
 * [Datasets](/components/datasets/)
+* [Orientation](/components/orientation/)
 * [Labels](/components/labels/)
 * [Axes](/components/axes/)
 * [Spacing](/components/spacing/)
 * [Reverse Order](/components/reverse-order/)
 * [Colors](/components/colors/)
+* [Stacked](/components/stacked/)
 
 ## External Components
 
