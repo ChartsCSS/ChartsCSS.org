@@ -327,6 +327,6 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 
 ## Size Variable 
 
-Your `--size` variable should always be a unitless number between `0` to `1`. Why unitless? Because it should you should be able to change chart types without changing all the variables.
+Your `--size` variable should always be a unitless number between `0` to `1`. Why unitless? Because you should be able to change chart types without changing all the variables.
 
-Rectangular charts use percentage as a unit of measurement while redial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated unit. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.
+Rectangular charts use percentage as a unit of measurement while redial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated units. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.
