@@ -199,9 +199,11 @@ To make the bars look like 3D cylinders yuo can use the `border-radius` property
 #custom-effect tbody td {
   margin-inline-start: 20%;
   margin-inline-end: 20%;
-  border-radius: 50% / 8px;
-  box-shadow: 2px  2px 2px grey;
-  background: radial-gradient(black, grey);
+  border-radius: 50% / 12px;
+  background:
+    radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
+    radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+    linear-gradient(grey, darkgrey, lightgrey);
 }
 ```
 
@@ -215,9 +217,11 @@ To make the bars look like 3D cylinders yuo can use the `border-radius` property
 #effect-example-3 tbody td {
   margin-inline-start: 20%;
   margin-inline-end: 20%;
-  border-radius: 50% / 8px;
-  box-shadow: 2px  2px 2px grey;
-  background: radial-gradient(black, grey);
+  border-radius: 50% / 12px;
+  background:
+    radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
+    radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+    linear-gradient(grey, darkgrey, lightgrey);
 }
 </style>
 <table class="charts-css column hide-data show-data-axes" id="effect-example-3">
@@ -355,9 +359,12 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
   margin-inline-start: 20%;
   margin-inline-start: 20%;
   margin-inline-end: 20%;
-  border-radius: 50% / 8px;
-  box-shadow: 5px  5px 5px grey;
-  background: linear-gradient(to right, black, grey, black);
+  border-radius: 50% / 12px;
+  background:
+    radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
+    radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+    linear-gradient(grey, darkgrey, lightgrey);
+  box-shadow: 2px  2px 5px grey;
 }
 ```
 
@@ -372,9 +379,12 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
 #effect-example-5 tbody td {
   margin-inline-start: 20%;
   margin-inline-end: 20%;
-  border-radius: 50% / 8px;
-  box-shadow: 5px  5px 5px grey;
-  background: linear-gradient(to right, black, grey, black);
+  border-radius: 50% / 12px;
+  background:
+    radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
+    radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+    linear-gradient(grey, darkgrey, lightgrey);
+  box-shadow: 2px  2px 5px grey;
 }
 </style>
 <table class="charts-css column hide-data show-data-axes" id="effect-example-5">
