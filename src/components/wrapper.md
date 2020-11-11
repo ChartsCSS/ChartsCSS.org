@@ -47,7 +47,7 @@ Only then you can start adding some inner components like [axes](/charts/axes), 
 
 ## Customizing the Wrapper
 
-The simplest wrapper element customization is to set the height and width of your chart.
+The simplest wrapper element customization is to set the `height` and `max-width` of your chart. Chart `width` is `100%` by default.
 
 ```css
 #my-chart {
@@ -57,8 +57,6 @@ The simplest wrapper element customization is to set the height and width of you
 }
 ```
 
-(*) Media queries can be used to set different dimensions for different screen sizes.
-
 In addition you can add any CSS, for example you can add your brand logo in the background.
 
 ```css
@@ -67,5 +65,31 @@ In addition you can add any CSS, for example you can add your brand logo in the 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100px 100px;
+}
+```
+
+## Responsive Wrapper
+
+Media queries can be used to set different dimensions for different screen sizes.
+
+```css
+#my-chart {
+  height: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  #my-chart {
+    height: 400px;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #my-chart {
+    height: 500px;
+    max-width: 1000px;
+  }
 }
 ```

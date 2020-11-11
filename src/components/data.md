@@ -109,7 +109,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 </style>
 <table class="charts-css column" id="data-example-2">
 
-  <caption> Data Example #3 - Front End Developer Salary </caption>
+  <caption> Data Example #2 - Front End Developer Salary </caption>
 
   <tbody>
     <tr>
@@ -174,7 +174,7 @@ Now, let's remove the raw data and see what happens.
 </style>
 <table class="charts-css column" id="data-example-3">
 
-  <caption> Data Example #4 - Front End Developer Salary </caption>
+  <caption> Data Example #3 - Front End Developer Salary </caption>
 
   <tbody>
     <tr>
@@ -239,7 +239,7 @@ The example above presents a significant problem. The solutions is to add the da
 </style>
 <table class="charts-css column hide-data" id="data-example-4">
 
-  <caption> Data Example #5 - Front End Developer Salary </caption>
+  <caption> Data Example #4 - Front End Developer Salary </caption>
 
   <tbody>
     <tr>
@@ -302,7 +302,7 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 </style>
 <table class="charts-css column show-data-on-hover" id="data-example-5">
 
-  <caption> Data Example #6 - Front End Developer Salary </caption>
+  <caption> Data Example #5 - Front End Developer Salary </caption>
 
   <tbody>
     <tr>
@@ -319,6 +319,70 @@ Another good practice is to hide the data, and show it when hovering over it. Th
     </tr>
     <tr>
       <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</code-example>
+
+## Starting Point
+
+Some chart types require not only the `--size` variable but also the `--start` variable that indicates the starting point.
+
+
+```html{7,10,13,16,19}
+<table class="charts-css area hide-data">
+
+  <caption> Front End Developer Salary </caption>
+
+  <tbody>
+    <tr>
+      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+```
+
+<code-example>
+<style>
+#data-example-6 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+</style>
+<table class="charts-css area hide-data" id="data-example-6">
+
+  <caption> Data Example #6 - Front End Developer Salary </caption>
+
+  <tbody>
+    <tr>
+      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
     </tr>
   </tbody>
 

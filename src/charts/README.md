@@ -15,8 +15,8 @@ Before using charts, check the development status. If a chart type is already re
 |:--------------------|:--------------------------------------------------------------------|:--------------------|
 | [Bar](./bar/)       | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css bar`    |
 | [Column](./column/) | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css column` |
+| [Area](./area/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css area  ` |
 | [Line](./line/)     | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css line`   |
-| [Bubble](./bubble/) | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css bubble` |
 | [Pie](./pie/)       | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css pie`    |
 | [Donut](./donut/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css donut`  |
 | [Radar](./radar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radar`  |
@@ -50,8 +50,8 @@ The current state of supported feature:
       <th scope="col"> Feature / Class </th>
       <th scope="col"> Bar </th>
       <th scope="col"> Column </th>
+      <th scope="col"> Area </th>
       <th scope="col"> Line </th>
-      <th scope="col"> Bubble </th>
       <th scope="col"> Pie </th>
       <th scope="col"> Donut </th>
       <th scope="col"> Radar </th>
@@ -64,8 +64,8 @@ The current state of supported feature:
       <th scope="row"> <code>show-heading</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -75,8 +75,8 @@ The current state of supported feature:
       <th scope="row"> [single dataset] </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -86,7 +86,7 @@ The current state of supported feature:
       <th scope="row"> <code>multiple</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -97,8 +97,8 @@ The current state of supported feature:
       <th scope="row"> <code>hide-data</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -108,8 +108,8 @@ The current state of supported feature:
       <th scope="row"> <code>show-data-on-hover</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -119,8 +119,8 @@ The current state of supported feature:
       <th scope="row"> <code>reverse</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -130,8 +130,8 @@ The current state of supported feature:
       <th scope="row"> <code>show-labels</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -141,8 +141,8 @@ The current state of supported feature:
       <th scope="row"> <code>labels-align-start</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -152,8 +152,8 @@ The current state of supported feature:
       <th scope="row"> <code>labels-align-center</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -163,8 +163,8 @@ The current state of supported feature:
       <th scope="row"> <code>labels-align-end</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -174,8 +174,8 @@ The current state of supported feature:
       <th scope="row"> <code>show-primary-axis</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -185,8 +185,8 @@ The current state of supported feature:
       <th scope="row"> <code>show-*-secondary-axes</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -196,8 +196,8 @@ The current state of supported feature:
       <th scope="row"> <code>show-data-axes</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -207,7 +207,7 @@ The current state of supported feature:
       <th scope="row"> <code>data-spacing-*</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -229,8 +229,8 @@ The current state of supported feature:
       <th scope="row"> <code>reverse-data</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
