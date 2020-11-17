@@ -24,16 +24,15 @@ Bar chart with a regular orientation and a reverse orientation:
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="orientation-example-1">
+<template v-slot:css-code>
 #orientation-example-1 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar" id="orientation-example-1">
 
   <caption> Orientation Example #1 </caption>
@@ -69,20 +68,18 @@ Bar chart with a regular orientation and a reverse orientation:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="orientation-example-2">
+<template v-slot:css-code>
 #orientation-example-2 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar reverse" id="orientation-example-2">
 
   <caption> Orientation Example #2 </caption>
@@ -118,9 +115,8 @@ Bar chart with a regular orientation and a reverse orientation:
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -130,16 +126,15 @@ Column chart with a regular orientation and a reverse orientation:
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="orientation-example-3">
+<template v-slot:css-code>
 #orientation-example-3 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column" id="orientation-example-3">
 
   <caption> Orientation Example #3 </caption>
@@ -175,20 +170,18 @@ Column chart with a regular orientation and a reverse orientation:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="orientation-example-4">
+<template v-slot:css-code>
 #orientation-example-4 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column reverse" id="orientation-example-4">
 
   <caption> Orientation Example #4 </caption>
@@ -224,8 +217,7 @@ Column chart with a regular orientation and a reverse orientation:
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>

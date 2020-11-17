@@ -74,13 +74,14 @@ To add labels to your primary axis, use `<th>` heading tags. To mark them as a r
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="labels-example-1">
+<template v-slot:css-code>
 #labels-example-1 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data" id="labels-example-1">
 
   <caption> Labels Example #1 </caption>
@@ -144,6 +145,7 @@ To add labels to your primary axis, use `<th>` heading tags. To mark them as a r
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Show Labels
@@ -156,14 +158,15 @@ To add labels to your primary axis, use `<th>` heading tags. To mark them as a r
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="labels-example-2">
+<template v-slot:css-code>
 #labels-example-2 {
   height: 250px;
   max-width: 100%;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data show-labels" id="labels-example-2">
 
   <caption> Labels Example #2 </caption>
@@ -227,6 +230,7 @@ To add labels to your primary axis, use `<th>` heading tags. To mark them as a r
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Label Size
@@ -261,16 +265,15 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="labels-example-3">
+<template v-slot:css-code>
 #labels-example-3 {
   height: 150px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column multiple show-labels hide-data labels-align-start" id="labels-example-3">
 
   <caption> Labels Example #3 </caption>
@@ -306,20 +309,18 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="labels-example-4">
+<template v-slot:css-code>
 #labels-example-4 {
   height: 150px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column multiple show-labels hide-data labels-align-end" id="labels-example-4">
 
   <caption> Labels Example #4 </caption>
@@ -355,9 +356,8 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 

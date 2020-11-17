@@ -52,16 +52,15 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-1">
+<template v-slot:css-code>
 #axes-example-1 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-primary-axis" id="axes-example-1">
 
   <caption> Axes Example #1 </caption>
@@ -97,20 +96,18 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-2">
+<template v-slot:css-code>
 #axes-example-2 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-primary-axis reverse" id="axes-example-2">
 
   <caption> Axes Example #2 </caption>
@@ -146,9 +143,8 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -156,16 +152,15 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-3">
+<template v-slot:css-code>
 #axes-example-3 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis" id="axes-example-3">
 
   <caption> Axes Example #3 </caption>
@@ -201,20 +196,18 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-4">
+<template v-slot:css-code>
 #axes-example-4 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis reverse" id="axes-example-4">
 
   <caption> Axes Example #4 </caption>
@@ -250,9 +243,8 @@ Note that in bar chart the primary axis is horizontal while in column chart it i
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -278,16 +270,15 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-5">
+<template v-slot:css-code>
 #axes-example-5 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-primary-axis show-2-secondary-axes" id="axes-example-5">
 
   <caption> Axes Example #5 </caption>
@@ -323,20 +314,18 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-6">
+<template v-slot:css-code>
 #axes-example-6 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-primary-axis show-6-secondary-axes reverse" id="axes-example-6">
 
   <caption> Axes Example #6 </caption>
@@ -372,9 +361,8 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -382,16 +370,15 @@ If the primary axis separate the labels from the chart, the secondary axes are l
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-7">
+<template v-slot:css-code>
 #axes-example-7 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes" id="axes-example-7">
 
   <caption> Axes Example #7 </caption>
@@ -427,20 +414,18 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-8">
+<template v-slot:css-code>
 #axes-example-8 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-10-secondary-axes reverse" id="axes-example-8">
 
   <caption> Axes Example #8 </caption>
@@ -476,9 +461,8 @@ If the primary axis separate the labels from the chart, the secondary axes are l
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -504,16 +488,15 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-9">
+<template v-slot:css-code>
 #axes-example-9 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-9">
 
   <caption> Axes Example #9 </caption>
@@ -549,20 +532,18 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-10">
+<template v-slot:css-code>
 #axes-example-10 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-primary-axis show-4-secondary-axes show-data-axes reverse" id="axes-example-10">
 
   <caption> Axes Example #10 </caption>
@@ -598,9 +579,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -608,16 +588,15 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-11">
+<template v-slot:css-code>
 #axes-example-11 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="axes-example-11">
 
   <caption> Axes Example #11 </caption>
@@ -653,20 +632,18 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="axes-example-12">
+<template v-slot:css-code>
 #axes-example-12 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes reverse" id="axes-example-12">
 
   <caption> Axes Example #12 </caption>
@@ -702,9 +679,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are 
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 

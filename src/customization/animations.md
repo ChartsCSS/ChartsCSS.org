@@ -25,8 +25,8 @@ Here is a basic example where the bars are jumping every 3 seconds.
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="animations-example-1">
+<template v-slot:css-code>
 #animations-example-1 {
   height: 200px;
   max-width: 300px;
@@ -44,8 +44,9 @@ Here is a basic example where the bars are jumping every 3 seconds.
   2% { transform: translateY( -10px ); }
   4% { transform: translateY(   0px ); }
 }
-</style>
-<table class="charts-css column show-primary-axis data-spacing-6 hide-data" id="animations-example-1">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column hide-data show-labels show-primary-axis data-spacing-6" id="animations-example-1">
 
   <caption> Animation Example #1 </caption>
 
@@ -80,6 +81,7 @@ Here is a basic example where the bars are jumping every 3 seconds.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Spinning Labels
@@ -97,8 +99,8 @@ Here is another simple examples with spinning labels every 3 seconds.
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="animations-example-2">
+<template v-slot:css-code>
 #animations-example-2 {
   --labels-size: 160px;
   height: 250px;
@@ -116,8 +118,9 @@ Here is another simple examples with spinning labels every 3 seconds.
   40%  { transform: rotateX( 360deg ); }
   100% { transform: rotateX( 360deg ); }
 }
-</style>
-<table class="charts-css bar data-spacing-5 show-primary-axis show-data-axes hide-data" id="animations-example-2">
+</template>
+<template v-slot:html-code>
+<table class="charts-css bar hide-data show-labels data-spacing-5 show-primary-axis show-data-axes" id="animations-example-2">
 
   <caption> Animation Example #2 - The Richest People In America (Forbes 1918) </caption>
 
@@ -154,6 +157,7 @@ Here is another simple examples with spinning labels every 3 seconds.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Moving Bars
@@ -177,8 +181,8 @@ Another example with moving bars. Revealing themselves from the bottom.
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="animations-example-3">
+<template v-slot:css-code>
 #animations-example-3 {
   height: 200px;
   max-width: 300px;
@@ -198,8 +202,9 @@ Another example with moving bars. Revealing themselves from the bottom.
   0%  { transform: translateY( 100% ); }
   15% { transform: translateY( 0 ); }
 }
-</style>
-<table class="charts-css column data-spacing-5 show-data-axes hide-data" id="animations-example-3">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column hide-data data-spacing-5 show-data-axes" id="animations-example-3">
 
   <caption> Animation Example #3 </caption>
 
@@ -234,6 +239,7 @@ Another example with moving bars. Revealing themselves from the bottom.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Highlighting Data
@@ -264,8 +270,8 @@ A useful example to highlighting individual items with animations.
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="animations-example-4">
+<template v-slot:css-code>
 #animations-example-4 {
   height: 200px;
   max-width: 350px;
@@ -283,8 +289,9 @@ A useful example to highlighting individual items with animations.
     box-shadow: 0 0 1px 0 black, 0 0 20px 5px darkgrey;
   }
 }
-</style>
-<table class="charts-css column data-spacing-15 show-primary-axis show-data-axes" id="animations-example-4">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels data-spacing-15 show-primary-axis show-data-axes" id="animations-example-4">
 
   <caption> Animation Example #4 </caption>
 
@@ -319,4 +326,5 @@ A useful example to highlighting individual items with animations.
   </tbody>
 
 </table>
+</template>
 </code-example>

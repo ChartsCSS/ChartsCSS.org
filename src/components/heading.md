@@ -29,16 +29,15 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="heading-example-1">
+<template v-slot:css-code>
 #heading-example-1 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column" id="heading-example-1">
 
   <caption> Chart a With Hidden Heading </caption>
@@ -74,20 +73,18 @@ Semantically speaking, any content on the page should have a heading. With `<tab
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="heading-example-2">
+<template v-slot:css-code>
 #heading-example-2 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-heading" id="heading-example-2">
 
   <caption> Chart a With Visible Heading </caption>
@@ -123,9 +120,8 @@ Semantically speaking, any content on the page should have a heading. With `<tab
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -147,16 +143,15 @@ To style the heading you can use regular CSS but with very long headings you wil
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="heading-example-3">
+<template v-slot:css-code>
 #heading-example-3 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-heading" id="heading-example-3">
 
   <caption> A Very Long Chart Heading Without any Custom Styling Applied on Captions </caption>
@@ -192,14 +187,11 @@ To style the heading you can use regular CSS but with very long headings you wil
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="heading-example-4">
+<template v-slot:css-code>
 #heading-example-4 {
   height: 200px;
   max-width: 300px;
@@ -211,7 +203,8 @@ To style the heading you can use regular CSS but with very long headings you wil
   font-weight: bold;
   line-height: 1.25rem;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-heading" id="heading-example-4">
 
   <caption> A Very Long Chart Heading With Some Custom Styling Applied on Captions </caption>
@@ -247,8 +240,7 @@ To style the heading you can use regular CSS but with very long headings you wil
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>

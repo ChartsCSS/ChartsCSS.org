@@ -28,13 +28,14 @@ When using a single datasets, you can use the `.reverse-data` class to reverse t
 
 Original data:
 
-<code-example>
-<style>
+<code-example code-example-id="reverse-data-example-1">
+<template v-slot:css-code>
 #reverse-data-example-1 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels hide-data" id="reverse-data-example-1">
 
   <caption> Reverse Data Example #1 </caption>
@@ -98,17 +99,19 @@ Original data:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 Reversed data:
 
-<code-example>
-<style>
+<code-example code-example-id="reverse-data-example-2">
+<template v-slot:css-code>
 #reverse-data-example-2 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels hide-data reverse-data" id="reverse-data-example-2">
 
   <caption> Reverse Data Example #2 </caption>
@@ -172,6 +175,7 @@ Reversed data:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Reverse Datasets Order
@@ -186,14 +190,15 @@ When using a multiple datasets, you can use the `.reverse-datasets` class to rev
 
 Original:
 
-<code-example>
-<style>
-#reverse-datasets-1 {
+<code-example code-example-id="reverse-datasets-example-1">
+<template v-slot:css-code>
+#reverse-datasets-example-1 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
-<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-datasets-1">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-datasets-example-1">
 
   <caption> Reverse Datasets Example #1 </caption>
 
@@ -236,18 +241,20 @@ Original:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 Reversed datasets:
 
-<code-example>
-<style>
-#reverse-datasets-2 {
+<code-example code-example-id="reverse-datasets-example-2">
+<template v-slot:css-code>
+#reverse-datasets-example-2 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
-<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4 reverse-datasets" id="reverse-datasets-2">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4 reverse-datasets" id="reverse-datasets-example-2">
 
   <caption> Reverse Datasets Example #2 </caption>
 
@@ -290,6 +297,7 @@ Reversed datasets:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Reverse Data & Datasets Order
@@ -305,14 +313,15 @@ You can combine the two classes to reverse data order and datasets order.
 
 Original:
 
-<code-example>
-<style>
-#reverse-data-datasets-1 {
+<code-example code-example-id="reverse-data-datasets-example-1">
+<template v-slot:css-code>
+#reverse-data-datasets-example-1 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
-<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-data-datasets-1">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4" id="reverse-data-datasets-example-1">
 
   <caption> Reverse Data & Datasets Example #1 </caption>
 
@@ -355,18 +364,20 @@ Original:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 Reversed datasets:
 
-<code-example>
-<style>
-#reverse-data-datasets-2 {
+<code-example code-example-id="reverse-data-datasets-example-2">
+<template v-slot:css-code>
+#reverse-data-datasets-example-2 {
   height: 250px;
   margin: 0 auto;
 }
-</style>
-<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4 reverse-data reverse-datasets" id="reverse-data-datasets-2">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column multiple show-labels hide-data show-data-axes data-spacing-20 datasets-spacing-4 reverse-data reverse-datasets" id="reverse-data-datasets-example-2">
 
   <caption> Reverse Data & Datasets Example #2 </caption>
 
@@ -409,4 +420,5 @@ Reversed datasets:
   </tbody>
 
 </table>
+</template>
 </code-example>

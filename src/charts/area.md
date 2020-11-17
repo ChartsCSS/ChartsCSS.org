@@ -45,14 +45,15 @@ When you add data, you need to supply not only the data `--size` variable but al
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="area-example-1">
+<template v-slot:css-code>
 #area-example-1 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area hide-data" id="area-example-1">
 
   <caption> Area Example #1 </caption>
@@ -76,6 +77,7 @@ When you add data, you need to supply not only the data `--size` variable but al
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Dimensions
@@ -96,14 +98,15 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="area-example-2">
+<template v-slot:css-code>
 #area-example-2 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area" id="area-example-2">
 
   <caption> Area Example #2 </caption>
@@ -127,6 +130,7 @@ To control the chart dimensions you can use regular CSS. You can use media queri
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Orientation
@@ -139,14 +143,15 @@ You can control the chart orientation, or direction. The initial orientation is 
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="area-example-3">
+<template v-slot:css-code>
 #area-example-3 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area reverse" id="area-example-3">
 
   <caption> Area Example #3 </caption>
@@ -170,6 +175,7 @@ You can control the chart orientation, or direction. The initial orientation is 
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Heading
@@ -183,14 +189,15 @@ You can add a heading to your chart using the `<caption>` tag. By default the he
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="area-example-4">
+<template v-slot:css-code>
 #area-example-4 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area show-heading" id="area-example-4">
 
   <caption> Descriptive Chart Heading </caption>
@@ -214,6 +221,7 @@ You can add a heading to your chart using the `<caption>` tag. By default the he
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Multiple Datasets
@@ -244,14 +252,15 @@ But when using multiple datasets you should add the `.multiple` class.
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="area-example-5">
+<template v-slot:css-code>
 #area-example-5 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data" id="area-example-5">
 
   <caption> Area Example #5 </caption>
@@ -275,6 +284,7 @@ But when using multiple datasets you should add the `.multiple` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Labels
@@ -300,16 +310,15 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-6">
+<template v-slot:css-code>
 #area-example-6 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels" id="area-example-6">
 
   <caption> Area Example #6 </caption>
@@ -345,20 +354,18 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-7">
+<template v-slot:css-code>
 #area-example-7 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels reverse" id="area-example-7">
 
   <caption> Area Example #7 </caption>
@@ -394,9 +401,8 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -410,17 +416,16 @@ Some charts use long labels others use short ones. To customize the label size u
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-8">
+<template v-slot:css-code>
 #area-example-8 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
   --labels-size: 3rem;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels" id="area-example-8">
 
   <caption> Area Example #8 </caption>
@@ -456,21 +461,19 @@ Some charts use long labels others use short ones. To customize the label size u
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-9">
+<template v-slot:css-code>
 #area-example-9 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
   --labels-size: 3rem;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels reverse" id="area-example-9">
 
   <caption> Area Example #9 </caption>
@@ -506,9 +509,8 @@ Some charts use long labels others use short ones. To customize the label size u
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -529,16 +531,15 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-10">
+<template v-slot:css-code>
 #area-example-10 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels" id="area-example-10">
 
   <caption> Area Example #10 </caption>
@@ -574,20 +575,18 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-11">
+<template v-slot:css-code>
 #area-example-11 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels show-primary-axis" id="area-example-11">
 
   <caption> Area Example #11 </caption>
@@ -623,9 +622,8 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -641,16 +639,15 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-12">
+<template v-slot:css-code>
 #area-example-12 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels show-primary-axis show-4-secondary-axes" id="area-example-12">
 
   <caption> Area Example #12 </caption>
@@ -686,20 +683,18 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-13">
+<template v-slot:css-code>
 #area-example-13 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels show-primary-axis show-10-secondary-axes" id="area-example-13">
 
   <caption> Area Example #13 </caption>
@@ -735,9 +730,8 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -753,16 +747,15 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-14">
+<template v-slot:css-code>
 #area-example-14 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels show-primary-axis show-data-axes" id="area-example-14">
 
   <caption> Area Example #14 </caption>
@@ -798,20 +791,18 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-15">
+<template v-slot:css-code>
 #area-example-15 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="area-example-15">
 
   <caption> Area Example #15 </caption>
@@ -847,9 +838,8 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -869,16 +859,15 @@ To reverse thr data order use the `.reverse-data` class.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-16">
+<template v-slot:css-code>
 #area-example-16 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels" id="area-example-16">
 
   <caption> Area Example #16 </caption>
@@ -914,20 +903,18 @@ To reverse thr data order use the `.reverse-data` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="area-example-17">
+<template v-slot:css-code>
 #area-example-17 {
   height: 200px;
   max-width: 400px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area multiple hide-data show-labels reverse-data" id="area-example-17">
 
   <caption> Area Example #17 </caption>
@@ -963,8 +950,7 @@ To reverse thr data order use the `.reverse-data` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>

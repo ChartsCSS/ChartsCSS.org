@@ -36,14 +36,15 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="data-example-1">
+<template v-slot:css-code>
 #data-example-1 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column" id="data-example-1">
 
   <caption> Data Example #1 - Front End Developer Salary </caption>
@@ -67,6 +68,7 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Display Size
@@ -99,14 +101,15 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="data-example-2">
+<template v-slot:css-code>
 #data-example-2 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column" id="data-example-2">
 
   <caption> Data Example #2 - Front End Developer Salary </caption>
@@ -130,6 +133,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 **Note:** You can manually change the `--size` property for each data item. But the values have to be unit-less numbers between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
@@ -164,14 +168,15 @@ Now, let's remove the raw data and see what happens.
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="data-example-3">
+<template v-slot:css-code>
 #data-example-3 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column" id="data-example-3">
 
   <caption> Data Example #3 - Front End Developer Salary </caption>
@@ -195,6 +200,7 @@ Now, let's remove the raw data and see what happens.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 The chart displayed as expected. The problem with the example above is that screen readers see empty tables and search engines have no data to scan.
@@ -229,14 +235,15 @@ The example above presents a significant problem. The solutions is to add the da
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="data-example-4">
+<template v-slot:css-code>
 #data-example-4 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data" id="data-example-4">
 
   <caption> Data Example #4 - Front End Developer Salary </caption>
@@ -260,6 +267,7 @@ The example above presents a significant problem. The solutions is to add the da
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Show Data on Hover
@@ -292,14 +300,15 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="data-example-5">
+<template v-slot:css-code>
 #data-example-5 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-data-on-hover" id="data-example-5">
 
   <caption> Data Example #5 - Front End Developer Salary </caption>
@@ -323,6 +332,7 @@ Another good practice is to hide the data, and show it when hovering over it. Th
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Starting Point
@@ -356,14 +366,15 @@ Some chart types require not only the `--size` variable but also the `--start` v
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="data-example-6">
+<template v-slot:css-code>
 #data-example-6 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css area hide-data" id="data-example-6">
 
   <caption> Data Example #6 - Front End Developer Salary </caption>
@@ -387,6 +398,7 @@ Some chart types require not only the `--size` variable but also the `--start` v
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Size Variable 

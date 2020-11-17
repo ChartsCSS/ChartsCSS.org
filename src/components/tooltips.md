@@ -77,21 +77,19 @@ This markup will help you target the data selector for other purposes like addin
 
 A simple example of a column chart with tooltips:
 
-<code-example>
-<style>
-#tooltips-example {
-  /* Custom colors */
-  --color-1: #FEE101;
-  --color-2: #D7D7D7;
-  --color-3: #A77044;
-
-  /* Custom chart size */
+<code-example code-example-id="tooltips-example-1">
+<template v-slot:css-code>
+#tooltips-example-1 {
   height: 300px;
   max-width: 600px;
   margin: 0 auto;
+  --color-1: #FEE101;
+  --color-2: #D7D7D7;
+  --color-3: #A77044;
 }
-</style>
-<table class="charts-css column multiple show-labels show-primary-axis data-spacing-20" id="tooltips-example">
+</template>
+<template v-slot:html-code>
+<table class="charts-css column multiple show-labels show-primary-axis data-spacing-20" id="tooltips-example-1">
 
   <caption> Tooltips Example - 2016 Summer Olympics Medal Table </caption>
 
@@ -109,50 +107,51 @@ A simple example of a column chart with tooltips:
       <th scope="row"> USA </th>
       <td style="--size: calc( 46 / 50 );">
         <span class="data"> 46 <br> 🥇 </span>
-        <span class="tooltip"> 🇺🇸 United States took <br> home 46 gold medals </span>
+        <span class="tooltip"> United States took <br> home 46 gold medals </span>
       </td>
       <td style="--size: calc( 37 / 50 );">
         <span class="data"> 37 <br> 🥈 </span>
-        <span class="tooltip"> 🇺🇸 United States took <br> home 37 silver medals </span>
+        <span class="tooltip"> United States took <br> home 37 silver medals </span>
       </td>
       <td style="--size: calc( 38 / 50 );">
         <span class="data"> 38 <br> 🥉 </span>
-        <span class="tooltip"> 🇺🇸 United States took <br> home 38 bronze medals </span>
+        <span class="tooltip"> United States took <br> home 38 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> GBR </th>
       <td style="--size: calc( 27 / 50 );">
         <span class="data"> 27 </span>
-        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 27 gold medals </span>
+        <span class="tooltip"> Great Britain took <br> home 27 gold medals </span>
       </td>
       <td style="--size: calc( 23 / 50 );">
         <span class="data"> 23 </span>
-        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 23 silver medals </span>
+        <span class="tooltip"> Great Britain took <br> home 23 silver medals </span>
       </td>
       <td style="--size: calc( 17 / 50 );">
         <span class="data"> 17 </span>
-        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 17 bronze medals </span>
+        <span class="tooltip"> Great Britain took <br> home 17 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> CHN </th>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> 🇨🇳 China took home <br> 26 gold medals </span>
+        <span class="tooltip"> China took home <br> 26 gold medals </span>
       </td>
       <td style="--size: calc( 18 / 50 );">
         <span class="data"> 18 </span>
-        <span class="tooltip"> 🇨🇳 China took home <br> 18 silver medals </span>
+        <span class="tooltip"> China took home <br> 18 silver medals </span>
       </td>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> 🇨🇳 China took home <br> 26 bronze medals </span>
+        <span class="tooltip"> China took home <br> 26 bronze medals </span>
       </td>
     </tr>
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ```css
@@ -188,45 +187,45 @@ A simple example of a column chart with tooltips:
       <th scope="row"> USA </th>
       <td style="--size: calc( 46 / 50 );">
         <span class="data"> 46 <br> 🥇 </span>
-        <span class="tooltip"> 🇺🇸 United States took <br> home 46 gold medals </span>
+        <span class="tooltip"> United States took <br> home 46 gold medals </span>
       </td>
       <td style="--size: calc( 37 / 50 );">
         <span class="data"> 37 <br> 🥈 </span>
-        <span class="tooltip"> 🇺🇸 United States took <br> home 37 silver medals </span>
+        <span class="tooltip"> United States took <br> home 37 silver medals </span>
       </td>
       <td style="--size: calc( 38 / 50 );">
         <span class="data"> 38 <br> 🥉 </span>
-        <span class="tooltip"> 🇺🇸 United States took <br> home 38 bronze medals </span>
+        <span class="tooltip"> United States took <br> home 38 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> GBR </th>
       <td style="--size: calc( 27 / 50 );">
         <span class="data"> 27 </span>
-        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 27 gold medals </span>
+        <span class="tooltip"> Great Britain took <br> home 27 gold medals </span>
       </td>
       <td style="--size: calc( 23 / 50 );">
         <span class="data"> 23 </span>
-        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 23 silver medals </span>
+        <span class="tooltip"> Great Britain took <br> home 23 silver medals </span>
       </td>
       <td style="--size: calc( 17 / 50 );">
         <span class="data"> 17 </span>
-        <span class="tooltip"> 🇬🇧 Great Britain took <br> home 17 bronze medals </span>
+        <span class="tooltip"> Great Britain took <br> home 17 bronze medals </span>
       </td>
     </tr>
     <tr>
       <th scope="row"> CHN </th>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> 🇨🇳 China took home <br> 26 gold medals </span>
+        <span class="tooltip"> China took home <br> 26 gold medals </span>
       </td>
       <td style="--size: calc( 18 / 50 );">
         <span class="data"> 18 </span>
-        <span class="tooltip"> 🇨🇳 China took home <br> 18 silver medals </span>
+        <span class="tooltip"> China took home <br> 18 silver medals </span>
       </td>
       <td style="--size: calc( 26 / 50 );">
         <span class="data"> 26 </span>
-        <span class="tooltip"> 🇨🇳 China took home <br> 26 bronze medals </span>
+        <span class="tooltip"> China took home <br> 26 bronze medals </span>
       </td>
     </tr>
   </tbody>

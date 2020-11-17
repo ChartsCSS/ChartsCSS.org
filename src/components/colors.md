@@ -61,9 +61,11 @@ The framework has a set of 10 default color repeating themselves. You can overri
 
 It works well with single datasets:
 
-<code-example>
-<style>
+<code-example code-example-id="colors-example-1">
+<template v-slot:css-code>
 #colors-example-1 {
+  height: 250px;
+  margin: 0 auto;
   --color-1: rgba(230, 30, 30, 0.2);
   --color-2: rgba(230, 30, 30, 0.4);
   --color-3: rgba(230, 30, 30, 0.5);
@@ -74,11 +76,9 @@ It works well with single datasets:
   --color-8: rgba(230, 30, 30, 0.6);
   --color-9: rgba(230, 30, 30, 0.4);
   --color-10: rgba(230, 30, 30, 0.2);
-
-  height: 250px;
-  margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels hide-data" id="colors-example-1">
 
   <caption> Colors Example #1 </caption>
@@ -134,13 +134,16 @@ It works well with single datasets:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 And with multiple datasets:
 
-<code-example>
-<style>
+<code-example code-example-id="colors-example-2">
+<template v-slot:css-code>
 #colors-example-2 {
+  height: 250px;
+  margin: 0 auto;
   --color-1: rgba(230, 30, 30, 0.2);
   --color-2: rgba(230, 30, 30, 0.4);
   --color-3: rgba(230, 30, 30, 0.5);
@@ -151,11 +154,9 @@ And with multiple datasets:
   --color-8: rgba(230, 30, 30, 0.6);
   --color-9: rgba(230, 30, 30, 0.4);
   --color-10: rgba(230, 30, 30, 0.2);
-
-  height: 250px;
-  margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-2">
 
   <caption> Colors Example #2 </caption>
@@ -197,6 +198,7 @@ And with multiple datasets:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Custom Colors System
@@ -229,8 +231,8 @@ For more advanced use-cases there is an option to replace the current color syst
 
 Three repeating colors in a single datasets table:
 
-<code-example>
-<style>
+<code-example code-example-id="colors-example-3">
+<template v-slot:css-code>
 #colors-example-3 {
   height: 250px;
   margin: 0 auto;
@@ -244,7 +246,8 @@ Three repeating colors in a single datasets table:
 #colors-example-3.charts-css:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
   background-color: #82beff;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels hide-data" id="colors-example-3">
 
   <caption> Colors Example #3 </caption>
@@ -308,12 +311,13 @@ Three repeating colors in a single datasets table:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 Three repeating colors in a multiple datasets table:
 
-<code-example>
-<style>
+<code-example code-example-id="colors-example-4">
+<template v-slot:css-code>
 #colors-example-4 {
   height: 250px;
   margin: 0 auto;
@@ -327,7 +331,8 @@ Three repeating colors in a multiple datasets table:
 #colors-example-4.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
   background-color: #82beff;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-4">
 
   <caption> Colors Example #4 </caption>
@@ -369,6 +374,7 @@ Three repeating colors in a multiple datasets table:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Images and Gradients
@@ -381,14 +387,15 @@ You can set background images and gradients on any CSS variables mentioned above
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="colors-example-5">
+<template v-slot:css-code>
 #colors-example-5 {
   height: 250px;
   margin: 0 auto;
   --color: linear-gradient(red, yellow);
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels hide-data" id="colors-example-5">
 
   <caption> Colors Example #5 </caption>
@@ -452,4 +459,5 @@ You can set background images and gradients on any CSS variables mentioned above
   </tbody>
 
 </table>
+</template>
 </code-example>

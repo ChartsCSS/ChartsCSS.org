@@ -29,8 +29,8 @@ To make the bars look like 3D bars is pretty simple. It can be done using CSS `b
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="effect-example-1">
+<template v-slot:css-code>
 #effect-example-1 {
   height: 200px;
   max-width: 300px;
@@ -51,7 +51,8 @@ To make the bars look like 3D bars is pretty simple. It can be done using CSS `b
     9px -9px 1px lightgrey,
     10px -10px 1px lightgrey;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data show-data-axes" id="effect-example-1">
 
   <caption> 3D Effect Example #1 </caption>
@@ -87,6 +88,7 @@ To make the bars look like 3D bars is pretty simple. It can be done using CSS `b
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 Or using `:before` and `:after` psedo-elements with `skew` property.
@@ -120,8 +122,8 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="effect-example-2">
+<template v-slot:css-code>
 #effect-example-2 {
   height: 200px;
   max-width: 300px;
@@ -153,7 +155,8 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
   transform-origin: top;
   background-color: lightgrey;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data show-data-axes" id="effect-example-2">
 
   <caption> 3D Effect Example #2 </caption>
@@ -189,6 +192,7 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## 3D Cylinders
@@ -207,8 +211,8 @@ To make the bars look like 3D cylinders yuo can use the `border-radius` property
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="effect-example-3">
+<template v-slot:css-code>
 #effect-example-3 {
   height: 200px;
   max-width: 300px;
@@ -223,7 +227,8 @@ To make the bars look like 3D cylinders yuo can use the `border-radius` property
     radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
     linear-gradient(grey, darkgrey, lightgrey);
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data show-data-axes" id="effect-example-3">
 
   <caption> 3D Effect Example #3 </caption>
@@ -259,6 +264,7 @@ To make the bars look like 3D cylinders yuo can use the `border-radius` property
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Tilt Chart
@@ -287,8 +293,8 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="effect-example-4">
+<template v-slot:css-code>
 #effect-example-4 {
   height: 200px;
   max-width: 300px;
@@ -310,7 +316,8 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
     9px -9px 1px lightgrey,
     10px -10px 1px lightgrey;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-data-axes" id="effect-example-4">
 
   <caption> 3D Effect Example #4 </caption>
@@ -346,6 +353,7 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 Or tilting the other way the cylinder bars with a nice linear gradient and some shades:
@@ -368,8 +376,8 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="effect-example-5">
+<template v-slot:css-code>
 #effect-example-5 {
   height: 200px;
   max-width: 300px;
@@ -386,7 +394,8 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
     linear-gradient(grey, darkgrey, lightgrey);
   box-shadow: 2px  2px 5px grey;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column hide-data show-data-axes" id="effect-example-5">
 
   <caption> 3D Effect Example #5 </caption>
@@ -422,6 +431,7 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Chart Reflection
@@ -446,8 +456,8 @@ We can also use the webkit reflect effect to highlight the chart
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="effect-example-6">
+<template v-slot:css-code>
 #effect-example-6 {
   height: 200px;
   max-width: 300px;
@@ -464,7 +474,8 @@ We can also use the webkit reflect effect to highlight the chart
       to( rgba( 255, 255, 255, 0.25 ) )
   );
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column labels-hide show-data-axes" id="effect-example-6">
 
   <caption> 3D Effect Example #6 </caption>
@@ -500,4 +511,5 @@ We can also use the webkit reflect effect to highlight the chart
   </tbody>
 
 </table>
+</template>
 </code-example>

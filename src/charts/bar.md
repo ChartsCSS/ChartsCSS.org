@@ -35,14 +35,15 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="bar-example-1">
+<template v-slot:css-code>
 #bar-example-1 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar" id="bar-example-1">
 
   <caption> Bar Example #1 </caption>
@@ -66,6 +67,7 @@ To control the chart dimensions you can use regular CSS. You can use media queri
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Orientation
@@ -78,14 +80,15 @@ You can control the chart orientation, or direction. The initial orientation dep
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="bar-example-2">
+<template v-slot:css-code>
 #bar-example-2 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar reverse" id="bar-example-2">
 
   <caption> Bar Example #2 </caption>
@@ -109,6 +112,7 @@ You can control the chart orientation, or direction. The initial orientation dep
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Heading
@@ -122,14 +126,15 @@ You can add a heading to your chart using the `<caption>` tag. By default the he
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="bar-example-3">
+<template v-slot:css-code>
 #bar-example-3 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-heading" id="bar-example-3">
 
   <caption> Descriptive Chart Heading </caption>
@@ -153,6 +158,7 @@ You can add a heading to your chart using the `<caption>` tag. By default the he
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Multiple Datasets
@@ -185,16 +191,15 @@ But when using multiple datasets you should add the `.multiple` class.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-4">
+<template v-slot:css-code>
 #bar-example-4 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar" id="bar-example-4">
 
   <caption> Bar Example #4 </caption>
@@ -218,20 +223,18 @@ But when using multiple datasets you should add the `.multiple` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-5">
+<template v-slot:css-code>
 #bar-example-5 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar multiple data-spacing-3" id="bar-example-5">
 
   <caption> Bar Example #5 </caption>
@@ -254,9 +257,8 @@ But when using multiple datasets you should add the `.multiple` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -283,16 +285,15 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-6">
+<template v-slot:css-code>
 #bar-example-6 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels" id="bar-example-6">
 
   <caption> Bar Example #6 </caption>
@@ -328,20 +329,18 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-7">
+<template v-slot:css-code>
 #bar-example-7 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels reverse" id="bar-example-7">
 
   <caption> Bar Example #7 </caption>
@@ -377,9 +376,8 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -393,17 +391,16 @@ Some charts use long labels others use short ones. To customize the label size u
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-8">
+<template v-slot:css-code>
 #bar-example-8 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
   --labels-size: 50px;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels" id="bar-example-8">
 
   <caption> Bar Example #8 </caption>
@@ -439,21 +436,19 @@ Some charts use long labels others use short ones. To customize the label size u
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-9">
+<template v-slot:css-code>
 #bar-example-9 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
   --labels-size: 50px;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels reverse" id="bar-example-9">
 
   <caption> Bar Example #9 </caption>
@@ -489,9 +484,8 @@ Some charts use long labels others use short ones. To customize the label size u
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -511,16 +505,15 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-10">
+<template v-slot:css-code>
 #bar-example-10 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels" id="bar-example-10">
 
   <caption> Bar Example #10 </caption>
@@ -556,20 +549,18 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-11">
+<template v-slot:css-code>
 #bar-example-11 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis" id="bar-example-11">
 
   <caption> Bar Example #11 </caption>
@@ -605,9 +596,8 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -623,16 +613,15 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-12">
+<template v-slot:css-code>
 #bar-example-12 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes" id="bar-example-12">
 
   <caption> Bar Example #12 </caption>
@@ -668,20 +657,18 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-13">
+<template v-slot:css-code>
 #bar-example-13 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-10-secondary-axes" id="bar-example-13">
 
   <caption> Bar Example #13 </caption>
@@ -717,9 +704,8 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -735,16 +721,15 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-14">
+<template v-slot:css-code>
 #bar-example-14 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-data-axes" id="bar-example-14">
 
   <caption> Bar Example #14 </caption>
@@ -780,20 +765,18 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-15">
+<template v-slot:css-code>
 #bar-example-15 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="bar-example-15">
 
   <caption> Bar Example #15 </caption>
@@ -829,9 +812,8 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -851,16 +833,15 @@ To add spacing between data items use the `.data-spacing-*` class.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-16">
+<template v-slot:css-code>
 #bar-example-16 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-data-axes" id="bar-example-16">
 
   <caption> Bar Example #16 </caption>
@@ -896,20 +877,18 @@ To add spacing between data items use the `.data-spacing-*` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-17">
+<template v-slot:css-code>
 #bar-example-17 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-primary-axis show-data-axes data-spacing-10" id="bar-example-17">
 
   <caption> Bar Example #17 </caption>
@@ -945,9 +924,8 @@ To add spacing between data items use the `.data-spacing-*` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -963,16 +941,15 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-18">
+<template v-slot:css-code>
 #bar-example-18 {
   height: 400px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels multiple show-primary-axis show-data-axes" id="bar-example-18">
 
   <caption> Bar Example #18 </caption>
@@ -1008,20 +985,18 @@ To add spacing between data items use the `.datasets-spacing-*` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-19">
+<template v-slot:css-code>
 #bar-example-19 {
   height: 400px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels multiple show-primary-axis show-data-axes datasets-spacing-10" id="bar-example-19">
 
   <caption> Bar Example #19 </caption>
@@ -1057,9 +1032,8 @@ To add spacing between data items use the `.datasets-spacing-*` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -1079,16 +1053,15 @@ To reverse thr data order use the `.reverse-data` class.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-20">
+<template v-slot:css-code>
 #bar-example-20 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels" id="bar-example-20">
 
   <caption> Bar Example #20 </caption>
@@ -1124,20 +1097,18 @@ To reverse thr data order use the `.reverse-data` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-21">
+<template v-slot:css-code>
 #bar-example-21 {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels reverse-data" id="bar-example-21">
 
   <caption> Bar Example #21 </caption>
@@ -1173,9 +1144,8 @@ To reverse thr data order use the `.reverse-data` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -1191,16 +1161,15 @@ To reverse datasets order use the `.reverse-datasets` class.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-22">
+<template v-slot:css-code>
 #bar-example-22 {
   height: 400px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes" id="bar-example-22">
 
   <caption> Bar Example #22 </caption>
@@ -1236,20 +1205,18 @@ To reverse datasets order use the `.reverse-datasets` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-23">
+<template v-slot:css-code>
 #bar-example-23 {
   height: 400px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="bar-example-23">
 
   <caption> Bar Example #23 </caption>
@@ -1285,9 +1252,8 @@ To reverse datasets order use the `.reverse-datasets` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>
 
@@ -1303,16 +1269,15 @@ You can combine the two classes to reverse data order and datasets order.
 
 <v-row>
 
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-24">
+<template v-slot:css-code>
 #bar-example-24 {
   height: 400px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes" id="bar-example-24">
 
   <caption> Bar Example #24 </caption>
@@ -1348,20 +1313,18 @@ You can combine the two classes to reverse data order and datasets order.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-</v-col>
-
-<v-col>
-
-<code-example>
-<style>
+<code-example code-example-id="bar-example-25">
+<template v-slot:css-code>
 #bar-example-25 {
   height: 400px;
   max-width: 300px;
   margin: 0 auto;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets" id="bar-example-25">
 
   <caption> Bar Example #25 </caption>
@@ -1397,8 +1360,7 @@ You can combine the two classes to reverse data order and datasets order.
   </tbody>
 
 </table>
+</template>
 </code-example>
-
-</v-col>
 
 </v-row>

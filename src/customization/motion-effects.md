@@ -21,8 +21,8 @@ A simple background color change when the user hovers over data items:
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="motion-effect-example-1">
+<template v-slot:css-code>
 #motion-effect-example-1 {
   height: 200px;
   max-width: 300px;
@@ -34,7 +34,8 @@ A simple background color change when the user hovers over data items:
 #motion-effect-example-1 tr:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-5 hide-data" id="motion-effect-example-1">
 
   <caption> Motion Effect Example #1 </caption>
@@ -70,6 +71,7 @@ A simple background color change when the user hovers over data items:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Dataset Opacity Effect
@@ -86,8 +88,8 @@ Reverse opacity effect when hovering over datasets:
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="motion-effect-example-2">
+<template v-slot:css-code>
 #motion-effect-example-2 {
   height: 200px;
   max-width: 500px;
@@ -100,7 +102,8 @@ Reverse opacity effect when hovering over datasets:
 #motion-effect-example-2 td:hover {
   opacity: 1;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column multiple show-primary-axis show-data-axes data-spacing-20 hide-data" id="motion-effect-example-2">
 
   <caption> Motion Effect Example #2 </caption>
@@ -136,6 +139,7 @@ Reverse opacity effect when hovering over datasets:
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Scale Data
@@ -152,8 +156,8 @@ You can scale the data when hovering over the chart.
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="motion-effect-example-3">
+<template v-slot:css-code>
 #motion-effect-example-3 {
   height: 200px;
   max-width: 300px;
@@ -166,7 +170,8 @@ You can scale the data when hovering over the chart.
 #motion-effect-example-3 td:hover .data {
   transform: scale(1);
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-5" id="motion-effect-example-3">
 
   <caption> Motion Effect Example #3 </caption>
@@ -202,6 +207,7 @@ You can scale the data when hovering over the chart.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Grayscale Chart
@@ -219,8 +225,8 @@ My favorite effect is the grayscale effect. The chart becomes colorful only when
 }
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="motion-effect-example-4">
+<template v-slot:css-code>
 #motion-effect-example-4 {
   height: 200px;
   max-width: 300px;
@@ -231,7 +237,8 @@ My favorite effect is the grayscale effect. The chart becomes colorful only when
 #motion-effect-example-4:hover {
   filter: none;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-10 hide-data" id="motion-effect-example-4">
 
   <caption> Motion Effect Example #4 </caption>
@@ -267,4 +274,5 @@ My favorite effect is the grayscale effect. The chart becomes colorful only when
   </tbody>
 
 </table>
+</template>
 </code-example>

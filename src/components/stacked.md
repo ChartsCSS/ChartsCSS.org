@@ -18,8 +18,8 @@ The Change display to stacked view simply use the `.stacked` class.
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="stacked-example-1">
+<template v-slot:css-code>
 #stacked-example-1 {
   height: 150px;
   margin: 0 auto;
@@ -27,7 +27,8 @@ The Change display to stacked view simply use the `.stacked` class.
   --color-2: rgba(255, 150, 0, 0.5);
   --color-3: rgba(255, 50, 50, 0.5);
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css bar show-labels show-data-on-hover show-primary-axis show-10-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-1">
 
   <caption> Stacked Example #1 </caption>
@@ -63,10 +64,11 @@ The Change display to stacked view simply use the `.stacked` class.
   </tbody>
 
 </table>
+</template>
 </code-example>
 
-<code-example>
-<style>
+<code-example code-example-id="stacked-example-2">
+<template v-slot:css-code>
 #stacked-example-2 {
   height: 250px;
   width: 250px;
@@ -75,7 +77,8 @@ The Change display to stacked view simply use the `.stacked` class.
   --color-2: rgba(255, 150, 0, 0.5);
   --color-3: rgba(255, 50, 50, 0.5);
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels show-data-on-hover show-primary-axis show-4-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-2">
 
   <caption> Stacked Example #2 </caption>
@@ -111,4 +114,5 @@ The Change display to stacked view simply use the `.stacked` class.
   </tbody>
 
 </table>
+</template>
 </code-example>

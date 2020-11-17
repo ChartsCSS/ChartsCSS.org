@@ -37,12 +37,13 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="datasets-example-1">
+<template v-slot:css-code>
 #datasets-example-1 {
   height: 300px;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels" id="datasets-example-1">
 
   <caption> Datasets Example #1 - Historical Human Population by Continent </caption>
@@ -67,6 +68,7 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
   </tbody>
 
 </table>
+</template>
 </code-example>
 
 ## Datasets Colors
@@ -81,12 +83,13 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 </table>
 ```
 
-<code-example>
-<style>
+<code-example code-example-id="datasets-example-2">
+<template v-slot:css-code>
 #datasets-example-2 {
   height: 300px;
 }
-</style>
+</template>
+<template v-slot:html-code>
 <table class="charts-css column show-labels multiple" id="datasets-example-2">
 
   <caption> Datasets Example #2 - Historical Human Population by Continent </caption>
@@ -111,4 +114,5 @@ On charts with multiple datasets you should add the `.multiple` class to make th
   </tbody>
 
 </table>
+</template>
 </code-example>
