@@ -65,18 +65,18 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> [single dataset] </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -87,7 +87,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -98,7 +98,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -109,7 +109,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -120,7 +120,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -131,7 +131,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -142,7 +142,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -153,7 +153,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -164,7 +164,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -175,7 +175,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -186,7 +186,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -197,7 +197,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -208,7 +208,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
@@ -230,7 +230,7 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>

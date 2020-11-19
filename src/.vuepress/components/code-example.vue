@@ -74,9 +74,9 @@ export default {
     codePenData() {
       let data = {
         "title": "Charts.css Example",
-        "tags": ["charts.css"],
+        "tags": ["charts.css", "charts", "chart"],
         "css_external": "https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css",
-        "editors": "",
+        "editors": "110",
         "html": this.html,
         "css": this.css,
         "turn_off_js": "true"
@@ -90,8 +90,7 @@ export default {
 <style>
 .code-example {
   margin: 0 auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
   flex: 1 1 0;
 }
 .code-example:focus > .open-in,

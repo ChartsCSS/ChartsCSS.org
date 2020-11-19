@@ -20,7 +20,6 @@ To visualize your data with an area chart, the main `.charts-css` class should b
 
 When you add data, you need to supply not only the data `--size` variable but also the `--start` variable that indicates the starting point.
 
-
 ```html
 <table class="charts-css area" id="my-chart">
 
@@ -513,7 +512,6 @@ Some charts use long labels others use short ones. To customize the label size u
 </code-example>
 
 </v-row>
-
 
 ## Axes
 

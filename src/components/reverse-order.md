@@ -367,7 +367,7 @@ Original:
 </template>
 </code-example>
 
-Reversed datasets:
+Reversed data & datasets:
 
 <code-example code-example-id="reverse-data-datasets-example-2">
 <template v-slot:css-code>

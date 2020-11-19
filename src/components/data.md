@@ -274,7 +274,7 @@ The example above presents a significant problem. The solutions is to add the da
 
 Another good practice is to hide the data, and show it when hovering over it. This is done using the `.show-data-on-hover` class.
 
-```html{7,10,13,16,19}
+```html{1,7,10,13,16,19}
 <table class="charts-css column show-data-on-hover">
 
   <caption> Front End Developer Salary </caption>

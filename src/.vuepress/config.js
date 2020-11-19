@@ -13,7 +13,7 @@ module.exports = {
   description: description,
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@0.7.0/dist/charts.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@0.8.2/dist/charts.min.css' }],
     ['link', { rel: 'icon', href: '/assets/img/logo.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['link', { rel: 'mask-icon', href: '/assets/img/logo.png', color: '#f57' }],
