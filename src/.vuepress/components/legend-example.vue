@@ -30,6 +30,7 @@ export default {
 .legend-example {
     display: flex;
     gap: 20px;
+    padding: 2rem 0;
 }
 .legend-example > * {
     flex: 1 1 0;
@@ -49,7 +50,7 @@ export default {
     background-image: url(/assets/img/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 30% 30%;
-    filter: grayscale(1) opacity(0.1);
+    background-size: 20%;
+    filter: grayscale(1) opacity(0.5);
 }
 </style>

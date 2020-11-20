@@ -18,11 +18,13 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend">
   <li> Label 1 </li>
   <li> Label 2 </li>
   <li> Label 3 </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -33,11 +35,13 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-inline</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-inline">
   <li> Label 1 </li>
   <li> Label 2 </li>
   <li> Label 3 </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -54,6 +58,7 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-circle</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-circle">
   <li> Red </li>
   <li> Orange </li>
@@ -66,6 +71,7 @@ pageClass: example-page
   <li> Tan </li>
   <li> Brown </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -76,6 +82,7 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-ellipse</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-ellipse">
   <li> Red </li>
   <li> Orange </li>
@@ -88,6 +95,7 @@ pageClass: example-page
   <li> Tan </li>
   <li> Brown </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -104,6 +112,7 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-square</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-square">
   <li> Red </li>
   <li> Orange </li>
@@ -116,6 +125,7 @@ pageClass: example-page
   <li> Tan </li>
   <li> Brown </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -126,6 +136,7 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-rectangle</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-rectangle">
   <li> Red </li>
   <li> Orange </li>
@@ -138,6 +149,7 @@ pageClass: example-page
   <li> Tan </li>
   <li> Brown </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -154,6 +166,7 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-rhombus</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-rhombus">
   <li> Red </li>
   <li> Orange </li>
@@ -166,6 +179,7 @@ pageClass: example-page
   <li> Tan </li>
   <li> Brown </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
@@ -176,6 +190,7 @@ pageClass: example-page
 <p style="text-align: center"> <code>charts-css legend legend-line</code> </p>
 
 <code-example>
+<template v-slot:html-code>
 <ul class="charts-css legend legend-line">
   <li> Red </li>
   <li> Orange </li>
@@ -188,6 +203,7 @@ pageClass: example-page
   <li> Tan </li>
   <li> Brown </li>
 </ul>
+</template>
 </code-example>
 
 </v-col>
