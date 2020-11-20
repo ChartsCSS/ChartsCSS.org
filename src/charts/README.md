@@ -16,7 +16,7 @@ Before using charts, check the development status. If a chart type is already re
 | [Bar](./bar/)       | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css bar`    |
 | [Column](./column/) | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css column` |
 | [Area](./area/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css area  ` |
-| [Line](./line/)     | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css line`   |
+| [Line](./line/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css line`   |
 | [Pie](./pie/)       | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css pie`    |
 | [Donut](./donut/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css donut`  |
 | [Radar](./radar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radar`  |
