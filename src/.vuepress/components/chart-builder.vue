@@ -16,7 +16,7 @@
             <input type="range" disabled :min="control.min" :max="control.max" :step="control.step" :value="helper[control.id]" @click.prevent="toggleUserData(idx, control)" />
           </label>
 
-          <button v-if="control.type==='button'" @click.prevent="toggleUserData(idx, control)" :class="{ pressed: userData[idx].includes(control.id) }">
+          <button v-if="control.type==='button'" @click.prevent="toggleUserData(idx, control)" :class="{ pressed: userData[idx].includes(control.id) }" :disabled="control.disabled">
             {{control.label}}
           </button>
 
@@ -54,29 +54,30 @@
       <tbody>
         <tr>
           <th scope="row"> 2000 </th>
-          <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
-          <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-          <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
-          <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
-          <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+          <td style="--start: 0.4; --size: 0.2;"> <span class="data"> 20 </span> </td>
+          <td style="--start: 0.3; --size: 0.5;"> <span class="data"> 50 </span> </td>
+          <td style="--start: 0.2; --size: 1.0;"> <span class="data"> 100 </span> </td>
+          <td style="--start: 0.1; --size: 0.7;"> <span class="data"> 70 </span> </td>
+          <td style="--start: 0.0; --size: 0.4;"> <span class="data"> 40 </span> </td>
         </tr>
         <tr>
           <th scope="row"> 2010 </th>
-          <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-          <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-          <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-          <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
-          <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+          <td style="--start: 0.2; --size: 0.9;"> <span class="data"> 90 </span> </td>
+          <td style="--start: 0.5; --size: 0.6;"> <span class="data"> 60 </span> </td>
+          <td style="--start: 1.0; --size: 0.4;"> <span class="data"> 40 </span> </td>
+          <td style="--start: 0.7; --size: 0.3;"> <span class="data"> 30 </span> </td>
+          <td style="--start: 0.4; --size: 0.2;"> <span class="data"> 20 </span> </td>
         </tr>
         <tr>
           <th scope="row"> 2020 </th>
-          <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
-          <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-          <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-          <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-          <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+          <td style="--start: 0.9; --size: 0.2;"> <span class="data"> 20 </span> </td>
+          <td style="--start: 0.6; --size: 0.4;"> <span class="data"> 40 </span> </td>
+          <td style="--start: 0.4; --size: 0.6;"> <span class="data"> 60 </span> </td>
+          <td style="--start: 0.3; --size: 0.1;"> <span class="data"> 10 </span> </td>
+          <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
         </tr>
       </tbody>
+
     </table>
 
     <table :class="chartClass" v-if="! isMultiple">
@@ -93,51 +94,51 @@
       <tbody>
         <tr>
           <th scope="row"> Jan </th>
-          <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+          <td style="--start: 0.0; --size: 0.3;"> <span class="data"> 30 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Feb </th>
-          <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+          <td style="--start: 0.3; --size: 0.5;"> <span class="data"> 50 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Mar </th>
-          <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+          <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Apr </th>
-          <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+          <td style="--start: 0.8; --size: 1.0;"> <span class="data"> 100 </span> </td>
         </tr>
         <tr>
           <th scope="row"> May </th>
-          <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+          <td style="--start: 1.0; --size: 0.65;"> <span class="data"> 65 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Jun </th>
-          <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+          <td style="--start: 0.65; --size: 0.45;"> <span class="data"> 45 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Jul </th>
-          <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+          <td style="--start: 0.45; --size: 0.15;"> <span class="data"> 15 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Aug </th>
-          <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+          <td style="--start: 0.15; --size: 0.32;"> <span class="data"> 32 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Sep </th>
-          <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+          <td style="--start: 0.32; --size: 0.6;"> <span class="data"> 60 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Oct </th>
-          <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+          <td style="--start: 0.6; --size: 0.9;"> <span class="data"> 90 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Nov </th>
-          <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+          <td style="--start: 0.9; --size: 0.55;"> <span class="data"> 55 </span> </td>
         </tr>
         <tr>
           <th scope="row"> Dec </th>
-          <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+          <td style="--start: 0.55; --size: 0.4;"> <span class="data"> 40 </span> </td>
         </tr>
       </tbody>
 
@@ -147,7 +148,7 @@
 
 <script>
 export default {
-  name: 'SwitchCharts',
+  name: 'ChartBuilder',
   data() {
     return {
       chartControls: {
@@ -158,10 +159,10 @@ export default {
           { id: 'column', label: 'Column', type: 'button' },
           { id: 'area', label: 'Area', type: 'button' },
           { id: 'line', label: 'Line', type: 'button' },
-          { id: 'pie', label: 'Pie', type: 'button' },
-          { id: 'donut', label: 'Donut', type: 'button' },
-          { id: 'radar', label: 'Radar', type: 'button' },
-          { id: 'polar', label: 'Polar', type: 'button' },
+          { id: 'pie', label: 'Pie', type: 'button', disabled: 'disabled' },
+          { id: 'donut', label: 'Donut', type: 'button', disabled: 'disabled' },
+          { id: 'radar', label: 'Radar', type: 'button', disabled: 'disabled' },
+          { id: 'polar', label: 'Polar', type: 'button', disabled: 'disabled' },
         ],
         datasets: [
           { id: '', label: 'Datasets', type: 'legend' },
@@ -178,6 +179,11 @@ export default {
         labels: [
           { id: '', label: 'Labels', type: 'legend' },
           { id: 'show-labels', label: 'Show Labels', type: 'button' },
+        ],
+        data: [
+          { id: '', label: 'Data', type: 'legend' },
+          { id: 'hide-data', label: 'Hide Data', type: 'button' },
+          { id: 'show-data-on-hover', label: 'Show Data on Hover', type: 'button' },
         ],
         reverseOrder: [
           { id: '', label: 'Reverse Order', type: 'legend' },
@@ -206,6 +212,7 @@ export default {
         orientation: [],
         labels: [],
         axes: [],
+        data: [],
         reverseOrder: [],
         spacing: [],
       },
@@ -226,6 +233,7 @@ export default {
         : 'charts-css ' + this.userData.chartType;
       const multiple = this.userData.datasets ? ' ' + this.userData.datasets.join(' ') : '';
       const heading = this.userData.heading ? ' ' + this.userData.heading.join(' ') : '';
+      const data = this.userData.data ? ' ' + this.userData.data.join(' ') : '';
       const reverseOrder = this.userData.reverseOrder ? ' ' + this.userData.reverseOrder.join(' ') : '';
       const orientation = this.userData.orientation ? ' ' + this.userData.orientation.join(' ') : '';
       const labels = this.userData.labels ? ' ' + this.userData.labels.join(' ') : '';
@@ -233,7 +241,7 @@ export default {
       const dataSpacing = ( this.userData.spacing.dataSpacing > 0 ) ? ` data-spacing-${this.userData.spacing.dataSpacing}` : '';
       const datasetsSpacing = ( this.userData.spacing.datasetsSpacing > 0 ) ? ` datasets-spacing-${this.userData.spacing.datasetsSpacing}` : '';
 
-      return `${type} ${multiple} ${heading} ${reverseOrder} ${orientation} ${labels} ${axes} ${dataSpacing} ${datasetsSpacing}`.trim();
+      return `${type} ${multiple} ${heading} ${data} ${reverseOrder} ${orientation} ${labels} ${axes} ${dataSpacing} ${datasetsSpacing}`.trim();
     }
   },
   watch: {
@@ -290,8 +298,8 @@ export default {
   grid-template-areas:
     "chart-types multiple    heading"
     "chart-types orientation labels"
-    "chart-types order       axes"
-    "chart-types axes2       axes2"
+    "chart-types data        order"
+    "chart-types axes        axes2"
     "chart-types spacing     spacing";
   padding: 1rem;
   border: 1px solid lightgrey;
@@ -301,10 +309,11 @@ export default {
 .chart-builder .controls fieldset:nth-of-type(3) { grid-area: heading; }
 .chart-builder .controls fieldset:nth-of-type(4) { grid-area: orientation; }
 .chart-builder .controls fieldset:nth-of-type(5) { grid-area: labels; }
-.chart-builder .controls fieldset:nth-of-type(6) { grid-area: order; }
-.chart-builder .controls fieldset:nth-of-type(7) { grid-area: axes; }
-.chart-builder .controls fieldset:nth-of-type(8) { grid-area: axes2; }
-.chart-builder .controls fieldset:nth-of-type(9) { grid-area: spacing; }
+.chart-builder .controls fieldset:nth-of-type(6) { grid-area: data; }
+.chart-builder .controls fieldset:nth-of-type(7) { grid-area: order; }
+.chart-builder .controls fieldset:nth-of-type(8) { grid-area: axes; }
+.chart-builder .controls fieldset:nth-of-type(9) { grid-area: axes2; }
+.chart-builder .controls fieldset:nth-of-type(10) { grid-area: spacing; }
 .chart-builder .controls fieldset {
   display: flex;
   justify-content: center;
@@ -312,6 +321,7 @@ export default {
   gap: 10px;
   margin: 0;
   border: 1px solid lightgrey;
+  padding: 5px 5px 15px;
 }
 .chart-builder .controls fieldset:first-of-type {
   flex-direction: column;
@@ -332,7 +342,8 @@ export default {
   transition-duration: 0.3s;
   cursor: pointer;
 }
-.chart-builder .controls button:hover {
+.chart-builder .controls button:hover,
+.chart-builder .controls button:focus {
   background-color: #d57;
   box-shadow: 0 4px 4px #666;
 }
@@ -341,6 +352,16 @@ export default {
   background-color: #a13;
   box-shadow: 0 3px 3px #666;
   transform: translateY(3px);
+}
+.chart-builder .controls button[disabled] {
+  color: #999;
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.chart-builder .controls button[disabled]:hover,
+.chart-builder .controls button[disabled]:focus {
+  background-color: #ccc;
+  box-shadow: 0 4px 4px #999;
 }
 .chart-builder .controls input[type="range"] {
   -webkit-appearance: none;
@@ -372,6 +393,7 @@ export default {
 }
 .chart-builder table {
   margin: 0 auto;
+  height: 250px;
 }
 .chart-builder table.charts-css.bar {
   width: 100%;
