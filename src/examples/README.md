@@ -21,12 +21,6 @@ Examples of different layouts for each chart type:
 * ~~[Radar Chart Examples](/examples/radar/)~~
 * ~~[Polar Chart Examples](/examples/polar/)~~
 
-<!--
-## Components Examples
-
-* [Legend Examples](/examples/legend/)
--->
-
 ## Tools
 
 * [Chart Builder](/examples/chart-builder/)
