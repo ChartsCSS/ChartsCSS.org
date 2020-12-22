@@ -18,19 +18,19 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
   <tbody>
     <tr>
       <th scope="row"> Europe </th>
-      <td style="--size: 0.15;"> <span class="data"> 40m </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 90m </span> </td>
-      <td style="--size: 0.24;"> <span class="data"> 111m </span> </td>
-      <td style="--size: 0.26;"> <span class="data"> 126m </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 800m </span> </td>
+      <td style="--size: 0.15;"> <span class="data">  40M <br> <small> (1000 CE) </small> </span> </td>
+      <td style="--size: 0.21;"> <span class="data"> 168M <br> <small> (1500 CE) </small> </span> </td>
+      <td style="--size: 0.24;"> <span class="data"> 178M <br> <small> (1700 CE) </small> </span> </td>
+      <td style="--size: 0.26;"> <span class="data"> 408M <br> <small> (1900 CE) </small> </span> </td>
+      <td style="--size: 1.00;"> <span class="data"> 800M <br> <small> (2000 CE) </small> </span> </td>
     </tr>
     <tr>
       <th scope="row"> Asia </th>
-      <td style="--size: 0.15;"> <span class="data"> 183m </span> </td>
-      <td style="--size: 0.18;"> <span class="data"> 284m </span> </td>
-      <td style="--size: 0.20;"> <span class="data"> 379m </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 402m </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 3,516m </span> </td>
+      <td style="--size: 0.15;"> <span class="data"> 183M <br> <small> (1000 CE) </small> </span> </td>
+      <td style="--size: 0.18;"> <span class="data"> 282M <br> <small> (1500 CE) </small> </span> </td>
+      <td style="--size: 0.20;"> <span class="data"> 411M <br> <small> (1700 CE) </small> </span> </td>
+      <td style="--size: 0.21;"> <span class="data"> 947M <br> <small> (1900 CE) </small> </span> </td>
+      <td style="--size: 1.00;"> <span class="data"> 3,700M <br> <small> (2000 CE) </small> </span> </td>
     </tr>
   </tbody>
 
@@ -41,6 +41,11 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
 <template v-slot:css-code>
 #datasets-example-1 {
   height: 300px;
+  max-width: 800px;
+}
+#datasets-example-1 .data {
+  text-align: center;
+  line-height: 1.25;
 }
 </template>
 <template v-slot:html-code>
@@ -51,19 +56,19 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
   <tbody>
     <tr>
       <th scope="row"> Europe </th>
-      <td style="--size: 0.15;"> <span class="data"> 40m </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 90m </span> </td>
-      <td style="--size: 0.24;"> <span class="data"> 111m </span> </td>
-      <td style="--size: 0.26;"> <span class="data"> 126m </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 800m </span> </td>
+      <td style="--size: 0.15;"> <span class="data">  40M <br> <small> (1000 CE) </small> </span> </td>
+      <td style="--size: 0.21;"> <span class="data"> 168M <br> <small> (1500 CE) </small> </span> </td>
+      <td style="--size: 0.24;"> <span class="data"> 178M <br> <small> (1700 CE) </small> </span> </td>
+      <td style="--size: 0.26;"> <span class="data"> 408M <br> <small> (1900 CE) </small> </span> </td>
+      <td style="--size: 1.00;"> <span class="data"> 800M <br> <small> (2000 CE) </small> </span> </td>
     </tr>
     <tr>
       <th scope="row"> Asia </th>
-      <td style="--size: 0.15;"> <span class="data"> 183m </span> </td>
-      <td style="--size: 0.18;"> <span class="data"> 284m </span> </td>
-      <td style="--size: 0.20;"> <span class="data"> 379m </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 402m </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 3,516m </span> </td>
+      <td style="--size: 0.15;"> <span class="data"> 183M <br> <small> (1000 CE) </small> </span> </td>
+      <td style="--size: 0.18;"> <span class="data"> 282M <br> <small> (1500 CE) </small> </span> </td>
+      <td style="--size: 0.20;"> <span class="data"> 411M <br> <small> (1700 CE) </small> </span> </td>
+      <td style="--size: 0.21;"> <span class="data"> 947M <br> <small> (1900 CE) </small> </span> </td>
+      <td style="--size: 1.00;"> <span class="data"> 3,700M <br> <small> (2000 CE) </small> </span> </td>
     </tr>
   </tbody>
 
@@ -87,6 +92,11 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 <template v-slot:css-code>
 #datasets-example-2 {
   height: 300px;
+  max-width: 800px;
+}
+#datasets-example-2 .data {
+  text-align: center;
+  line-height: 1.25;
 }
 </template>
 <template v-slot:html-code>
@@ -97,19 +107,19 @@ On charts with multiple datasets you should add the `.multiple` class to make th
   <tbody>
     <tr>
       <th scope="row"> Europe </th>
-      <td style="--size: 0.15;"> <span class="data"> 40m </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 90m </span> </td>
-      <td style="--size: 0.24;"> <span class="data"> 111m </span> </td>
-      <td style="--size: 0.26;"> <span class="data"> 126m </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 800m </span> </td>
+      <td style="--size: 0.15;"> <span class="data">  40M <br> <small> (1000 CE) </small> </span> </td>
+      <td style="--size: 0.21;"> <span class="data"> 168M <br> <small> (1500 CE) </small> </span> </td>
+      <td style="--size: 0.24;"> <span class="data"> 178M <br> <small> (1700 CE) </small> </span> </td>
+      <td style="--size: 0.26;"> <span class="data"> 408M <br> <small> (1900 CE) </small> </span> </td>
+      <td style="--size: 1.00;"> <span class="data"> 800M <br> <small> (2000 CE) </small> </span> </td>
     </tr>
     <tr>
       <th scope="row"> Asia </th>
-      <td style="--size: 0.15;"> <span class="data"> 183m </span> </td>
-      <td style="--size: 0.18;"> <span class="data"> 284m </span> </td>
-      <td style="--size: 0.20;"> <span class="data"> 379m </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 402m </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 3,516m </span> </td>
+      <td style="--size: 0.15;"> <span class="data"> 183M <br> <small> (1000 CE) </small> </span> </td>
+      <td style="--size: 0.18;"> <span class="data"> 282M <br> <small> (1500 CE) </small> </span> </td>
+      <td style="--size: 0.20;"> <span class="data"> 411M <br> <small> (1700 CE) </small> </span> </td>
+      <td style="--size: 0.21;"> <span class="data"> 947M <br> <small> (1900 CE) </small> </span> </td>
+      <td style="--size: 1.00;"> <span class="data"> 3,700M <br> <small> (2000 CE) </small> </span> </td>
     </tr>
   </tbody>
 

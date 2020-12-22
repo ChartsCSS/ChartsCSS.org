@@ -32,6 +32,7 @@ Original data:
 <template v-slot:css-code>
 #reverse-data-example-1 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>
@@ -108,6 +109,7 @@ Reversed data:
 <template v-slot:css-code>
 #reverse-data-example-2 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>
@@ -194,6 +196,7 @@ Original:
 <template v-slot:css-code>
 #reverse-datasets-example-1 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>
@@ -250,6 +253,7 @@ Reversed datasets:
 <template v-slot:css-code>
 #reverse-datasets-example-2 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>
@@ -317,6 +321,7 @@ Original:
 <template v-slot:css-code>
 #reverse-data-datasets-example-1 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>
@@ -373,6 +378,7 @@ Reversed data & datasets:
 <template v-slot:css-code>
 #reverse-data-datasets-example-2 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>

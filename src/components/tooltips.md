@@ -98,7 +98,7 @@ A simple example of a column chart with tooltips:
       <th scope="col"> Country </th>
       <th scope="col"> Gold </th>
       <th scope="col"> Silver </th>
-      <th scope="col"> Silver </th>
+      <th scope="col"> Bronze </th>
     </tr>
   </thead>
 
@@ -156,15 +156,15 @@ A simple example of a column chart with tooltips:
 
 ```css
 #tooltips-example {
-    /* Custom colors */
-    --color-1: #FEE101;
-    --color-2: #D7D7D7;
-    --color-3: #A77044;
+  /* Custom chart size */
+  height: 300px;
+  max-width: 600px;
+  margin: 0 auto;
 
-    /* Custom chart size */
-    height: 300px;
-    max-width: 600px;
-    margin: 0 auto;
+  /* Custom colors */
+  --color-1: #FEE101;
+  --color-2: #D7D7D7;
+  --color-3: #A77044;
 }
 ```
 
@@ -178,7 +178,7 @@ A simple example of a column chart with tooltips:
       <th scope="col"> Country </th>
       <th scope="col"> Gold </th>
       <th scope="col"> Silver </th>
-      <th scope="col"> Silver </th>
+      <th scope="col"> Bronze </th>
     </tr>
   </thead>
 

@@ -22,6 +22,7 @@ Note that it adds paddings to `<tr>` elements.
 <template v-slot:css-code>
 #spacing-example-1 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>
@@ -108,6 +109,7 @@ Note that it adds margins to `<td>` elements.
 <template v-slot:css-code>
 #spacing-example-2 {
   height: 250px;
+  max-width: 800px;
   margin: 0 auto;
 }
 </template>

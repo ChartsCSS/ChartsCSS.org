@@ -1,11 +1,14 @@
 /**
  * Custom Styles
  *
- * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ * ref: https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
 .theme-container .home
   padding-top 0
+
+.home
+  text-align center
 
 .home .hero img
   max-width 450px !important
@@ -13,7 +16,33 @@
 
 .home .features
   align-items center !important
-  text-align center
+  border-bottom 1px solid #eee
+  margin-bottom 2.5rem
+
+.home .circles
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  gap 40px 10px
+  padding 3rem 0 2rem
+  margin-top 2.5rem
+  border-top 1px solid #eee
+
+.home .circle a
+  display inline-block
+  background-image linear-gradient(135deg, #48c, #f57)
+  border-radius 50%
+  padding 20px
+  max-width 80px
+
+.home .circle img
+.home .circle svg
+  width 80px
+  height 80px
+
+.home .circle p
+  margin 0
+  font-size 13px
 
 .home .footer
   padding 2rem !important

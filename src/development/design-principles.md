@@ -13,7 +13,7 @@ The chart should be broken down into as many building blocks as possible. Each c
 
 ## Building a Framework
 
-The main goal is to develop a framework for the masses, not a niche library used in a very specific use cases.
+The main goal is to develop a framework for the masses, not a niche library used in specific use cases.
 
 ## Global Features
 
@@ -25,7 +25,7 @@ Class names should be intuitive and self-explanatory to make it easy to implemen
 
 ## Direction Free Classes
 
-When naming classes we should consider RTL, LTR and BTT languages. Class names should not use direction names (top, bottom, right, left, vertical, horizontal etc.). Direction free names like before and after are preferred.
+When naming classes we should consider RTL, LTR and BTT languages. Class names should not use direction names (top, bottom, right, left, vertical, horizontal etc.). Direction free names like "start & end" are preferred.
 
 ## CSS Customization
 

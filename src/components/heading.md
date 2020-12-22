@@ -21,8 +21,9 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 
 **By default the heading is hidden**. To display the heading use the `.show-heading` class.
 
-```html
+```html{1}
 <table class="charts-css column show-heading">
+  <caption> Custom Heading </caption>
   ...
 </table>
 ```
@@ -40,7 +41,7 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 <template v-slot:html-code>
 <table class="charts-css column" id="heading-example-1">
 
-  <caption> Chart a With Hidden Heading </caption>
+  <caption> Hidden Chart Heading </caption>
 
   <thead>
     <tr>
@@ -87,7 +88,7 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 <template v-slot:html-code>
 <table class="charts-css column show-heading" id="heading-example-2">
 
-  <caption> Chart a With Visible Heading </caption>
+  <caption> Visible Chart Heading </caption>
 
   <thead>
     <tr>

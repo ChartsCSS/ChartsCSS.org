@@ -26,7 +26,7 @@ In addition, large JS libraries usually effect your site performance. Search eng
 
 Some libraries fixed search engines visibility by injecting HTML nodes. Accessible issues fixed with additional JS solutions. But in most cases those patches lead to more background processing, effecting page performance.
 
-With CSS frameworks, all this is not required. The raw data is part of the HTML making it visibility to search engines and screen readers. With CSS rendering is not required, resulting in performance boost compare to JS solutions.
+With CSS frameworks, all this is not required. The raw data is part of the HTML making it visibility to search engines and screen readers. With CSS, rendering is not required, resulting in performance boost compare to JS solutions.
 
 ## Which is Better
 

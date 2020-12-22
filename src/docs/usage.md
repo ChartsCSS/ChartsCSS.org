@@ -122,7 +122,7 @@ The framework offers many [utility classes](/components/) to enhance chart visib
 If your class becomes longer then expected and unreadable, you can use [class grouping](https://piccalil.li/blog/cube-css/#heading-grouping) technique introduced by Andy Bell.
 
 ```html
-<table class="charts-css [ bar ] [ multiple data-spacing-5 hide-data reverse-data ] [ labels-after labels-align-start ] ">
+<table class="charts-css [ line ] [ multiple ] [ show-labels labels-align-start ] [ hide-data reverse-data data-spacing-5 ] [ show-primary-axis show-data-axes ] ">
   ...
 </table>
 ```

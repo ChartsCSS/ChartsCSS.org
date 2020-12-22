@@ -9,7 +9,7 @@ By animating the chart you can add smooth interactions to make your chart even m
 
 ## Jumping Bars
 
-Here is a basic example where the bars are jumping every 3 seconds.
+Here is a basic example where the bars (`<td>` elements) are jumping every 3 seconds.
 
 ```css
 #animations-example-1 td {
@@ -86,7 +86,7 @@ Here is a basic example where the bars are jumping every 3 seconds.
 
 ## Spinning Labels
 
-Here is another simple examples with spinning labels every 3 seconds.
+Here is another simple examples with labels (`<th>` elements) spinning every 3 seconds.
 
 ```css
 #animations-example-2 th {
@@ -314,6 +314,94 @@ A useful example to highlighting individual items with animations.
     <tr>
       <th scope="row"> 2018 </th>
       <td style="--size: 1.0" class="highlighted"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.5"> <span class="data"> 50 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 0.3"> <span class="data"> 30 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
+## Color Gradient Animation
+
+Now lets animate the colors with gradients.
+
+```css
+#animations-example-5 td {
+  background-image: linear-gradient(
+    45deg,
+    #956fd3,
+    #e76ec2,
+    #ff7fa2,
+    #ffa782,
+    #ffd86f,
+    #faf982
+  );
+  background-size: 600%;
+  animation: gradient-animation 3s linear infinite alternate;
+}
+@keyframes gradient-animation {
+  0%   { background-position:   0%; }
+  100% { background-position: 100%; }
+}
+```
+
+<code-example code-example-id="animations-example-5">
+<template v-slot:css-code>
+#animations-example-5 {
+  height: 200px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+#animations-example-5 td {
+  background-image: linear-gradient(
+    45deg,
+    #956fd3,
+    #e76ec2,
+    #ff7fa2,
+    #ffa782,
+    #ffd86f,
+    #faf982
+  );
+  background-size: 600%;
+  animation: gradient-animation 3s linear infinite alternate;
+}
+@keyframes gradient-animation {
+  0%   { background-position:   0%; }
+  100% { background-position: 100%; }
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-5">
+
+  <caption> Animation Example #5 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2019 </th>

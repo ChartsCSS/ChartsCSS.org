@@ -283,11 +283,11 @@ This method can be also applied on all the `<td>` elements.
 </template>
 </code-example>
 
-**Note:** With small data tables it's an acceptable method but with large tables it's a not a recommended practice. Keep reading to learn how to change global colors.
+**Note:** With small data tables it's an acceptable method but with large tables it's a not a recommended practice. Keep reading to learn how to [change global colors](#change-global-colors).
 
 ## Change Global Colors
 
-The framework has a set of 10 default color repeating themselves. You can override those colors to create your custom theme.
+The framework has a set of 10 default color repeating themselves. You can override those colors to create your own custom theme.
 
 ```css
 #my-chart {
@@ -325,7 +325,7 @@ It works well with single datasets:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data" id="colors-example-4">
+<table class="charts-css column show-labels hide-data data-spacing-2" id="colors-example-4">
 
   <caption> Colors Example #4 </caption>
 
@@ -404,13 +404,13 @@ And with multiple datasets:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-5">
+<table class="charts-css column multiple show-labels hide-data data-spacing-10 datasets-spacing-1 show-data-axes" id="colors-example-5">
 
   <caption> Colors Example #5 </caption>
 
   <thead>
     <tr>
-      <th scope="col"> Month </th>
+      <th scope="col"> Year </th>
       <th scope="col"> Progress </th>
     </tr>
   </thead>
@@ -448,6 +448,356 @@ And with multiple datasets:
 </template>
 </code-example>
 
+**Note:** As mentioned above, the framework has a set of 10 default color repeating themselves. You can create your own [custom color system](#custom-colors-system) based on 3 or 5 or even 20 repeating colors.
+
+## Custom Images
+
+External images can be places instead of the color.
+
+```css
+#my-chart {
+  --color: url("https://.../");
+}
+```
+
+<code-example code-example-id="colors-example-6">
+<template v-slot:css-code>
+#colors-example-6 {
+  height: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+  --color: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Galaxy_Cluster_Abell_1689_%284423351940%29.jpg/544px-Galaxy_Cluster_Abell_1689_%284423351940%29.jpg") top center repeat black;
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels hide-data" id="colors-example-6">
+
+  <caption> Colors Example #6 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Month </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> Jan </th>
+      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Feb </th>
+      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Mar </th>
+      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Apr </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> May </th>
+      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jun </th>
+      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jul </th>
+      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Aug </th>
+      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Sep </th>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Oct </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Nov </th>
+      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Dec </th>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
+## Use Gradients
+
+You can set gradients on any CSS variables mentioned above.
+
+```css
+#my-chart {
+  --color: linear-gradient(red, yellow);
+}
+```
+
+<code-example code-example-id="colors-example-7">
+<template v-slot:css-code>
+#colors-example-7 {
+  height: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+  --color: linear-gradient(red, yellow);
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels hide-data" id="colors-example-7">
+
+  <caption> Colors Example #7 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Month </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> Jan </th>
+      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Feb </th>
+      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Mar </th>
+      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Apr </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> May </th>
+      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jun </th>
+      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jul </th>
+      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Aug </th>
+      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Sep </th>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Oct </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Nov </th>
+      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Dec </th>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
+<code-example code-example-id="colors-example-8">
+<template v-slot:css-code>
+#colors-example-8 {
+  height: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+  --color: linear-gradient(red, yellow);
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css area show-labels hide-data" id="colors-example-8">
+
+  <caption> Colors Example #8 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Month </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> Jan </th>
+      <td style="--start: 0.2; --size: 0.3;"> <span class="data"> 30 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Feb </th>
+      <td style="--start: 0.3; --size: 0.5;"> <span class="data"> 50 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Mar </th>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Apr </th>
+      <td style="--start: 0.8; --size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> May </th>
+      <td style="--start: 1; --size: 0.65;"> <span class="data"> 65 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jun </th>
+      <td style="--start: 0.65; --size: 0.45;"> <span class="data"> 45 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jul </th>
+      <td style="--start: 0.45; --size: 0.15;"> <span class="data"> 15 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Aug </th>
+      <td style="--start: 0.12; --size: 0.32;"> <span class="data"> 32 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Sep </th>
+      <td style="--start: 0.32; --size: 0.6;"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Oct </th>
+      <td style="--start: 0.6; --size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Nov </th>
+      <td style="--start: 0.9; --size: 0.55;"> <span class="data"> 55 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Dec </th>
+      <td style="--start: 0.55; --size: 0.4;"> <span class="data"> 40 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
+## Use Patterns
+
+You can even use custom CSS patterns.
+
+```css
+#my-chart {
+  --color-1: repeating-linear-gradient(#f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-2: repeating-linear-gradient(45deg, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-3: repeating-linear-gradient(90deg, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-4: repeating-linear-gradient(-45deg, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-5: repeating-linear-gradient(transparent, #e34 20px),
+             repeating-linear-gradient(90deg, transparent, #e34 20px);
+  --color-6: repeating-radial-gradient(circle, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-7: repeating-radial-gradient(circle at 50% 100%, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-8: repeating-radial-gradient(circle at 50% 0%, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-9: repeating-radial-gradient(circle at 0% 50%, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-10: repeating-radial-gradient(circle at 100% 50%, #f80, #f80 10px, #e34 10px, #e34 20px);
+}
+```
+
+Repeating gradients will do the trick.
+
+<code-example code-example-id="colors-example-9">
+<template v-slot:css-code>
+#colors-example-9 {
+  height: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+  --color-1: repeating-linear-gradient(#f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-2: repeating-linear-gradient(45deg, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-3: repeating-linear-gradient(90deg, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-4: repeating-linear-gradient(-45deg, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-5: repeating-linear-gradient(transparent, #e34 20px),
+             repeating-linear-gradient(90deg, transparent, #e34 20px);
+  --color-6: repeating-radial-gradient(circle, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-7: repeating-radial-gradient(circle at 50% 100%, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-8: repeating-radial-gradient(circle at 50% 0%, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-9: repeating-radial-gradient(circle at 0% 50%, #f80, #f80 10px, #e34 10px, #e34 20px);
+  --color-10: repeating-radial-gradient(circle at 100% 50%, #f80, #f80 10px, #e34 10px, #e34 20px);
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels hide-data data-spacing-5" id="colors-example-9">
+
+  <caption> Colors Example #9 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Month </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> Jan </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Feb </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Mar </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Apr </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> May </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jun </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jul </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Aug </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Sep </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Oct </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
 ## Custom Colors System
 
 For more advanced use-cases there is an option to replace the current color system. Let's say we want 3 repeating colors.
@@ -478,27 +828,27 @@ For more advanced use-cases there is an option to replace the current color syst
 
 Three repeating colors in a single datasets table:
 
-<code-example code-example-id="colors-example-6">
+<code-example code-example-id="colors-example-10">
 <template v-slot:css-code>
-#colors-example-6 {
+#colors-example-10 {
   height: 200px;
   max-width: 800px;
   margin: 0 auto;
 }
-#colors-example-6:not(.multiple) tbody tr:nth-of-type(3n + 1) td {
+#colors-example-10:not(.multiple) tbody tr:nth-of-type(3n + 1) td {
   background-color: #f06464;
 }
-#colors-example-6:not(.multiple) tbody tr:nth-of-type(3n + 2) td {
+#colors-example-10:not(.multiple) tbody tr:nth-of-type(3n + 2) td {
   background-color: #8cdc78;
 }
-#colors-example-6:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
+#colors-example-10:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
   background-color: #82beff;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data" id="colors-example-6">
+<table class="charts-css column show-labels hide-data" id="colors-example-10">
 
-  <caption> Colors Example #6 </caption>
+  <caption> Colors Example #10 </caption>
 
   <thead>
     <tr>
@@ -564,31 +914,31 @@ Three repeating colors in a single datasets table:
 
 Three repeating colors in a multiple datasets table:
 
-<code-example code-example-id="colors-example-7">
+<code-example code-example-id="colors-example-11">
 <template v-slot:css-code>
-#colors-example-7 {
+#colors-example-11 {
   height: 200px;
   max-width: 800px;
   margin: 0 auto;
 }
-#colors-example-7.charts-css.multiple tbody tr td:nth-of-type(3n + 1) {
+#colors-example-11.charts-css.multiple tbody tr td:nth-of-type(3n + 1) {
   background-color: #f06464;
 }
-#colors-example-7.charts-css.multiple tbody tr td:nth-of-type(3n + 2) {
+#colors-example-11.charts-css.multiple tbody tr td:nth-of-type(3n + 2) {
   background-color: #8cdc78;
 }
-#colors-example-7.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
+#colors-example-11.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
   background-color: #82beff;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-7">
+<table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-11">
 
-  <caption> Colors Example #7 </caption>
+  <caption> Colors Example #11 </caption>
 
   <thead>
     <tr>
-      <th scope="col"> Month </th>
+      <th scope="col"> Year </th>
       <th scope="col"> Progress </th>
     </tr>
   </thead>
@@ -619,92 +969,6 @@ Three repeating colors in a multiple datasets table:
       <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
       <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
       <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-## Images and Gradients
-
-You can set background images and gradients on any CSS variables mentioned above.
-
-```css
-#my-chart {
-  --color: linear-gradient(red, yellow);
-}
-```
-
-<code-example code-example-id="colors-example-8">
-<template v-slot:css-code>
-#colors-example-8 {
-  height: 200px;
-  max-width: 800px;
-  margin: 0 auto;
-  --color: linear-gradient(red, yellow);
-}
-</template>
-<template v-slot:html-code>
-<table class="charts-css column show-labels hide-data" id="colors-example-8">
-
-  <caption> Colors Example #8 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Month </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> Jan </th>
-      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Feb </th>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Mar </th>
-      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Apr </th>
-      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> May </th>
-      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jun </th>
-      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jul </th>
-      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Aug </th>
-      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Sep </th>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Oct </th>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Nov </th>
-      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Dec </th>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
   </tbody>
 

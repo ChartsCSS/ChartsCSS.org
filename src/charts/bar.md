@@ -72,7 +72,7 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 
 ## Orientation
 
-You can control the chart orientation, or direction. The initial orientation depends on your language writing direction. Using the `.reverse` class you can reverse the orientation.
+You can control the [chart orientation](../components/orientation/), or direction. The initial orientation depends on your language writing direction. Using the `.reverse` class you can reverse the orientation.
 
 ```html
 <table class="charts-css bar reverse">
@@ -117,7 +117,7 @@ You can control the chart orientation, or direction. The initial orientation dep
 
 ## Heading
 
-You can add a heading to your chart using the `<caption>` tag. By default the heading is hidden. To display the heading use the `.show-heading` class.
+You can add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default the heading is hidden. To display the heading use the `.show-heading` class.
 
 ```html
 <table class="charts-css bar show-heading">
@@ -163,7 +163,7 @@ You can add a heading to your chart using the `<caption>` tag. By default the he
 
 ## Multiple Datasets
 
-You can use a single dataset (one `<td>` tag in each `<td>`).
+You can use a [single dataset](../components/data/) (one `<td>` tag in each `<td>`).
 
 ```html{2}
 <tr>
@@ -171,7 +171,7 @@ You can use a single dataset (one `<td>` tag in each `<td>`).
 </tr>
 ```
 
-Or multiple datasets (many `<td>` tags in `<td>`).
+Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<td>`).
 
 ```html{2-4}
 <tr>
@@ -264,7 +264,7 @@ But when using multiple datasets you should add the `.multiple` class.
 
 ## Labels
 
-You can add labels to your data and control the labels positions and size. Labels added using `<th>` tag inside the `<tr>`
+You can add [labels](../components/labels/) to your data and control the labels positions and size. Labels added using `<th>` tag inside the `<tr>`
 
 ```html{2}
 <tr>
@@ -491,7 +491,7 @@ Some charts use long labels others use short ones. To customize the label size u
 
 ## Axes
 
-You can control the axes that will be displayed on the chart.
+You can control the [axes](../components/axes/) that will be displayed on the chart.
 
 ### Primary Axis
 
@@ -819,7 +819,7 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 
 ## Spacing
 
-You can control the space between the data items and between the datasets.
+You can control the [space](../components/spacing/) between the data items and between the datasets.
 
 ### Data Spacing
 
@@ -1039,7 +1039,7 @@ To add spacing between data items use the `.datasets-spacing-*` class.
 
 ## Reverse Order
 
-You can reverse the order of the elements without changing the HTML markup.
+You can [reverse the order of the elements](../components/reverse-order/) without changing the HTML markup.
 
 ### Reverse Data Order
 
