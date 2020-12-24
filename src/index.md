@@ -3,32 +3,21 @@ home: true
 navbar: false
 heroImage: /assets/img/logo.png
 tagline: CSS data visualization framework
-actionText: Quick Start
-actionLink: /docs/
-features:
-- title: HTML & CSS
-  details: Uses semantic HTML tags
-- title: Accessible
-  details: Raw data inside the markup
-- title: Customizable
-  details: Style the charts your way
-- title: Open Source
-  details: Change the source code
-- title: Responsive
-  details: Uses media queries for scaling
-- title: Large Variety
-  details: Many supported chart types
-footer: Copyright © 2020 Rami Yushuvaev
 ---
 
-**Charts.css** is a modern CSS frameworks. It styles HTML elements using predefined CSS utility classes.
+<p class="action">
+  <a href="/docs/" class="action-button">Quick Start</a>
+  <a href="https://github.com/ChartsCSS/charts.css" target="_blank" class="action-button github">GitHub Repo</a>
+</p>
 
-See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub and please consider to star the project.
+**Charts.css** is a modern CSS framework. It uses CSS utility classes to style HTML elements as charts.
 
-<div class="circles">
+The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css). If you like the project, please consider to star the repo on GitHub.
 
-  <div class="circle">
-    <a href="./charts/area/">
+<div class="charts">
+
+  <div class="chart">
+    <a href="./charts/area/" aria-label="Area Chart">
       <svg viewBox="0 0 100 100">
         <polygon points="0 80 15 50 30 70 45 30 60 60 75 10 100 80 0 80" style="fill:#fff;" />
       </svg>
@@ -36,8 +25,8 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>Area <br> Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/bar/">
+  <div class="chart">
+    <a href="./charts/bar/" aria-label="Bar Chart">
       <svg viewBox="0 0 100 100">
         <rect x="10" y="20" width="30" height="15" style="fill:#fff;" />
         <rect x="10" y="45" width="80" height="15" style="fill:#fff;" />
@@ -47,8 +36,8 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>Bar <br> Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/column/">
+  <div class="chart">
+    <a href="./charts/column/" aria-label="Column Chart">
       <svg viewBox="0 0 100 100">
         <rect x="5"  y="65" width="15" height="20" style="fill:#fff;" />
         <rect x="30" y="45" width="15" height="40" style="fill:#fff;" />
@@ -59,8 +48,8 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>Column <br> Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/line/">
+  <div class="chart">
+    <a href="./charts/line/" aria-label="Line Chart">
       <svg viewBox="0 0 100 100">
         <polyline points="0 80 15 60 25 70 50 20 70 55 80 36 100 80" style="fill:none; stroke:#fff; stroke-width:4px;" />
       </svg>
@@ -68,19 +57,19 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>Line <br> Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/area/#multiple-datasets">
+  <div class="chart">
+    <a href="./charts/area/#multiple-datasets" aria-label="Multi-Dataset Area Chart">
       <svg viewBox="0 0 100 100">
         <polygon points="0 80 0 76 15 50 30 55 45 30 60 50 75 10 100 70 100 80 0 80" style="fill:#fff; opacity:0.3;" />
         <polygon points="0 80 0 78 15 60 30 65 45 45 60 60 75 30 100 75 100 80 0 80" style="fill:#fff; opacity:0.6;" />
         <polygon points="0 80 0 80 15 70 30 75 45 60 60 70 75 50 100 80 100 80 0 80" style="fill:#fff; opacity:1.0;" />
       </svg>
     </a>
-    <p>Multi-Dataset <br> Area</p>
+    <p>Multi-Dataset <br> Area Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/bar/#multiple-datasets">
+  <div class="chart">
+    <a href="./charts/bar/#multiple-datasets" aria-label="Multi-Dataset Bar Chart">
       <svg viewBox="0 0 100 100">
         <rect x="10" y="10" width="30" height="12" style="fill:#fff;" />
         <rect x="11" y="28" width="80" height="12" style="fill:none; stroke:#fff; stroke-width:2px;" />
@@ -88,11 +77,11 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
         <rect x="11" y="78" width="50" height="12" style="fill:none; stroke:#fff; stroke-width:2px;" />
       </svg>
     </a>
-    <p>Multi-Dataset <br> Bars</p>
+    <p>Multi-Dataset <br> Bar Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/column/#multiple-datasets">
+  <div class="chart">
+    <a href="./charts/column/#multiple-datasets" aria-label="Multi-Dataset Column Chart">
       <svg viewBox="0 0 100 100">
         <rect x="5"  y="65" width="15" height="19" style="fill:none; stroke:#fff; stroke-width:2px;" />
         <rect x="25" y="40" width="15" height="45" style="fill:#fff;" />
@@ -100,22 +89,22 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
         <rect x="80" y="50" width="15" height="35" style="fill:#fff;" />
       </svg>
     </a>
-    <p>Multi-Dataset <br> Columns</p>
+    <p>Multi-Dataset <br> Column Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./charts/line/">
+  <div class="chart">
+    <a href="./charts/line/" aria-label="Multi-Dataset Line Chart">
       <svg viewBox="0 0 100 100">
         <polyline points="0 65 15 50 30 55 45 30 60 50 75 10 100 60" style="fill:none; stroke:#fff; stroke-width:3px; opacity:0.9;" />
         <polyline points="0 72 15 60 30 65 45 45 60 60 75 30 100 70" style="fill:none; stroke:#fff; stroke-width:3px; opacity:0.6;" />
         <polyline points="0 80 15 70 30 75 45 60 60 70 75 50 100 80" style="fill:none; stroke:#fff; stroke-width:3px; opacity:0.3;" />
       </svg>
     </a>
-    <p>Multi-Dataset <br> Lines</p>
+    <p>Multi-Dataset <br> Line Chart</p>
   </div>
 
-  <div class="circle">
-    <a href="./components/stacked/">
+  <div class="chart">
+    <a href="./components/stacked/" aria-label="Percentage Columns">
       <svg viewBox="0 0 100 100">
         <rect x="5"  y="15" width="15" height="30" style="fill:#fff; opacity:0.3;" />
         <rect x="5"  y="45" width="15" height="20" style="fill:#fff; opacity:0.6;" />
@@ -134,8 +123,8 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>Percentage <br> Columns</p>
   </div>
 
-  <div class="circle">
-    <a href="./components/stacked/">
+  <div class="chart">
+    <a href="./components/stacked/" aria-label="Stacked Columns">
       <svg viewBox="0 0 100 100">
         <rect x="5"  y="55" width="15" height="10" style="fill:#fff; opacity:0.3;" />
         <rect x="5"  y="65" width="15" height="10" style="fill:#fff; opacity:0.6;" />
@@ -154,8 +143,8 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>Stacked <br> Columns</p>
   </div>
 
-  <div class="circle">
-    <a href="./customization/3d-effects/#_3d-bars">
+  <div class="chart">
+    <a href="./customization/3d-effects/#_3d-bars" aria-label="3D Bars Effect">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
         <polygon points="17.96 61.54 22.07 58.09 22.03 76.76 17.92 80.21 17.96 61.54" style="fill:none; stroke:#fff; stroke-width:1px;" />
         <polygon points="2.98 61.24 7.08 57.79 22.07 58.09 17.96 61.54 2.98 61.24" style="fill:none; stroke:#fff; stroke-width:1px;" />
@@ -174,8 +163,8 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
     <p>3D Bars <br> Effect</p>
   </div>
 
-  <div class="circle">
-    <a href="./customization/3d-effects/#tilt-chart">
+  <div class="chart">
+    <a href="./customization/3d-effects/#tilt-chart" aria-label="3D Tilt Effect">
       <svg viewBox="0 0 100 100">
         <g style="transform: skewY(20deg) translateY(-20px) translateX(-5px);">
           <rect x="5"  y="65" width="15" height="20" style="fill:#fff;" />
@@ -185,10 +174,45 @@ See [Chart.css source code](https://github.com/ChartsCSS/charts.css) on GitHub a
         </g>
       </svg>
     </a>
-    <p>3D Tilting <br> Effect</p>
+    <p>3D Tilt <br> Effect</p>
   </div>
 
 </div>
 
+<div class="features">
+
+  <div class="feature">
+    <h2>HTML & CSS</h2>
+    <p>Uses semantic HTML tags</p>
+  </div>
+
+  <div class="feature">
+    <h2>Accessible</h2>
+    <p>Raw data inside the markup</p>
+  </div>
+
+  <div class="feature">
+    <h2>Customizable</h2>
+    <p>Style the charts your way</p>
+  </div>
+
+  <div class="feature">
+    <h2>Open Source</h2>
+    <p>You can change the code</p>
+  </div>
+
+  <div class="feature">
+    <h2>Responsive</h2>
+    <p>Uses media queries for scaling</p>
+  </div>
+
+  <div class="feature">
+    <h2>Large Variety</h2>
+    <p>Many supported chart types</p>
+  </div>
+
+</div>
+
+**Charts.css** is an open source framework licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT license</a>.
 
 <br>
