@@ -11,31 +11,45 @@ Datasets are different series of data.
 To add multiple datasets simply add more than one `<td>` tag to each of your `<tr>` tags.
 
 ```html{8-12,16-20}
-<table class="charts-css column show-labels">
+<table class="charts-css column">
 
-  <caption> Historical Human Population by Continent </caption>
+  <caption> Front End Developer Salary </caption>
 
   <tbody>
     <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: 0.15;"> <span class="data">  40M <br> <small> (1000 CE) </small> </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 168M <br> <small> (1500 CE) </small> </span> </td>
-      <td style="--size: 0.24;"> <span class="data"> 178M <br> <small> (1700 CE) </small> </span> </td>
-      <td style="--size: 0.26;"> <span class="data"> 408M <br> <small> (1900 CE) </small> </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 800M <br> <small> (2000 CE) </small> </span> </td>
+      <th scope="row"> Asia </th>
+      <td style="--size: calc( 20 / 100 );"> <span class="data"> $ 20K </span> </td>
+      <td style="--size: calc( 30 / 100 );"> <span class="data"> $ 30K </span> </td>
+      <td style="--size: calc( 40 / 100 );"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 50 / 100 );"> <span class="data"> $ 50K </span> </td>
+      <td style="--size: calc( 75 / 100 );"> <span class="data"> $ 75K </span> </td>
     </tr>
     <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: 0.15;"> <span class="data"> 183M <br> <small> (1000 CE) </small> </span> </td>
-      <td style="--size: 0.18;"> <span class="data"> 282M <br> <small> (1500 CE) </small> </span> </td>
-      <td style="--size: 0.20;"> <span class="data"> 411M <br> <small> (1700 CE) </small> </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 947M <br> <small> (1900 CE) </small> </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 3,700M <br> <small> (2000 CE) </small> </span> </td>
+      <th scope="row"> Europe </th>
+      <td style="--size: calc( 40 / 100 );"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 60 / 100 );"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 75 / 100 );"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 90 / 100 );"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 100 / 100 );"> <span class="data"> $ 100K </span> </td>
     </tr>
   </tbody>
 
 </table>
 ```
+
+It is also recommended to add a [legend](/components/legend/) to describe the datasets.
+
+```html
+<ul class="charts-css legend">
+  <li> 1st year </li>
+  <li> 2nd year </li>
+  <li> 3rd year </li>
+  <li> 4th year </li>
+  <li> 5th year </li>
+</ul>
+```
+
+The result:
 
 <code-example code-example-id="datasets-example-1">
 <template v-slot:css-code>
@@ -43,38 +57,49 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
   height: 300px;
   max-width: 800px;
 }
-#datasets-example-1 .data {
-  text-align: center;
-  line-height: 1.25;
+.legend {
+  margin-block-start: 1rem;
+  justify-content: center;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels" id="datasets-example-1">
+<div class="chart-container">
 
-  <caption> Datasets Example #1 - Historical Human Population by Continent </caption>
+  <table class="charts-css column show-labels data-spacing-5 datasets-spacing-1" id="datasets-example-1">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $ 20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $ 30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $ 50K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $ 60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $ 75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $ 90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
 
-  <tbody>
-    <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: 0.15;"> <span class="data">  40M <br> <small> (1000 CE) </small> </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 168M <br> <small> (1500 CE) </small> </span> </td>
-      <td style="--size: 0.24;"> <span class="data"> 178M <br> <small> (1700 CE) </small> </span> </td>
-      <td style="--size: 0.26;"> <span class="data"> 408M <br> <small> (1900 CE) </small> </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 800M <br> <small> (2000 CE) </small> </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: 0.15;"> <span class="data"> 183M <br> <small> (1000 CE) </small> </span> </td>
-      <td style="--size: 0.18;"> <span class="data"> 282M <br> <small> (1500 CE) </small> </span> </td>
-      <td style="--size: 0.20;"> <span class="data"> 411M <br> <small> (1700 CE) </small> </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 947M <br> <small> (1900 CE) </small> </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 3,700M <br> <small> (2000 CE) </small> </span> </td>
-    </tr>
-  </tbody>
+  <ul class="charts-css legend legend-inline legend-square">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
 
-</table>
+</div>
 </template>
 </code-example>
+
+As you can see we have an issue with colors in our datasets. Continue reading to see how to solve it.
 
 ## Datasets Colors
 
@@ -83,7 +108,7 @@ By default, **Chart.css** assumes you use a single dataset. The framework uses d
 On charts with multiple datasets you should add the `.multiple` class to make the framework use different color for each dataset.
 
 ```html{1}
-<table class="charts-css column show-labels multiple">
+<table class="charts-css column multiple">
   ...
 </table>
 ```
@@ -94,35 +119,44 @@ On charts with multiple datasets you should add the `.multiple` class to make th
   height: 300px;
   max-width: 800px;
 }
-#datasets-example-2 .data {
-  text-align: center;
-  line-height: 1.25;
+.legend {
+  margin-block-end: 1rem;
+  justify-content: center;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels multiple" id="datasets-example-2">
+<div class="chart-container">
 
-  <caption> Datasets Example #2 - Historical Human Population by Continent </caption>
+  <ul class="charts-css legend legend-inline legend-square">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
 
-  <tbody>
-    <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: 0.15;"> <span class="data">  40M <br> <small> (1000 CE) </small> </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 168M <br> <small> (1500 CE) </small> </span> </td>
-      <td style="--size: 0.24;"> <span class="data"> 178M <br> <small> (1700 CE) </small> </span> </td>
-      <td style="--size: 0.26;"> <span class="data"> 408M <br> <small> (1900 CE) </small> </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 800M <br> <small> (2000 CE) </small> </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: 0.15;"> <span class="data"> 183M <br> <small> (1000 CE) </small> </span> </td>
-      <td style="--size: 0.18;"> <span class="data"> 282M <br> <small> (1500 CE) </small> </span> </td>
-      <td style="--size: 0.20;"> <span class="data"> 411M <br> <small> (1700 CE) </small> </span> </td>
-      <td style="--size: 0.21;"> <span class="data"> 947M <br> <small> (1900 CE) </small> </span> </td>
-      <td style="--size: 1.00;"> <span class="data"> 3,700M <br> <small> (2000 CE) </small> </span> </td>
-    </tr>
-  </tbody>
+  <table class="charts-css column multiple show-labels data-spacing-10 datasets-spacing-1" id="datasets-example-2">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $ 20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $ 30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $ 50K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $ 60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $ 75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $ 90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
 
-</table>
+</div>
 </template>
 </code-example>
