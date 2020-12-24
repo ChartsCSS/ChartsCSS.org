@@ -448,7 +448,7 @@ And with multiple datasets:
 </template>
 </code-example>
 
-**Note:** As mentioned above, the framework has a set of 10 default color repeating themselves. You can create your own [custom color system](#custom-colors-system) based on 3 or 5 or even 20 repeating colors.
+**Note:** As mentioned above, the framework has a set of 10 default color repeating themselves. You can create your own [custom color system](#custom-color-system) based on 3 or 5 or even 20 repeating colors.
 
 ## Custom Images
 
@@ -798,7 +798,7 @@ Repeating gradients will do the trick.
 </template>
 </code-example>
 
-## Custom Colors System
+## Custom Color System
 
 For more advanced use-cases there is an option to replace the current color system. Let's say we want 3 repeating colors.
 
