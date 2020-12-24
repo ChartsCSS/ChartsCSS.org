@@ -40,6 +40,9 @@ export default {
     .v-row.row {
         flex-direction: column;
     }
+    .v-row.row .code-example {
+        margin: unset;
+    }
 }
 
 </style>
