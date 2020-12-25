@@ -41,13 +41,64 @@ Use the `.legend` class to style your chart legend.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-1">
+<template v-slot:css-code>
+#legend-example-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-1 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-1 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-1">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ## Legend Orientation
 
@@ -63,13 +114,61 @@ To aligning legend dataset labels horizontally, use the `.legend-inline` class. 
 </ul>
 ```
 
-<legend-example orientation="column">
-<ul class="charts-css legend legend-inline">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-2">
+<template v-slot:css-code>
+#legend-example-2 {
+  margin: 0 auto;
+  max-width: 480px;
+}
+#legend-example-2 .bar {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-2 .legend {
+  margin-top: 20px;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-2">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-inline">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ## Legend Shape
 
@@ -85,13 +184,64 @@ Use the `.legend-circle` class to display a circular shape label.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend legend-circle">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-3">
+<template v-slot:css-code>
+#legend-example-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-3 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-3 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-3">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-circle">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ### Ellipse
 
@@ -105,13 +255,64 @@ Use the `.legend-ellipse` class to display a circular shape label.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend legend-ellipse">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-4">
+<template v-slot:css-code>
+#legend-example-4 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-4 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-4 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-4">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-ellipse">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ### Square
 
@@ -125,13 +326,64 @@ Use the `.legend-square` class to display a square shape label.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend legend-square">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-5">
+<template v-slot:css-code>
+#legend-example-5 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-5 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-5 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-5">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-square">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ### Rectangle
 
@@ -145,13 +397,64 @@ Use the `.legend-rectangle` class to display a rectangular shape label.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend legend-rectangle">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-6">
+<template v-slot:css-code>
+#legend-example-6 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-6 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-6 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-6">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-rectangle">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ### Rhombus
 
@@ -165,13 +468,64 @@ Use the `.legend-rhombus` class to display a circular shape label.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend legend-rhombus">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-7">
+<template v-slot:css-code>
+#legend-example-7 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-7 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-7 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-7">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-rhombus">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ### Line
 
@@ -185,13 +539,64 @@ Use the `.legend-line` class to display a line shape label.
 </ul>
 ```
 
-<legend-example orientation="row">
-<ul class="charts-css legend legend-line">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+<code-example code-example-id="legend-example-8">
+<template v-slot:css-code>
+#legend-example-8 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-8 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-8 .legend {
+  flex-shrink: 2;
+}
+</template>
+<template v-slot:html-code>
+<div id="legend-example-8">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-line">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 ## Custom Styles
 
@@ -207,43 +612,137 @@ For example, lets change the text color, the background color and add a box-shad
 }
 ```
 
-<legend-example orientation="row">
-<style>
-#custom-legend-1 {
+<code-example code-example-id="legend-example-9">
+<template v-slot:css-code>
+#legend-example-9 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-9 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-9 .legend {
+  flex-shrink: 2;
   color: #ccc;
   background-color: #333;
   box-shadow: 0 0 15px #000;
 }
-</style>
-<ul class="charts-css legend legend-square" id="custom-legend-1">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+</template>
+<template v-slot:html-code>
+<div id="legend-example-9">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-square">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
 
 To target an individual legend element, we can do something like:
 
 ```css
-.legend > li:nth-of-type(2) {
+.legend > li:nth-of-type(3) {
   color: red;
 }
 ```
 
-<legend-example orientation="row">
-<style>
-#custom-legend-2 {
+<code-example code-example-id="legend-example-10">
+<template v-slot:css-code>
+#legend-example-10 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#legend-example-10 .bar {
+  height: 192px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#legend-example-10 .legend {
+  flex-shrink: 2;
   color: #ccc;
   background-color: #333;
   box-shadow: 0 0 15px #000;
 }
-#custom-legend-2 > li:nth-of-type(2) {
+#legend-example-10 .legend > li:nth-of-type(3) {
   color: red;
 }
-</style>
-<ul class="charts-css legend legend-square" id="custom-legend-2">
-  <li> Label 1 </li>
-  <li> Label 2 </li>
-  <li> Label 3 </li>
-</ul>
-</legend-example>
+</template>
+<template v-slot:html-code>
+<div id="legend-example-10">
+
+  <table class="charts-css bar hide-data show-labels">
+    <caption> Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 1 </th>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2 </th>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 3 </th>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 4 </th>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 5 </th>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="charts-css legend legend-square">
+    <li> 1st year </li>
+    <li> 2nd year </li>
+    <li> 3rd year </li>
+    <li> 4th year </li>
+    <li> 5th year </li>
+  </ul>
+
+</div>
+</template>
+</code-example>
