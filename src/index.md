@@ -1,7 +1,7 @@
 ---
 home: true
 navbar: false
-heroImage: /assets/img/logo.png
+heroImage: /assets/img/logo-animation.svg
 tagline: CSS data visualization framework
 ---
 
