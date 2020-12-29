@@ -8,7 +8,7 @@ Labels are used to describe the data or the dataset over the primary axis.
 
 ## Add Labels
 
-To add labels to your primary axis, use `<th>` heading tags. To mark them as a row heading add the `scope="row"` attribute.
+To add labels to the primary axis, use `<th>` heading tags. To mark them as a row heading add the `scope="row"` attribute.
 
 ```html{12,16,20,24,28,32,36,40,44,48,52,56}
 <table class="charts-css column hide-data">
@@ -494,13 +494,11 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 </table>
 ```
 
-<v-row>
-
 <code-example code-example-id="labels-example-5">
 <template v-slot:css-code>
 #labels-example-5 {
-  height: 150px;
-  max-width: 300px;
+  height: 200px;
+  max-width: 500px;
   margin: 0 auto;
 }
 </template>
@@ -546,8 +544,8 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 <code-example code-example-id="labels-example-6">
 <template v-slot:css-code>
 #labels-example-6 {
-  height: 150px;
-  max-width: 300px;
+  height: 200px;
+  max-width: 500px;
   margin: 0 auto;
 }
 </template>
@@ -589,8 +587,6 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 </table>
 </template>
 </code-example>
-
-</v-row>
 
 To override a specific label use the `--labels-align` variable on `<th>` or `<tr>` elements.
 

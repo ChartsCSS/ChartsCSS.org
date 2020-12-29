@@ -8,7 +8,7 @@ You can reverse the order of the elements without changing the HTML markup.
 
 ## Reordering Data
 
-Generally speaking, the framework doesn't deal with data - it only styles your data.
+Generally speaking, the framework doesn't deal with data - it only styles the data.
 
 But in some unique cases you don't have access to the HTML markup. In other cases you receive an auto-generate HTML table from a backend server you have no control over.
 

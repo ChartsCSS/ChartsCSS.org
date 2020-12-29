@@ -17,19 +17,19 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
 
   <tbody>
     <tr>
-      <td> $ 40K </td>
+      <td> $40K </td>
     </tr>
     <tr>
-      <td> $ 60K </td>
+      <td> $60K </td>
     </tr>
     <tr>
-      <td> $ 75K </td>
+      <td> $75K </td>
     </tr>
     <tr>
-      <td> $ 90K </td>
+      <td> $90K </td>
     </tr>
     <tr>
-      <td> $ 100K </td>
+      <td> $100K </td>
     </tr>
   </tbody>
 
@@ -51,19 +51,19 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
 
   <tbody>
     <tr>
-      <td> $ 40K </td>
+      <td> $40K </td>
     </tr>
     <tr>
-      <td> $ 60K </td>
+      <td> $60K </td>
     </tr>
     <tr>
-      <td> $ 75K </td>
+      <td> $75K </td>
     </tr>
     <tr>
-      <td> $ 90K </td>
+      <td> $90K </td>
     </tr>
     <tr>
-      <td> $ 100K </td>
+      <td> $100K </td>
     </tr>
   </tbody>
 
@@ -82,19 +82,19 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 
   <tbody>
     <tr>
-      <td style="--size: calc( 40 / 100 )"> $ 40K </td>
+      <td style="--size: calc( 40 / 100 )"> $40K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 60 / 100 )"> $ 60K </td>
+      <td style="--size: calc( 60 / 100 )"> $60K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 75 / 100 )"> $ 75K </td>
+      <td style="--size: calc( 75 / 100 )"> $75K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 90 / 100 )"> $ 90K </td>
+      <td style="--size: calc( 90 / 100 )"> $90K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> $ 100K </td>
+      <td style="--size: calc( 100 / 100 )"> $100K </td>
     </tr>
   </tbody>
 
@@ -116,19 +116,19 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 
   <tbody>
     <tr>
-      <td style="--size: calc( 40 / 100 )"> $ 40K </td>
+      <td style="--size: calc( 40 / 100 )"> $40K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 60 / 100 )"> $ 60K </td>
+      <td style="--size: calc( 60 / 100 )"> $60K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 75 / 100 )"> $ 75K </td>
+      <td style="--size: calc( 75 / 100 )"> $75K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 90 / 100 )"> $ 90K </td>
+      <td style="--size: calc( 90 / 100 )"> $90K </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> $ 100K </td>
+      <td style="--size: calc( 100 / 100 )"> $100K </td>
     </tr>
   </tbody>
 
@@ -216,19 +216,19 @@ The example above presents a significant problem. The solutions is to add the da
 
   <tbody>
     <tr>
-      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
     </tr>
   </tbody>
 
@@ -250,19 +250,19 @@ The example above presents a significant problem. The solutions is to add the da
 
   <tbody>
     <tr>
-      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
     </tr>
   </tbody>
 
@@ -281,19 +281,19 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 
   <tbody>
     <tr>
-      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
     </tr>
   </tbody>
 
@@ -315,19 +315,19 @@ Another good practice is to hide the data, and show it when hovering over it. Th
 
   <tbody>
     <tr>
-      <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+      <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+      <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
+      <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
+      <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
     </tr>
     <tr>
-      <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+      <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
     </tr>
   </tbody>
 
@@ -347,19 +347,19 @@ Some chart types require not only the `--size` variable but also the `--start` v
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $40K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
+      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $80K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $60K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
+      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $100K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
+      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $30K </span> </td>
     </tr>
   </tbody>
 
@@ -381,19 +381,19 @@ Some chart types require not only the `--size` variable but also the `--start` v
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $40K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
+      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $80K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $60K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
+      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $100K </span> </td>
     </tr>
     <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
+      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $30K </span> </td>
     </tr>
   </tbody>
 
@@ -403,6 +403,6 @@ Some chart types require not only the `--size` variable but also the `--start` v
 
 ## Size Variable 
 
-Your `--size` variable should always be a unitless number between `0` to `1`. Why unitless? Because you should be able to change chart types without changing all the variables.
+All `--size` variables should always be a unitless numbers between `0` to `1`. Why unitless? Because you should be able to change chart types without changing the unit in all the variables.
 
 Rectangular charts use percentage as a unit of measurement while redial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated units. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.

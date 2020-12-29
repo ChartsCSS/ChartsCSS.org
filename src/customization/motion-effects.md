@@ -17,7 +17,11 @@ A simple background color change when the user hovers over data items:
   transition-duration: 0.3s;
 }
 #motion-effect tr:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#motion-effect tr:hover th {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 ```
 
@@ -32,11 +36,15 @@ A simple background color change when the user hovers over data items:
   transition-duration: 0.3s;
 }
 #motion-effect-example-1 tr:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#motion-effect-example-1 tr:hover th {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-5 hide-data" id="motion-effect-example-1">
+<table class="charts-css column show-labels show-primary-axis show-5-secondary-axes data-spacing-5 hide-data" id="motion-effect-example-1">
 
   <caption> Motion Effect Example #1 </caption>
 

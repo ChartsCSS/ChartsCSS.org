@@ -5,11 +5,35 @@ prev: ../
 
 # Wrapper
 
-A wrapper class is the most basic class you need to apply before turning raw data into a chart.
+A wrapper includes the general HTML structure and the chart structure in order to turn raw data into a chart.
 
-## Main Class
+## General Anatomy
 
-You need to add the `.charts-css` class on the `<table>` element itself:
+The full structure of a chart includes a wrapper `<div>` with inner components including the data `<table>` and the legend list.
+
+```html
+<div class="my-chart">
+
+  <ul class="charts-css legend">
+  </ul>
+
+  <table class="charts-css bar|column|area|line">
+  </table>
+
+</div>
+```
+
+Note that only the `<table>` is required. The wrapper elements and the legend are optional fields.
+
+| Type            | Field        | Element   |
+|:----------------|:-------------|:----------|
+| Wrapper Element | **Optional** | Any       |
+| Chart Legend    | **Optional** | Any       |
+| Chart Data      | **Required** | `<table>` |
+
+## Data Table
+
+To turn the data table into a chart, you need to add the `.charts-css` class on the `<table>` element itself:
 
 ```html
 <table class="charts-css">
@@ -17,7 +41,7 @@ You need to add the `.charts-css` class on the `<table>` element itself:
 </table>
 ```
 
-This main class will reset, contain, pad and remove all other styles. But it won't transform the data table into a chart, yet.
+This class will reset, contain, pad and remove all other styles. But it won't transform the data table into a chart, yet.
 
 ## Chart Classes
 
@@ -45,12 +69,12 @@ Only then you can start adding some inner components like [axes](/charts/axes), 
 </table>
 ```
 
-## Customizing the Wrapper
+## Customizing the Chart
 
-The simplest wrapper element customization is to set the `height` and `max-width` of your chart. Chart `width` is `100%` by default.
+A simple customization will include the `height` and `max-width` of the chart. Chart `width` is `100%` by default.
 
 ```css
-#my-chart {
+#my-chart .bar {
   height: 300px;
   max-width: 600px;
   margin: 0 auto;
@@ -60,7 +84,7 @@ The simplest wrapper element customization is to set the `height` and `max-width
 In addition you can add any CSS, for example you can add your brand logo in the background.
 
 ```css
-#my-chart {
+#my-chart .bar {
   background-image: url(path/to/your/logo.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -73,21 +97,21 @@ In addition you can add any CSS, for example you can add your brand logo in the 
 Media queries can be used to set different dimensions for different screen sizes.
 
 ```css
-#my-chart {
+#my-chart .bar {
   height: 300px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 @media (min-width: 600px) {
-  #my-chart {
+  #my-chart .bar {
     height: 400px;
     max-width: 800px;
   }
 }
 
 @media (min-width: 1000px) {
-  #my-chart {
+  #my-chart .bar {
     height: 500px;
     max-width: 1000px;
   }

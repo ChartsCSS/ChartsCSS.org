@@ -145,4 +145,20 @@ You can use either an `id` or a `class` for your custom styles. In any case, you
 }
 ```
 
+Or with a wrapper element:
+
+```html{1}
+<div id="my-chart">
+  <table class="charts-css bar ...">
+    ...
+  </table>
+</div>
+```
+
+```css
+#my-chart .bar {
+  ...
+}
+```
+
 To demonstrate how easy it is, check out our basic examples for creating [3D effects](/customization/3d-effects/), [motion effects](/customization/motion-effects/) and [animations](/customization/animations/). It's amazing what you can do with a few lines of CSS.
