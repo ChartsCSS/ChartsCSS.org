@@ -1,7 +1,7 @@
 {
-  "name": "Charts.js",
+  "name": "Charts.css",
   "short_name": "chartscss",
-  "description": "The Progressive JavaScript Framework",
+  "description": "CSS data visualization framework",
   "lang": "en-US",
   "start_url": "https://ChartsCSS.org",
   "background_color": "#fff",
