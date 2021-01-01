@@ -12,7 +12,7 @@ A wrapper includes the general HTML structure and the chart structure in order t
 The full structure of a chart includes a wrapper `<div>` with inner components including the data `<table>` and the legend list.
 
 ```html
-<div class="my-chart">
+<div id="my-chart">
 
   <ul class="charts-css legend">
   </ul>

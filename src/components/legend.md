@@ -11,19 +11,19 @@ Chart legend displays the labels of the datasets appear on a chart. The chart vi
 
 The legend is a separate component with a separate HTML tag. You have the freedom to position the legend wherever you want. Just like any other HTML tag. 
 
-Note: Currently legend required to use `<ul>` or `<ol>` tags. In the next versions you will have the freedom to use any HTML tag.
+Note: Currently legend required to use `<ul>` + `<li>` or `<ol>` + `<li>` tags. In the next versions you will have the freedom to use any HTML tag.
 
 ## Legend Position
 
 So if you choose to display the chart legend. You can position it wherever you want. Use float (`float: right;`), flexbox (`flex-direction: row;`), grid (`grid-template-columns: 100px 1fr;`), or any other method.
 
 ```html
-<div class="my-chart-container">
+<div id="my-chart">
 
   <ul class="charts-css legend">
   </ul>
 
-  <table class="charts-css bar">
+  <table class="charts-css bar|column|area|line multiple ...">
   </table>
 
 </div>
@@ -47,53 +47,67 @@ Use the `.legend` class to style your chart legend.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-1 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-1 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-1 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-1">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -118,52 +132,67 @@ To aligning legend dataset labels horizontally, use the `.legend-inline` class. 
 <template v-slot:css-code>
 #legend-example-2 {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 500px;
 }
-#legend-example-2 .bar {
+#legend-example-2 .column {
   height: 200px;
-  max-width: 300px;
+  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-2 .legend {
   margin-top: 20px;
+  justify-content: space-between;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-2">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-inline">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -190,53 +219,67 @@ Use the `.legend-circle` class to display a circular shape label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-3 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-3 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-3 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-3">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-circle">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -261,53 +304,67 @@ Use the `.legend-ellipse` class to display a circular shape label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-4 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-4 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-4 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-4">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-ellipse">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -332,53 +389,67 @@ Use the `.legend-square` class to display a square shape label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-5 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-5 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-5 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-5">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-square">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -403,53 +474,67 @@ Use the `.legend-rectangle` class to display a rectangular shape label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-6 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-6 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-6 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-6">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-rectangle">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -474,53 +559,67 @@ Use the `.legend-rhombus` class to display a circular shape label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-7 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-7 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-7 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-7">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-rhombus">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -545,53 +644,67 @@ Use the `.legend-line` class to display a line shape label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-8 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-8 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-8 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-8">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-line">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -618,16 +731,16 @@ For example, lets change the text color, the background color and add a box-shad
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-9 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-9 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-9 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
   color: #ccc;
   background-color: #333;
   box-shadow: 0 0 15px #000;
@@ -636,38 +749,52 @@ For example, lets change the text color, the background color and add a box-shad
 <template v-slot:html-code>
 <div id="legend-example-9">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-square">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
@@ -688,16 +815,16 @@ To target an individual legend element, we can do something like:
   display: flex;
   flex-direction: row;
   gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#legend-example-10 .column {
+  height: 200px;
   max-width: 500px;
   margin: 0 auto;
 }
-#legend-example-10 .bar {
-  height: 192px;
-  max-width: 300px;
-  margin: 0 auto;
-}
 #legend-example-10 .legend {
-  flex-shrink: 2;
+  flex-shrink: 3;
   color: #ccc;
   background-color: #333;
   box-shadow: 0 0 15px #000;
@@ -709,38 +836,52 @@ To target an individual legend element, we can do something like:
 <template v-slot:html-code>
 <div id="legend-example-10">
 
-  <table class="charts-css bar hide-data show-labels">
+  <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
+    <thead>
+      <tr>
+        <th scope="row"> Continent </th>
+        <th scope="col"> 2000 </th>
+        <th scope="col"> 2005 </th>
+        <th scope="col"> 2010 </th>
+        <th scope="col"> 2015 </th>
+        <th scope="col"> 2020 </th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <th scope="row"> 1 </th>
-        <td style="--size: calc( 40 / 100 )"> <span class="data"> $ 40K </span> </td>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc( 20 / 100 );"> <span class="data"> $20K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 2 </th>
-        <td style="--size: calc( 60 / 100 )"> <span class="data"> $ 60K </span> </td>
+        <th scope="row"> Australia </th>
+        <td style="--size: calc( 10 / 100 );"> <span class="data"> $10K </span> </td>
+        <td style="--size: calc( 30 / 100 );"> <span class="data"> $30K </span> </td>
+        <td style="--size: calc( 50 / 100 );"> <span class="data"> $50K </span> </td>
+        <td style="--size: calc( 70 / 100 );"> <span class="data"> $70K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
       </tr>
       <tr>
-        <th scope="row"> 3 </th>
-        <td style="--size: calc( 75 / 100 )"> <span class="data"> $ 75K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 4 </th>
-        <td style="--size: calc( 90 / 100 )"> <span class="data"> $ 90K </span> </td>
-      </tr>
-      <tr>
-        <th scope="row"> 5 </th>
-        <td style="--size: calc( 100 / 100 )"> <span class="data"> $ 100K </span> </td>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc( 40 / 100 );"> <span class="data"> $40K </span> </td>
+        <td style="--size: calc( 60 / 100 );"> <span class="data"> $60K </span> </td>
+        <td style="--size: calc( 75 / 100 );"> <span class="data"> $75K </span> </td>
+        <td style="--size: calc( 90 / 100 );"> <span class="data"> $90K </span> </td>
+        <td style="--size: calc( 100 / 100 );"> <span class="data"> $100K </span> </td>
       </tr>
     </tbody>
   </table>
 
   <ul class="charts-css legend legend-square">
-    <li> 1st year </li>
-    <li> 2nd year </li>
-    <li> 3rd year </li>
-    <li> 4th year </li>
-    <li> 5th year </li>
+    <li> 2000 </li>
+    <li> 2005 </li>
+    <li> 2010 </li>
+    <li> 2015 </li>
+    <li> 2020 </li>
   </ul>
 
 </div>
