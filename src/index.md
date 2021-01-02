@@ -1,4 +1,5 @@
 ---
+title: Charts.css
 home: true
 navbar: false
 heroImage: /assets/img/logo-animation.svg

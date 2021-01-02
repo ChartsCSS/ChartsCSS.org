@@ -1,5 +1,3 @@
-const { description } = require('../../package')
-
 /**
  * Theme configuration reference.
  * https://v1.vuepress.vuejs.org/config/
@@ -10,7 +8,7 @@ module.exports = {
 
   title: 'Charts.css',
 
-  description: description,
+  description: 'CSS data visualization framework',
 
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@0.9.0/dist/charts.min.css' }],
@@ -182,7 +180,7 @@ module.exports = {
         twitterCard: _ => 'summary_large_image',
         type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
         url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-        image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image),
+        image: () => '/assets/img/logo.svg',
         publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
         modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
       }
