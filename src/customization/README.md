@@ -1,5 +1,5 @@
 ---
-prev: ../charts/radar
+prev: ../charts/mixed
 next: ./3d-effects
 ---
 

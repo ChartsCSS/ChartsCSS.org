@@ -111,6 +111,7 @@ module.exports = {
           '/charts/donut',
           '/charts/polar',
           '/charts/radar',
+          '/charts/mixed',
         ]
       },
       {
