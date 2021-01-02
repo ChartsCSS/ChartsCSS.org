@@ -25,11 +25,11 @@ The full structure of a chart includes a wrapper `<div>` with inner components i
 
 Note that only the `<table>` is required. The wrapper elements and the legend are optional fields.
 
-| Type            | Field        | Element   |
-|:----------------|:-------------|:----------|
-| Wrapper Element | **Optional** | Any       |
-| Chart Legend    | **Optional** | Any       |
-| Chart Data      | **Required** | `<table>` |
+| Type            | Field        | Element         |
+|:----------------|:-------------|:----------------|
+| Wrapper Element | **Optional** | Any             |
+| Chart Legend    | **Optional** | `<ul>` / `<ol>` |
+| Chart Data      | **Required** | `<table>`       |
 
 ## Data Table
 
