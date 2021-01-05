@@ -180,7 +180,7 @@ module.exports = {
         twitterCard: _ => 'summary_large_image',
         type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
         url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-        image: () => 'https://chartscss.org/assets/img/logo.svg',
+        image: () => 'https://chartscss.org/assets/img/logo.png',
         publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
         modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
       }
