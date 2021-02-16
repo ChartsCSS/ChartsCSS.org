@@ -163,7 +163,7 @@ You can add a [heading](../components/heading/) to your chart using the `<captio
 
 ## Multiple Datasets
 
-You can use a [single dataset](../components/data/) (one `<td>` tag in each `<td>`).
+You can use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
 
 ```html{2}
 <tr>
@@ -171,7 +171,7 @@ You can use a [single dataset](../components/data/) (one `<td>` tag in each `<td
 </tr>
 ```
 
-Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<td>`).
+Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<tr>`).
 
 ```html{2-4}
 <tr>
