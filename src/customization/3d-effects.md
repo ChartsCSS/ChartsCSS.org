@@ -197,7 +197,7 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
 
 ## 3D Cylinders
 
-To make the bars look like 3D cylinders yuo can use the `border-radius` property:
+To make the bars look like 3D cylinders you can use the `border-radius` property:
 
 ```css
 #custom-effect tbody td {
