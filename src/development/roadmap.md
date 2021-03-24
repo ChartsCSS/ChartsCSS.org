@@ -15,15 +15,15 @@ Planned development and the release of new chart types:
 
 * ~~**November 2020** - Area Chart & Line Chart.~~
 
-* **January 2021** - Radial chart.
+* **Q3 2021** - Radial chart.
 
-* **February 2021** - Pie chart.
+* **Q3 2021** - Pie chart.
 
-* **March 2021** - Donut chart.
+* **Q3 2021** - Donut chart.
 
-* **April 2021** - Polar Chart.
+* **Q4 2021** - Polar Chart.
 
-* **May 2021** - Radar Chart.
+* **Q4 2021** - Radar Chart.
 
 ## Long Term Roadmap
 
