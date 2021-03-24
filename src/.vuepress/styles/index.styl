@@ -31,7 +31,7 @@
 .home .features
   align-items center !important
   padding 2.5rem 0 !important
-  margin 0 0 2.5rem !important
+  margin 0 !important
   border-bottom 1px solid #eee
 
 .home .charts
@@ -60,6 +60,23 @@
 .home .chart:hover a
 .home .chart:focus a
   transform translateY(-8px) scale(1.05)
+
+.home .contributors
+  display flex
+  justify-content space-evenly
+  padding 3rem 0
+  border-bottom 1px solid #eee
+
+.home .contributor img
+  width 150px
+  height 150px
+  border-radius 50%
+
+.home .contributor div
+  line-height 2
+
+.home .contributor div:nth-of-type(1)
+  font-weight 700
 
 .nav-links .repo-link
 .sidebar .nav-links .repo-link

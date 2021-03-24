@@ -214,6 +214,22 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
 
 </div>
 
+<div class="contributors">
+
+  <div class="contributor">
+    <img src="/assets/img/rami.jpg" title="Rami Yushuvaev">
+    <div>Rami Yushuvaev</div>
+    <div>Developer</div>
+  </div>
+
+  <div class="contributor">
+    <img src="/assets/img/lana.jpg" title="Lana Gordiievska">
+    <div>Lana Gordiievski</div>
+    <div>Designer</div>
+  </div>
+
+</div>
+
 **Charts.css** is an open source framework licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT license</a>.
 
 <br>
