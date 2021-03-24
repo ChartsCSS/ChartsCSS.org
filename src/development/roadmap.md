@@ -33,8 +33,6 @@ The framework should implement new features and components. Not necessarily in t
 
 * **Dual Axes Labels** - Support two independent secondary-labels, one dataset on each side.
 
-* **Axis Titles** - Support axes titles. Primary axis title and secondary axis title.
-
 * **Build Tools** - Add more build tools.
 
 * **Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.

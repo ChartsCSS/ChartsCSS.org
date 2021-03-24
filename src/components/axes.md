@@ -693,3 +693,136 @@ To customize the data axes use the following CSS variables:
   --data-axes-width: 1px;
 }
 ```
+
+## Axis Title
+
+To add informative titles for your axes, you can use `<table>` tags. To add axis titles we will use a [wrapper div](wrapper/#general-anatomy). The title will be outside of the chart because HTML `<table>`s don't have HTML tags we can use.
+
+```html
+<div id="my-chart">
+
+  <table class="charts-css column"> ... </table>
+
+  <div class="primary-axis"> Primary Axis Title </div>
+
+  <div class="data-axis"> Data Axis Title </div>
+
+</div>
+```
+
+```css
+#my-chart {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 250px 50px;
+  grid-template-areas: 
+    "data-axis    chart"
+    "primary-axis primary-axis";
+  background-color: #eee;
+}
+#my-chart > table {
+  grid-area: chart;
+}
+#my-chart > .primary-axis {
+  grid-area: primary-axis;
+}
+#my-chart > .data-axis {
+  grid-area: data-axis;
+  writing-mode: tb-rl;
+  transform: rotateZ(180deg);
+}
+```
+
+<code-example code-example-id="axes-example-13">
+<template v-slot:css-code>
+#axes-example-13 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 250px 50px;
+  grid-template-areas: 
+    "data-axis    chart"
+    "primary-axis primary-axis";
+  background-color: #eee;
+}
+#axes-example-13 > table {
+  grid-area: chart;
+}
+#axes-example-13 > .primary-axis {
+  grid-area: primary-axis;
+}
+#axes-example-13 > .data-axis {
+  grid-area: data-axis;
+  writing-mode: tb-rl;
+  transform: rotateZ(180deg);
+}
+</template>
+<template v-slot:html-code>
+<div id="axes-example-13">
+  <table class="charts-css column show-labels show-primary-axis">
+  <caption> Axes Example #13 </caption>
+  <thead>
+    <tr>
+      <th scope="col"> Month </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> Jan </th>
+      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Feb </th>
+      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Mar </th>
+      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Apr </th>
+      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> May </th>
+      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jun </th>
+      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jul </th>
+      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Aug </th>
+      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Sep </th>
+      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Oct </th>
+      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Nov </th>
+      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Dec </th>
+      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+    </tr>
+  </tbody>
+  </table>
+  <div class="primary-axis"> Month </div>
+  <div class="data-axis"> Progress </div>
+</div>
+</template>
+</code-example>
