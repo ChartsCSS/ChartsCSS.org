@@ -720,7 +720,6 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
   grid-template-areas: 
     "data-axis    chart"
     "primary-axis primary-axis";
-  background-color: #eee;
 }
 #my-chart > table {
   grid-area: chart;
@@ -747,6 +746,7 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
     "data-axis    chart"
     "primary-axis primary-axis";
   background-color: #eee;
+  width: 650px;
 }
 #axes-example-13 > table {
   grid-area: chart;

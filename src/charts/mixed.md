@@ -49,9 +49,9 @@ The first method to place them on top of each other using CSS position:
 #my-stock-chart {
   position: relative;
   height: 250px;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  background-color: #eee;
 }
 #my-stock-chart > table {
   position: absolute;
@@ -71,6 +71,7 @@ The first method to place them on top of each other using CSS position:
 #stock-chart-example-1 {
   position: relative;
   height: 250px;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   background-color: #eee;
@@ -192,7 +193,6 @@ The same result can be achieved with CSS grid. And also include [axis titles](..
     "data-1-axis  stocks       data-2-axis"
     "data-1-axis  volume       data-2-axis"
     "primary-axis primary-axis primary-axis";
-  background-color: #eee;
 }
 #my-chart > table.area,
 #my-chart > table.line {
@@ -228,6 +228,7 @@ The same result can be achieved with CSS grid. And also include [axis titles](..
     "data-1-axis  volume       data-2-axis"
     "primary-axis primary-axis primary-axis";
   background-color: #eee;
+  width: 650px;
 }
 #stock-chart-example-2 > table.area,
 #stock-chart-example-2 > table.line {
