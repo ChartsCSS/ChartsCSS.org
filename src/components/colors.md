@@ -187,7 +187,7 @@ To change specific element color, we need to apply the `--color` variable on a s
 </template>
 </code-example>
 
-This method can be also applied on all the `<td>` elements.
+This method can be also applied on all the `<td>` elements one by one.
 
 ```html{3,7,11}
 <tr>
@@ -283,7 +283,7 @@ This method can be also applied on all the `<td>` elements.
 </template>
 </code-example>
 
-**Note:** With small data tables it's an acceptable method but with large tables it's a not a recommended practice. Keep reading to learn how to [change global colors](#change-global-colors).
+**Note:** With small data tables it's an acceptable method to override colors for each `<td>` element but with large tables it's a not a recommended practice. Keep reading to learn how to [change global colors](#change-global-colors).
 
 ## Change Global Colors
 
@@ -325,7 +325,7 @@ It works well with single datasets:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-2" id="colors-example-4">
+<table class="charts-css column show-labels hide-data data-spacing-2 show-primary-axis" id="colors-example-4">
 
   <caption> Colors Example #4 </caption>
 
@@ -404,7 +404,7 @@ And with multiple datasets:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-labels hide-data data-spacing-10 datasets-spacing-1 show-data-axes" id="colors-example-5">
+<table class="charts-css column multiple show-labels hide-data data-spacing-10 datasets-spacing-1 show-primary-axis show-data-axes" id="colors-example-5">
 
   <caption> Colors Example #5 </caption>
 
@@ -698,6 +698,106 @@ You can set gradients on any CSS variables mentioned above.
 </template>
 </code-example>
 
+## Use Pseudo Classes
+
+You can use CSS pseudo-classes to target the elements you want to color.
+
+```css
+#my-chart tr {
+  --color: #fdc;
+}
+#my-chart tr:nth-child(n+8):not(:last-child) {
+  --color: #f84;
+}
+#my-chart tr:last-child {
+  --color: repeating-linear-gradient(135deg, #fdc 0px, #fdc 6px, #f84 6px, #f84 12px);
+}
+```
+
+<code-example code-example-id="colors-example-9">
+<template v-slot:css-code>
+#colors-example-9 {
+  height: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#colors-example-9 tr {
+  --color: #fdc;
+}
+#colors-example-9 tr:nth-child(n+8):not(:last-child) {
+  --color: #f84;
+}
+#colors-example-9 tr:last-child {
+  --color: repeating-linear-gradient(135deg, #fdc 0px, #fdc 6px, #f84 6px, #f84 12px);
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels hide-data data-spacing-5" id="colors-example-9">
+
+  <caption> Colors Example #9 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Month </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> Jan </th>
+      <td style="--size: 0.48;"> <span class="data"> 48 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Feb </th>
+      <td style="--size: 0.40;"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Mar </th>
+      <td style="--size: 0.36;"> <span class="data"> 36 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Apr </th>
+      <td style="--size: 0.38;"> <span class="data"> 38 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> May </th>
+      <td style="--size: 0.48;"> <span class="data"> 48 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jun </th>
+      <td style="--size: 0.60;"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Jul </th>
+      <td style="--size: 0.78;"> <span class="data"> 78 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Aug </th>
+      <td style="--size: 0.88;"> <span class="data"> 88 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Sep </th>
+      <td style="--size: 0.96;"> <span class="data"> 96 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Oct </th>
+      <td style="--size: 1.00;"> <span class="data"> 100 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Nov </th>
+      <td style="--size: 0.97;"> <span class="data"> 97 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> Dec </th>
+      <td style="--size: 0.84;"> <span class="data"> 84 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
 ## Use Patterns
 
 You can even use custom CSS patterns.
@@ -720,9 +820,9 @@ You can even use custom CSS patterns.
 
 Repeating gradients will do the trick.
 
-<code-example code-example-id="colors-example-9">
+<code-example code-example-id="colors-example-10">
 <template v-slot:css-code>
-#colors-example-9 {
+#colors-example-10 {
   height: 200px;
   max-width: 800px;
   margin: 0 auto;
@@ -740,9 +840,9 @@ Repeating gradients will do the trick.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5" id="colors-example-9">
+<table class="charts-css column show-labels hide-data data-spacing-5" id="colors-example-10">
 
-  <caption> Colors Example #9 </caption>
+  <caption> Colors Example #10 </caption>
 
   <thead>
     <tr>
@@ -830,25 +930,25 @@ Three repeating colors in a single datasets table:
 
 <code-example code-example-id="colors-example-10">
 <template v-slot:css-code>
-#colors-example-10 {
+#colors-example-11 {
   height: 200px;
   max-width: 800px;
   margin: 0 auto;
 }
-#colors-example-10:not(.multiple) tbody tr:nth-of-type(3n + 1) td {
+#colors-example-11:not(.multiple) tbody tr:nth-of-type(3n + 1) td {
   background-color: #f06464;
 }
-#colors-example-10:not(.multiple) tbody tr:nth-of-type(3n + 2) td {
+#colors-example-11:not(.multiple) tbody tr:nth-of-type(3n + 2) td {
   background-color: #8cdc78;
 }
-#colors-example-10:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
+#colors-example-11:not(.multiple) tbody tr:nth-of-type(3n + 3) td {
   background-color: #82beff;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data" id="colors-example-10">
+<table class="charts-css column show-labels hide-data" id="colors-example-11">
 
-  <caption> Colors Example #10 </caption>
+  <caption> Colors Example #11 </caption>
 
   <thead>
     <tr>
@@ -914,27 +1014,27 @@ Three repeating colors in a single datasets table:
 
 Three repeating colors in a multiple datasets table:
 
-<code-example code-example-id="colors-example-11">
+<code-example code-example-id="colors-example-12">
 <template v-slot:css-code>
-#colors-example-11 {
+#colors-example-12 {
   height: 200px;
   max-width: 800px;
   margin: 0 auto;
 }
-#colors-example-11.charts-css.multiple tbody tr td:nth-of-type(3n + 1) {
+#colors-example-12.charts-css.multiple tbody tr td:nth-of-type(3n + 1) {
   background-color: #f06464;
 }
-#colors-example-11.charts-css.multiple tbody tr td:nth-of-type(3n + 2) {
+#colors-example-12.charts-css.multiple tbody tr td:nth-of-type(3n + 2) {
   background-color: #8cdc78;
 }
-#colors-example-11.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
+#colors-example-12.charts-css.multiple tbody tr td:nth-of-type(3n + 3) {
   background-color: #82beff;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-11">
+<table class="charts-css column multiple show-labels hide-data data-spacing-10 show-data-axes" id="colors-example-12">
 
-  <caption> Colors Example #11 </caption>
+  <caption> Colors Example #12 </caption>
 
   <thead>
     <tr>
