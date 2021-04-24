@@ -35,6 +35,8 @@ The framework should implement new features and components. Not necessarily in t
 
 * **Build Tools** - Add more build tools.
 
+* **Name Spacing** - Use namespaces to prevent class conflicts with other css frameworks.
+
 * **Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.
 
-* **Component Prefix** - Consider supporting component prefix: `axes:primary`, `axes:*-secondary`, `axes:data`, `labels:show`, `labels:align-end` etc.
+* **Component Prefix** - Consider supporting component prefix: `chart-axes:primary`, `chart-axes:*-secondary`, `chart-axes:data`, `chart-labels:show`, `chart-labels:align-end` etc.
