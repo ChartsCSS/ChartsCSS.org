@@ -405,4 +405,4 @@ Some chart types require not only the `--size` variable but also the `--start` v
 
 All `--size` variables should always be a unitless numbers between `0` to `1`. Why unitless? Because you should be able to change chart types without changing the unit in all the variables.
 
-Rectangular charts use percentage as a unit of measurement while redial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated units. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.
+Rectangular charts use percentage as a unit of measurement while radial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated units. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.
