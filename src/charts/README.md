@@ -77,8 +77,8 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
       <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
     </tr>
@@ -100,9 +100,9 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-data-on-hover</code> </th>
@@ -110,10 +110,10 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>reverse</code> </th>
@@ -177,9 +177,9 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-*-secondary-axes</code> </th>
@@ -188,9 +188,9 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-data-axes</code> </th>
@@ -231,8 +231,8 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
       <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
     </tr>
