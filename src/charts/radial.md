@@ -1,8 +1,8 @@
 ---
-permalink: /charts/donut/
+permalink: /charts/radial/
 ---
 
-# Donut <Badge type="warning" vertical="top" text="Under Development" />
+# Radial <Badge type="warning" vertical="top" text="Under Development" />
 
 ::: warning Note
 This chart is still [under development](/development/roadmap/). It's not yet included in the latest release.

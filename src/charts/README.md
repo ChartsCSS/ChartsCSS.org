@@ -17,8 +17,8 @@ Before using charts, check the development status. If a chart type is already re
 | [Column](./column/) | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css column` |
 | [Area](./area/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css area  ` |
 | [Line](./line/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css line`   |
+| [Radial](./radial/) | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radial` |
 | [Pie](./pie/)       | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css pie`    |
-| [Donut](./donut/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css donut`  |
 | [Radar](./radar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radar`  |
 | [Polar](./polar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css polar`  |
 
@@ -33,7 +33,7 @@ The current state of supported feature:
 }
 #features thead tr th:not(:first-of-type) {
   transform: rotate(-90deg);
-  width: 60px;
+  width: 40px;
   height: 80px;
   padding: 0;
   text-align: start;
@@ -52,8 +52,8 @@ The current state of supported feature:
       <th scope="col"> Column </th>
       <th scope="col"> Area </th>
       <th scope="col"> Line </th>
+      <th scope="col"> Radial </th>
       <th scope="col"> Pie </th>
-      <th scope="col"> Donut </th>
       <th scope="col"> Radar </th>
       <th scope="col"> Polar </th>
     </tr>
@@ -77,8 +77,8 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
       <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
     </tr>
@@ -100,9 +100,9 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-data-on-hover</code> </th>
@@ -110,10 +110,10 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>reverse</code> </th>
@@ -177,9 +177,9 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-*-secondary-axes</code> </th>
@@ -188,9 +188,9 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-d /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-data-axes</code> </th>
@@ -231,8 +231,8 @@ The current state of supported feature:
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
       <td> <status-x /> </td>
+      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
     </tr>
