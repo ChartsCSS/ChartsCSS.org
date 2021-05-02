@@ -33,7 +33,7 @@ The current state of supported feature:
 }
 #features thead tr th:not(:first-of-type) {
   transform: rotate(-90deg);
-  width: 60px;
+  width: 40px;
   height: 80px;
   padding: 0;
   text-align: start;
