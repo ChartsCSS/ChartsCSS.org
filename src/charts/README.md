@@ -17,8 +17,8 @@ Before using charts, check the development status. If a chart type is already re
 | [Column](./column/) | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css column` |
 | [Area](./area/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css area  ` |
 | [Line](./line/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css line`   |
+| [Radial](./radial/) | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radial` |
 | [Pie](./pie/)       | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css pie`    |
-| [Donut](./donut/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css donut`  |
 | [Radar](./radar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radar`  |
 | [Polar](./polar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css polar`  |
 
@@ -52,8 +52,8 @@ The current state of supported feature:
       <th scope="col"> Column </th>
       <th scope="col"> Area </th>
       <th scope="col"> Line </th>
+      <th scope="col"> Radial </th>
       <th scope="col"> Pie </th>
-      <th scope="col"> Donut </th>
       <th scope="col"> Radar </th>
       <th scope="col"> Polar </th>
     </tr>

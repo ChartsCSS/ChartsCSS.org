@@ -1,14 +1,14 @@
 ---
-permalink: /examples/donut/
+permalink: /examples/radial/
 editLink: false
 prev: false
 next: false
 pageClass: example-page
 ---
 
-# Donut Examples
+# Radial Examples
 
-<table class="charts-css donut">
+<table class="charts-css radial">
   <caption>Years Compared</caption>
   <thead>
     <tr>

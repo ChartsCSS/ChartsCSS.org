@@ -19,7 +19,7 @@ Planned development and the release of new chart types:
 
 * **Q3 2021** - Pie chart.
 
-* **Q3 2021** - Donut chart.
+* **Q4 2021** - Radial chart.
 
 * **Q4 2021** - Polar Chart.
 

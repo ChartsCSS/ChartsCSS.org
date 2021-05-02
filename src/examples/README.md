@@ -16,8 +16,8 @@ Examples of different layouts for each chart type:
 * [Column Chart Examples](/examples/column/)
 * [Area Chart Examples](/examples/area/)
 * [Line Chart Examples](/examples/line/)
+* ~~[Radial Chart Examples](/examples/radial/)~~
 * ~~[Pie Chart Examples](/examples/pie/)~~
-* ~~[Donut Chart Examples](/examples/donut/)~~
 * ~~[Radar Chart Examples](/examples/radar/)~~
 * ~~[Polar Chart Examples](/examples/polar/)~~
 
