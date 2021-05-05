@@ -183,8 +183,18 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
 <div class="features">
 
   <div class="feature">
-    <h2>HTML & CSS</h2>
-    <p>Uses semantic HTML tags</p>
+    <h2>Semantic Structure</h2>
+    <p>Uses HTML tags to display data</p>
+  </div>
+
+  <div class="feature">
+    <h2>Customizable</h2>
+    <p>Custom styling using CSS</p>
+  </div>
+
+  <div class="feature">
+    <h2>Responsive</h2>
+    <p>Scaled using media queries</p>
   </div>
 
   <div class="feature">
@@ -193,23 +203,28 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
   </div>
 
   <div class="feature">
-    <h2>Customizable</h2>
-    <p>Style the charts your way</p>
+    <h2>Large Variety</h2>
+    <p>Many supported chart types</p>
+  </div>
+
+  <div class="feature">
+    <h2>No dependencies</h2>
+    <p>Zero external overhead</p>
+  </div>
+
+  <div class="feature">
+    <h2>Small Library</h2>
+    <p>72kb file size, 6kb gzipped</p>
+  </div>
+
+  <div class="feature">
+    <h2>Better Performance</h2>
+    <p>No JS = no rendering</p>
   </div>
 
   <div class="feature">
     <h2>Open Source</h2>
     <p>You can change the code</p>
-  </div>
-
-  <div class="feature">
-    <h2>Responsive</h2>
-    <p>Uses media queries for scaling</p>
-  </div>
-
-  <div class="feature">
-    <h2>Large Variety</h2>
-    <p>Many supported chart types</p>
   </div>
 
 </div>
