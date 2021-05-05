@@ -5,14 +5,14 @@ next: ./3d-effects
 
 # Customization
 
-One of the key features in **Charts.CSS** is the ability to customize the visibility using basic CSS. Frontend developers can target any HTML element and customize it. This philosophical guideline is what makes the framework so flexible and easy to use.
+One of the key features in **Charts.CSS** is the ability to **_customize the visibility using basic CSS_**. Frontend developers can target any HTML element and customize it. This philosophical guideline is what makes the framework so flexible and easy to use.
 
 ## Custom Styling 
 
-To add your custom CSS simply add either an `id` or a `class` to your `<table>` tag.
+To add your custom CSS simply add an `id` attribute to the `<table>` tag:
 
 ```html
-<table class="charts-css ..." id="my-chart">
+<table id="my-chart" class="charts-css bar|column|area|line ...">
   ...
 </table>
 ```
@@ -22,19 +22,42 @@ To add your custom CSS simply add either an `id` or a `class` to your `<table>` 
 }
 ```
 
-Recommended best practice is to add the chart type to the selector. This way the style will apply only on that chart type and not the other types. Why? because each chart type has its own structure and layout. You don't want un-expected side-effects when switching between charts.
+Or add an `id` attribute to a [wrapper element](/components/wrapper/):
+
+```html
+<div id="my-chart">
+
+  <table class="charts-css bar|column|area|line multiple ...">
+  </table>
+
+  <ul class="charts-css legend">
+  </ul>
+
+</div>
+```
+```css
+#my-chart > table {
+  ...
+}
+```
+
+### Best Practice
+
+It's recommend to add the chart type to your selector. This way the custom style will apply only on that specific chart type and not all the types.
 
 ```css
-/* Custom style applies only on bar charts */
+/* Customize only bar charts */
 #my-chart.bar {
   ...
 }
 
-/* Other style applies only on pie charts */
+/* Customize only pie charts */
 #my-chart.pie {
   ...
 }
 ```
+
+Why is this important? because each chart type has its own structure and layout. You don't want unexpected side-effects when switching between charts types.
 
 ## Basic Examples
 
