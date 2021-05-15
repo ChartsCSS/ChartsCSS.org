@@ -25,7 +25,16 @@ When you add data, you need to supply not only the data `--size` variable but al
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--start: 0.0; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.2"> <span class="data"> $ 20K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.2; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 0.4"> <span class="data"> $ 40K </span> </td>
     </tr>
     <tr>
       <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
@@ -35,9 +44,6 @@ When you add data, you need to supply not only the data `--size` variable but al
     </tr>
     <tr>
       <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
     </tr>
   </tbody>
 
@@ -60,7 +66,16 @@ When you add data, you need to supply not only the data `--size` variable but al
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+      <td style="--start: 0.0; --size: 0.4"> <span class="data"> $ 40K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.2"> <span class="data"> $ 20K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.2; --size: 0.6"> <span class="data"> $ 60K </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 0.4"> <span class="data"> $ 40K </span> </td>
     </tr>
     <tr>
       <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
@@ -70,9 +85,6 @@ When you add data, you need to supply not only the data `--size` variable but al
     </tr>
     <tr>
       <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
     </tr>
   </tbody>
 
@@ -114,7 +126,16 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> </td>
+      <td style="--start: 0.0; --size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.2; --size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 0.4"> </td>
     </tr>
     <tr>
       <td style="--start: 0.4; --size: 0.8"> </td>
@@ -124,9 +145,6 @@ To control the chart dimensions you can use regular CSS. You can use media queri
     </tr>
     <tr>
       <td style="--start: 0.6; --size: 1.0"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> </td>
     </tr>
   </tbody>
 
@@ -160,7 +178,16 @@ You can control the [chart orientation](../components/orientation/), or directio
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> </td>
+      <td style="--start: 0.0; --size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.2; --size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 0.4"> </td>
     </tr>
     <tr>
       <td style="--start: 0.4; --size: 0.8"> </td>
@@ -170,9 +197,6 @@ You can control the [chart orientation](../components/orientation/), or directio
     </tr>
     <tr>
       <td style="--start: 0.6; --size: 1.0"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> </td>
     </tr>
   </tbody>
 
@@ -207,7 +231,16 @@ You can add a [heading](../components/heading/) to your chart using the `<captio
 
   <tbody>
     <tr>
-      <td style="--start: 0.2; --size: 0.4"> </td>
+      <td style="--start: 0.0; --size: 0.4"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.4; --size: 0.2"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.2; --size: 0.6"> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.6; --size: 0.4"> </td>
     </tr>
     <tr>
       <td style="--start: 0.4; --size: 0.8"> </td>
@@ -217,9 +250,6 @@ You can add a [heading](../components/heading/) to your chart using the `<captio
     </tr>
     <tr>
       <td style="--start: 0.6; --size: 1.0"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> </td>
     </tr>
   </tbody>
 
@@ -271,19 +301,34 @@ But when using multiple datasets you should add the `.multiple` class.
 
   <tbody>
     <tr>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.6; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.8; --size: 0.7;"> <span class="data"> 70 </span> </td>
+      <td style="--start: 0.7; --size: 0.9;"> <span class="data"> 100 </span> </td>
     </tr>
     <tr>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.3; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.4; --size: 0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--start: 0.7; --size: 0.9;"> <span class="data"> 90 </span> </td>
+      <td style="--start: 0.9; --size: 0.7;"> <span class="data"> 70 </span> </td>
     </tr>
     <tr>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.1; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.6; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.9; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.7; --size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.3; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.4; --size: 0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--start: 0.8; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.9; --size: 0.9;"> <span class="data"> 90 </span> </td>
+    </tr>
+    <tr>
+      <td style="--start: 0.1; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.6; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.8; --size: 1.0;"> <span class="data"> 100 </span> </td>
+      <td style="--start: 0.9; --size: 0.7;"> <span class="data"> 70 </span> </td>
     </tr>
   </tbody>
 
@@ -340,21 +385,21 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -388,21 +433,21 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -449,21 +494,21 @@ Some charts use long labels others use short ones. To customize the label size u
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -498,21 +543,21 @@ Some charts use long labels others use short ones. To customize the label size u
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -564,21 +609,21 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -612,21 +657,21 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -674,21 +719,21 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -722,21 +767,21 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -784,21 +829,21 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -832,21 +877,21 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -898,21 +943,21 @@ To reverse thr data order use the `.reverse-data` class.
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 
@@ -946,21 +991,21 @@ To reverse thr data order use the `.reverse-data` class.
   <tbody>
     <tr>
       <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
+      <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--start: 0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
+      <td style="--start: 0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
     </tr>
     <tr>
       <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--start: 0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--start: 0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
+      <td style="--start: 0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
     </tr>
   </tbody>
 

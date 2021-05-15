@@ -166,7 +166,7 @@ Another example with moving bars. Revealing themselves from the bottom.
 
 ```css
 #animations-example-3 tbody {
-  overflow-y: hidden;
+  overflow-y: hidden; /* remove this to see how it works */
 }
 #animations-example-3 tbody th {
   background-color: #fff;
@@ -189,7 +189,7 @@ Another example with moving bars. Revealing themselves from the bottom.
   margin: 0 auto;
 }
 #animations-example-3 tbody {
-  overflow-y: hidden;
+  overflow-y: hidden; /* remove this to see how it works */
 }
 #animations-example-3 tbody th {
   background-color: #fff;
@@ -204,7 +204,7 @@ Another example with moving bars. Revealing themselves from the bottom.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data data-spacing-5 show-data-axes" id="animations-example-3">
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-3">
 
   <caption> Animation Example #3 </caption>
 
@@ -242,6 +242,74 @@ Another example with moving bars. Revealing themselves from the bottom.
 </template>
 </code-example>
 
+The same can be done with less code using `scale()`;
+
+```css
+#animations-example-4 tbody td {
+  transform-origin: bottom;
+  animation: revealing-bars 4s linear infinite;
+}
+@keyframes revealing-bars {
+  0%  { transform: scaleY( 0 ); }
+  15% { transform: scaleY( 1 ); }
+}
+```
+
+<code-example code-example-id="animations-example-4">
+<template v-slot:css-code>
+#animations-example-4 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#animations-example-4 tbody td {
+  transform-origin: bottom;
+  animation: revealing-bars 4s linear infinite;
+}
+@keyframes revealing-bars {
+  0%  { transform: scaleY( 0 ); }
+  15% { transform: scaleY( 1 ); }
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-4">
+
+  <caption> Animation Example #4 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
+
 ## Highlighting Data
 
 A useful example to highlighting individual items with animations.
@@ -256,44 +324,36 @@ A useful example to highlighting individual items with animations.
 ```
 
 ```css
-#animations-example-4 .highlighted {
+#animations-example-5 .highlighted {
   animation: highlighted-bar 2s linear infinite;
 }
 @keyframes highlighted-bar {
-  0%,
-  100% {
-    box-shadow: none;
-  }
-  50% {
-    box-shadow: 0 0 1px 0 black, 0 0 20px 5px darkgrey;
-  }
+  0%   { box-shadow: none; }
+  50%  { box-shadow: 0 0 1px 0 black, 0 0 20px 5px darkgrey; }
+  100% { box-shadow: none; }
 }
 ```
 
-<code-example code-example-id="animations-example-4">
+<code-example code-example-id="animations-example-5">
 <template v-slot:css-code>
-#animations-example-4 {
+#animations-example-5 {
   height: 200px;
   max-width: 350px;
   margin: 0 auto;
 }
-#animations-example-4 .highlighted {
+#animations-example-5 .highlighted {
   animation: highlighted-bar 2s linear infinite;
 }
 @keyframes highlighted-bar {
-  0%,
-  100% {
-    box-shadow: none;
-  }
-  50% {
-    box-shadow: 0 0 1px 0 black, 0 0 20px 5px darkgrey;
-  }
+  0%   { box-shadow: none; }
+  50%  { box-shadow: 0 0 1px 0 black, 0 0 20px 5px darkgrey; }
+  100% { box-shadow: none; }
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels data-spacing-15 show-primary-axis show-data-axes" id="animations-example-4">
+<table class="charts-css column show-labels data-spacing-15 show-primary-axis show-data-axes" id="animations-example-5">
 
-  <caption> Animation Example #4 </caption>
+  <caption> Animation Example #5 </caption>
 
   <thead>
     <tr>
@@ -334,7 +394,7 @@ A useful example to highlighting individual items with animations.
 Now lets animate the colors with gradients.
 
 ```css
-#animations-example-5 td {
+#animations-example-6 td {
   background-image: linear-gradient(
     45deg,
     #956fd3,
@@ -353,14 +413,14 @@ Now lets animate the colors with gradients.
 }
 ```
 
-<code-example code-example-id="animations-example-5">
+<code-example code-example-id="animations-example-6">
 <template v-slot:css-code>
-#animations-example-5 {
+#animations-example-6 {
   height: 200px;
   max-width: 350px;
   margin: 0 auto;
 }
-#animations-example-5 td {
+#animations-example-6 td {
   background-image: linear-gradient(
     45deg,
     #956fd3,
@@ -379,9 +439,9 @@ Now lets animate the colors with gradients.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-5">
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-6">
 
-  <caption> Animation Example #5 </caption>
+  <caption> Animation Example #6 </caption>
 
   <thead>
     <tr>
