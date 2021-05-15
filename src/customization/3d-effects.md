@@ -513,3 +513,85 @@ We can also use the webkit reflect effect to highlight the chart
 </table>
 </template>
 </code-example>
+
+## Charts with Shadows
+
+Using shadow is always a good practice to create 3D effects.
+
+```css
+#custom-effect tbody {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+#custom-effect tbody td {
+  margin-inline: 10px;
+  border-radius: 10px;
+  box-shadow:
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+```
+
+<code-example code-example-id="effect-example-7">
+<template v-slot:css-code>
+#effect-example-7 {
+  height: 260px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+#effect-example-7 tbody {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+#effect-example-7 tbody td {
+  margin-inline: 10px;
+  border-radius: 10px;
+  box-shadow:
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+</template>
+<template v-slot:html-code>
+<table class="charts-css column hide-data" id="effect-example-7">
+
+  <caption> 3D Effect Example #7 </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Progress </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> 2016 </th>
+      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2017 </th>
+      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2018 </th>
+      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2019 </th>
+      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+    </tr>
+    <tr>
+      <th scope="row"> 2020 </th>
+      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+    </tr>
+  </tbody>
+
+</table>
+</template>
+</code-example>
