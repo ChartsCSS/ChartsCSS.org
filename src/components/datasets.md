@@ -103,7 +103,7 @@ As you can see we have an issue with colors in our datasets. Continue reading to
 
 ## Datasets Colors
 
-By default, **Chart.css** assumes you use a single dataset. The framework uses different colors for each data record.
+By default, **Charts.css** assumes you use a single dataset. The framework uses different colors for each data record.
 
 On charts with multiple datasets you should add the `.multiple` class to make the framework use different color for each dataset.
 

@@ -13,13 +13,11 @@ Planned development and the release of new chart types:
 
 * ~~**October 2020** - Bar chart & Column chart.~~
 
-* ~~**November 2020** - Area Chart & Line Chart.~~
+* ~~**November 2020** - Area chart & Line chart.~~
 
 * **Q3 2021** - Radial chart.
 
 * **Q3 2021** - Pie chart.
-
-* **Q4 2021** - Radial chart.
 
 * **Q4 2021** - Polar Chart.
 
@@ -29,7 +27,7 @@ Planned development and the release of new chart types:
 
 The framework should implement new features and components. Not necessarily in that order, the long term goals are:
 
-* **More Chart types** - Add more chart types, start with radial and pie charts.
+* **More Chart Types** - Add more chart types, start with radial and pie charts.
 
 * **Dual Axes Labels** - Support two independent secondary-labels, one dataset on each side.
 
