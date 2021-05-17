@@ -717,9 +717,9 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
   justify-items: center;
   grid-template-columns: 50px 1fr;
   grid-template-rows: 250px 50px;
-  grid-template-areas: 
-    "data-axis    chart"
-    "primary-axis primary-axis";
+  grid-template-areas:
+    "data-axis chart"
+    ".         primary-axis";
 }
 #my-chart > table {
   grid-area: chart;
@@ -742,9 +742,9 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
   justify-items: center;
   grid-template-columns: 50px 1fr;
   grid-template-rows: 250px 50px;
-  grid-template-areas: 
-    "data-axis    chart"
-    "primary-axis primary-axis";
+  grid-template-areas:
+    "data-axis chart"
+    ".         primary-axis";
   background-color: #eee;
   width: 650px;
 }
