@@ -53,7 +53,7 @@ To make the bars look like 3D bars is pretty simple. It can be done using CSS `b
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-data-axes" id="effect-example-1">
+<table class="charts-css column hide-data" id="effect-example-1">
 
   <caption> 3D Effect Example #1 </caption>
 
@@ -157,7 +157,7 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-data-axes" id="effect-example-2">
+<table class="charts-css column hide-data" id="effect-example-2">
 
   <caption> 3D Effect Example #2 </caption>
 
@@ -229,7 +229,7 @@ To make the bars look like 3D cylinders you can use the `border-radius` property
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-data-axes" id="effect-example-3">
+<table class="charts-css column hide-data" id="effect-example-3">
 
   <caption> 3D Effect Example #3 </caption>
 
@@ -318,7 +318,7 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-data-axes" id="effect-example-4">
+<table class="charts-css column" id="effect-example-4">
 
   <caption> 3D Effect Example #4 </caption>
 
@@ -396,7 +396,7 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-data-axes" id="effect-example-5">
+<table class="charts-css column hide-data" id="effect-example-5">
 
   <caption> 3D Effect Example #5 </caption>
 
@@ -476,7 +476,7 @@ We can also use the webkit reflect effect to highlight the chart
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column labels-hide show-data-axes" id="effect-example-6">
+<table class="charts-css column labels-hide" id="effect-example-6">
 
   <caption> 3D Effect Example #6 </caption>
 
