@@ -120,7 +120,7 @@ Here is another simple examples with labels (`<th>` elements) spinning every 3 s
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar hide-data show-labels data-spacing-5 show-primary-axis show-data-axes" id="animations-example-2">
+<table class="charts-css bar hide-data show-labels data-spacing-5 show-primary-axis" id="animations-example-2">
 
   <caption> Animation Example #2 - The Richest People In America (Forbes 1918) </caption>
 
@@ -204,7 +204,7 @@ Another example with moving bars. Revealing themselves from the bottom.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-3">
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis" id="animations-example-3">
 
   <caption> Animation Example #3 </caption>
 
@@ -272,7 +272,7 @@ The same can be done with less code using `scale()`;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-4">
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis" id="animations-example-4">
 
   <caption> Animation Example #4 </caption>
 
@@ -351,7 +351,7 @@ A useful example to highlighting individual items with animations.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels data-spacing-15 show-primary-axis show-data-axes" id="animations-example-5">
+<table class="charts-css column show-labels data-spacing-15 show-primary-axis" id="animations-example-5">
 
   <caption> Animation Example #5 </caption>
 
@@ -439,7 +439,7 @@ Now lets animate the colors with gradients.
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis show-data-axes" id="animations-example-6">
+<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis" id="animations-example-6">
 
   <caption> Animation Example #6 </caption>
 
