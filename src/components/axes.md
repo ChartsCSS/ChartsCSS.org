@@ -32,7 +32,7 @@ Class like `.show-x-axes` and `.show-y-axes` deprecated early-on in favor of `.s
 
 ### Supported Axes
 
-**Chart.css** axis system supports 3 types of axes:
+**Charts.css** axis system supports 3 types of axes:
 
 * **Primary Axis** (`.show-primary-axis`) separating the labels from the chart.
 * **Secondary Axes** (`.show-*-secondary-axes`) located inside the chart itself, parallel to the primary axis.

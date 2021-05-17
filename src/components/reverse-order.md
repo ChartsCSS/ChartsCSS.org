@@ -12,7 +12,7 @@ Generally speaking, the framework doesn't deal with data - it only styles the da
 
 But in some unique cases you don't have access to the HTML markup. In other cases you receive an auto-generate HTML table from a backend server you have no control over.
 
-You can use JS to alter the content, but **Chart.css** has two utility classes that can change displayed order without changing the HTML markup.
+You can use JS to alter the content, but **Charts.css** has two utility classes that can change displayed order without changing the HTML markup.
 
 Note: Before changing content order using CSS, make sure there are no focusable elements (`<button>`, `<a>` etc.). It can be very confusing for users using a keyboard.
 
