@@ -130,6 +130,8 @@ module.exports = {
         sidebarDepth: -1,
         children: [
           '/development/design-principles',
+          '/development/supported-features',
+          '/development/cheat-sheet',
           '/development/roadmap',
         ]
       },
