@@ -61,7 +61,7 @@ To transform it to a bar chart we need to add the `.bar` class.
 </table>
 ```
 
-Only then you can start adding some inner components like [axes](/charts/axes), [tooltips](/charts/tooltip) etc.
+Only then you can start adding some inner components like [axes](/components/axes), [tooltips](/components/tooltips) etc.
 
 ```html
 <table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes">
