@@ -674,7 +674,7 @@ You can set gradients on any CSS variables mentioned above.
     </tr>
     <tr>
       <th scope="row"> Aug </th>
-      <td style="--start: 0.12; --size: 0.32;"> <span class="data"> 32 </span> </td>
+      <td style="--start: 0.15; --size: 0.32;"> <span class="data"> 32 </span> </td>
     </tr>
     <tr>
       <th scope="row"> Sep </th>
