@@ -53,3 +53,8 @@ Or using [yarn](https://classic.yarnpkg.com/en/package/charts.css):
 ```bash
 yarn add charts.css
 ```
+
+Then import it in your project:
+```javascript
+import 'charts.css';
+```
