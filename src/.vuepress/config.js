@@ -20,7 +20,11 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'msapplication-TileImage', content: '/assets/img/logo.svg' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    // Google Fonts
+    [ "link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    [ "link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" } ],
+    [ "link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;700&display=swap" } ]
   ],
 
   themeConfig: {
