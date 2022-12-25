@@ -1,6 +1,5 @@
 ---
 permalink: /docs/usage/
-next: ../../components/
 ---
 
 # Usage

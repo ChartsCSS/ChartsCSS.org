@@ -38,7 +38,7 @@ When should you consider migrating to **Charts.css**? In most cases, you just ne
 
 ## Get Started
 
-To start using **Charts.css** see the [installation](/docs/installation/) page and read the [usage](/docs/usage/) page explaining how to structure your data and apply CSS classes.
+To start using **Charts.css** see the [installation](/docs/installation/) page. Read the [usage](/docs/usage/) page explaining how to structure your data and apply CSS classes. And visit the [anatomy](/docs/anatomy/) to see the layers of the different components.
 
 ## License
 

@@ -1,5 +1,5 @@
 ---
-prev: ../docs/usage
+prev: ../docs/anatomy
 next: ./wrapper
 ---
 
