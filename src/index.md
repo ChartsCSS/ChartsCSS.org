@@ -178,6 +178,28 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
     <p>3D Tilt <br> Effect</p>
   </div>
 
+  <div class="chart hidden">
+    <a href="./charts/pie/" aria-label="Pie Chart">
+      <svg viewBox="0 0 100 100">
+        <path d="M50,10V50L17.24,27.06A39.92,39.92,0,0,1,50,10Z" style="fill:#fff; opacity:0.3;" />
+        <path d="M50,50,39.65,88.64A40,40,0,0,1,17.24,27.06Z" style="fill:#fff; opacity:0.6;" />
+        <path d="M90,50A40,40,0,0,1,39.65,88.64L50,50V10A40,40,0,0,1,90,50Z" style="fill:#fff; opacity:0.9;" />
+      </svg>
+    </a>
+    <p>Pie <br> Chart</p>
+  </div>
+
+  <div class="chart hidden">
+    <a href="./charts/donut/" aria-label="Donut Chart">
+      <svg viewBox="0 0 100 100">
+        <path d="M50,30V10A39.92,39.92,0,0,0,17.24,27.06L33.63,38.54A19.94,19.94,0,0,1,50,30Z" style="fill:#fff; opacity:0.3;" />
+        <path d="M30,50a19.85,19.85,0,0,1,3.63-11.46L17.24,27.06A40,40,0,0,0,39.65,88.64L44.83,69.3A20,20,0,0,1,30,50Z" style="fill:#fff; opacity:0.6;" />
+        <path d="M50,10V30a20,20,0,1,1-5.17,39.3L39.65,88.64A40,40,0,1,0,50,10Z" style="fill:#fff; opacity:0.9;" />
+      </svg>
+    </a>
+    <p>Donut <br> Chart</p>
+  </div>
+
 </div>
 
 <div class="features">
