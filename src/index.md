@@ -6,6 +6,8 @@ heroImage: /assets/img/logo-animation.svg
 tagline: CSS data visualization framework
 ---
 
+<div class="info">
+
 <p class="action">
   <a href="/docs/" class="action-button">Quick Start</a>
   <a href="https://github.com/ChartsCSS/charts.css" target="_blank" class="action-button github">GitHub Repo</a>
@@ -15,7 +17,11 @@ tagline: CSS data visualization framework
 
 The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css). If you like the project, please consider to star the repo on GitHub.
 
+</div>
+
 <div class="charts">
+
+  <h2>Choose from a Variety of Charts</h2>
 
   <div class="chart">
     <a href="./charts/area/" aria-label="Area Chart">
@@ -204,48 +210,50 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
 
 <div class="features">
 
+  <h2>Framework Benefits</h2>
+
   <div class="feature">
-    <h2>Semantic Structure</h2>
+    <h3>Semantic Structure</h3>
     <p>Uses HTML tags to display data</p>
   </div>
 
   <div class="feature">
-    <h2>Customizable</h2>
+    <h3>Customizable</h3>
     <p>Custom styling using CSS</p>
   </div>
 
   <div class="feature">
-    <h2>Responsive</h2>
+    <h3>Responsive</h3>
     <p>Scaled using media queries</p>
   </div>
 
   <div class="feature">
-    <h2>Accessible</h2>
+    <h3>Accessible</h3>
     <p>Raw data inside the markup</p>
   </div>
 
   <div class="feature">
-    <h2>Large Variety</h2>
+    <h3>Large Variety</h3>
     <p>Many supported chart types</p>
   </div>
 
   <div class="feature">
-    <h2>No dependencies</h2>
+    <h3>No dependencies</h3>
     <p>Zero external overhead</p>
   </div>
 
   <div class="feature">
-    <h2>Small Library</h2>
+    <h3>Small Library</h3>
     <p>72kb file size, 6kb gzipped</p>
   </div>
 
   <div class="feature">
-    <h2>Better Performance</h2>
+    <h3>Better Performance</h3>
     <p>No JS = no rendering</p>
   </div>
 
   <div class="feature">
-    <h2>Open Source</h2>
+    <h3>Open Source</h3>
     <p>You can change the code</p>
   </div>
 
@@ -253,16 +261,18 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
 
 <div class="contributors">
 
+  <h2>The People Behind The Project</h2>
+
   <div class="contributor">
     <img src="/assets/img/rami.jpg" title="Rami Yushuvaev">
-    <div>Rami Yushuvaev</div>
-    <div>Developer</div>
+    <h3>Rami Yushuvaev</h3>
+    <p>Developer</p>
   </div>
 
   <div class="contributor">
     <img src="/assets/img/lana.jpg" title="Lana Gordiievska">
-    <div>Lana Gordiievski</div>
-    <div>Designer</div>
+    <h3>Lana Gordiievska</h3>
+    <p>Designer</p>
   </div>
 
 </div>

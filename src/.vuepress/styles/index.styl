@@ -7,22 +7,45 @@
 h1, h2, h3, h4, h5, h6, .sidebar-heading, .site-name, .nav-link
   font-family 'Baloo Tamma 2'
 
+.theme-container.no-sidebar
+  background-image url(/assets/img/bg.svg)
+  background-size contain
+  background-repeat repeat-y
+
 .theme-container .home
   padding-top 0
-
-.home
   text-align center
 
-.home .hero img
+.theme-container .home .hero img
   max-width 450px !important
-  margin 2rem auto !important
+  padding 2rem 0 0 !important
+  margin 0 auto !important
+
+.theme-container .home .hero h1
+  margin 1.25rem auto
+
+.theme-container .home .hero .description
+  margin 1.25rem auto
+
+.theme-container .home h2
+  width 100%
+  border 0
+  padding 0
+  margin 0 auto
+
+.theme-container .home h3
+  font-size 1.15rem
+  margin-bottom 0
+
+.theme-container .home p
+  margin-top 0
 
 .home .action-button
   display inline-block
   box-sizing border-box
   font-size 1.1rem
   padding 0.8rem 1.6rem
-  margin 0 1rem 1rem
+  margin 0 1rem
   border-radius 4px
   transition background-color 0.1s ease
   color #fff
@@ -31,18 +54,17 @@ h1, h2, h3, h4, h5, h6, .sidebar-heading, .site-name, .nav-link
 .home .action-button.github
   background-color #333
 
-.home .features
-  align-items center !important
-  padding 2.5rem 0 !important
-  margin 0 !important
-  border-bottom 1px solid #eee
-
 .home .charts
   display flex
   justify-content space-between
   flex-wrap wrap
   gap 30px 10px
-  padding 4rem 0 4rem
+  margin 5rem 0
+
+.home .chart
+  display flex
+  flex-direction column
+  gap .9rem
 
 .home .chart a
   display inline-block
@@ -50,38 +72,45 @@ h1, h2, h3, h4, h5, h6, .sidebar-heading, .site-name, .nav-link
   border-radius 50%
   padding 20px
   max-width 80px
-  transition-duration 0.3s
+  transition-duration 0.6s
 
 .home .chart svg
   width 80px
   height 80px
 
 .home .chart p
-  margin 10px 0 0
   font-size 13px
+  margin-bottom 0
 
 .home .chart:hover a
 .home .chart:focus a
-  transform translateY(-8px) scale(1.05)
+  transform translateY(-12px)
 
 .home .chart.hidden
   display none
 
+.home .features
+  margin 5rem 0 !important
+  padding 0 !important
+  border 0 !important
+  gap 20px 10px
+
+.home .features p
+  margin 0 auto 1rem
+
 .home .contributors
   display flex
-  justify-content space-evenly
-  padding 3rem 0
-  border-bottom 1px solid #eee
+  justify-content center
+  flex-wrap: wrap;
+  gap 2rem 5rem
+  margin 5rem 0
 
 .home .contributor img
   width 150px
   height 150px
   border-radius 50%
 
-.home .contributor div
-  line-height 2
-
-.home .contributor div:nth-of-type(1)
+.home .contributor h3
   font-weight 700
 
 .nav-links .repo-link
