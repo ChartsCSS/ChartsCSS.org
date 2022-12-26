@@ -11,17 +11,21 @@ This page shows the future development roadmap of the framework.
 
 Planned development and the release of new chart types:
 
-* ~~**October 2020** - Bar chart & Column chart.~~
+* ~~**October 2020** - Bar chart.~~
 
-* ~~**November 2020** - Area chart & Line chart.~~
+* ~~**October 2020** - Column chart.~~
 
-* **Q3 2022** - Radial chart.
+* ~~**November 2020** - Area chart.~~
 
-* **Q3 2022** - Pie chart.
+* ~~**November 2020** - Line chart.~~
 
-* **Q4 2022** - Polar Chart.
+* **TBD 2023** - Radial chart.
 
-* **Q4 2022** - Radar Chart.
+* **TBD 2023** - Pie chart.
+
+* **TBD 2023** - Polar Chart.
+
+* **TBD 2023** - Radar Chart.
 
 ## Long Term Roadmap
 
@@ -35,6 +39,6 @@ The framework should implement new features and components. Not necessarily in t
 
 * **Name Spacing** - Use namespaces to prevent class conflicts with other css frameworks.
 
-* **Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.
+* ~~**Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.~~ Can be adjusted with container queries.
 
 * **Component Prefix** - Consider supporting component prefix: `chart-axes:primary`, `chart-axes:*-secondary`, `chart-axes:data`, `chart-labels:show`, `chart-labels:align-end` etc.
