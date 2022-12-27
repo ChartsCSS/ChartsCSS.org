@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{272:function(e,n,t){"use strict";t.r(n);var o={name:"vnode-to-html",props:["vnode"],render(e){return e("template",[this.vnode])},mounted(){this.$emit("html",[...this.$el.childNodes].map(e=>e.outerHTML).join("\n\n"))}},d=t(12),i=Object(d.a)(o,void 0,void 0,!1,null,null,null);n.default=i.exports}}]);
