@@ -5,11 +5,11 @@ next: ../../customization/
 
 # Mixed
 
-Mixed charts display a combination of two or more different chart types on top of each other.
+Mixed charts display a combination of two or more different chart types on top of one another.
 
 ## Usage
 
-To display mixed charts we need to create multiple `<table>` elements for each chart.
+To display mixed charts, create multiple `<table>` elements for each chart.
 
 ```html{3,5,7}
 <div id="my-chart">
@@ -23,7 +23,7 @@ To display mixed charts we need to create multiple `<table>` elements for each c
 </div>
 ```
 
-The next step is to place them on top of each other using CSS. There are several ways to do that we will show two methods.
+The next step is to place them on top of each other using CSS. There are several ways to do this, below are two methods.
 
 ## Stock Chart
 
@@ -31,7 +31,7 @@ Stock charts are very popular in the financial sector. To create a stock chart w
 
 ### Using CSS Position
 
-The first method to place them on top of each other using CSS position:
+The first method to placing them on top of each other is using CSS position:
 
 ```html
 <div id="my-stock-chart">
@@ -162,7 +162,7 @@ The first method to place them on top of each other using CSS position:
 
 ### Using CSS Grid
 
-The same result can be achieved with CSS grid. And also include [axis titles](../components/axes/#axis-title).
+The same result can be achieved with CSS grid. The folowing example also includes [axis titles](../components/axes/#axis-title).
 
 ```html
 <div id="my-stock-chart">

@@ -4,11 +4,11 @@ permalink: /components/tooltips/
 
 # Tooltips
 
-Tooltips allow you to display additional information about the data, using little popup boxes, when hovering over the data.
+Tooltips display additional information, using little popup boxes, when hovering over the data.
 
 ## Add Tooltips
 
-To add tooltips to your data, you need to change the HTML markup to include the tooltip content.
+Add tooltips to any data element by changing the HTML markup to include the tooltip content.
 
 ### Only Data
 
@@ -36,7 +36,7 @@ To add tooltips, simply add a `<span>` tag with a `.tooltip` class.
 </tr>
 ```
 
-You can add tooltips to a specific data like you see in the example above, or to all your data elements as shown bellow.
+Add tooltips to specific data as in the example above, or to all your data elements as shown bellow.
 
 ```html{3-5}
 <tr>
@@ -47,11 +47,11 @@ You can add tooltips to a specific data like you see in the example above, or to
 </tr>
 ```
 
-You can add links, images and other elements to your tooltips.
+You can even add links, images and other elements to your tooltips.
 
 ### Best Practice
 
-It's not required but it's recommended to wrap your data with a `<span>` element and a `.data` class. This way you can distinguish between the raw data and the tooltip.
+It's not required, but we recommend wrapping your data with a `<span>` element and a `.data` class. This way you can distinguish between the raw data and the tooltip.
 
 ```html{4-5,8-9,12-13}
 <tr>

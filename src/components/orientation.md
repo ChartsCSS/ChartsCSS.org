@@ -4,15 +4,15 @@ permalink: /components/orientation/
 
 # Orientation
 
-The orientation sets the general direction of the chart.
+The orientation sets the general direction of the chart and its components.
 
 ## Reverse Orientation
 
-Each chart has an initial orientation. Column charts display data from bottom to top. Bar charts display data from left to right (in LTR languages) and from right to left in RTL languages.
+Each chart has an initial orientation. Column charts display data from bottom to top. Bar charts display data from left to right in LTR languages and from right to left in RTL languages.
 
-You can reverse the initial orientation using the `.reverse` class.
+Reverse the initial orientation of any chart using the `.reverse` class.
 
-It does not matter what's your language writing direction, left-to-right (LTR), right-to-left (RTL) or top-to-bottom (TTB), the `.reverse` class will reverse the initial orientation.
+No matter what the language writing direction, left-to-right (LTR), right-to-left (RTL) or top-to-bottom (TTB), the `.reverse` class will reverse the initial orientation.
 
 ```html
 <table class="charts-css bar reverse">

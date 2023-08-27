@@ -9,7 +9,7 @@ next: ./bar
 
 ## Chart Types
 
-Before using charts, check the development status. If a chart type is already released, you can use it with the **usage class**.
+Before using charts, check the **development status** in the table below. If a chart type has already been released, you can use it with the **usage class**.
 
 | Type                | Development Status                                                  | Usage Class         |
 |:--------------------|:--------------------------------------------------------------------|:--------------------|
@@ -22,4 +22,4 @@ Before using charts, check the development status. If a chart type is already re
 | [Radar](./radar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radar`  |
 | [Polar](./polar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css polar`  |
 
-Also see the [supported features](/development/supported-features/) for each chart type.
+See the [supported features](/development/supported-features/) for each chart type.

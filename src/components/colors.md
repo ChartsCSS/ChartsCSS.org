@@ -4,7 +4,7 @@ permalink: /components/colors/
 
 # Colors
 
-Chart colors help end-users to distinguish between data items and datasets.
+Chart colors help users distinguish between data items and datasets.
 
 ## Change All Colors
 
@@ -98,7 +98,7 @@ The most basic way to change colors is to use the `--color` variable, applying i
 
 ## Change Specific Colors
 
-To change specific element color, we need to apply the `--color` variable on a specific `<td>` tag. This way the inheritance rules apply only on that element. 
+To change specific element color, we need to apply the `--color` variable on a specific `<td>` tag. This way the inheritance rules only apply to that element. 
 
 ```html{3}
 <tr>
@@ -187,7 +187,7 @@ To change specific element color, we need to apply the `--color` variable on a s
 </template>
 </code-example>
 
-This method can be also applied on all the `<td>` elements one by one.
+This method can be also be applied to all the `<td>` elements one by one.
 
 ```html{3,7,11}
 <tr>
@@ -283,11 +283,11 @@ This method can be also applied on all the `<td>` elements one by one.
 </template>
 </code-example>
 
-**Note:** With small data tables it's an acceptable method to override colors for each `<td>` element but with large tables it's a not a recommended practice. Keep reading to learn how to [change global colors](#change-global-colors).
+**Note:** With small data tables it's acceptable to override colors for each `<td>` element but with large tables it's a not recommended. Keep reading to learn how to [change global colors](#change-global-colors).
 
 ## Change Global Colors
 
-The framework has a set of 10 default color repeating themselves. You can override those colors to create your own custom theme.
+The framework has a set of 10 default colors repeating themselves. Override these colors to create your own custom theme.
 
 ```css
 #my-chart {
@@ -304,7 +304,7 @@ The framework has a set of 10 default color repeating themselves. You can overri
 }
 ```
 
-It works well with single datasets:
+This works well with single datasets:
 
 <code-example code-example-id="colors-example-4">
 <template v-slot:css-code>
@@ -448,11 +448,11 @@ And with multiple datasets:
 </template>
 </code-example>
 
-**Note:** As mentioned above, the framework has a set of 10 default color repeating themselves. You can create your own [custom color system](#custom-color-system) based on 3 or 5 or even 20 repeating colors.
+**Note:** As mentioned above, the framework has a set of 10 default colors repeating themselves. You can create your own [custom color system](#custom-color-system) based on three, five, or even 20 repeating colors.
 
 ## Custom Images
 
-External images can be places instead of the color.
+External images can be used instead of colors.
 
 ```css
 #my-chart {
@@ -538,7 +538,7 @@ External images can be places instead of the color.
 
 ## Use Gradients
 
-You can set gradients on any CSS variables mentioned above.
+Set gradients on any CSS variables mentioned above.
 
 ```css
 #my-chart {
@@ -700,7 +700,7 @@ You can set gradients on any CSS variables mentioned above.
 
 ## Use Pseudo Classes
 
-You can use CSS pseudo-classes to target the elements you want to color.
+Use CSS pseudo-classes to target the elements you want to color.
 
 ```css
 #my-chart tr {
@@ -800,7 +800,7 @@ You can use CSS pseudo-classes to target the elements you want to color.
 
 ## Use Patterns
 
-You can even use custom CSS patterns.
+Use custom CSS patterns instead of colors.
 
 ```css
 #my-chart {
@@ -818,7 +818,7 @@ You can even use custom CSS patterns.
 }
 ```
 
-Repeating gradients will do the trick.
+Create CSS patterns using repeating gradients.
 
 <code-example code-example-id="colors-example-10">
 <template v-slot:css-code>
@@ -926,7 +926,7 @@ For more advanced use-cases there is an option to replace the current color syst
 }
 ```
 
-Three repeating colors in a single datasets table:
+Three repeating colors in a single dataset table:
 
 <code-example code-example-id="colors-example-10">
 <template v-slot:css-code>
@@ -1012,7 +1012,7 @@ Three repeating colors in a single datasets table:
 </template>
 </code-example>
 
-Three repeating colors in a multiple datasets table:
+Three repeating colors in a table with multiple datasets:
 
 <code-example code-example-id="colors-example-12">
 <template v-slot:css-code>

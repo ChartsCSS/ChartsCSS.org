@@ -9,7 +9,7 @@ Bar charts display raw data as horizontal bars.
 
 ## Usage
 
-To visualize your data with bar chart, the main `.charts-css` class should be followed by the `.bar` class.
+To visualize your data with a bar chart, the main `.charts-css` class should be followed by the `.bar` class.
 
 ```html
 <table class="charts-css bar">
@@ -19,7 +19,7 @@ To visualize your data with bar chart, the main `.charts-css` class should be fo
 
 ## Dimensions
 
-To control the chart dimensions you can use regular CSS. You can use media queries to set different dimensions for smaller devices.
+To control the chart dimensions use regular CSS. Use media queries to set different dimensions for smaller devices.
 
 ```css
 #my-chart.bar {
@@ -72,7 +72,7 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 
 ## Orientation
 
-You can control the [chart orientation](../components/orientation/), or direction. The initial orientation depends on your language writing direction. Using the `.reverse` class you can reverse the orientation.
+Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages). Use the `.reverse` class to reverse the orientation.
 
 ```html
 <table class="charts-css bar reverse">
@@ -117,7 +117,7 @@ You can control the [chart orientation](../components/orientation/), or directio
 
 ## Heading
 
-You can add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default the heading is hidden. To display the heading use the `.show-heading` class.
+Add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default, the heading is hidden. To display the heading use the `.show-heading` class.
 
 ```html
 <table class="charts-css bar show-heading">
@@ -163,7 +163,7 @@ You can add a [heading](../components/heading/) to your chart using the `<captio
 
 ## Multiple Datasets
 
-You can use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
+Use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
 
 ```html{2}
 <tr>
@@ -264,7 +264,7 @@ But when using multiple datasets you should add the `.multiple` class.
 
 ## Labels
 
-You can add [labels](../components/labels/) to your data and control the labels positions and size. Labels added using `<th>` tag inside the `<tr>`
+Add [labels](../components/labels/) to your data and control the labels' positions and size. Labels added using `<th>` tag inside the `<tr>`.
 
 ```html{2}
 <tr>
@@ -275,7 +275,7 @@ You can add [labels](../components/labels/) to your data and control the labels 
 </tr>
 ```
 
-By default the labels are hidden. To display the labels use the `.show-labels` class.
+By default, labels are hidden. To display labels use the `.show-labels` class.
 
 ```html
 <table class="charts-css bar show-labels">
@@ -381,7 +381,7 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
 
 </v-row>
 
-Some charts use long labels others use short ones. To customize the label size use the `--labels-size` variable.
+Some charts use long labels, others use short ones. To customize the label size use the `--labels-size` variable.
 
 ```css
 #my-chart.bar {
@@ -491,11 +491,11 @@ Some charts use long labels others use short ones. To customize the label size u
 
 ## Axes
 
-You can control the [axes](../components/axes/) that will be displayed on the chart.
+Control the [axes](../components/axes/) displayed on the chart.
 
 ### Primary Axis
 
-To add a primary axis to separate the labels from the chart itself use the `.show-primary-axis` class.
+To add a primary axis, separating the labels from the data, use the `.show-primary-axis` class.
 
 ```html
 <table class="charts-css bar show-primary-axis">
@@ -603,7 +603,7 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 
 ### Secondary Axes
 
-To add secondary axes, located inside the chart itself, use the `.show-*-secondary-axes` class.
+To add secondary axes, located behind the chart data, use the `.show-*-secondary-axes` class. Use the `.show-*-secondary-axes` class. Replace the `*` in the class name, with any number `1`-`10`. For example, to display four axes use the `.show-4-secondary-axes` class.
 
 ```html
 <table class="charts-css bar show-4-secondary-axes">
@@ -711,7 +711,7 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 
 ### Data Axes
 
-To add data axes which are auto-generated based on the amount of rows (`<tr>` tags) you have. Use the `.show-data-axes` class to add them.
+Data axes are auto-generated based on the amount of rows (`<tr>` tags) in the chart. Add data axes using the `.show-data-axes` class.
 
 ```html
 <table class="charts-css bar show-data-axes">
@@ -819,11 +819,11 @@ To add data axes which are auto-generated based on the amount of rows (`<tr>` ta
 
 ## Spacing
 
-You can control the [space](../components/spacing/) between the data items and between the datasets.
+Control the [space](../components/spacing/) between the data items and the datasets.
 
 ### Data Spacing
 
-To add spacing between data items use the `.data-spacing-*` class.
+To add space between data items use the `.data-spacing-*` class.
 
 ```html
 <table class="charts-css bar data-spacing-10">
@@ -931,7 +931,7 @@ To add spacing between data items use the `.data-spacing-*` class.
 
 ### Datasets Spacing
 
-To add spacing between data items use the `.datasets-spacing-*` class.
+To add space between data items use the `.datasets-spacing-*` class.
 
 ```html
 <table class="charts-css bar multiple datasets-spacing-10">
@@ -1043,7 +1043,7 @@ You can [reverse the order of the elements](../components/reverse-order/) withou
 
 ### Reverse Data Order
 
-To reverse thr data order use the `.reverse-data` class.
+To reverse the data order use the `.reverse-data` class.
 
 ```html
 <table class="charts-css bar reverse-data">
@@ -1151,7 +1151,7 @@ To reverse thr data order use the `.reverse-data` class.
 
 ### Reverse Datasets Order
 
-To reverse datasets order use the `.reverse-datasets` class.
+To reverse the datasets order use the `.reverse-datasets` class.
 
 ```html
 <table class="charts-css bar reverse-datasets">
@@ -1259,7 +1259,7 @@ To reverse datasets order use the `.reverse-datasets` class.
 
 ### Reverse Data & Datasets Order
 
-You can combine the two classes to reverse data order and datasets order.
+Combine the two classes to reverse the data order and the datasets order.
 
 ```html
 <table class="charts-css bar reverse-data reverse-datasets">

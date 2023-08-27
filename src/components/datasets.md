@@ -4,11 +4,11 @@ permalink: /components/datasets/
 
 # Datasets
 
-Datasets are different series of data.
+Datasets are different series of data displayed in the chart.
 
 ## Add Datasets
 
-To add multiple datasets simply add more than one `<td>` tag to each of your `<tr>` tags.
+To add multiple datasets, simply add more than one `<td>` tag to each of the `<tr>` tags.
 
 ```html{8-12,16-20}
 <table class="charts-css column">
@@ -37,7 +37,7 @@ To add multiple datasets simply add more than one `<td>` tag to each of your `<t
 </table>
 ```
 
-It is also recommended to add a [legend](/components/legend/) and [labels](/components/labels/) to describe the datasets.
+We also recommend adding [legends](/components/legend/) and [labels](/components/labels/) to describe the datasets.
 
 ```html
 <ul class="charts-css legend">
@@ -99,13 +99,13 @@ The result:
 </template>
 </code-example>
 
-As you can see we have an issue with colors in our datasets. Continue reading to see how to solve the issue.
+As you can see, we have an issue with colors in our datasets. Continue reading to see how to solve this issue.
 
-## Datasets Colors
+## Dataset Colors
 
-By default, **Charts.css** assumes you use a single dataset. The framework uses different colors for each data record.
+By default, **Charts.css** assumes you are using a single dataset. The framework uses different colors for each data record.
 
-On charts with multiple datasets you should add the `.multiple` class to make the framework use different color for each dataset.
+On charts with multiple datasets you should add the `.multiple` class to make the framework use a different color for each dataset.
 
 ```html{1}
 <table class="charts-css column multiple">
@@ -161,9 +161,11 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 </template>
 </code-example>
 
-## Datasets Display Alternatives
+## Dataset Display Alternatives
 
-You can display multiple datasets in two ways:
+Multiple datasets can display the same data in two different ways.
+
+The first method uses two `<tr>` elements, each containing five `<td>` elements:
 
 <code-example code-example-id="datasets-example-3">
 <template v-slot:css-code>
@@ -220,7 +222,7 @@ You can display multiple datasets in two ways:
 </template>
 </code-example>
 
-Or:
+While the second method uses five `<tr>` elements, each containing two `<td>` elements:
 
 <code-example code-example-id="datasets-example-4">
 <template v-slot:css-code>
@@ -282,5 +284,3 @@ Or:
 </div>
 </template>
 </code-example>
-
-The same data, with multiple datasets, displayed in two different ways.

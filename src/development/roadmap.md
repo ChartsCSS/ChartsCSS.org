@@ -19,9 +19,9 @@ Planned development and the release of new chart types:
 
 * ~~**November 2020** - Line chart.~~
 
-* **TBD 2023** - Radial chart.
-
 * **TBD 2023** - Pie chart.
+
+* **TBD 2023** - Radial chart.
 
 * **TBD 2023** - Polar Chart.
 
@@ -29,16 +29,18 @@ Planned development and the release of new chart types:
 
 ## Long Term Roadmap
 
-The framework should implement new features and components. Not necessarily in that order, the long term goals are:
+The framework will implement new features and components, not necessarily in that order. The long term goals are:
 
-* **More Chart Types** - Add more chart types, start with radial and pie charts.
+* **More Chart Types** - Add more chart types, start with the radial and pie charts.
 
-* **Dual Axes Labels** - Support two independent secondary-labels, one dataset on each side.
+* **Dual Axes Labels** - Support two independent secondary-labels, with one dataset on each side.
 
 * **Build Tools** - Add more build tools.
 
 * **Name Spacing** - Use namespaces to prevent class conflicts with other css frameworks.
 
-* ~~**Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.~~ Can be adjusted with container queries.
+* ~~**Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.~~ <br> Responsive controls can already be implemented with container queries.
 
-* **Component Prefix** - Consider supporting component prefix: `chart-axes:primary`, `chart-axes:*-secondary`, `chart-axes:data`, `chart-labels:show`, `chart-labels:align-end` etc.
+* **Component Prefixes** - Consider supporting component prefixes: `chart-axes:primary`, `chart-axes:*-secondary`, `chart-axes:data`, `chart-labels:show`, `chart-labels:align-end` etc.
+
+* **Reverse Labels** - Position chart labels on either side of the chart using the `reverse-labels` utility class.

@@ -4,13 +4,13 @@ permalink: /customization/motion-effects/
 
 # Motion Effects
 
-Motion effects enhance your charts when users interact with elements using [mouse](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover) or [touch](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action) events. The simplest example is CSS hover effects. You can add motion effects when the mouse hovers over the entire chart or an individual inner element. Use your imagination and CSS skills to create beautiful interaction effects.
+Motion effects enhance your charts when users interact with elements using [mouse](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover) or [touch](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action) events. For example, add motion effects when the mouse hovers over the entire chart or an individual inner element. Use your imagination to create interactive effects with CSS.
 
-Here are some basic examples leveraging CSS `:hover` pseudo-class.
+Here are some basic examples leveraging the CSS `:hover` pseudo-class.
 
 ## Data Hover Effect
 
-A simple background color change when the user hovers over data items:
+Change background color when the user hovers over data items:
 
 ```css
 #motion-effect tr {
@@ -152,7 +152,7 @@ Reverse opacity effect when hovering over datasets:
 
 ## Scale Data
 
-You can scale the data when hovering over the chart.
+Scale the data when hovering over the data elements:
 
 ```css
 #motion-effect td .data {
@@ -220,8 +220,7 @@ You can scale the data when hovering over the chart.
 
 ## Grayscale Chart
 
-
-My favorite effect is the grayscale effect. The chart becomes colorful only when the user hovers over chart.
+Grayscale colors the chart when visitors hover over it:
 
 ```css
 #motion-effect {

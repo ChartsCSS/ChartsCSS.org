@@ -5,17 +5,17 @@ next: ../../charts/
 
 # Legend
 
-Chart legend displays the labels of the datasets appear on a chart. The chart visualize the raw data, the legend visualize the datasets.
+Chart legends display the labels of the datasets as they appear in the chart.
 
 ## Legend Structure
 
 The legend is a separate component with a separate HTML tag. You have the freedom to position the legend wherever you want. Just like any other HTML tag. 
 
-Note: Currently legend required to use `<ul>` + `<li>` or `<ol>` + `<li>` tags. In the next versions you will have the freedom to use any HTML tag.
+Note that currently legends required to use of `<ul>` with `<li>` or `<ol>` with `<li>` tags. In future versions, you will have the freedom to use any HTML tag.
 
 ## Legend Position
 
-So if you choose to display the chart legend. You can position it wherever you want. Use float (`float: right;`), flexbox (`flex-direction: row;`), grid (`grid-template-columns: 100px 1fr;`), or any other method.
+If you choose to display a chart legend, position it wherever you want. Use float (`float: right;`), flexbox (`flex-direction: row;`), grid (`grid-template-columns: 100px 1fr;`), or any other method for this.
 
 ```html
 <div id="my-chart">
@@ -116,9 +116,7 @@ Use the `.legend` class to style your chart legend.
 
 ## Legend Orientation
 
-By default legend dataset labels vertically are aligned vertically. Usually used to position the legend beside the chart.
-
-To aligning legend dataset labels horizontally, use the `.legend-inline` class. Usually used to position the legend above or below the chart.
+By default, legend dataset labels are vertically aligned and positioned beside the chart. To aligning legend dataset labels horizontally, use the `.legend-inline` class. This is usually used to position the legend above or below the chart.
 
 ```html
 <ul class="charts-css legend legend-inline">
@@ -203,7 +201,7 @@ To aligning legend dataset labels horizontally, use the `.legend-inline` class. 
 
 ### Circle
 
-Use the `.legend-circle` class to display a circular shape label.
+Use the `.legend-circle` class to display a circular shaped label.
 
 ```html
 <ul class="charts-css legend legend-circle">
@@ -288,7 +286,7 @@ Use the `.legend-circle` class to display a circular shape label.
 
 ### Ellipse
 
-Use the `.legend-ellipse` class to display a circular shape label.
+Use the `.legend-ellipse` class to display an ellipse shaped label.
 
 ```html
 <ul class="charts-css legend legend-ellipse">
@@ -373,7 +371,7 @@ Use the `.legend-ellipse` class to display a circular shape label.
 
 ### Square
 
-Use the `.legend-square` class to display a square shape label.
+Use the `.legend-square` class to display a square shaped label.
 
 ```html
 <ul class="charts-css legend legend-square">
@@ -458,7 +456,7 @@ Use the `.legend-square` class to display a square shape label.
 
 ### Rectangle
 
-Use the `.legend-rectangle` class to display a rectangular shape label.
+Use the `.legend-rectangle` class to display a rectangular shaped label.
 
 ```html
 <ul class="charts-css legend legend-rectangle">
@@ -543,7 +541,7 @@ Use the `.legend-rectangle` class to display a rectangular shape label.
 
 ### Rhombus
 
-Use the `.legend-rhombus` class to display a circular shape label.
+Use the `.legend-rhombus` class to display a rhombus shaped label.
 
 ```html
 <ul class="charts-css legend legend-rhombus">
@@ -628,7 +626,7 @@ Use the `.legend-rhombus` class to display a circular shape label.
 
 ### Line
 
-Use the `.legend-line` class to display a line shape label.
+Use the `.legend-line` class to display a line shaped label.
 
 ```html
 <ul class="charts-css legend legend-line">
@@ -713,7 +711,7 @@ Use the `.legend-line` class to display a line shape label.
 
 ## Custom Styles
 
-You can change every aspect of the legend element using CSS. Simply target the CSS selector and apply your own style.
+Change any aspect of the legend element using CSS. Simply target the CSS selector and apply your own style.
 
 For example, lets change the text color, the background color and add a box-shadow:
 
@@ -801,7 +799,7 @@ For example, lets change the text color, the background color and add a box-shad
 </template>
 </code-example>
 
-To target an individual legend element, we can do something like:
+To target an individual legend element, we can do something like this:
 
 ```css
 .legend > li:nth-of-type(3) {

@@ -4,7 +4,7 @@ permalink: /components/labels/
 
 # Labels
 
-Labels are used to describe the data or the dataset over the primary axis.
+Labels describe the data or the dataset along the chart primary axis.
 
 ## Add Labels
 
@@ -151,7 +151,7 @@ To add labels to the primary axis, use `<th>` heading tags. To mark them as a ro
 
 ## Show Labels
 
-**By default the labels are hidden**. To display the labels use the `.show-labels` class.
+**By default, labels are hidden**. To display labels use the `.show-labels` class.
 
 ```html
 <table class="charts-css column hide-data show-labels">
@@ -338,9 +338,9 @@ To control which labels to hide, use `.show-labels` class on the main table to d
 
 ## Label Size
 
-Some charts use long labels others use short ones. To customize the label size use the `--labels-size` CSS variables.
+Some charts use long labels, others use short ones. To customize the label size use the `--labels-size` CSS variable.
 
-Custom labels size for bar charts:
+Custom label size for bar charts:
 
 ```css{2}
 #my-chart.bar {
@@ -348,7 +348,7 @@ Custom labels size for bar charts:
 }
 ```
 
-Custom labels size for column charts:
+Custom label size for column charts:
 
 ```css{2}
 #my-chart.column {
@@ -486,7 +486,7 @@ Custom labels size for column charts:
 
 ## Align Labels
 
-Lastly, you can play with the label text alignment. Use the `labels-align-start`, `labels-align-center` and `labels-align-end` classes.
+Lastly, play with the label text alignment. Use the `labels-align-start`, `labels-align-center` and `labels-align-end` classes.
 
 ```html{1,13}
 <table class="charts-css column multiple show-labels labels-align-start">
@@ -588,7 +588,7 @@ Lastly, you can play with the label text alignment. Use the `labels-align-start`
 </template>
 </code-example>
 
-To override a specific label use the `--labels-align` variable on `<th>` or `<tr>` elements.
+To override a specific label, use the `--labels-align` variable on `<th>` or `<tr>` elements.
 
 ```html{1,13}
 <table class="charts-css column show-labels labels-align-start">

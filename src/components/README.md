@@ -5,7 +5,7 @@ next: ./wrapper
 
 # Components
 
-While designing the framework, the guiding philosophy was to break down the chart into parts and build each part individually. With decoupled components you have more flexibility to choose what to display and how to style it.
+While designing the framework, the guiding philosophy was to break down the chart into parts and build each part individually. With decoupled components, you have more flexibility to choose what to display and how to style it.
 
 ## Chart Components
 

@@ -5,11 +5,11 @@ next: ../../development/
 
 # Animations
 
-By animating the chart you can add smooth interactions to make your chart even more interactive. Use CSS `@keyframes` to animate elements without using JavaScript.
+Animating charts draws visitor's attention and can highlight important information. Use CSS `@keyframes` to animate elements without using JavaScript.
 
 ## Jumping Bars
 
-Here is a basic example where the bars (`<td>` elements) are jumping every 3 seconds.
+Here is a basic example where the bars (`<td>` elements) jump every three seconds:
 
 ```css
 #animations-example-1 td {
@@ -86,7 +86,7 @@ Here is a basic example where the bars (`<td>` elements) are jumping every 3 sec
 
 ## Spinning Labels
 
-Here is another simple examples with labels (`<th>` elements) spinning every 3 seconds.
+Here is another simple example using labels (`<th>` elements) that spin every three seconds:
 
 ```css
 #animations-example-2 th {
@@ -160,9 +160,9 @@ Here is another simple examples with labels (`<th>` elements) spinning every 3 s
 </template>
 </code-example>
 
-## Moving Bars
+## Rising Bars
 
-Another example with moving bars. Revealing themselves from the bottom.
+In this example, the bars rise from the bottom of the chart:
 
 ```css
 #animations-example-3 tbody {
@@ -242,7 +242,7 @@ Another example with moving bars. Revealing themselves from the bottom.
 </template>
 </code-example>
 
-The same can be done with less code using `scale()`;
+The same can be done with less code using the CSS `scale()` transformation:
 
 ```css
 #animations-example-4 tbody td {
@@ -312,7 +312,7 @@ The same can be done with less code using `scale()`;
 
 ## Highlighting Data
 
-A useful example to highlighting individual items with animations.
+A useful example of highlighting individual items with animations:
 
 ```html{3}
 <tr>
@@ -391,7 +391,7 @@ A useful example to highlighting individual items with animations.
 
 ## Color Gradient Animation
 
-Now lets animate the colors with gradients.
+Now lets animate colors with gradients:
 
 ```css
 #animations-example-6 td {

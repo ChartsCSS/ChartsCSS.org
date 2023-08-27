@@ -8,7 +8,7 @@ The actual data can be added to the chart in a variety of ways. There are some b
 
 ## Add Data
 
-To add data to the chart you simply need to add new `<td>` tags. It can be and type of data - numbers, strings, HTML tags, images, media or whatever.
+To add data to the chart you simply need to add new `<td>` tags. It can be any type of data - numbers, strings, HTML tags, images, media or whatever.
 
 ```html{7,10,13,16,19}
 <table class="charts-css column">
@@ -73,7 +73,7 @@ To add data to the chart you simply need to add new `<td>` tags. It can be and t
 
 ## Display Size
 
-Raw data without a visual representation has no meaning. As visual frameworks don't do calculations, you need to add the calculation in order to tell the framework how to display the data. To minimize logarithmic errors, the best practice is to calculation using CSS `calc()` function.
+Raw data without a visual representation has no meaning. As visual frameworks don't do calculations, you need to add the calculation in order to tell the framework how to display the data. To minimize logarithmic errors, the best practice is to calculate using the CSS `calc()` function.
 
 ```html{7,10,13,16,19}
 <table class="charts-css column">
@@ -136,7 +136,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 </template>
 </code-example>
 
-**Note:** You can manually change the `--size` property for each data item. But the values have to be unit-less numbers between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
+**Note:** The `--size` property can be manually changed for each data item. But the values have to be unit-less numbers, between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
 
 ## Raw data is not really required
 
@@ -207,7 +207,7 @@ The chart displayed as expected. The problem with the example above is that scre
 
 ## Hide Data
 
-The example above presents a significant problem. The solutions is to add the data to the structure but hide it from the end-user. We do it by wrapping the data with `<span class="data">` tag and applying `.hide-data` class on the wrapper.
+The example above presents a significant problem. The solution is to add data to the structure, but hide it from the end-user. We do this by wrapping the data with `<span class="data">` tag and applying `.hide-data` class to the wrapper.
 
 ```html{1,7,10,13,16,19}
 <table class="charts-css column hide-data">
@@ -272,7 +272,7 @@ The example above presents a significant problem. The solutions is to add the da
 
 ## Show Data on Hover
 
-Another good practice is to hide the data, and show it when hovering over it. This is done using the `.show-data-on-hover` class.
+Another good practice is to hide the data, and show it when visitors are hover over it. This is done using the `.show-data-on-hover` class.
 
 ```html{1,7,10,13,16,19}
 <table class="charts-css column show-data-on-hover">
@@ -403,6 +403,6 @@ Some chart types require not only the `--size` variable but also the `--start` v
 
 ## Size Variable 
 
-All `--size` variables should always be a unitless numbers between `0` to `1`. Why unitless? Because you should be able to change chart types without changing the unit in all the variables.
+All `--size` variables should always be a unit-less number between `0` to `1`. Why unit-less? Because you should be able to change chart types without changing the unit in all your variables.
 
 Rectangular charts use percentage as a unit of measurement while radial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated units. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.

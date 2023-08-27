@@ -18,7 +18,7 @@ To visualize your data with an area chart, the main `.charts-css` class should b
 
 ## Data
 
-When you add data, you need to supply not only the data `--size` variable but also the `--start` variable that indicates the starting point.
+When adding data, supply not only the data `--size` variable, but also the `--start` variable that indicates the starting point.
 
 ```html
 <table class="charts-css area" id="my-chart">
@@ -81,7 +81,7 @@ When you add data, you need to supply not only the data `--size` variable but al
 
 ## Dimensions
 
-To control the chart dimensions you can use regular CSS. You can use media queries to set different dimensions for smaller devices.
+To control the chart dimensions use regular CSS. Use media queries to set different dimensions for smaller devices.
 
 ```css
 #my-chart.area {
@@ -134,7 +134,7 @@ To control the chart dimensions you can use regular CSS. You can use media queri
 
 ## Orientation
 
-You can control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages). Using the `.reverse` class you can reverse the orientation.
+Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages). Use the `.reverse` class to reverse the orientation.
 
 ```html
 <table class="charts-css area reverse">
@@ -179,7 +179,7 @@ You can control the [chart orientation](../components/orientation/), or directio
 
 ## Heading
 
-You can add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default the heading is hidden. To display the heading use the `.show-heading` class.
+Add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default, the heading is hidden. To display the heading use the `.show-heading` class.
 
 ```html
 <table class="charts-css area show-heading">
@@ -225,7 +225,7 @@ You can add a [heading](../components/heading/) to your chart using the `<captio
 
 ## Multiple Datasets
 
-You can use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
+Use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
 
 ```html{2}
 <tr>
@@ -288,7 +288,7 @@ But when using multiple datasets you should add the `.multiple` class.
 
 ## Labels
 
-You can add [labels](../components/labels/) to your data and control the labels positions and size. Labels added using `<th>` tag inside the `<tr>`
+Add [labels](../components/labels/) to your data and control the labels' positions and size. Labels added using `<th>` tag inside the `<tr>`
 
 ```html{2}
 <tr>
@@ -299,7 +299,7 @@ You can add [labels](../components/labels/) to your data and control the labels 
 </tr>
 ```
 
-By default the labels are hidden. To display the labels use the `.show-labels` class.
+By default, labels are hidden. To display labels use the `.show-labels` class.
 
 ```html
 <table class="charts-css area show-labels">
@@ -405,7 +405,7 @@ By default the labels are hidden. To display the labels use the `.show-labels` c
 
 </v-row>
 
-Some charts use long labels others use short ones. To customize the label size use the `--labels-size` variable.
+Some charts use long labels, others use short ones. To customize the label size use the `--labels-size` variable.
 
 ```css
 #my-chart.area {
@@ -515,11 +515,11 @@ Some charts use long labels others use short ones. To customize the label size u
 
 ## Axes
 
-You can control the [axes](../components/axes/) that will be displayed on the chart.
+Control the [axes](../components/axes/) displayed on the chart.
 
 ### Primary Axis
 
-To add a primary axis to separate the labels from the chart itself use the `.show-primary-axis` class.
+To add a primary axis, separating the labels from the data, use the `.show-primary-axis` class.
 
 ```html
 <table class="charts-css area show-primary-axis">
@@ -627,7 +627,7 @@ To add a primary axis to separate the labels from the chart itself use the `.sho
 
 ### Secondary Axes
 
-To add secondary axes, located inside the chart itself, use the `.show-*-secondary-axes` class.
+To add secondary axes, located behind the chart data, use the `.show-*-secondary-axes` class. Use the `.show-*-secondary-axes` class. Replace the `*` in the class name, with any number `1`-`10`. For example, to display four axes use the `.show-4-secondary-axes` class.
 
 ```html
 <table class="charts-css area show-4-secondary-axes">
@@ -735,7 +735,7 @@ To add secondary axes, located inside the chart itself, use the `.show-*-seconda
 
 ### Data Axes
 
-To add data axes which are auto-generated based on the amount of rows (`<tr>` tags) you have. Use the `.show-data-axes` class to add them.
+Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the chart. Add data axes using the `.show-data-axes` class.
 
 ```html
 <table class="charts-css area show-data-axes">
@@ -847,7 +847,7 @@ You can [reverse the order of the elements](../components/reverse-order/) withou
 
 ### Reverse Data Order
 
-To reverse thr data order use the `.reverse-data` class.
+To reverse the data order use the `.reverse-data` class.
 
 ```html
 <table class="charts-css area reverse-data">
