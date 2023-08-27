@@ -15,7 +15,7 @@ tagline: CSS data visualization framework
 
 **Charts.css** is a modern CSS framework. It uses CSS utility classes to style HTML elements as charts.
 
-The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css). If you like the project, please consider to star the repo on GitHub.
+The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css). If you like the project, please consider starring the repo on GitHub.
 
 </div>
 

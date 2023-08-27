@@ -13,5 +13,5 @@ If you are a passionate frontend developer looking for a new open source project
 
 * [Design Principles](/development/design-principles/) - framework philosophical guidelines.
 * [Supported Features](/development/supported-features/) - current state of supported features.
-* [Cheat Sheet](/development/cheat-sheet/) - visual representation of charts.css anatomy.
+* [Cheat Sheet](/development/cheat-sheet/) - visual representation of Charts.css anatomy.
 * [Roadmap](/development/roadmap/) - future development timeline.

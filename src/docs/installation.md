@@ -5,7 +5,7 @@ prev: ../
 
 # Installation
 
-Looking to quickly add **Charts.css** to your project? You can [download](#download) the stylesheet file, use a [CDN](#cdn), or use a [package manager](#package-manager).
+There are three different ways to add **Charts.css** to your project: [download](#download) the stylesheet file, use a [CDN](#cdn), or use a [package manager](#package-manager).
 
 ## Download
 
@@ -23,7 +23,7 @@ Next, you need to load the CSS file in your HTML document. Paste the stylesheet 
 
 ## CDN
 
-Alternatively, you can use a CDN. Copy one of the following `<link>` tags and paste it inside the document `<head>`.
+Alternatively, use a CDN. Copy one of the following `<link>` tags and paste it inside the document `<head>`.
 
 Use [jsdelivr](https://www.jsdelivr.com/package/npm/charts.css) CDN:
 
@@ -40,7 +40,7 @@ Or [unpkg](https://unpkg.com/browse/charts.css/) CDN:
 
 ## Package Manager
 
-If you are developing a Node.js powered application, you can pull **Charts.css** source files using your favorite package manager.
+If you are developing a Node.js powered application, pull **Charts.css** source files using your favorite package manager.
 
 Install using [npm](https://www.npmjs.com/package/charts.css):
 

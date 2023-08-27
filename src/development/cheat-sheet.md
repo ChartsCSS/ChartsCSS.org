@@ -4,7 +4,7 @@ permalink: /development/cheat-sheet/
 
 # Cheat Sheet
 
-Visual representation of **charts.css anatomy**.
+Visual representation of **Charts.css anatomy**.
 
 ## Charts.css v0.9.0
 

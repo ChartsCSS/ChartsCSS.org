@@ -4,7 +4,7 @@ permalink: /components/spacing/
 
 # Spacing
 
-Spacing refers to the space between the data items and between the datasets.
+Spacing refers to the space between the data items and the datasets.
 
 ## Add Data Spacing
 
@@ -16,7 +16,7 @@ When using a single datasets table, sometimes we want to add space between the i
 </table>
 ```
 
-Note that it adds paddings to `<tr>` elements.
+Note that this adds padding to `<tr>` elements.
 
 <code-example code-example-id="spacing-example-1">
 <template v-slot:css-code>
@@ -95,7 +95,7 @@ Note that it adds paddings to `<tr>` elements.
 
 ## Add Dataset Spacing
 
-When using a multiple datasets, we can use the `.datasets-spacing-*` class to add spacing between datasets.
+When using multiple datasets, we can use the `.datasets-spacing-*` class to add spacing between datasets.
 
 ```html
 <table class="charts-css column multiple data-spacing-20 datasets-spacing-4">
@@ -103,7 +103,7 @@ When using a multiple datasets, we can use the `.datasets-spacing-*` class to ad
 </table>
 ```
 
-Note that it adds margins to `<td>` elements.
+Note that this adds margins to `<td>` elements.
 
 <code-example code-example-id="spacing-example-2">
 <template v-slot:css-code>

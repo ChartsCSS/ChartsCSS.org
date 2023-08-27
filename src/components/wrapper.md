@@ -5,7 +5,7 @@ prev: ../
 
 # Wrapper
 
-A wrapper includes the general HTML structure and the chart structure in order to turn raw data into a chart.
+A wrapper element includes the general HTML structure needed to turn raw data into a chart.
 
 ## General Anatomy
 
@@ -14,11 +14,11 @@ The full structure of a chart includes a wrapper `<div>` with inner components i
 ```html
 <div id="my-chart">
 
-  <ul class="charts-css legend">
-  </ul>
-
   <table class="charts-css bar|column|area|line">
   </table>
+
+  <ul class="charts-css legend">
+  </ul>
 
 </div>
 ```
@@ -33,7 +33,7 @@ Note that only the `<table>` is required. The wrapper elements and the legend ar
 
 ## Data Table
 
-To turn the data table into a chart, you need to add the `.charts-css` class on the `<table>` element itself:
+To turn the data table into a chart, you need to add the `.charts-css` class to the `<table>` element itself:
 
 ```html
 <table class="charts-css">
@@ -45,7 +45,7 @@ This class will reset, contain, pad and remove all other styles. But it won't tr
 
 ## Chart Classes
 
-To visualize the data you need to decide which [chart type](/charts/) you want to use and add the chart class after to the main class. For example, to display a column chart we need to add the `.column` class.
+To visualize the data you need to decide which [chart type](/charts/) you want to use and add the chart class after the main class. For example, to display a column chart we need to add the `.column` class.
 
 ```html
 <table class="charts-css column">
@@ -53,7 +53,7 @@ To visualize the data you need to decide which [chart type](/charts/) you want t
 </table>
 ```
 
-To transform it to a bar chart we need to add the `.bar` class.
+To create a bar chart you need to add the `.bar` class.
 
 ```html
 <table class="charts-css bar">
@@ -61,7 +61,7 @@ To transform it to a bar chart we need to add the `.bar` class.
 </table>
 ```
 
-Only then you can start adding some inner components like [axes](/components/axes), [tooltips](/components/tooltips) etc.
+Only then add some inner components like [axes](/components/axes), [tooltips](/components/tooltips) etc.
 
 ```html
 <table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes">
@@ -81,7 +81,7 @@ A simple customization will include the `height` and `max-width` of the chart. C
 }
 ```
 
-In addition you can add any CSS, for example you can add your brand logo in the background.
+In addition, you can add any CSS to style the chart. For example, add your brand logo in the background.
 
 ```css
 #my-chart .bar {

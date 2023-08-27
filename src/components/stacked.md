@@ -4,23 +4,23 @@ permalink: /components/stacked/
 
 # Stacked
 
-Stacked charts places the items either atop one another (column chart) or side-by-side (bar chart).
+Stacked charts place the items either atop one another (column chart) or side-by-side (bar chart).
 
 ## Stacked Charts
 
-Stacked charts are used to show how a larger group is divided into smaller groups and what the relationship of each part has on the total amount.
+Stacked charts are used to show how a larger group is divided into smaller groups and what the relationship of each part is to the total amount.
 
 There are two types of stacked charts:
 
-* **Simple stacked chart** - each item placed after the previous one. The total item is all the items added together. Ideal for comparing between groups.
+* **Simple stacked chart** - each item is placed after the previous one. The total number of items equals the items added together. This is ideal for comparing groups.
 
-* **Percentage stacked chart** - shows the percentage-of-the-whole of each group and are plotted by the percentage of each item to the total amount in each group. This makes it easier to see the relative differences between quantities in each group.
+* **Percentage stacked chart** - shows the percentage as a whole for each group. These charts are plotted using the percentage of each item within each group. This makes it easier to see the relative differences between quantities in each group.
 
 ## Using Stacked Charts
 
-By definition, stacked view can be applied only on multiple datasets (with `.multiple` class). A single datasets has nothing to stack.
+By definition, stacked view can be applied only on multiple datasets (with `.multiple` class). A single dataset has nothing to stack.
 
-To change the display to stacked view simply use the `.stacked` class.
+To display a stacked view simply use the `.stacked` class.
 
 ```html
 <table class="charts-css multiple stacked">
@@ -31,7 +31,6 @@ To change the display to stacked view simply use the `.stacked` class.
 ## Stacked Bars
 
 Stack items side-by-side using `.bar` chart.
-
 
 ```html
 <table class="charts-css bar multiple stacked">
@@ -319,9 +318,9 @@ Stack items atop one another using `.column` chart.
 
 ## Simple vs. Percentage
 
-To change the display between simple stacked view to percentage stacked view, you need to change the `--size` property.
+To change the display from a simple stacked view to a percentage stacked view, change the `--size` property.
 
-For **simple view**, we divide by the total number we want to compare the group too:
+For a **simple view**, we divide by the total number we want to compare the group to:
 
 ```html{2-4,7-9}
 <tr>
@@ -336,7 +335,7 @@ For **simple view**, we divide by the total number we want to compare the group 
 </tr>
 ```
 
-For **percentage view**, we divide by the relative number of each group (each `<tr>`), which is to total amount of the group items:
+For a **percentage view**, we divide by the relative number of each group (each `<tr>`), which totals the amount of group items:
 
 ```html{2-4,7-9}
 <tr>

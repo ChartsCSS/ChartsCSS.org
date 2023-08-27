@@ -5,11 +5,11 @@ prev: ../
 
 # 3D Effects
 
-A 3D effect can be applied on the charts to give it depth. There are several techniques to achieve this.
+A 3D effect can be applied to the charts to give it depth. There are several techniques to achieve this.
 
 ## 3D Bars
 
-To make the bars look like 3D bars is pretty simple. It can be done using CSS `box-shadow` property:
+To create 3D bars is pretty simple. It can be done using the CSS `box-shadow` property:
 
 ```css
 #custom-effect tbody td {
@@ -91,7 +91,7 @@ To make the bars look like 3D bars is pretty simple. It can be done using CSS `b
 </template>
 </code-example>
 
-Or using `:before` and `:after` psedo-elements with `skew` property.
+Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()` transformation:
 
 ```css
 #custom-effect tbody td {
@@ -197,7 +197,7 @@ Or using `:before` and `:after` psedo-elements with `skew` property.
 
 ## 3D Cylinders
 
-To make the bars look like 3D cylinders you can use the `border-radius` property:
+To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
 
 ```css
 #custom-effect tbody td {
@@ -269,7 +269,7 @@ To make the bars look like 3D cylinders you can use the `border-radius` property
 
 ## Tilt Chart
 
-Another way to make your chart look 3D is to tilt the entire `<table>` with css `skew()`.
+Another way to make your chart look 3D is to tilt the entire `<table>` element using the CSS `skew()` transformation:
 
 ```css
 #custom-effect {
@@ -356,7 +356,7 @@ Another way to make your chart look 3D is to tilt the entire `<table>` with css 
 </template>
 </code-example>
 
-Or tilting the other way the cylinder bars with a nice linear gradient and some shades:
+Or tilt the cylinder bars the other way:
 
 ```css
 #custom-effect {
@@ -436,7 +436,7 @@ Or tilting the other way the cylinder bars with a nice linear gradient and some 
 
 ## Chart Reflection
 
-We can also use the webkit reflect effect to highlight the chart 
+Use the webkit reflect effect to highlight the chart:
 
 ```css
 #custom-effect {
@@ -516,7 +516,7 @@ We can also use the webkit reflect effect to highlight the chart
 
 ## Charts with Shadows
 
-Using shadow is always a good practice to create 3D effects.
+Using shadows is another good way to create 3D effects:
 
 ```css
 #custom-effect tbody {

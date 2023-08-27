@@ -4,45 +4,31 @@ permalink: /components/axes/
 
 # Axes
 
-Chart axes are used to visually categorize and measure the data.
+Axes are used to visually categorize and measure the data inside the chart.
 
 ## Axis System
 
-<!--
-### General Definitions
-
-There are 3 types of axes:
-* **Vertical axis**, also known as Y axis.
-* **Horizontal axis**, known as X axis.
-* **Depth axis**, which is known as Z axis.
-
-Different chart types use different axes systems. Here are some examples:
-* **Single axis charts** are used by Polar chart. 
-* **Dual axes charts** used by Column chart, Bar chart and Line chart. 
-* **Triple axes charts** are used by 3D column chart, 3D pyramid chart and 3D cone chart.
--->
-
-The axis system was designed as a separate component and contains several parts. **By default all axes are hidden**, you choose which axes to display using the CSS utility classes.
+The axis system is a separate component and contains several parts. **By default, all axes are hidden**, you choose which axes to display using the CSS utility classes.
 
 ### Naming Conventions
 
-One of the framework philosophical guidelines is to use direction free class names. This way it can support all languages out-of-the-box, including left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB) languages.
+One of the frameworks philosophical guidelines is to use direction-free class names. This way it can support all languages out-of-the-box, including left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB) languages.
 
-Class like `.show-x-axes` and `.show-y-axes` deprecated early-on in favor of `.show-primary-axis`, `.show-*-secondary-axes` and `.show-data-axes`. 
+Class like `.show-x-axes` and `.show-y-axes` were deprecated early-on in favor of `.show-primary-axis`, `.show-*-secondary-axes` and `.show-data-axes`. 
 
 ### Supported Axes
 
-**Charts.css** axis system supports 3 types of axes:
+The **Charts.css** axis system supports 3 types of axes:
 
-* **Primary Axis** (`.show-primary-axis`) separating the labels from the chart.
-* **Secondary Axes** (`.show-*-secondary-axes`) located inside the chart itself, parallel to the primary axis.
-* **Data Axes** (`.show-data-axes`) located inside the chart itself, crossing the primary axis.
+* **Primary Axis** (`.show-primary-axis`) separates the labels from the chart.
+* **Secondary Axes** (`.show-*-secondary-axes`) are located inside the chart itself, parallel to the primary axis.
+* **Data Axes** (`.show-data-axes`) are located inside the chart itself, crossing the primary axis.
 
 ## Add Primary Axis
 
-The primary axis separate the labels from the chart itself. To display the primary axis use the `.show-primary-axis` class.
+The primary axis separates the labels from the data. To display the primary axis use the `.show-primary-axis` class.
 
-Note that in bar chart the primary axis is horizontal while in column chart it is vertical. If the change the labels position (before of after), the primary axis will change its position too.
+Note that in a bar chart the primary axis is horizontal, while in a column chart it is vertical. If this changes the label's position (before of after), the primary axis will change its position too.
 
 ```html
 <table class="charts-css bar show-labels show-primary-axis">
@@ -260,7 +246,7 @@ To customize the primary axis use the following CSS variables:
 
 ## Add Secondary Axes
 
-If the primary axis separate the labels from the chart, the secondary axes are located inside the chart itself. Therefor you can choose how much axes to display. Use the `.show-*-secondary-axes` class.
+While the primary axis located between the labels and the data, the secondary axes located behind the chart data. The number of displayed axes can be controled using the `.show-*-secondary-axes` class. Replace the `*` in the class name, with any number `1`-`10`. For example, to display 4 secondary axes use the `.show-4-secondary-axes` class.
 
 ```html
 <table class="charts-css bar show-labels show-4-secondary-axes">
@@ -478,7 +464,7 @@ To customize the secondary axes use the following CSS variables:
 
 ## Add Data Axes
 
-Data axes are based on the amount of rows (`<tr>` tags), therefor data axes are auto-generated using CSS border property. To display data axes use the `.show-data-axes` class.
+Data axes are based on the amount of rows (`<tr>` tags), therefore data axes are auto-generated using the CSS border property. To display data axes use the `.show-data-axes` class.
 
 ```html
 <table class="charts-css bar show-labels show-data-axes">
@@ -696,7 +682,7 @@ To customize the data axes use the following CSS variables:
 
 ## Axis Title
 
-To add informative titles for your axes, you can use `<table>` tags. To add axis titles we will use a [wrapper div](wrapper/#general-anatomy). The title will be outside of the chart because HTML `<table>`s don't have HTML tags we can use.
+To add informative axis titles use a [wrapper div](wrapper/#general-anatomy). The title will be placed outside the chart as the HTML `<table>`s don't have HTML tags that can be used.
 
 ```html
 <div id="my-chart">
@@ -705,7 +691,9 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
 
   <div class="primary-axis"> Primary Axis Title </div>
 
-  <div class="data-axis"> Data Axis Title </div>
+  <div class="data-axis-1"> Data Axis Title 1 </div>
+
+  <div class="data-axis-2"> Data Axis Title 2 </div>
 
 </div>
 ```
@@ -715,11 +703,11 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
   grid-template-rows: 250px 50px;
   grid-template-areas:
-    "data-axis chart"
-    ".         primary-axis";
+    "data-axis-1 chart data-axis-2"
+    ". primary-axis .";
 }
 #my-chart > table {
   grid-area: chart;
@@ -727,10 +715,15 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
 #my-chart > .primary-axis {
   grid-area: primary-axis;
 }
-#my-chart > .data-axis {
-  grid-area: data-axis;
+#my-chart > .data-axis-1 {
+  grid-area: data-axis-1;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
+}
+#my-chart > .data-axis-2 {
+  grid-area: data-axis-2;
+  writing-mode: tb-rl;
+  transform: rotateZ(360deg);
 }
 ```
 
@@ -740,11 +733,11 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
   grid-template-rows: 250px 50px;
   grid-template-areas:
-    "data-axis chart"
-    ".         primary-axis";
+    "data-axis-1 chart data-axis-2"
+    ". primary-axis .";
   background-color: #eee;
   width: 650px;
 }
@@ -754,10 +747,15 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
 #axes-example-13 > .primary-axis {
   grid-area: primary-axis;
 }
-#axes-example-13 > .data-axis {
-  grid-area: data-axis;
+#axes-example-13 > .data-axis-1 {
+  grid-area: data-axis-1;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
+}
+#axes-example-13 > .data-axis-2 {
+  grid-area: data-axis-2;
+  writing-mode: tb-rl;
+  transform: rotateZ(360deg);
 }
 </template>
 <template v-slot:html-code>
@@ -822,7 +820,8 @@ To add informative titles for your axes, you can use `<table>` tags. To add axis
   </tbody>
   </table>
   <div class="primary-axis"> Month </div>
-  <div class="data-axis"> Progress </div>
+  <div class="data-axis-1"> Progress </div>
+  <div class="data-axis-2"> Progress </div>
 </div>
 </template>
 </code-example>

@@ -4,21 +4,21 @@ permalink: /components/reverse-order/
 
 # Reverse Order
 
-You can reverse the order of the elements without changing the HTML markup.
+Reversing order changes the elements order visually without changing the HTML markup.
 
 ## Reordering Data
 
 Generally speaking, the framework doesn't deal with data - it only styles the data.
 
-But in some unique cases you don't have access to the HTML markup. In other cases you receive an auto-generate HTML table from a backend server you have no control over.
+However, in some cases you may not have access to the HTML markup or you may receive an auto-generate HTML table from a backend server which you don't control.
 
-You can use JS to alter the content, but **Charts.css** has two utility classes that can change displayed order without changing the HTML markup.
+In these cases use JS to alter the content, but if you don't want to use JS, **Charts.css** offers utility classes that can change the displayed order without changing the HTML markup.
 
-Note: Before changing content order using CSS, make sure there are no focusable elements (`<button>`, `<a>` etc.). It can be very confusing for users using a keyboard.
+Note that before changing content order inside your **Charts.css** table, make sure there are no focusable elements (`<button>`, `<a>` etc.) in the table as this can be confusing for users using a keyboard.
 
 ## Reverse Data Order
 
-When using a single datasets, you can use the `.reverse-data` class to reverse the order of your data.
+When using a single dataset, use the `.reverse-data` class to reverse the order of the data items.
 
 ```html
 <table class="charts-css column reverse-data">
@@ -182,7 +182,7 @@ Reversed data:
 
 ## Reverse Datasets Order
 
-When using a multiple datasets, you can use the `.reverse-datasets` class to reverse the order of your datasets.
+When using multiple datasets, use the `.reverse-datasets` class to reverse the order of the datasets.
 
 ```html
 <table class="charts-css column reverse-datasets">
@@ -306,8 +306,7 @@ Reversed datasets:
 
 ## Reverse Data & Datasets Order
 
-You can combine the two classes to reverse data order and datasets order.
-
+Combine the two classes to reverse the data order and the datasets order.
 
 ```html
 <table class="charts-css column reverse-data reverse-datasets">

@@ -20,6 +20,7 @@ Examples of different layouts for each chart type:
 * ~~[Pie Chart Examples](/examples/pie/)~~
 * ~~[Radar Chart Examples](/examples/radar/)~~
 * ~~[Polar Chart Examples](/examples/polar/)~~
+* [Mixed Chart Examples](/examples/line/)
 
 ## Tools
 

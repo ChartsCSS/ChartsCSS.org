@@ -5,7 +5,7 @@ next: ../../components/
 
 # Anatomy
 
-The chart is made of several [components](../components/) grouped together. The structure built with a simple HTML `<table>` element. The different components are styled using **CSS classes** which are defined on the parent element but applied on inner HTML tags.
+Charts are made of several [components](../components/) grouped together. The structure is built with a simple HTML `<table>` element. The different components are styled using **CSS classes** which are defined for the parent element but applied on inner HTML elements.
 
 ## Chart Layers
 
@@ -160,13 +160,13 @@ The following animation shows how the various elements are separated into layers
 </template>
 </code-example>
 
-As it was previously mentioned, the layers are composed of different HTML elements that are nestled inside the `<table>` tag.
+As was previously mentioned, the layers are composed of different HTML elements nested inside the `<table>` element.
 
-For example, the [heading](../components/heading/) layer created from the `<caption>` tag, the data [labels](../components/labels/) are created from the `<th>` tags, the [data](../components/data/)/[dataset](../components/datasets/) using `<td>` tags, and the [axes](../components/axes/) layer is generated from the `<tg>` tags.
+For example, the [heading](../components/heading/) layer is created from the `<caption>` element, the data [labels](../components/labels/) are created from the `<th>` element, the [data](../components/data/)/[dataset](../components/datasets/) uses `<td>` elements, and the [axes](../components/axes/) layer is generated from the `<tbody>` elements.
 
 ## HTML Table
 
-The raw data is a basic HTML `<table>` tag visible to search engines and screen readers:
+The raw data is a basic HTML `<table>` element visible to search engines and screen readers:
 
 <table>
 
@@ -246,7 +246,7 @@ With the use of CSS classes, we can convert the raw data into a chart. These cla
 </table>
 ```
 
-The result is an `<table>` tag displayed to the user as a chart:
+The result is a `<table>` element displayed to the user as a chart:
 
 <code-example code-example-id="anatomy-simple-chart">
 <template v-slot:css-code>

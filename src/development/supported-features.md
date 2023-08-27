@@ -8,7 +8,7 @@ The current state of supported features.
 
 ## Classes
 
-A list of components and their support.
+A list of components and their development status.
 
 <style>
 #features {

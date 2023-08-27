@@ -4,7 +4,7 @@ permalink: /components/heading/
 
 # Heading
 
-A heading briefly describing the content of the chart.
+The heading briefly describes the chart content and its data.
 
 ## Add a Heading
 
@@ -19,7 +19,7 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 
 ## Display the Heading
 
-**By default the heading is hidden**. To display the heading use the `.show-heading` class.
+**By default, the heading is hidden**. To display the heading use the `.show-heading` class.
 
 ```html{1}
 <table class="charts-css column show-heading">
@@ -128,7 +128,7 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 
 ## Style the Heading
 
-To style the heading you can use regular CSS but with very long headings you will need to increase the `<caption>` height. To keep the chart proportions use the `--heading-size` variable.
+To style the heading, use regular CSS, but with very long headings you will need to increase the `<caption>` height. To keep the chart proportions, use the `--heading-size` variable.
 
 ```css{3}
 #my-chart {
