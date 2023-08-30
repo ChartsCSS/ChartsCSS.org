@@ -6,11 +6,11 @@ permalink: /docs/usage/
 
 **Charts.css** visualizes data by applying **CSS classes** on HTML tags. The data is structured using semantic HTML tags and styled using CSS classes which change the visual representation displayed to the end user.
 
-## Data Table
+## HTML Tables
 
-The raw data is placed in the document as an HTML `<table>` tag, making it visible to search engines and screen readers.
+To make the data visible to search engines and accessible for screen readers, **Charts.css** is based on standard HTML `<table>` elements.
 
-Example data table:
+Example HTML table containing some data:
 
 ```html
 <table>
@@ -88,9 +88,97 @@ Result:
 
 </table>
 
-## Apply Charts.css
+## Add Data
 
-To display the data as a chart, first you need to add the `.charts-css` class to the `<table>` element:
+To make the data available for use by **Chart.css**, it should be converted to CSS properties.
+
+The same table with CSS `--size` properties:
+
+```html{17-19,23-25,29-31}
+<table>
+
+  <caption> 2016 Summer Olympics Medal Table </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Country </th>
+      <th scope="col"> Gold </th>
+      <th scope="col"> Silver </th>
+      <th scope="col"> Bronze </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> USA </th>
+      <td style="--size: 0.46"> 46 </td>
+      <td style="--size: 0.37"> 37 </td>
+      <td style="--size: 0.38"> 38 </td>
+    </tr>
+    <tr>
+      <th scope="row"> GBR </th>
+      <td style="--size: 0.27"> 27 </td>
+      <td style="--size: 0.23"> 23 </td>
+      <td style="--size: 0.17"> 17 </td>
+    </tr>
+    <tr>
+      <th scope="row"> CHN </th>
+      <td style="--size: 0.26"> 26 </td>
+      <td style="--size: 0.18"> 18 </td>
+      <td style="--size: 0.26"> 26 </td>
+    </tr>
+  </tbody>
+
+</table>
+```
+
+This has no effect on the table:
+
+<table>
+
+  <caption> 2016 Summer Olympics Medal Table </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Country </th>
+      <th scope="col"> Gold </th>
+      <th scope="col"> Silver </th>
+      <th scope="col"> Bronze </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"> USA </th>
+      <td style="--size: 0.46"> 46 </td>
+      <td style="--size: 0.37"> 37 </td>
+      <td style="--size: 0.38"> 38 </td>
+    </tr>
+    <tr>
+      <th scope="row"> GBR </th>
+      <td style="--size: 0.27"> 27 </td>
+      <td style="--size: 0.23"> 23 </td>
+      <td style="--size: 0.17"> 17 </td>
+    </tr>
+    <tr>
+      <th scope="row"> CHN </th>
+      <td style="--size: 0.26"> 26 </td>
+      <td style="--size: 0.18"> 18 </td>
+      <td style="--size: 0.26"> 26 </td>
+    </tr>
+  </tbody>
+
+</table>
+
+This is an expected behaviour. Search engines and screen readers should consume the table in its original form.
+
+## Charts.css Utility Classes
+
+To transform the HTML table to a chart, the framework offers several [chart types](/charts/) and [components](/components/). To apply any of them, simple add the relevant CSS class to the table.
+
+### General Class
+
+First, add the general `.charts-css` class to the `<table>` element to resets any existing styles:
 
 ```html
 <table class="charts-css">
@@ -98,7 +186,7 @@ To display the data as a chart, first you need to add the `.charts-css` class to
 </table>
 ```
 
-## Chart Types
+### Chart Type Classes
 
 Next, choose one of the [chart types](/charts/) and apply it to your data table using a simple CSS class. For example, add the `.bar` class to display the data as a [bar chart](/charts/bar/):
 
@@ -108,7 +196,7 @@ Next, choose one of the [chart types](/charts/) and apply it to your data table 
 </table>
 ```
 
-## Component Classes
+### Component Classes
 
 The framework offers many [utility classes](/components/) to enhance chart visibility. For example, you can reverse the order of the data without changing the markup. You can add all kinds of axes to your chart. You can add tooltips describing the data. And much more.
 
@@ -121,7 +209,7 @@ The framework offers many [utility classes](/components/) to enhance chart visib
 If the class becomes longer then expected and unreadable, use the [class grouping](https://piccalil.li/blog/cube-css/#heading-grouping) technique introduced by **Andy Bell**.
 
 ```html
-<table class="charts-css [ line ] [ multiple ] [ show-labels labels-align-start ] [ hide-data reverse-data data-spacing-5 ] [ show-primary-axis show-data-axes ] ">
+<table class="charts-css [ line ] [ multiple ] [ show-heading ] [ show-labels labels-align-start ] [ hide-data reverse-data data-spacing-5 ] [ show-primary-axis show-data-axes ] ">
   ...
 </table>
 ```
