@@ -3,38 +3,39 @@
 
     <form class="controls">
 
-      <fieldset v-for="(group, idx) in chartControls">
+      <fieldset v-for="(controlData, controlGroup) in chartControls">
 
-        <template v-for="control in group">
+        <template v-for="control in controlData">
 
-          <legend v-if="control.type==='legend'">
-            {{control.label}}
+          <legend v-if="control.type === 'legend'">
+            {{ control.label }}
           </legend>
 
-          <label v-if="control.type==='range'" disabled>
-            {{control.label}}:
-            <input type="range" disabled :min="control.min" :max="control.max" :step="control.step" :value="helper[control.id]" @click.prevent="toggleUserData(idx, control)" />
-          </label>
-
-          <button v-if="control.type==='button'" @click.prevent="toggleUserData(idx, control)" :class="{ pressed: userData[idx].includes(control.id) }" :disabled="control.disabled">
-            {{control.label}}
+          <button
+            v-if="control.type === 'button'"
+            @click.prevent="toggleUserData( controlGroup, control )"
+            :class="{ pressed: userData[controlGroup].includes( control.id ) }"
+            :disabled="control.disabled || checkCondition( control.condition )"
+          >
+            {{ control.label }}
           </button>
 
         </template>
 
       </fieldset>
 
+      <fieldset class="chart-code">
+        <legend>Chart code</legend>
+        <code>
+          &lt;table class="<strong>{{ chartClass }}</strong>"&gt;
+          <br>
+          ...
+          <br>
+          &lt;/table&gt;
+        </code>
+      </fieldset>
+
     </form>
-
-    <hr>
-
-    <div class="chart-code">
-      &lt;table class="<strong>{{chartClass}}</strong>"&gt;
-      <br>
-      ...
-      <br>
-      &lt;/table&gt;
-    </div>
 
     <table :class="chartClass" v-if="isMultiple">
 
@@ -153,138 +154,177 @@ export default {
     return {
       chartControls: {
         chartType: [
-          { id: '', label: 'Chart Type', type: 'legend' },
-          { id: '', label: 'None', type: 'button' },
-          { id: 'bar', label: 'Bar', type: 'button' },
-          { id: 'column', label: 'Column', type: 'button' },
-          { id: 'area', label: 'Area', type: 'button' },
-          { id: 'line', label: 'Line', type: 'button' },
-          { id: 'radial', label: 'Radial', type: 'button', disabled: 'disabled' },
-          { id: 'pie', label: 'Pie', type: 'button', disabled: 'disabled' },
-          { id: 'radar', label: 'Radar', type: 'button', disabled: 'disabled' },
-          { id: 'polar', label: 'Polar', type: 'button', disabled: 'disabled' },
+          { type: 'legend', label: 'Chart Type' },
+          { type: 'button', id: '', label: 'None' },
+          { type: 'button', id: 'bar', label: 'Bar' },
+          { type: 'button', id: 'column', label: 'Column' },
+          { type: 'button', id: 'area', label: 'Area' },
+          { type: 'button', id: 'line', label: 'Line' },
+          { type: 'button', id: 'radial', label: 'Radial', disabled: 'disabled' },
+          { type: 'button', id: 'pie', label: 'Pie', disabled: 'disabled' },
+          { type: 'button', id: 'radar', label: 'Radar', disabled: 'disabled' },
+          { type: 'button', id: 'polar', label: 'Polar', disabled: 'disabled' },
         ],
-        datasets: [
-          { id: '', label: 'Datasets', type: 'legend' },
-          { id: 'multiple', label: 'Multiple', type: 'button' },
-        ],
-        heading: [
-          { id: '', label: 'Chart Heading', type: 'legend' },
-          { id: 'show-heading', label: 'Heading', type: 'button' },
-        ],
-        orientation: [
-          { id: '', label: 'Orientation', type: 'legend' },
-          { id: 'reverse', label: 'Reverse', type: 'button' },
-        ],
-        labels: [
-          { id: '', label: 'Labels', type: 'legend' },
-          { id: 'show-labels', label: 'Show Labels', type: 'button' },
+        multiple: [
+          { type: 'legend', label: 'Datasets' },
+          { type: 'button', id: 'multiple', label: 'Multiple' },
         ],
         data: [
-          { id: '', label: 'Data', type: 'legend' },
-          { id: 'hide-data', label: 'Hide Data', type: 'button' },
-          { id: 'show-data-on-hover', label: 'Show Data on Hover', type: 'button' },
+          { type: 'legend', label: 'Data' },
+          { type: 'button', id: 'hide-data', label: 'Hide Data', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-data-on-hover', label: 'Show Data on Hover', condition: [ 'bar', 'column', 'area', 'line' ] },
         ],
-        reverseOrder: [
-          { id: '', label: 'Reverse Order', type: 'legend' },
-          { id: 'reverse-data', label: 'Reverse Data', type: 'button' },
-          { id: 'reverse-datasets', label: 'Reverse Datasets', type: 'button' },
+        heading: [
+          { type: 'legend', label: 'Heading' },
+          { type: 'button', id: 'show-heading', label: 'Show Heading', condition: [ 'bar', 'column', 'area', 'line' ] },
         ],
-        axes: [
-          { id: '', label: 'Axes', type: 'legend' },
-          { id: 'show-primary-axis', label: 'Primary Axis', type: 'button' },
-          { id: 'show-data-axes', label: 'Data Axes', type: 'button' },
+        labels: [
+          { type: 'legend', label: 'Labels' },
+          { type: 'button', id: 'show-labels', label: 'Show Labels', condition: [ 'bar', 'column', 'area', 'line' ] },
         ],
-        axes2: [
-          { id: '', label: 'Axes', type: 'legend' },
-          { id: 'show-*-secondary-axes', label: 'Secondary Axes', type: 'range', min: '0', max: '10', step: '1' },
+        orientation: [
+          { type: 'legend', label: 'Orientation' },
+          { type: 'button', id: 'reverse', label: 'Reverse', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'reverse-data', label: 'Reverse Data', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'reverse-datasets', label: 'Reverse Datasets', condition: [ 'multiple' ] },
         ],
-        spacing: [
-          { id: '', label: 'Spacing', type: 'legend' },
-          { id: 'data-spacing-*', label: 'Data', type: 'range', min: '0', max: '20', step: '1' },
-          { id: 'datasets-spacing-*', label: 'Dataset', type: 'range', min: '0', max: '20', step: '1' },
+        primaryAxis: [
+          { type: 'legend', label: 'Primary Axis' },
+          { type: 'button', id: 'show-primary-axis', label: 'Primary Axis', condition: [ 'bar', 'column', 'area', 'line' ] },
+        ],
+        dataAxes: [
+          { type: 'legend', label: 'Data Axes' },
+          { type: 'button', id: 'show-data-axes', label: 'Data Axes', condition: [ 'bar', 'column', 'area', 'line' ] },
+        ],
+        secondaryAxes: [
+          { type: 'legend', label: 'Secondary Axes' },
+          { type: 'button', id: 'show-1-secondary-axes', label: '1', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-2-secondary-axes', label: '2', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-3-secondary-axes', label: '3', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-4-secondary-axes', label: '4', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-5-secondary-axes', label: '5', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-6-secondary-axes', label: '6', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-7-secondary-axes', label: '7', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-8-secondary-axes', label: '8', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-9-secondary-axes', label: '9', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'show-10-secondary-axes', label: '10', condition: [ 'bar', 'column', 'area', 'line' ] },
+        ],
+        dataSpacing: [
+          { type: 'legend', label: 'Data Spacing', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-1', label: '1', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-2', label: '2', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-3', label: '3', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-4', label: '4', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-5', label: '5', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-6', label: '6', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-7', label: '7', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-8', label: '8', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-9', label: '9', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-10', label: '10', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-11', label: '11', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-12', label: '12', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-13', label: '13', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-14', label: '14', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-15', label: '15', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-16', label: '16', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-17', label: '17', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-18', label: '18', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-19', label: '19', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-spacing-20', label: '20', condition: [ 'bar', 'column' ] },
+        ],
+        datasetsSpacing: [
+          { type: 'legend', label: 'Datasets Spacing' },
+          { type: 'button', id: 'datasets-spacing-1', label: '1', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-2', label: '2', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-3', label: '3', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-4', label: '4', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-5', label: '5', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-6', label: '6', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-7', label: '7', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-8', label: '8', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-9', label: '9', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-10', label: '10', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-11', label: '11', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-12', label: '12', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-13', label: '13', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-14', label: '14', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-15', label: '15', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-16', label: '16', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-17', label: '17', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-18', label: '18', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-19', label: '19', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'datasets-spacing-20', label: '20', condition: [ 'bar', 'column' ] },
         ],
       },
       userData: {
         chartType: [''],
-        datasets: [],
-        heading: [],
-        orientation: [],
-        labels: [],
-        axes: [],
+        multiple: [],
         data: [],
-        reverseOrder: [],
-        spacing: [],
-      },
-      helper: {
-        'show-*-secondary-axes': 0,
-        'data-spacing-*': 0,
-        'dataset-spacing-*': 0,
+        heading: [],
+        labels: [],
+        orientation: [],
+        primaryAxis: [],
+        dataAxes: [],
+        secondaryAxes: [],
+        dataSpacing: [],
+        datasetsSpacing: [],
       },
     }
   },
   computed: {
     isMultiple() {
-      return this.userData.datasets.includes('multiple');
+      return this.userData.multiple.includes('multiple');
     },
     chartClass() {
-      const type = ( !Array.isArray(this.userData.chartType) || this.userData.chartType.length <= 0 || this.userData.chartType[0] === '' )
+      let chartClass = '';
+
+      chartClass += ( !Array.isArray(this.userData.chartType) || this.userData.chartType.length <= 0 || this.userData.chartType[0] === '' )
         ? ''
         : 'charts-css ' + this.userData.chartType;
-      const multiple = this.userData.datasets ? ' ' + this.userData.datasets.join(' ') : '';
-      const heading = this.userData.heading ? ' ' + this.userData.heading.join(' ') : '';
-      const data = this.userData.data ? ' ' + this.userData.data.join(' ') : '';
-      const reverseOrder = this.userData.reverseOrder ? ' ' + this.userData.reverseOrder.join(' ') : '';
-      const orientation = this.userData.orientation ? ' ' + this.userData.orientation.join(' ') : '';
-      const labels = this.userData.labels ? ' ' + this.userData.labels.join(' ') : '';
-      const axes = this.userData.axes ? ' ' + this.userData.axes.join(' ') : '';
-      const dataSpacing = ( this.userData.spacing.dataSpacing > 0 ) ? ` data-spacing-${this.userData.spacing.dataSpacing}` : '';
-      const datasetsSpacing = ( this.userData.spacing.datasetsSpacing > 0 ) ? ` datasets-spacing-${this.userData.spacing.datasetsSpacing}` : '';
 
-      return `${type} ${multiple} ${heading} ${data} ${reverseOrder} ${orientation} ${labels} ${axes} ${dataSpacing} ${datasetsSpacing}`.trim();
-    }
-  },
-  watch: {
-    helper(newValue, oldValue) {
-        var index = this.userData[group].indexOf(control.id);
+      const elements = [
+        'multiple',
+        'data',
+        'heading',
+        'labels',
+        'orientation',
+        'primaryAxis',
+        'dataAxes',
+        'secondaryAxes',
+        'dataSpacing',
+        'datasetsSpacing',
+      ];
 
-        if (index === -1) {
-          this.userData[group].push(control.id.replace('*', 'xxx'));
-        } else {
-          this.userData[group].splice(index, 1);
-        }
+      for (const i of elements) {
+        chartClass += this.userData[i] ? ' ' + this.userData[i].join(' ') : '';
+      }
+
+      return chartClass.trim();
     }
   },
   methods: {
-    toggleUserData(group, control) {
-      // Update chart type group (unique case)
-      if (group === 'chartType') {
+    toggleUserData(controlGroup, control) {
+      if (controlGroup === 'chartType') {
         this.userData.chartType = [];
-        this.userData[group].push(control.id);
+        this.userData[controlGroup].push(control.id);
         return;
       }
 
-      // Other groups
       if (control.type === 'button') {
-        // Buttons
-        var index = this.userData[group].indexOf(control.id);
+        var index = this.userData[controlGroup].indexOf(control.id);
         if (index === -1) {
-          this.userData[group].push(control.id);
+          this.userData[controlGroup].push(control.id);
         } else {
-          this.userData[group].splice(index, 1);
-        }
-      } else if (control.type === 'range') {
-        // Range
-        var className = this.helper[control.id];
-        var index = this.userData[group].indexOf(control.id);
-
-        if (index === -1) {
-          // this.userData[group].push(control.id.replace('*', 'xxx'));
-        } else {
-          // this.userData[group].splice(index, 1);
+          this.userData[controlGroup].splice(index, 1);
         }
       }
+    },
+    checkCondition(conditions) {
+      if ( conditions === undefined ) {
+        return false;
+      }
 
+      return ! conditions.some(cond => this.chartClass.split(' ').includes(cond));
     }
   }
 }
@@ -294,64 +334,99 @@ export default {
 .chart-builder .controls {
   display: grid;
   grid-template-columns: 110px 1fr 1fr;
-  gap: 20px 20px;
+  gap: 10px;
   grid-template-areas:
-    "chart-types multiple    heading"
-    "chart-types orientation labels"
-    "chart-types data        order"
-    "chart-types axes        axes2"
-    "chart-types spacing     spacing";
-  padding: 1rem;
-  border: 1px solid lightgrey;
+    "chart-types multiple        data"
+    "chart-types heading         labels"
+    "chart-types orientation     orientation"
+    "chart-types primaryAxis     dataAxes"
+    "chart-types secondaryAxes   secondaryAxes"
+    "chart-types dataSpacing     dataSpacing"
+    "chart-types datasetsSpacing datasetsSpacing"
+    "chartCode   chartCode       chartCode";
+  margin-block-end: 40px;
 }
-.chart-builder .controls fieldset:nth-of-type(1) { grid-area: chart-types; }
-.chart-builder .controls fieldset:nth-of-type(2) { grid-area: multiple; }
-.chart-builder .controls fieldset:nth-of-type(3) { grid-area: heading; }
-.chart-builder .controls fieldset:nth-of-type(4) { grid-area: orientation; }
-.chart-builder .controls fieldset:nth-of-type(5) { grid-area: labels; }
-.chart-builder .controls fieldset:nth-of-type(6) { grid-area: data; }
-.chart-builder .controls fieldset:nth-of-type(7) { grid-area: order; }
-.chart-builder .controls fieldset:nth-of-type(8) { grid-area: axes; }
-.chart-builder .controls fieldset:nth-of-type(9) { grid-area: axes2; }
-.chart-builder .controls fieldset:nth-of-type(10) { grid-area: spacing; }
+.chart-builder .controls fieldset:nth-of-type(1) {
+  grid-area: chart-types;
+}
+.chart-builder .controls fieldset:nth-of-type(2) {
+  grid-area: multiple;
+}
+.chart-builder .controls fieldset:nth-of-type(3) {
+  grid-area: data;
+}
+.chart-builder .controls fieldset:nth-of-type(4) {
+  grid-area: heading;
+}
+.chart-builder .controls fieldset:nth-of-type(5) {
+  grid-area: labels;
+}
+.chart-builder .controls fieldset:nth-of-type(6) {
+  grid-area: orientation;
+}
+.chart-builder .controls fieldset:nth-of-type(7) {
+  grid-area: primaryAxis;
+}
+.chart-builder .controls fieldset:nth-of-type(8) {
+  grid-area: dataAxes;
+}
+.chart-builder .controls fieldset:nth-of-type(9) {
+  grid-area: secondaryAxes;
+}
+.chart-builder .controls fieldset:nth-of-type(10) {
+  grid-area: dataSpacing;
+}
+.chart-builder .controls fieldset:nth-of-type(11) {
+  grid-area: datasetsSpacing;
+}
+.chart-builder .controls fieldset.chart-code {
+  grid-area: chartCode;
+}
 .chart-builder .controls fieldset {
   display: flex;
   justify-content: center;
+  align-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
   margin: 0;
   border: 1px solid lightgrey;
-  padding: 5px 5px 15px;
+  padding: 4px 4px 12px;
 }
 .chart-builder .controls fieldset:first-of-type {
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
 }
+.chart-builder .controls legend {
+  font-size: 14px;
+  font-weight: bold;
+}
+.chart-builder .controls label {
+  font-size: 14px;
+}
 .chart-builder .controls button {
   -webkit-appearance: none;
   appearance: none;
-  padding: 8px 12px;
-  border: 1px solid black;
+  padding: 4px 8px;
+  border: 1px solid #666;
   border: 0;
-  border-radius: 6px;
+  border-radius: 4px;
   color: #fff;
   outline: none;
   background-color: #f57;
-  box-shadow: 0 4px 4px #999;
+  box-shadow: 0 4px 8px #999;
   transition-duration: 0.3s;
   cursor: pointer;
 }
 .chart-builder .controls button:hover,
 .chart-builder .controls button:focus {
   background-color: #d57;
-  box-shadow: 0 4px 4px #666;
+  box-shadow: 0 4px 6px #666;
 }
 .chart-builder .controls button:active,
 .chart-builder .controls button.pressed {
   background-color: #a13;
-  box-shadow: 0 3px 3px #666;
-  transform: translateY(3px);
+  box-shadow: 0 4px 4px #666;
 }
 .chart-builder .controls button[disabled] {
   color: #999;
@@ -363,42 +438,27 @@ export default {
   background-color: #ccc;
   box-shadow: 0 4px 4px #999;
 }
-.chart-builder .controls input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 8px;
-  background: #d3d3d3;
-  outline: none;
-}
-.chart-builder .controls input[type="range"]::-webkit-slider-thumb,
-.chart-builder .controls input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border: 0;
-  border-radius: 50%;
-  background: #f57;
-  cursor: pointer;
-}
 .chart-builder .chart-code {
+  padding: 1rem;
   margin-block-start: 2rem;
   margin-block-end: 2rem;
-  padding: 1rem;
   border: 1px solid lightgrey;
+}
+.chart-builder .chart-code code {
+  width: 100%;
+  background-color: unset;
 }
 .chart-builder .chart-code strong {
   font-weight: bold;
 }
 .chart-builder table {
   margin: 0 auto;
+}
+.chart-builder table.charts-css {
   height: 250px;
 }
 .chart-builder table.charts-css.bar {
   width: 100%;
-}
-.chart-builder table.charts-css.column {
-  height: 200px;
+  height: unset;
 }
 </style>
