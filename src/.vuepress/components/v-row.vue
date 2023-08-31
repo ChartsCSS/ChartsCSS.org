@@ -28,7 +28,7 @@ export default {
 <style>
 .v-row {
     display: flex;
-    gap: 20px
+    gap: 40px
 }
 .v-row.row {
     flex-direction: row;
@@ -44,5 +44,4 @@ export default {
         margin: unset;
     }
 }
-
 </style>
