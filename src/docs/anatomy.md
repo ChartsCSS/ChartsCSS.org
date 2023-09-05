@@ -5,7 +5,7 @@ next: ../../components/
 
 # Anatomy
 
-Charts are made of several [components](../components/) grouped together. The structure is built with a simple HTML `<table>` element. The different components are styled using **CSS classes** which are defined for the parent element but applied on inner HTML elements.
+Charts are made of several [components](../components/) grouped together. The structure is built with a simple HTML `<table>` element. The different components are styled using **CSS classes** which are defined for the parent element but affect inner HTML elements.
 
 ## Chart Layers
 
@@ -88,23 +88,23 @@ The following animation shows how the various elements are separated into layers
 		<tbody>
 			<tr>
 				<th> </th>
-				<td style="--size:0;"></td>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0;"></td>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0;"></td>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0;"></td>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0;"></td>
+				<td style="--size: 0;"></td>
 			</tr>
 		</tbody>
 	</table>
@@ -113,23 +113,23 @@ The following animation shows how the various elements are separated into layers
 		<tbody>
 			<tr>
 				<th> </th>
-				<td style="--size:0.2;"></td>
+				<td style="--size: 0.2;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0.4;"></td>
+				<td style="--size: 0.4;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0.6;"></td>
+				<td style="--size: 0.6;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:0.8;"></td>
+				<td style="--size: 0.8;"></td>
 			</tr>
 			<tr>
 				<th> </th>
-				<td style="--size:1;"></td>
+				<td style="--size: 1;"></td>
 			</tr>
 		</tbody>
 	</table>
@@ -162,51 +162,20 @@ The following animation shows how the various elements are separated into layers
 
 As was previously mentioned, the layers are composed of different HTML elements nested inside the `<table>` element.
 
-For example, the [heading](../components/heading/) layer is created from the `<caption>` element, the data [labels](../components/labels/) are created from the `<th>` element, the [data](../components/data/)/[dataset](../components/datasets/) uses `<td>` elements, and the [axes](../components/axes/) layer is generated from the `<tbody>` elements.
+* [Heading layer](../components/heading/) - generated from the `<caption>` element.
+* [Labels layer](../components/labels/) - generated from the `<th>` elements.
+* [Data layer](../components/data/) - generated from the `<td>` elements.
+* [Axes layer](../components/axes/) - generated from the `<tbody>` element.
 
-## HTML Table
+## Chart Structure
 
-The raw data is a basic HTML `<table>` element visible to search engines and screen readers:
+With the help of CSS classes, the HTML table displayed as a chart. These utility classes change the appearance of the table by applying styles on various inner HTML elements.
 
-<table>
+To transform the `<table>` into a chart, only two inner HTML elements are required, the `<tbody>` and `<td>` elements, without them, nothing works. The other elements are optional. However, we recommend using all the elements, including `<caption>`, `<thead>`, and `<th>`, as they provide more clarity for search-engines and screen-reader users.
 
-  <caption> Chart Heading </caption>
+### HTML Table
 
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Value </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th> 2016 </th>
-      <td style="--size:0.2;"> 20 </td>
-    </tr>
-    <tr>
-      <th> 2017 </th>
-      <td style="--size:0.4;"> 40 </td>
-    </tr>
-    <tr>
-      <th> 2018 </th>
-      <td style="--size:0.6;"> 60 </td>
-    </tr>
-    <tr>
-      <th> 2019 </th>
-      <td style="--size:0.8;"> 80 </td>
-    </tr>
-    <tr>
-      <th> 2020 </th>
-      <td style="--size:1.0;"> 100 </td>
-    </tr>
-  </tbody>
-
-</table>
-
-## Chart Table
-
-With the use of CSS classes, we can convert the raw data into a chart. These classes change the HTML structure's appearance.
+The following table, for example, provides meaningful information like a heading, labels and data. With semantic markup the information visible to search-engines and screen readers.
 
 ```html
 <table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes show-data-axes data-spacing-15 hide-data">
@@ -223,30 +192,32 @@ With the use of CSS classes, we can convert the raw data into a chart. These cla
   <tbody>
     <tr>
       <th> 2016 </th>
-      <td style="--size:0.2;"></td>
+      <td style="--size: calc( 20 / 100 );"> 20 </td>
     </tr>
     <tr>
       <th> 2017 </th>
-      <td style="--size:0.4;"></td>
+      <td style="--size: calc( 40 / 100 );"> 40 </td>
     </tr>
     <tr>
       <th> 2018 </th>
-      <td style="--size:0.6;"></td>
+      <td style="--size: calc( 60 / 100 );"> 60 </td>
     </tr>
     <tr>
       <th> 2019 </th>
-      <td style="--size:0.8;"></td>
+      <td style="--size: calc( 80 / 100 );"> 80 </td>
     </tr>
     <tr>
       <th> 2020 </th>
-      <td style="--size:1.0;"></td>
+      <td style="--size: calc( 100 / 100 );"> 100 </td>
     </tr>
   </tbody>
 
 </table>
 ```
 
-The result is a `<table>` element displayed to the user as a chart:
+### Chart View
+
+With the help of CSS classes, the user will see the following chart:
 
 <code-example code-example-id="anatomy-simple-chart">
 <template v-slot:css-code>
@@ -271,26 +242,66 @@ The result is a `<table>` element displayed to the user as a chart:
   <tbody>
     <tr>
       <th> 2016 </th>
-      <td style="--size:0.2;"> <span class="data"> 20 </span> </td>
+      <td style="--size: calc( 20 / 100 );"> 20 </td>
     </tr>
     <tr>
       <th> 2017 </th>
-      <td style="--size:0.4;"> <span class="data"> 40 </span> </td>
+      <td style="--size: calc( 40 / 100 );"> 40 </td>
     </tr>
     <tr>
       <th> 2018 </th>
-      <td style="--size:0.6;"> <span class="data"> 60 </span> </td>
+      <td style="--size: calc( 60 / 100 );"> 60 </td>
     </tr>
     <tr>
       <th> 2019 </th>
-      <td style="--size:0.8;"> <span class="data"> 80 </span> </td>
+      <td style="--size: calc( 80 / 100 );"> 80 </td>
     </tr>
     <tr>
       <th> 2020 </th>
-      <td style="--size:1.0;"> <span class="data"> 100 </span> </td>
+      <td style="--size: calc( 100 / 100 );"> 100 </td>
     </tr>
   </tbody>
 
 </table>
 </template>
 </code-example>
+
+### Table View
+
+Removing the CSS classes, the style will be removed and the user will see a regular table:
+
+<table>
+
+  <caption> Chart Heading </caption>
+
+  <thead>
+    <tr>
+      <th scope="col"> Year </th>
+      <th scope="col"> Value </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th> 2016 </th>
+      <td style="--size: calc( 20 / 100 );"> 20 </td>
+    </tr>
+    <tr>
+      <th> 2017 </th>
+      <td style="--size: calc( 40 / 100 );"> 40 </td>
+    </tr>
+    <tr>
+      <th> 2018 </th>
+      <td style="--size: calc( 60 / 100 );"> 60 </td>
+    </tr>
+    <tr>
+      <th> 2019 </th>
+      <td style="--size: calc( 80 / 100 );"> 80 </td>
+    </tr>
+    <tr>
+      <th> 2020 </th>
+      <td style="--size: calc( 100 / 100 );"> 100 </td>
+    </tr>
+  </tbody>
+
+</table>
