@@ -20,7 +20,7 @@ Class like `.show-x-axes` and `.show-y-axes` were deprecated early-on in favor o
 
 The **Charts.css** axis system supports 3 types of axes:
 
-* **Primary Axis** (`.show-primary-axis`) separates the labels from the chart.
+* **Primary Axis** (`.show-primary-axis`) is located at the point where the chart data starts.
 * **Secondary Axes** (`.show-*-secondary-axes`) are located inside the chart itself, parallel to the primary axis.
 * **Data Axes** (`.show-data-axes`) are located inside the chart itself, crossing the primary axis.
 
