@@ -100,17 +100,6 @@ A list of components and their development status.
       <td> <status-d /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>reverse</code> </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
       <th scope="row"> <code>show-labels</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
@@ -204,6 +193,17 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>reverse</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
