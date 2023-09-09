@@ -174,7 +174,7 @@ This is an expected behaviour. Search engines and screen readers should consume 
 
 ## Charts.css Utility Classes
 
-To transform the HTML table to a chart, the framework offers several [chart types](/charts/) and [components](/components/). To apply any of them, simple add the relevant CSS class to the table.
+To transform the HTML table to a chart, the framework offers several [chart types](/charts/) and [components](/components/). To apply any of them, simply add the relevant CSS class to the table.
 
 ### General Class
 
@@ -218,9 +218,9 @@ If the class becomes longer then expected and unreadable, use the [class groupin
 
 The biggest advantage this framework has to offer is the ability to [customize](/customization/) visibility using CSS. Select any HTML element inside the `<table>` and add your own CSS rules.
 
-Use either an `id` or a `class` for your custom styles. In any case, you need to know basic concepts like CSS specificity, and know when one rule overrides the other.
+Use either an `id` or a `class` attribute for your custom styles. In any case, you need to know basic concepts like CSS specificity, and know when one rule overrides the other.
 
-The `id` can be applied to the `<table>` element:
+The `id` attribute can be applied to the `<table>` element:
 
 ```html{1}
 <table class="charts-css bar ..." id="my-chart">
@@ -234,7 +234,7 @@ The `id` can be applied to the `<table>` element:
 }
 ```
 
-Or to the wrapper element:
+Or add the `id` attribute to the wrapper element:
 
 ```html{1}
 <div id="my-chart">
@@ -247,9 +247,9 @@ Or to the wrapper element:
 ```
 
 ```css
-#my-chart .bar {
+#my-chart > .bar {
   ...
 }
 ```
 
-To demonstrate how easy it is to add custom styling, check out our basic examples for creating [3D effects](/customization/3d-effects/), [motion effects](/customization/motion-effects/) and [animations](/customization/animations/). It's amazing what you can do with a few lines of CSS.
+To demonstrate how easy it is to add custom styling, check out our examples for applying [basic styles](/customization/basic-styling/), [3D effects](/customization/3d-effects/), [motion effects](/customization/motion-effects/) and [animations](/customization/animations/). It's amazing what you can do with a few lines of CSS.
