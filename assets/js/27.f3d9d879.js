@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{291:function(t,s,n){},316:function(t,s,n){"use strict";n(291)},387:function(t,s,n){"use strict";n.r(s);n(316);var u=n(12),a=Object(u.a)({},(function(){return(0,this._self._c)("div",{staticClass:"status-x",attrs:{"aria-label":"Status todo"}},[this._v(" x ")])}),[],!1,null,null,null);s.default=a.exports}}]);
