@@ -1,6 +1,5 @@
 ---
 permalink: /customization/3d-effects/
-prev: ../
 ---
 
 # 3D Effects

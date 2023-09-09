@@ -1,6 +1,6 @@
 ---
 prev: ../charts/mixed
-next: ./3d-effects
+next: ./basic-styling
 ---
 
 # Customization
@@ -9,7 +9,7 @@ One of the key features in **Charts.css** is the ability to **_customize visibil
 
 ## Custom Styling 
 
-To add custom CSS simply add an `id` attribute to the `<table>` tag:
+To add custom CSS simply add an `id` attribute to the `<table>` element:
 
 ```html
 <table id="my-chart" class="charts-css bar|column|area|line ...">
@@ -47,12 +47,12 @@ We recommend adding the chart type to your selector. This way the custom style w
 
 ```css
 /* Customize only bar charts */
-#my-chart.bar {
+#my-chart > table.bar {
   ...
 }
 
-/* Customize only pie charts */
-#my-chart.pie {
+/* Customize only column charts */
+#my-chart > table.column {
   ...
 }
 ```
@@ -61,10 +61,11 @@ This is important because each chart type has its own structure and layout. You 
 
 ## Basic Examples
 
-There are many ways to customize the framework. We prepared some basic examples to get you started, covering three topics.
+There are many ways to customize the framework. We prepared some basic examples to get you started, covering the following topics.
 
+* [Basic Styling](/customization/basic-styling/)
 * [3D Effects](/customization/3d-effects/)
 * [Motion Effects](/customization/motion-effects/)
 * [Animations](/customization/animations/)
 
-have a beautiful design? Create a codepen and share with the community!
+Have a beautiful design? Create a codepen and share with the community!

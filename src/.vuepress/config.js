@@ -123,6 +123,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: -1,
         children: [
+          '/customization/basic-styling',
           '/customization/3d-effects',
           '/customization/motion-effects',
           '/customization/animations',
