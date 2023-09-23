@@ -32,95 +32,91 @@ Semantically speaking, any content on the page should have a heading. With `<tab
 
 <code-example code-example-id="heading-example-1">
 <template v-slot:css-code>
-#heading-example-1 {
+#heading-example-1 .charts-css {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column" id="heading-example-1">
-
-  <caption> Hidden Chart Heading </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="heading-example-1">
+  <table class="charts-css column">
+    <caption> Hidden Chart Heading </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="heading-example-2">
 <template v-slot:css-code>
-#heading-example-2 {
+#heading-example-2 .charts-css {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-heading" id="heading-example-2">
-
-  <caption> Visible Chart Heading </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="heading-example-2">
+  <table class="charts-css column show-heading">
+    <caption> Visible Chart Heading </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -146,101 +142,97 @@ To style the heading, use regular CSS, but with very long headings you will need
 
 <code-example code-example-id="heading-example-3">
 <template v-slot:css-code>
-#heading-example-3 {
+#heading-example-3 .charts-css {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-heading" id="heading-example-3">
-
-  <caption> A Very Long Chart Heading Without any Custom Styling Applied on Captions </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="heading-example-3">
+  <table class="charts-css column show-heading">
+    <caption> A Very Long Chart Heading Without any Custom Styling Applied on Captions </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="heading-example-4">
 <template v-slot:css-code>
-#heading-example-4 {
+#heading-example-4 .charts-css {
   height: 200px;
   max-width: 300px;
   margin: 0 auto;
   --heading-size: 3rem;
 }
-#heading-example-4 caption {
+#heading-example-4 .charts-css caption {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.25rem;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-heading" id="heading-example-4">
-
-  <caption> A Very Long Chart Heading With Some Custom Styling Applied on Captions </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="heading-example-4">
+  <table class="charts-css column show-heading">
+    <caption> A Very Long Chart Heading With Some Custom Styling Applied on Captions </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
