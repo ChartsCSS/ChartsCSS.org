@@ -48,6 +48,7 @@ The first method to placing them on top of each other is using CSS position:
 ```css
 #my-stock-chart {
   position: relative;
+  aspect-ratio: 16 / 9;
   height: 250px;
   width: 100%;
   max-width: 600px;
@@ -55,14 +56,11 @@ The first method to placing them on top of each other is using CSS position:
 }
 #my-stock-chart > table {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
-#my-stock-chart > table.column {
-  top: unset;
-  height: 35px;
+#my-stock-chart > table.column tbody {
+  aspect-ratio: 12 / 1;
+  margin-block-start: auto;
 }
 ```
 
@@ -74,22 +72,19 @@ The first method to placing them on top of each other is using CSS position:
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  background-color: #eee;
+  background-color: #f6f6ff;
 }
 #stock-chart-example-1 > table {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
-#stock-chart-example-1 > table.column {
-  top: unset;
-  height: 35px;
+#stock-chart-example-1 > table.column tbody {
+  aspect-ratio: 12 / 1;
+  margin-block-start: auto;
 }
 /* Colors */
 #stock-chart-example-1 > table.area {
-  --color: linear-gradient(#000, #fff);
+  --color: linear-gradient(#f30, #fff);
 }
 #stock-chart-example-1 > table.line {
   --color: #fc1;
@@ -201,6 +196,10 @@ The same result can be achieved with CSS grid. The folowing example also include
 #my-chart > table.column {
   grid-area: volume;
 }
+#my-chart > table.column tbody {
+  aspect-ratio: 12 / 1;
+  margin-block-start: auto;
+}
 #my-chart > .primary-axis {
   grid-area: primary-axis;
 }
@@ -227,7 +226,7 @@ The same result can be achieved with CSS grid. The folowing example also include
     "data-1-axis  stocks       data-2-axis"
     "data-1-axis  volume       data-2-axis"
     "primary-axis primary-axis primary-axis";
-  background-color: #eee;
+  background-color: #f6f6ff;
   width: 650px;
 }
 #stock-chart-example-2 > table.area,
@@ -236,6 +235,10 @@ The same result can be achieved with CSS grid. The folowing example also include
 }
 #stock-chart-example-2 > table.column {
   grid-area: volume;
+}
+#stock-chart-example-2 > table.column tbody {
+  aspect-ratio: 12 / 1;
+  margin-block-start: auto;
 }
 #stock-chart-example-2 > .primary-axis {
   grid-area: primary-axis;
@@ -251,7 +254,7 @@ The same result can be achieved with CSS grid. The folowing example also include
 }
 /* Colors */
 #stock-chart-example-2 > table.area {
-  --color: linear-gradient(#666, rgba(255, 255, 255, 0));
+  --color: linear-gradient(#99e, rgba(0, 0, 0, 0));
 }
 #stock-chart-example-2 > table.line {
   --color: #fc1;

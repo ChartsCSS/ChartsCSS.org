@@ -36,8 +36,8 @@ A list of components and their development status.
       <th scope="col"> Column </th>
       <th scope="col"> Area </th>
       <th scope="col"> Line </th>
-      <th scope="col"> Radial </th>
       <th scope="col"> Pie </th>
+      <th scope="col"> Radial </th>
       <th scope="col"> Radar </th>
       <th scope="col"> Polar </th>
     </tr>
@@ -50,7 +50,7 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
@@ -61,8 +61,8 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-x /> </td>
-      <td> <status-d /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
     </tr>
@@ -83,7 +83,7 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
@@ -94,10 +94,54 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
-      <td> <status-d /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>data-start</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>data-end</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>data-center</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>data-outside</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
     </tr>
     <tr>
       <th scope="row"> <code>show-labels</code> </th>
@@ -105,24 +149,13 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
+      <td> <status-d /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>labels-align-start</code> </th>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-v /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-      <td> <status-x /> </td>
-    </tr>
-    <tr>
-      <th scope="row"> <code>labels-align-center</code> </th>
+      <th scope="row"> <code>labels-align-block-start</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
@@ -133,7 +166,51 @@ A list of components and their development status.
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>labels-align-end</code> </th>
+      <th scope="row"> <code>labels-align-block--center</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-block--end</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-inline-start</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-inline--center</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>labels-align-inline--end</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
@@ -149,7 +226,7 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
@@ -160,7 +237,7 @@ A list of components and their development status.
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
-      <td> <status-d /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
       <td> <status-d /> </td>
@@ -210,13 +287,24 @@ A list of components and their development status.
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>reverse-data</code> </th>
+      <th scope="row"> <code>reverse-labels</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+      <td> <status-x /> </td>
+    </tr>
+    <tr>
+      <th scope="row"> <code>reverse-data</code> </th>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
+      <td> <status-v /> </td>
       <td> <status-d /> </td>
+      <td> <status-x /> </td>
       <td> <status-x /> </td>
       <td> <status-x /> </td>
     </tr>
@@ -288,90 +376,109 @@ A list of supported CSS variables.
 
   <tbody>
     <tr>
-      <th> Size </th>
+      <th rowspan="3"> Size </th>
       <td> <code>--size</code> </td>
-      <td> <code>number</code> </td>
-      <td> 0 </td>
+      <td> <code>&lt;number&gt;</code> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> <code>--start</code> </td>
+      <td> <code>&lt;number&gt;</code> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> <code>--end</code> </td>
+      <td> <code>&lt;number&gt;</code> </td>
+      <td> </td>
     </tr>
     <tr>
       <th rowspan="2"> Color </th>
       <td> <code>--color</code> </td>
-      <td> <code>color</code> </td>
+      <td> <code>&lt;color&gt;</code> </td>
       <td> transparent </td>
     </tr>
     <tr>
       <td> <code>--color-*</code> </td>
-      <td> <code>color</code> </td>
+      <td> <code>&lt;color&gt;</code> </td>
       <td> transparent </td>
     </tr>
     <tr>
-      <th> Heading </th>
-      <td> <code>--heading-size</code> </td>
-      <td> <code>length</code> </td>
-      <td> 0 </td>
-    </tr>
-    <tr>
-      <th rowspan="2"> Labels </th>
+      <th rowspan="3"> Labels </th>
       <td> <code>--labels-size</code> </td>
-      <td> <code>length</code> </td>
+      <td> <code>&lt;length&gt;</code> </td>
       <td> 0 </td>
     </tr>
     <tr>
-      <td> <code>--labels-align</code> </td>
-      <td> <code>string</code> </td>
-      <td> center </td>
+      <td> <code>--labels-align-block</code> </td>
+      <td> <code>&lt;string&gt;</code> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> <code>--labels-align-inline</code> </td>
+      <td> <code>&lt;string&gt;</code> </td>
+      <td>  </td>
     </tr>
     <tr>
       <th rowspan="9"> Axes </th>
       <td> <code>--primary-axis-color</code> </td>
-      <td> <code>color</code> </td>
+      <td> <code>&lt;color&gt;</code> </td>
       <td> transparent </td>
     </tr>
     <tr>
       <td> <code>--primary-axis-style</code> </td>
-      <td> <code>line-style</code> </td>
+      <td> <code>&lt;line-style&gt;</code> </td>
       <td> solid </td>
     </tr>
     <tr>
       <td> <code>--primary-axis-width</code> </td>
-      <td> <code>length</code> </td>
+      <td> <code>&lt;length&gt;</code> </td>
       <td> 1px </td>
     </tr>
     <tr>
       <td> <code>--secondary-axes-color</code> </td>
-      <td> <code>color</code> </td>
+      <td> <code>&lt;color&gt;</code> </td>
       <td> transparent </td>
     </tr>
     <tr>
       <td> <code>--secondary-axes-style</code> </td>
-      <td> <code>line-style</code> </td>
+      <td> <code>&lt;line-style&gt;</code> </td>
       <td> solid </td>
     </tr>
     <tr>
       <td> <code>--secondary-axes-width</code> </td>
-      <td> <code>length</code> </td>
+      <td> <code>&lt;length&gt;</code> </td>
       <td> 1px </td>
     </tr>
     <tr>
       <td> <code>--data-axes-color</code> </td>
-      <td> <code>color</code> </td>
+      <td> <code>&lt;color&gt;</code> </td>
       <td> transparent </td>
     </tr>
     <tr>
       <td> <code>--data-axes-style</code> </td>
-      <td> <code>line-style</code> </td>
+      <td> <code>&lt;line-style&gt;</code> </td>
       <td> solid </td>
     </tr>
     <tr>
       <td> <code>--data-axes-width</code> </td>
-      <td> <code>length</code> </td>
+      <td> <code>&lt;length&gt;</code> </td>
       <td> 1px </td>
     </tr>
     <tr>
-      <th> Legend </th>
+      <th rowspan="3"> Legend </th>
       <td> <code>--legend-border-color</code> </td>
-      <td> <code>color</code> </td>
+      <td> <code>&lt;color&gt;</code> </td>
       <td> transparent </td>
+    </tr>
+    <tr>
+      <td> <code>--legend-border-style</code> </td>
+      <td> <code>&lt;line-style&gt;</code> </td>
+      <td> solid </td>
+    </tr>
+    <tr>
+      <td> <code>--legend-border-width</code> </td>
+      <td> <code>&lt;length&gt;</code> </td>
+      <td> 1px </td>
     </tr>
   </tbody>
 

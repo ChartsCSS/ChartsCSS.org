@@ -31,6 +31,8 @@ Note that only the `<table>` is required. The wrapper elements and the legend ar
 | Chart Legend    | **Optional** | `<ul>` / `<ol>` |
 | Chart Data      | **Required** | `<table>`       |
 
+As of version 1.0.0, the new best practice is to add a wrapper element to all your charts.
+
 ## Data Table
 
 To turn the data table into a chart, you need to add the `.charts-css` class to the `<table>` element itself:
@@ -71,12 +73,12 @@ Only then add some inner components like [axes](/components/axes), [tooltips](/c
 
 ## Customizing the Chart
 
-A simple customization will include the `height` and `max-width` of the chart. Chart `width` is `100%` by default.
+A simple customization will include the `height` and `width` of the chart.
 
 ```css
 #my-chart .bar {
   height: 300px;
-  max-width: 600px;
+  width: 600px;
   margin: 0 auto;
 }
 ```
@@ -98,21 +100,17 @@ Media queries can be used to set different dimensions for different screen sizes
 
 ```css
 #my-chart .bar {
-  height: 300px;
   max-width: 600px;
-  margin: 0 auto;
 }
 
 @media (min-width: 600px) {
   #my-chart .bar {
-    height: 400px;
     max-width: 800px;
   }
 }
 
 @media (min-width: 1000px) {
   #my-chart .bar {
-    height: 500px;
     max-width: 1000px;
   }
 }

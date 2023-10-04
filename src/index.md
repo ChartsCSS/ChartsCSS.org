@@ -244,7 +244,7 @@ The [source code is available on GitHub](https://github.com/ChartsCSS/charts.css
 
   <div class="feature">
     <h3>Small Library</h3>
-    <p>72kb file size, 6kb gzipped</p>
+    <p>76kb file size, 7kb gzipped</p>
   </div>
 
   <div class="feature">

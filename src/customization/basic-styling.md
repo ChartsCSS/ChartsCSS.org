@@ -103,3 +103,29 @@ To control the backgrounds of different elements, use one of the following selec
   color: blue;
 }
 ```
+
+### Aspect Ratio
+
+To control the chart width/height ratio, use one of the following selectors.
+
+```css
+#my-chart .bar tbody {
+  aspect-ratio: none;
+}
+
+#my-chart .column tbody {
+  aspect-ratio: 21 / 9;
+}
+
+#my-chart .area tbody {
+  aspect-ratio: 21 / 9;
+}
+
+#my-chart .line tbody {
+  aspect-ratio: 21 / 9;
+}
+
+#my-chart .pie tbody {
+  aspect-ratio: 1 / 1;
+}
+```

@@ -41,132 +41,138 @@ Stack items side-by-side using `.bar` chart.
 <code-example code-example-id="stacked-example-1">
 <template v-slot:css-code>
 #stacked-example-1 {
-  height: 200px;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  --heading-size: 2.5rem;
+}
+#stacked-example-1 .bar {
   --color-1: rgba(255, 200, 0, 0.6);
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
 }
-#stacked-example-1 caption {
+#stacked-example-1 .bar caption {
   font-weight: bold;
+  padding-block-end: 1rem;
+}
+#stacked-example-1 .bar tbody {
+  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar hide-data show-heading show-labels show-primary-axis show-5-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-1">
-
-  <caption> Simple Stacked Bars </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> #1 </th>
-      <th scope="col"> #2 </th>
-      <th scope="col"> #3 </th>
-      <th scope="col"> #4 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> America </th>
-      <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: calc(40 / 150);"> <span class="data"> 40$ </span> </td>
-      <td style="--size: calc(25 / 150);"> <span class="data"> 25$ </span> </td>
-      <td style="--size: calc(45 / 150);"> <span class="data"> 45$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Africa </th>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="stacked-example-1">
+  <table class="charts-css bar hide-data show-heading show-labels show-primary-axis show-5-secondary-axes data-spacing-5 multiple stacked">
+    <caption> Simple Stacked Bars </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Continent </th>
+        <th scope="col"> #1 </th>
+        <th scope="col"> #2 </th>
+        <th scope="col"> #3 </th>
+        <th scope="col"> #4 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> America </th>
+        <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc(40 / 150);"> <span class="data"> 40$ </span> </td>
+        <td style="--size: calc(25 / 150);"> <span class="data"> 25$ </span> </td>
+        <td style="--size: calc(45 / 150);"> <span class="data"> 45$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Africa </th>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="stacked-example-2">
 <template v-slot:css-code>
 #stacked-example-2 {
-  height: 200px;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  --heading-size: 2.5rem;
+}
+#stacked-example-2 .bar {
   --color-1: rgba(255, 200, 0, 0.6);
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
 }
-#stacked-example-2 caption {
+#stacked-example-2 .bar caption {
   font-weight: bold;
+  padding-block-end: 1rem;
+}
+#stacked-example-2 .bar tbody {
+  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar hide-data show-heading show-labels show-primary-axis show-5-secondary-axes data-spacing-5 multiple stacked" id="stacked-example-2">
-
-  <caption> Percentage Stacked Bars </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> #1 </th>
-      <th scope="col"> #2 </th>
-      <th scope="col"> #3 </th>
-      <th scope="col"> #4 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> America </th>
-      <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(30 / (50 + 50 + 30 + 20));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(20 / (50 + 50 + 30 + 20));"> <span class="data"> 20$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: calc(40 / (40 + 25 + 45 + 30));"> <span class="data"> 40$ </span> </td>
-      <td style="--size: calc(25 / (40 + 25 + 45 + 30));"> <span class="data"> 25$ </span> </td>
-      <td style="--size: calc(45 / (40 + 25 + 45 + 30));"> <span class="data"> 45$ </span> </td>
-      <td style="--size: calc(30 / (40 + 25 + 45 + 30));"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Africa </th>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="stacked-example-2">
+  <table class="charts-css bar hide-data show-heading show-labels show-primary-axis show-5-secondary-axes data-spacing-5 multiple stacked">
+    <caption> Percentage Stacked Bars </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Continent </th>
+        <th scope="col"> #1 </th>
+        <th scope="col"> #2 </th>
+        <th scope="col"> #3 </th>
+        <th scope="col"> #4 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> America </th>
+        <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(30 / (50 + 50 + 30 + 20));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(20 / (50 + 50 + 30 + 20));"> <span class="data"> 20$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc(40 / (40 + 25 + 45 + 30));"> <span class="data"> 40$ </span> </td>
+        <td style="--size: calc(25 / (40 + 25 + 45 + 30));"> <span class="data"> 25$ </span> </td>
+        <td style="--size: calc(45 / (40 + 25 + 45 + 30));"> <span class="data"> 45$ </span> </td>
+        <td style="--size: calc(30 / (40 + 25 + 45 + 30));"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Africa </th>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -185,132 +191,138 @@ Stack items atop one another using `.column` chart.
 <code-example code-example-id="stacked-example-3">
 <template v-slot:css-code>
 #stacked-example-3 {
-  height: 300px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  --heading-size: 2.5rem;
+}
+#stacked-example-3 .column {
   --color-1: rgba(255, 200, 0, 0.6);
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
 }
-#stacked-example-3 caption {
+#stacked-example-3 .column caption {
   font-weight: bold;
+  padding-block-end: 1rem;
+}
+#stacked-example-3 .column tbody {
+  aspect-ratio: 1 / 1;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-heading show-labels show-primary-axis show-3-secondary-axes data-spacing-10 multiple stacked" id="stacked-example-3">
-
-  <caption> Simple Stacked Columns </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> #1 </th>
-      <th scope="col"> #2 </th>
-      <th scope="col"> #3 </th>
-      <th scope="col"> #4 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> America </th>
-      <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: calc(40 / 150);"> <span class="data"> 40$ </span> </td>
-      <td style="--size: calc(25 / 150);"> <span class="data"> 25$ </span> </td>
-      <td style="--size: calc(45 / 150);"> <span class="data"> 45$ </span> </td>
-      <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Africa </th>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="stacked-example-3">
+  <table class="charts-css column hide-data show-heading show-labels show-primary-axis show-3-secondary-axes data-spacing-10 multiple stacked">
+    <caption> Simple Stacked Columns </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Continent </th>
+        <th scope="col"> #1 </th>
+        <th scope="col"> #2 </th>
+        <th scope="col"> #3 </th>
+        <th scope="col"> #4 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> America </th>
+        <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(50 / 150);"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc(40 / 150);"> <span class="data"> 40$ </span> </td>
+        <td style="--size: calc(25 / 150);"> <span class="data"> 25$ </span> </td>
+        <td style="--size: calc(45 / 150);"> <span class="data"> 45$ </span> </td>
+        <td style="--size: calc(30 / 150);"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Africa </th>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / 150);"> <span class="data"> 20$ </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="stacked-example-4">
 <template v-slot:css-code>
 #stacked-example-4 {
-  height: 300px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  --heading-size: 2.5rem;
+}
+#stacked-example-4 .column {
   --color-1: rgba(255, 200, 0, 0.6);
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
 }
-#stacked-example-4 caption {
+#stacked-example-4 .column caption {
   font-weight: bold;
+  padding-block-end: 1rem;
+}
+#stacked-example-4 .column tbody {
+  aspect-ratio: 1 / 1;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-heading show-labels show-primary-axis show-3-secondary-axes data-spacing-10 multiple stacked" id="stacked-example-4">
-
-  <caption> Percentage Stacked Columns </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Continent </th>
-      <th scope="col"> #1 </th>
-      <th scope="col"> #2 </th>
-      <th scope="col"> #3 </th>
-      <th scope="col"> #4 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> America </th>
-      <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
-      <td style="--size: calc(30 / (50 + 50 + 30 + 20));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(20 / (50 + 50 + 30 + 20));"> <span class="data"> 20$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Asia </th>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-      <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Europe </th>
-      <td style="--size: calc(40 / (40 + 25 + 45 + 30));"> <span class="data"> 40$ </span> </td>
-      <td style="--size: calc(25 / (40 + 25 + 45 + 30));"> <span class="data"> 25$ </span> </td>
-      <td style="--size: calc(45 / (40 + 25 + 45 + 30));"> <span class="data"> 45$ </span> </td>
-      <td style="--size: calc(30 / (40 + 25 + 45 + 30));"> <span class="data"> 30$ </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Africa </th>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-      <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="stacked-example-4">
+  <table class="charts-css column hide-data show-heading show-labels show-primary-axis show-3-secondary-axes data-spacing-10 multiple stacked">
+    <caption> Percentage Stacked Columns </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Continent </th>
+        <th scope="col"> #1 </th>
+        <th scope="col"> #2 </th>
+        <th scope="col"> #3 </th>
+        <th scope="col"> #4 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> America </th>
+        <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(50 / (50 + 50 + 30 + 20));"> <span class="data"> 50$ </span> </td>
+        <td style="--size: calc(30 / (50 + 50 + 30 + 20));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(20 / (50 + 50 + 30 + 20));"> <span class="data"> 20$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Asia </th>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+        <td style="--size: calc(30 / (30 + 30 + 30 + 30));"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Europe </th>
+        <td style="--size: calc(40 / (40 + 25 + 45 + 30));"> <span class="data"> 40$ </span> </td>
+        <td style="--size: calc(25 / (40 + 25 + 45 + 30));"> <span class="data"> 25$ </span> </td>
+        <td style="--size: calc(45 / (40 + 25 + 45 + 30));"> <span class="data"> 45$ </span> </td>
+        <td style="--size: calc(30 / (40 + 25 + 45 + 30));"> <span class="data"> 30$ </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Africa </th>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+        <td style="--size: calc(20 / (20 + 20 + 20 + 20));"> <span class="data"> 20$ </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 

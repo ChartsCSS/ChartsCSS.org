@@ -11,7 +11,7 @@ A 3D effect can be applied to the charts to give it depth. There are several tec
 To create 3D bars is pretty simple. It can be done using the CSS `box-shadow` property:
 
 ```css
-#custom-effect tbody td {
+#custom-effect .column tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
   box-shadow:
@@ -31,11 +31,14 @@ To create 3D bars is pretty simple. It can be done using the CSS `box-shadow` pr
 <code-example code-example-id="effect-example-1">
 <template v-slot:css-code>
 #effect-example-1 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#effect-example-1 tbody td {
+#effect-example-1 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#effect-example-1 .column tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
   box-shadow:
@@ -52,52 +55,50 @@ To create 3D bars is pretty simple. It can be done using the CSS `box-shadow` pr
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="effect-example-1">
-
-  <caption> 3D Effect Example #1 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-1">
+  <table class="charts-css column hide-data">
+    <caption> 3D Effect Example #1 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()` transformation:
 
 ```css
-#custom-effect tbody td {
+#custom-effect .column .column tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
 }
-#custom-effect tbody td:before {
+#custom-effect .column .column tbody td:before {
   content: '';
   position: absolute;
   top: -10px;
@@ -108,7 +109,7 @@ Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()`
   transform-origin: top;
   background-color: lightgrey;
 }
-#custom-effect tbody td:after {
+#custom-effect .column .column tbody td:after {
   content: '';
   position: absolute;
   top: -4px;
@@ -124,15 +125,18 @@ Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()`
 <code-example code-example-id="effect-example-2">
 <template v-slot:css-code>
 #effect-example-2 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#effect-example-2 tbody td {
+#effect-example-2 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#effect-example-2 .column tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
 }
-#effect-example-2 tbody td:before {
+#effect-example-2 .column tbody td:before {
   content: '';
   position: absolute;
   top: -10px;
@@ -143,7 +147,7 @@ Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()`
   transform-origin: top;
   background-color: lightgrey;
 }
-#effect-example-2 tbody td:after {
+#effect-example-2 .column tbody td:after {
   content: '';
   position: absolute;
   top: -4px;
@@ -156,41 +160,39 @@ Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()`
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="effect-example-2">
-
-  <caption> 3D Effect Example #2 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-2">
+  <table class="charts-css column hide-data">
+    <caption> 3D Effect Example #2 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -199,7 +201,7 @@ Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()`
 To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
 
 ```css
-#custom-effect tbody td {
+#custom-effect .column tbody td {
   margin-inline-start: 20%;
   margin-inline-end: 20%;
   border-radius: 50% / 12px;
@@ -213,11 +215,14 @@ To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
 <code-example code-example-id="effect-example-3">
 <template v-slot:css-code>
 #effect-example-3 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#effect-example-3 tbody td {
+#effect-example-3 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#effect-example-3 .column tbody td {
   margin-inline-start: 20%;
   margin-inline-end: 20%;
   border-radius: 50% / 12px;
@@ -228,41 +233,39 @@ To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="effect-example-3">
-
-  <caption> 3D Effect Example #3 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-3">
+  <table class="charts-css column hide-data">
+    <caption> 3D Effect Example #3 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -271,11 +274,11 @@ To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
 Another way to make your chart look 3D is to tilt the entire `<table>` element using the CSS `skew()` transformation:
 
 ```css
-#custom-effect {
+#custom-effect .column {
   margin: 1.5rem auto;
   transform: skewY(20deg);
 }
-#custom-effect tbody td {
+#custom-effect .column tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
   box-shadow:
@@ -295,12 +298,18 @@ Another way to make your chart look 3D is to tilt the entire `<table>` element u
 <code-example code-example-id="effect-example-4">
 <template v-slot:css-code>
 #effect-example-4 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
+  margin: 0 auto;
+}
+#effect-example-4 .column {
   margin: 1.5rem auto;
   transform: skewY(20deg);
 }
-#effect-example-4 tbody td {
+#effect-example-4 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#effect-example-4 .column tbody td {
   margin-inline-start: 10px;
   margin-inline-end: 20px;
   box-shadow:
@@ -317,52 +326,50 @@ Another way to make your chart look 3D is to tilt the entire `<table>` element u
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column" id="effect-example-4">
-
-  <caption> 3D Effect Example #4 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-4">
+  <table class="charts-css column">
+    <caption> 3D Effect Example #4 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 Or tilt the cylinder bars the other way:
 
 ```css
-#custom-effect {
+#custom-effect .column {
   margin: 1.5rem auto;
   transform: skewY(-8deg);
 }
-#custom-effect tbody td {
+#custom-effect .column tbody td {
   margin-inline-start: 20%;
   margin-inline-start: 20%;
   margin-inline-end: 20%;
@@ -378,12 +385,18 @@ Or tilt the cylinder bars the other way:
 <code-example code-example-id="effect-example-5">
 <template v-slot:css-code>
 #effect-example-5 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
+  margin: 0 auto;
+}
+#effect-example-5 .column {
   margin: 1.5rem auto;
   transform: skewY(-8deg);
 }
-#effect-example-5 tbody td {
+#effect-example-5 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#effect-example-5 .column tbody td {
   margin-inline-start: 20%;
   margin-inline-end: 20%;
   border-radius: 50% / 12px;
@@ -395,41 +408,39 @@ Or tilt the cylinder bars the other way:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="effect-example-5">
-
-  <caption> 3D Effect Example #5 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-5">
+  <table class="charts-css column hide-data">
+    <caption> 3D Effect Example #5 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -438,8 +449,7 @@ Or tilt the cylinder bars the other way:
 Use the webkit reflect effect to highlight the chart:
 
 ```css
-#custom-effect {
-  height: 200px;
+#custom-effect .column {
   margin: 0 auto 100px;
   -webkit-box-reflect:
     below
@@ -458,8 +468,11 @@ Use the webkit reflect effect to highlight the chart:
 <code-example code-example-id="effect-example-6">
 <template v-slot:css-code>
 #effect-example-6 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
+  margin: 0 auto;
+}
+#effect-example-6 .column {
   margin: 0 auto 100px;
   -webkit-box-reflect:
     below
@@ -473,43 +486,44 @@ Use the webkit reflect effect to highlight the chart:
       to( rgba( 255, 255, 255, 0.25 ) )
   );
 }
+#effect-example-6 .column tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css column labels-hide" id="effect-example-6">
-
-  <caption> 3D Effect Example #6 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-6">
+  <table class="charts-css column labels-hide">
+    <caption> 3D Effect Example #6 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -518,14 +532,14 @@ Use the webkit reflect effect to highlight the chart:
 Using shadows is another good way to create 3D effects:
 
 ```css
-#custom-effect tbody {
+#custom-effect .column tbody {
   padding: 30px;
   border-radius: 10px;
   box-shadow:
     inset -5px -5px 10px rgba(0, 0, 0, 0.5),
     5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-#custom-effect tbody td {
+#custom-effect .column tbody td {
   margin-inline: 10px;
   border-radius: 10px;
   box-shadow:
@@ -537,18 +551,19 @@ Using shadows is another good way to create 3D effects:
 <code-example code-example-id="effect-example-7">
 <template v-slot:css-code>
 #effect-example-7 {
-  height: 260px;
-  max-width: 360px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 }
-#effect-example-7 tbody {
+#effect-example-7 .column tbody {
+  aspect-ratio: 4 / 3;
   padding: 30px;
   border-radius: 10px;
   box-shadow:
     inset -5px -5px 10px rgba(0, 0, 0, 0.5),
     5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-#effect-example-7 tbody td {
+#effect-example-7 .column tbody td {
   margin-inline: 10px;
   border-radius: 10px;
   box-shadow:
@@ -557,40 +572,38 @@ Using shadows is another good way to create 3D effects:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="effect-example-7">
-
-  <caption> 3D Effect Example #7 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="effect-example-7">
+  <table class="charts-css column hide-data">
+    <caption> 3D Effect Example #7 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>

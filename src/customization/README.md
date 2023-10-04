@@ -7,39 +7,39 @@ next: ./basic-styling
 
 One of the key features in **Charts.css** is the ability to **_customize visibility using basic CSS_**. Frontend developers can target any HTML element and customize it. This philosophical guideline is what makes the framework so flexible and easy to use.
 
-## Custom Styling 
+## Custom Styling
 
-To add custom CSS simply add an `id` attribute to the `<table>` element:
-
-```html
-<table id="my-chart" class="charts-css bar|column|area|line ...">
-  ...
-</table>
-```
-```css
-#my-chart {
-  ...
-}
-```
-
-Or add an `id` attribute to a [wrapper element](/components/wrapper/):
+To add custom CSS add an `id` attribute to a [wrapper element](/components/wrapper/):
 
 ```html
 <div id="my-chart">
 
-  <table class="charts-css bar|column|area|line multiple ...">
+  <table class="charts-css bar|column|area|line multiple...">
+    ...
   </table>
 
   <ul class="charts-css legend">
+    ...
   </ul>
 
 </div>
 ```
+
 ```css
-#my-chart > table {
+#my-chart {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#my-chart .bar {
+  ...
+}
+#my-chart .legend {
   ...
 }
 ```
+
+Wrapping chart components in a single HTML element helps grouping components and scoping styles in that specific wrapper.
 
 ### Best Practice
 
@@ -47,12 +47,12 @@ We recommend adding the chart type to your selector. This way the custom style w
 
 ```css
 /* Customize only bar charts */
-#my-chart > table.bar {
+#my-chart .bar {
   ...
 }
 
 /* Customize only column charts */
-#my-chart > table.column {
+#my-chart .column {
   ...
 }
 ```

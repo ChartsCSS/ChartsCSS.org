@@ -19,13 +19,13 @@ Planned development and the release of new chart types:
 
 * ~~**November 2020** - Line chart.~~
 
-* **TBD 2023** - Pie chart.
+* ~~**September 2023** - Pie chart.~~
 
-* **TBD 2023** - Radial chart.
+* **2023/2024** - Radial chart.
 
-* **TBD 2023** - Polar Chart.
+* **TBD** - Polar Chart.
 
-* **TBD 2023** - Radar Chart.
+* **TBD** - Radar Chart.
 
 ## Long Term Roadmap
 
@@ -37,10 +37,6 @@ The framework will implement new features and components, not necessarily in tha
 
 * **Build Tools** - Add more build tools.
 
-* **Name Spacing** - Use namespaces to prevent class conflicts with other css frameworks.
-
-* ~~**Responsive Control** - Support conditional display for different screen sizes. The code should look like this `sm:pie md:column xl:bar`.~~ <br> Responsive controls can already be implemented with container queries.
+* **Name Spacing** - Use namespaces for classes ~~& properties~~ to prevent conflicts with other CSS frameworks.
 
 * **Component Prefixes** - Consider supporting component prefixes: `chart-axes:primary`, `chart-axes:*-secondary`, `chart-axes:data`, `chart-labels:show`, `chart-labels:align-end` etc.
-
-* **Reverse Labels** - Position chart labels on either side of the chart using the `reverse-labels` utility class.

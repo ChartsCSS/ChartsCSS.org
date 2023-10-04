@@ -12,10 +12,10 @@ Animating charts draws visitor's attention and can highlight important informati
 Here is a basic example where the bars (`<td>` elements) jump every three seconds:
 
 ```css
-#animations-example-1 td {
+#animations-example .column td {
   animation: jumping-bars 3s linear infinite;
 }
-#animations-example-1 tr:nth-of-type(even) td {
+#animations-example .column tr:nth-of-type(even) td {
   animation-delay: 300ms;
 }
 @keyframes jumping-bars {
@@ -28,15 +28,18 @@ Here is a basic example where the bars (`<td>` elements) jump every three second
 <code-example code-example-id="animations-example-1">
 <template v-slot:css-code>
 #animations-example-1 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#animations-example-1 td {
+#animations-example-1 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#animations-example-1 .column td {
   animation: jumping-bars 3s linear infinite;
   animation-delay: 0;
 }
-#animations-example-1 tr:nth-of-type(even) td {
+#animations-example-1 .column tr:nth-of-type(even) td {
   animation-delay: 300ms;
 }
 @keyframes jumping-bars {
@@ -46,41 +49,39 @@ Here is a basic example where the bars (`<td>` elements) jump every three second
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-labels show-primary-axis data-spacing-6" id="animations-example-1">
-
-  <caption> Animation Example #1 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="animations-example-1">
+  <table class="charts-css column hide-data show-labels show-primary-axis data-spacing-6">
+    <caption> Animation Example #1 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -89,7 +90,7 @@ Here is a basic example where the bars (`<td>` elements) jump every three second
 Here is another simple example using labels (`<th>` elements) that spin every three seconds:
 
 ```css
-#animations-example-2 th {
+#animations-example .bar th {
   animation: spin-labels 3s linear infinite;
 }
 @keyframes spin-labels {
@@ -102,15 +103,17 @@ Here is another simple example using labels (`<th>` elements) that spin every th
 <code-example code-example-id="animations-example-2">
 <template v-slot:css-code>
 #animations-example-2 {
-  --labels-size: 160px;
-  height: 250px;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
-#animations-example-2 td {
+#animations-example-2 .bar {
+  --labels-size: 160px;
+}
+#animations-example-2 .bar td {
   line-height: 1.5;
 }
-#animations-example-2 th {
+#animations-example-2 .bar th {
   animation: spin-labels 3s linear infinite;
 }
 @keyframes spin-labels {
@@ -120,43 +123,41 @@ Here is another simple example using labels (`<th>` elements) that spin every th
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar hide-data show-labels data-spacing-5 show-primary-axis" id="animations-example-2">
-
-  <caption> Animation Example #2 - The Richest People In America (Forbes 1918) </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Country </th>
-      <th scope="col"> Gold </th>
-      <th scope="col"> Silver </th>
-      <th scope="col"> Silver </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> John D. Rockefeller </th>
-      <td style="--size: calc( 1200 / 1200 );"> <span class="data"> 1,200 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Henry Clay Frick </th>
-      <td style="--size: calc( 225 / 1200 );"> <span class="data"> 225 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Andrew Carnegie </th>
-      <td style="--size: calc( 200 / 1200 );"> <span class="data"> 200 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> George Fisher Baker </th>
-      <td style="--size: calc( 150 / 1200 );"> <span class="data"> 150 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> William Rockefeller </th>
-      <td style="--size: calc( 150 / 1200 );"> <span class="data"> 150 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="animations-example-2">
+  <table class="charts-css bar hide-data show-labels data-spacing-5 show-primary-axis">
+    <caption> Animation Example #2 - The Richest People In America (Forbes 1918) </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Country </th>
+        <th scope="col"> Gold </th>
+        <th scope="col"> Silver </th>
+        <th scope="col"> Silver </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> John D. Rockefeller </th>
+        <td style="--size: calc( 1200 / 1200 );"> <span class="data"> 1,200 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Henry Clay Frick </th>
+        <td style="--size: calc( 225 / 1200 );"> <span class="data"> 225 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Andrew Carnegie </th>
+        <td style="--size: calc( 200 / 1200 );"> <span class="data"> 200 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> George Fisher Baker </th>
+        <td style="--size: calc( 150 / 1200 );"> <span class="data"> 150 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> William Rockefeller </th>
+        <td style="--size: calc( 150 / 1200 );"> <span class="data"> 150 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -165,14 +166,14 @@ Here is another simple example using labels (`<th>` elements) that spin every th
 In this example, the bars rise from the bottom of the chart:
 
 ```css
-#animations-example-3 tbody {
+#animations-example .column tbody {
   overflow-y: hidden; /* remove this to see how it works */
 }
-#animations-example-3 tbody th {
+#animations-example .column tbody th {
   background-color: #fff;
   z-index: 1;
 }
-#animations-example-3 tbody td {
+#animations-example .column tbody td {
   animation: moving-bars 4s linear infinite;
 }
 @keyframes moving-bars {
@@ -184,18 +185,19 @@ In this example, the bars rise from the bottom of the chart:
 <code-example code-example-id="animations-example-3">
 <template v-slot:css-code>
 #animations-example-3 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#animations-example-3 tbody {
+#animations-example-3 .column tbody {
+  aspect-ratio: 4 / 3;
   overflow-y: hidden; /* remove this to see how it works */
 }
-#animations-example-3 tbody th {
+#animations-example-3 .column tbody th {
   background-color: #fff;
   z-index: 1;
 }
-#animations-example-3 tbody td {
+#animations-example-3 .column tbody td {
   animation: moving-bars 4s linear infinite;
 }
 @keyframes moving-bars {
@@ -204,48 +206,46 @@ In this example, the bars rise from the bottom of the chart:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis" id="animations-example-3">
-
-  <caption> Animation Example #3 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="animations-example-3">
+  <table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis">
+    <caption> Animation Example #3 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 The same can be done with less code using the CSS `scale()` transformation:
 
 ```css
-#animations-example-4 tbody td {
+#animations-example .column tbody td {
   transform-origin: bottom;
   animation: revealing-bars 4s linear infinite;
 }
@@ -258,11 +258,14 @@ The same can be done with less code using the CSS `scale()` transformation:
 <code-example code-example-id="animations-example-4">
 <template v-slot:css-code>
 #animations-example-4 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#animations-example-4 tbody td {
+#animations-example-4 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#animations-example-4 .column tbody td {
   transform-origin: bottom;
   animation: revealing-bars 4s linear infinite;
 }
@@ -272,41 +275,39 @@ The same can be done with less code using the CSS `scale()` transformation:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis" id="animations-example-4">
-
-  <caption> Animation Example #4 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="animations-example-4">
+  <table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis">
+    <caption> Animation Example #4 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -324,7 +325,7 @@ A useful example of highlighting individual items with animations:
 ```
 
 ```css
-#animations-example-5 .highlighted {
+#animations-example .highlighted {
   animation: highlighted-bar 2s linear infinite;
 }
 @keyframes highlighted-bar {
@@ -337,9 +338,12 @@ A useful example of highlighting individual items with animations:
 <code-example code-example-id="animations-example-5">
 <template v-slot:css-code>
 #animations-example-5 {
-  height: 200px;
+  width: 100%;
   max-width: 350px;
   margin: 0 auto;
+}
+#animations-example-5 .column tbody {
+  aspect-ratio: 4 / 3;
 }
 #animations-example-5 .highlighted {
   animation: highlighted-bar 2s linear infinite;
@@ -351,41 +355,39 @@ A useful example of highlighting individual items with animations:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels data-spacing-15 show-primary-axis" id="animations-example-5">
-
-  <caption> Animation Example #5 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 1.0" class="highlighted"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.5"> <span class="data"> 50 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.3"> <span class="data"> 30 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="animations-example-5">
+  <table class="charts-css column show-labels data-spacing-15 show-primary-axis">
+    <caption> Animation Example #5 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 1.0" class="highlighted"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.5"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.3"> <span class="data"> 30 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -394,7 +396,7 @@ A useful example of highlighting individual items with animations:
 Now lets animate colors with gradients:
 
 ```css
-#animations-example-6 td {
+#animations-example .column td {
   background-image: linear-gradient(
     45deg,
     #956fd3,
@@ -416,11 +418,14 @@ Now lets animate colors with gradients:
 <code-example code-example-id="animations-example-6">
 <template v-slot:css-code>
 #animations-example-6 {
-  height: 200px;
+  width: 100%;
   max-width: 350px;
   margin: 0 auto;
 }
-#animations-example-6 td {
+#animations-example-6 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#animations-example-6 .column td {
   background-image: linear-gradient(
     45deg,
     #956fd3,
@@ -439,40 +444,38 @@ Now lets animate colors with gradients:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis" id="animations-example-6">
-
-  <caption> Animation Example #6 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.5"> <span class="data"> 50 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.3"> <span class="data"> 30 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="animations-example-6">
+  <table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis">
+    <caption> Animation Example #6 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.5"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.3"> <span class="data"> 30 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>

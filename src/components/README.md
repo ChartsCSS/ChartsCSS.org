@@ -1,5 +1,5 @@
 ---
-prev: ../docs/anatomy
+prev: ../docs/migrate-to-v1
 next: ./wrapper
 ---
 
@@ -15,11 +15,10 @@ Components add additional visual elements using nothing but CSS classes. You con
 * [Heading](/components/heading/)
 * [Data](/components/data/)
 * [Datasets](/components/datasets/)
-* [Orientation](/components/orientation/)
 * [Labels](/components/labels/)
 * [Axes](/components/axes/)
 * [Spacing](/components/spacing/)
-* [Reverse Order](/components/reverse-order/)
+* [Orientation](/components/orientation/)
 * [Colors](/components/colors/)
 * [Stacked](/components/stacked/)
 

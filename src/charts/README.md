@@ -17,8 +17,8 @@ Before using charts, check the **development status** in the table below. If a c
 | [Column](./column/) | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css column` |
 | [Area](./area/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css area  ` |
 | [Line](./line/)     | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css line`   |
+| [Pie](./pie/)       | <Badge type="tip" vertical="middle" text="Released" />              | `charts-css pie`    |
 | [Radial](./radial/) | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radial` |
-| [Pie](./pie/)       | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css pie`    |
 | [Radar](./radar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css radar`  |
 | [Polar](./polar/)   | <Badge type="warning" vertical="middle" text="Under Development" /> | `charts-css polar`  |
 

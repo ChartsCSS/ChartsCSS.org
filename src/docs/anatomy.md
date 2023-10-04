@@ -1,6 +1,5 @@
 ---
 permalink: /docs/anatomy/
-next: ../../components/
 ---
 
 # Anatomy
@@ -17,25 +16,26 @@ The following animation shows how the various elements are separated into layers
 	position: relative;
 	width: calc(100% * 0.42261826174); /* 100% * cos(65deg) */
 	width: 75%;
-    margin: 0 auto;
-	aspect-ratio: 1 / 1;
+	margin: 0 auto;
+	aspect-ratio: 1;
 }
 .layers-wrapper .charts-css {
 	position: absolute;
 	inset: 0;
 	width: 100%;
 	height: 100%;
-	margin: 0 auto;
 	border-radius: 10px;
 	animation-name: animate_layers;
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	--labels-size: 40px !important;
-	--heading-size: 40px !important;
 }
 .layers-wrapper .charts-css caption {
 	padding: 10px !important;
+}
+.layers-wrapper .charts-css tbody {
+	aspect-ratio: 1.1;
 }
 .layers-wrapper .charts-css:nth-child(1) {
 	--distance: -150px;
@@ -84,77 +84,104 @@ The following animation shows how the various elements are separated into layers
 <template v-slot:html-code>
 <div class="layers-wrapper">
 	<table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes show-data-axes">
-		<caption> </caption>
+		<caption> &nbsp; </caption>
 		<tbody>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0;"></td>
 			</tr>
 		</tbody>
 	</table>
 	<table class="charts-css column show-heading show-labels data-spacing-15">
-		<caption> </caption>
+		<caption> &nbsp; </caption>
 		<tbody>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0.2;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0.4;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0.6;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 0.8;"></td>
 			</tr>
 			<tr>
-				<th> </th>
+				<th> &nbsp; </th>
 				<td style="--size: 1;"></td>
 			</tr>
 		</tbody>
 	</table>
 	<table class="charts-css column show-heading show-labels">
-		<caption> </caption>
+		<caption> &nbsp; </caption>
 		<tbody>
 			<tr>
 				<th> 2016 </th>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> 2017 </th>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> 2018 </th>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> 2019 </th>
+				<td style="--size: 0;"></td>
 			</tr>
 			<tr>
 				<th> 2020 </th>
+				<td style="--size: 0;"></td>
 			</tr>
 		</tbody>
 	</table>
 	<table class="charts-css column show-heading">
 		<caption> Chart Heading </caption>
+		<tbody>
+			<tr>
+				<th> &nbsp; </th>
+				<td style="--size: 0;"></td>
+			</tr>
+			<tr>
+				<th> &nbsp; </th>
+				<td style="--size: 0;"></td>
+			</tr>
+			<tr>
+				<th> &nbsp; </th>
+				<td style="--size: 0;"></td>
+			</tr>
+			<tr>
+				<th> &nbsp; </th>
+				<td style="--size: 0;"></td>
+			</tr>
+			<tr>
+				<th> &nbsp; </th>
+				<td style="--size: 0;"></td>
+			</tr>
+		</tbody>
 	</table>
 </div>
 </template>
@@ -222,14 +249,17 @@ With the help of CSS classes, the user will see the following chart:
 <code-example code-example-id="anatomy-simple-chart">
 <template v-slot:css-code>
 #anatomy-simple-chart .charts-css {
-  height: 300px;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
+}
+#anatomy-simple-chart .charts-css tbody {
+	aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
 <div id="anatomy-simple-chart">
-  <table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes show-data-axes data-spacing-15 hide-data">
+  <table class="charts-css column show-heading show-labels show-primary-axis show-3-secondary-axes show-data-axes data-spacing-15 hide-data">
     <caption> Chart Heading </caption>
     <thead>
       <tr>
@@ -266,7 +296,7 @@ With the help of CSS classes, the user will see the following chart:
 
 ### Table View
 
-Removing the CSS classes, the style will be removed and the user will see a regular table:
+When removing the CSS classes, the style will be removed and the user will see a regular table:
 
 <table>
 
