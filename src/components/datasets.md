@@ -53,9 +53,10 @@ The result:
 
 <code-example code-example-id="datasets-example-1">
 <template v-slot:css-code>
-#datasets-example-1 .column {
-  height: 300px;
-  max-width: 800px;
+#datasets-example-1 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 #datasets-example-1 .legend {
   margin-block-start: 1rem;
@@ -64,7 +65,6 @@ The result:
 </template>
 <template v-slot:html-code>
 <div id="datasets-example-1">
-
   <table class="charts-css column show-labels data-spacing-5 datasets-spacing-1">
     <caption> Front End Developer Salary </caption>
     <tbody>
@@ -86,7 +86,6 @@ The result:
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-inline legend-square">
     <li> 1st year </li>
     <li> 2nd year </li>
@@ -94,7 +93,6 @@ The result:
     <li> 4th year </li>
     <li> 5th year </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -115,9 +113,10 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 
 <code-example code-example-id="datasets-example-2">
 <template v-slot:css-code>
-#datasets-example-2 .column {
-  height: 300px;
-  max-width: 800px;
+#datasets-example-2 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 #datasets-example-2 .legend {
   margin-block-end: 1rem;
@@ -126,7 +125,6 @@ On charts with multiple datasets you should add the `.multiple` class to make th
 </template>
 <template v-slot:html-code>
 <div id="datasets-example-2">
-
   <ul class="charts-css legend legend-inline legend-square">
     <li> 1st year </li>
     <li> 2nd year </li>
@@ -134,7 +132,6 @@ On charts with multiple datasets you should add the `.multiple` class to make th
     <li> 4th year </li>
     <li> 5th year </li>
   </ul>
-
   <table class="charts-css column multiple show-labels data-spacing-10 datasets-spacing-1">
     <caption> Front End Developer Salary </caption>
     <tbody>
@@ -156,7 +153,6 @@ On charts with multiple datasets you should add the `.multiple` class to make th
       </tr>
     </tbody>
   </table>
-
 </div>
 </template>
 </code-example>
@@ -172,13 +168,12 @@ The first method uses two `<tr>` elements, each containing five `<td>` elements:
 #datasets-example-3 {
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
   gap: 20px;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
 #datasets-example-3 .column {
-  height: 300px;
   max-width: 700px;
 }
 #datasets-example-3 .legend {
@@ -187,15 +182,13 @@ The first method uses two `<tr>` elements, each containing five `<td>` elements:
 </template>
 <template v-slot:html-code>
 <div id="datasets-example-3">
-
-  <ul class="charts-css legend legend-inline legend-square">
+  <ul class="charts-css legend legend-square">
     <li> 1st year </li>
     <li> 2nd year </li>
     <li> 3rd year </li>
     <li> 4th year </li>
     <li> 5th year </li>
   </ul>
-
   <table class="charts-css column multiple show-labels data-spacing-5 datasets-spacing-1">
     <caption> Front End Developer Salary </caption>
     <tbody>
@@ -217,7 +210,6 @@ The first method uses two `<tr>` elements, each containing five `<td>` elements:
       </tr>
     </tbody>
   </table>
-
 </div>
 </template>
 </code-example>
@@ -231,11 +223,11 @@ While the second method uses five `<tr>` elements, each containing two `<td>` el
   flex-direction: row-reverse;
   align-items: center;
   gap: 20px;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
 #datasets-example-4 .column {
-  height: 300px;
   max-width: 700px;
 }
 #datasets-example-4 .legend {
@@ -244,12 +236,10 @@ While the second method uses five `<tr>` elements, each containing two `<td>` el
 </template>
 <template v-slot:html-code>
 <div id="datasets-example-4">
-
-  <ul class="charts-css legend legend-inline legend-square">
+  <ul class="charts-css legend legend-square">
     <li> Asia </li>
     <li> Europe </li>
   </ul>
-
   <table class="charts-css column multiple show-labels data-spacing-5 datasets-spacing-1">
     <caption> Front End Developer Salary </caption>
     <tbody>
@@ -280,7 +270,6 @@ While the second method uses five `<tr>` elements, each containing two `<td>` el
       </tr>
     </tbody>
   </table>
-
 </div>
 </template>
 </code-example>

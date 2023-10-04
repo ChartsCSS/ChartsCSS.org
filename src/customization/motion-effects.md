@@ -13,13 +13,13 @@ Here are some basic examples leveraging the CSS `:hover` pseudo-class.
 Change background color when the user hovers over data items:
 
 ```css
-#motion-effect tr {
+#motion-effect .column tr {
   transition-duration: 0.3s;
 }
-#motion-effect tr:hover {
+#motion-effect .column tr:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-#motion-effect tr:hover th {
+#motion-effect .column tr:hover th {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
 }
@@ -28,57 +28,58 @@ Change background color when the user hovers over data items:
 <code-example code-example-id="motion-effect-example-1">
 <template v-slot:css-code>
 #motion-effect-example-1 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#motion-effect-example-1 tr {
+#motion-effect-example-1 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#motion-effect-example-1 .column tr {
   transition-duration: 0.3s;
 }
-#motion-effect-example-1 tr:hover {
+#motion-effect-example-1 .column tr:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-#motion-effect-example-1 tr:hover th {
+#motion-effect-example-1 .column tr:hover th {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels show-primary-axis show-5-secondary-axes data-spacing-5 hide-data" id="motion-effect-example-1">
-
-  <caption> Motion Effect Example #1 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="motion-effect-example-1">
+  <table class="charts-css column show-labels show-primary-axis show-5-secondary-axes data-spacing-5 hide-data">
+    <caption> Motion Effect Example #1 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -87,11 +88,11 @@ Change background color when the user hovers over data items:
 Reverse opacity effect when hovering over datasets:
 
 ```css
-#motion-effect td {
+#motion-effect .column td {
   transition-duration: 0.3s;
   opacity: 0.5;
 }
-#motion-effect td:hover {
+#motion-effect .column td:hover {
   opacity: 1;
 }
 ```
@@ -99,54 +100,55 @@ Reverse opacity effect when hovering over datasets:
 <code-example code-example-id="motion-effect-example-2">
 <template v-slot:css-code>
 #motion-effect-example-2 {
-  height: 200px;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
-#motion-effect-example-2 td {
+#motion-effect-example-2 .column tbody {
+  aspect-ratio: 21 / 9;
+}
+#motion-effect-example-2 .column td {
   transition-duration: 0.3s;
   opacity: 0.5;
 }
-#motion-effect-example-2 td:hover {
+#motion-effect-example-2 .column td:hover {
   opacity: 1;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-primary-axis show-data-axes data-spacing-20 hide-data" id="motion-effect-example-2">
-
-  <caption> Motion Effect Example #2 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-      <th scope="col"> Progress 4 </th>
-      <th scope="col"> Progress 5 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
-      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
-      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="motion-effect-example-2">
+  <table class="charts-css column multiple show-primary-axis show-data-axes data-spacing-20 hide-data">
+    <caption> Motion Effect Example #2 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+        <th scope="col"> Progress 4 </th>
+        <th scope="col"> Progress 5 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+        <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+        <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -155,11 +157,11 @@ Reverse opacity effect when hovering over datasets:
 Scale the data when hovering over the data elements:
 
 ```css
-#motion-effect td .data {
+#motion-effect .column td .data {
   transition-duration: 0.6s;
   transform: scale(0);
 }
-#motion-effect td:hover .data {
+#motion-effect .column td:hover .data {
   transform: scale(1);
 }
 ```
@@ -167,54 +169,55 @@ Scale the data when hovering over the data elements:
 <code-example code-example-id="motion-effect-example-3">
 <template v-slot:css-code>
 #motion-effect-example-3 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-#motion-effect-example-3 td .data {
+#motion-effect-example-3 .column tbody {
+  aspect-ratio: 4 / 3;
+}
+#motion-effect-example-3 .column td .data {
   transition-duration: 0.6s;
   transform: scale(0);
 }
-#motion-effect-example-3 td:hover .data {
+#motion-effect-example-3 .column td:hover .data {
   transform: scale(1);
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-5" id="motion-effect-example-3">
-
-  <caption> Motion Effect Example #3 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="motion-effect-example-3">
+  <table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-5">
+    <caption> Motion Effect Example #3 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -223,11 +226,11 @@ Scale the data when hovering over the data elements:
 Grayscale colors the chart when visitors hover over it:
 
 ```css
-#motion-effect {
+#motion-effect .column {
   transition-duration: 1s;
   filter: grayscale(100%);
 }
-#motion-effect:hover {
+#motion-effect .column:hover {
   filter: none;
 }
 ```
@@ -235,51 +238,54 @@ Grayscale colors the chart when visitors hover over it:
 <code-example code-example-id="motion-effect-example-4">
 <template v-slot:css-code>
 #motion-effect-example-4 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
+}
+#motion-effect-example-4 .column {
   transition-duration: 1s;
   filter: grayscale(100%);
 }
-#motion-effect-example-4:hover {
+#motion-effect-example-4 .column:hover {
   filter: none;
+}
+#motion-effect-example-4 .column tbody {
+  aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-10 hide-data" id="motion-effect-example-4">
-
-  <caption> Motion Effect Example #4 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="motion-effect-example-4">
+  <table class="charts-css column show-primary-axis show-5-secondary-axes data-spacing-10 hide-data">
+    <caption> Motion Effect Example #4 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>

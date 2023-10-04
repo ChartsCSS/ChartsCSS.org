@@ -47,12 +47,8 @@ Use the `.legend` class to style your chart legend.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-1 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-1 .legend {
@@ -61,7 +57,6 @@ Use the `.legend` class to style your chart legend.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-1">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -101,7 +96,6 @@ Use the `.legend` class to style your chart legend.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -109,7 +103,6 @@ Use the `.legend` class to style your chart legend.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -129,22 +122,17 @@ By default, legend dataset labels are vertically aligned and positioned beside t
 <code-example code-example-id="legend-example-2">
 <template v-slot:css-code>
 #legend-example-2 {
-  margin: 0 auto;
-  max-width: 500px;
-}
-#legend-example-2 .column {
-  height: 200px;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-2 .legend {
-  margin-top: 20px;
+  margin-block-start: 20px;
   justify-content: space-between;
 }
 </template>
 <template v-slot:html-code>
 <div id="legend-example-2">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -184,7 +172,6 @@ By default, legend dataset labels are vertically aligned and positioned beside t
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-inline">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -192,7 +179,6 @@ By default, legend dataset labels are vertically aligned and positioned beside t
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -217,12 +203,8 @@ Use the `.legend-circle` class to display a circular shaped label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-3 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-3 .legend {
@@ -231,7 +213,6 @@ Use the `.legend-circle` class to display a circular shaped label.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-3">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -271,7 +252,6 @@ Use the `.legend-circle` class to display a circular shaped label.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-circle">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -279,7 +259,6 @@ Use the `.legend-circle` class to display a circular shaped label.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -302,12 +281,8 @@ Use the `.legend-ellipse` class to display an ellipse shaped label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-4 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-4 .legend {
@@ -316,7 +291,6 @@ Use the `.legend-ellipse` class to display an ellipse shaped label.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-4">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -356,7 +330,6 @@ Use the `.legend-ellipse` class to display an ellipse shaped label.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-ellipse">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -364,7 +337,6 @@ Use the `.legend-ellipse` class to display an ellipse shaped label.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -387,12 +359,8 @@ Use the `.legend-square` class to display a square shaped label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-5 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-5 .legend {
@@ -401,7 +369,6 @@ Use the `.legend-square` class to display a square shaped label.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-5">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -441,7 +408,6 @@ Use the `.legend-square` class to display a square shaped label.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-square">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -449,7 +415,6 @@ Use the `.legend-square` class to display a square shaped label.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -472,12 +437,8 @@ Use the `.legend-rectangle` class to display a rectangular shaped label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-6 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-6 .legend {
@@ -486,7 +447,6 @@ Use the `.legend-rectangle` class to display a rectangular shaped label.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-6">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -526,7 +486,6 @@ Use the `.legend-rectangle` class to display a rectangular shaped label.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-rectangle">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -534,7 +493,6 @@ Use the `.legend-rectangle` class to display a rectangular shaped label.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -557,12 +515,8 @@ Use the `.legend-rhombus` class to display a rhombus shaped label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-7 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-7 .legend {
@@ -571,7 +525,6 @@ Use the `.legend-rhombus` class to display a rhombus shaped label.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-7">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -611,7 +564,6 @@ Use the `.legend-rhombus` class to display a rhombus shaped label.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-rhombus">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -619,7 +571,6 @@ Use the `.legend-rhombus` class to display a rhombus shaped label.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -642,12 +593,8 @@ Use the `.legend-line` class to display a line shaped label.
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-8 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-8 .legend {
@@ -656,7 +603,6 @@ Use the `.legend-line` class to display a line shaped label.
 </template>
 <template v-slot:html-code>
 <div id="legend-example-8">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -696,7 +642,6 @@ Use the `.legend-line` class to display a line shaped label.
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-line">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -704,7 +649,6 @@ Use the `.legend-line` class to display a line shaped label.
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -729,12 +673,8 @@ For example, lets change the text color, the background color and add a box-shad
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-9 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-9 .legend {
@@ -746,7 +686,6 @@ For example, lets change the text color, the background color and add a box-shad
 </template>
 <template v-slot:html-code>
 <div id="legend-example-9">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -786,7 +725,6 @@ For example, lets change the text color, the background color and add a box-shad
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-square">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -794,7 +732,6 @@ For example, lets change the text color, the background color and add a box-shad
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>
@@ -813,12 +750,8 @@ To target an individual legend element, we can do something like this:
   display: flex;
   flex-direction: row;
   gap: 40px;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-}
-#legend-example-10 .column {
-  height: 200px;
-  max-width: 500px;
   margin: 0 auto;
 }
 #legend-example-10 .legend {
@@ -833,7 +766,6 @@ To target an individual legend element, we can do something like this:
 </template>
 <template v-slot:html-code>
 <div id="legend-example-10">
-
   <table class="charts-css column multiple hide-data show-labels data-spacing-5">
     <caption> Front End Developer Salary </caption>
     <thead>
@@ -873,7 +805,6 @@ To target an individual legend element, we can do something like this:
       </tr>
     </tbody>
   </table>
-
   <ul class="charts-css legend legend-square">
     <li> 2000 </li>
     <li> 2005 </li>
@@ -881,7 +812,6 @@ To target an individual legend element, we can do something like this:
     <li> 2015 </li>
     <li> 2020 </li>
   </ul>
-
 </div>
 </template>
 </code-example>

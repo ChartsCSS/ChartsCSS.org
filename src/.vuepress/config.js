@@ -11,7 +11,7 @@ module.exports = {
   description: 'CSS data visualization framework',
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@0.9.0/dist/charts.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@1.0.1/dist/charts.min.css' }],
     ['link', { rel: 'icon', href: '/assets/img/logo.svg' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['link', { rel: 'mask-icon', href: '/assets/img/logo.svg', color: '#f57' }],
@@ -77,6 +77,7 @@ module.exports = {
           '/docs/installation',
           '/docs/usage',
           '/docs/anatomy',
+          '/docs/migrate-to-v1',
         ]
       },
       {
@@ -89,11 +90,10 @@ module.exports = {
           '/components/heading',
           '/components/data',
           '/components/datasets',
-          '/components/orientation',
           '/components/labels',
           '/components/axes',
           '/components/spacing',
-          '/components/reverse-order',
+          '/components/orientation',
           '/components/colors',
           '/components/stacked',
           '/components/tooltips',
@@ -110,8 +110,8 @@ module.exports = {
           '/charts/column',
           '/charts/area',
           '/charts/line',
-          '/charts/radial',
           '/charts/pie',
+          '/charts/radial',
           '/charts/polar',
           '/charts/radar',
           '/charts/mixed',

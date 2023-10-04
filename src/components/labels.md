@@ -77,75 +77,73 @@ To add labels to the primary axis, use `<th>` heading tags. To mark them as a ro
 <code-example code-example-id="labels-example-1">
 <template v-slot:css-code>
 #labels-example-1 {
-  height: 250px;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="labels-example-1">
-
-  <caption> Labels Example #1 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Month </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> Jan </th>
-      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Feb </th>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Mar </th>
-      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Apr </th>
-      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> May </th>
-      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jun </th>
-      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jul </th>
-      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Aug </th>
-      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Sep </th>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Oct </th>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Nov </th>
-      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Dec </th>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="labels-example-1">
+  <table class="charts-css column hide-data">
+    <caption> Labels Example #1 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Month </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> Jan </th>
+        <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Feb </th>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Mar </th>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Apr </th>
+        <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> May </th>
+        <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jun </th>
+        <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jul </th>
+        <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Aug </th>
+        <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Sep </th>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Oct </th>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Nov </th>
+        <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Dec </th>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -162,75 +160,73 @@ To add labels to the primary axis, use `<th>` heading tags. To mark them as a ro
 <code-example code-example-id="labels-example-2">
 <template v-slot:css-code>
 #labels-example-2 {
-  height: 250px;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-labels" id="labels-example-2">
-
-  <caption> Labels Example #2 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Month </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> Jan </th>
-      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Feb </th>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Mar </th>
-      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Apr </th>
-      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> May </th>
-      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jun </th>
-      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jul </th>
-      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Aug </th>
-      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Sep </th>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Oct </th>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Nov </th>
-      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Dec </th>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="labels-example-2">
+  <table class="charts-css column hide-data show-labels">
+    <caption> Labels Example #2 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Month </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> Jan </th>
+        <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Feb </th>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Mar </th>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Apr </th>
+        <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> May </th>
+        <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jun </th>
+        <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jul </th>
+        <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Aug </th>
+        <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Sep </th>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Oct </th>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Nov </th>
+        <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Dec </th>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -264,75 +260,73 @@ To control which labels to hide, use `.show-labels` class on the main table to d
 <code-example code-example-id="labels-example-3">
 <template v-slot:css-code>
 #labels-example-3 {
-  height: 250px;
-  max-width: 800px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data show-labels" id="labels-example-3">
-
-  <caption> Labels Example #3 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Month </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr class="hide-label">
-      <th scope="row"> Jan </th>
-      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Feb </th>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-    </tr>
-    <tr class="hide-label">
-      <th scope="row"> Mar </th>
-      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Apr </th>
-      <td style="--size: 1;"> <span class="data"> 100 </span> </td>
-    </tr>
-    <tr class="hide-label">
-      <th scope="row"> May </th>
-      <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Jun </th>
-      <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
-    </tr>
-    <tr class="hide-label">
-      <th scope="row"> Jul </th>
-      <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Aug </th>
-      <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
-    </tr>
-    <tr class="hide-label">
-      <th scope="row"> Sep </th>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Oct </th>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-    </tr>
-    <tr class="hide-label">
-      <th scope="row"> Nov </th>
-      <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Dec </th>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="labels-example-3">
+  <table class="charts-css column hide-data show-labels">
+    <caption> Labels Example #3 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Month </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hide-label">
+        <th scope="row"> Jan </th>
+        <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Feb </th>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr class="hide-label">
+        <th scope="row"> Mar </th>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Apr </th>
+        <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr class="hide-label">
+        <th scope="row"> May </th>
+        <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jun </th>
+        <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+      </tr>
+      <tr class="hide-label">
+        <th scope="row"> Jul </th>
+        <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Aug </th>
+        <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+      </tr>
+      <tr class="hide-label">
+        <th scope="row"> Sep </th>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Oct </th>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      </tr>
+      <tr class="hide-label">
+        <th scope="row"> Nov </th>
+        <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Dec </th>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -343,7 +337,7 @@ Some charts use long labels, others use short ones. To customize the label size 
 Custom label size for bar charts:
 
 ```css{2}
-#my-chart.bar {
+#my-chart .bar {
   --labels-size: 200px;
 }
 ```
@@ -351,20 +345,22 @@ Custom label size for bar charts:
 Custom label size for column charts:
 
 ```css{2}
-#my-chart.column {
+#my-chart .column {
   --labels-size: 4rem;
 }
 ```
 
 <code-example code-example-id="labels-example-4">
 <template v-slot:css-code>
-#labels-example-4.column {
-  height: 250px;
+#labels-example-4 {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
+}
+#labels-example-4 .column {
   --labels-size: 4rem;
 }
-#labels-example-4.column th {
+#labels-example-4 .column th {
   background-color: #f6f6f6;
 }
 .sun {
@@ -438,58 +434,65 @@ Custom label size for column charts:
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-labels" id="labels-example-4">
-
-  <caption> Labels Example #4 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Day </th>
-      <th scope="col"> Forecast </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> Mon <br><div class="sun"></div> </th>
-      <td style="--size: calc(28 / 30);"> <span class="data"> 28° </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Tue <div class="sun"></div> </th>
-      <td style="--size: calc(25 / 30);"> <span class="data"> 25° </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Wed <div class="sun"></div> </th>
-      <td style="--size: calc(23 / 30);"> <span class="data"> 23° </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Thu <div class="cloud"></div> </th>
-      <td style="--size: calc(16 / 30);"> <span class="data"> 16° </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Fri <div class="cloud"></div> </th>
-      <td style="--size: calc(14 / 30);"> <span class="data"> 14° </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Sat <div class="cloud"></div> </th>
-      <td style="--size: calc(18 / 30);"> <span class="data"> 18° </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> Sun <div class="sun"></div> </th>
-      <td style="--size: calc(22 / 30);"> <span class="data"> 22° </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="labels-example-4">
+  <table class="charts-css column show-labels">
+    <caption> Labels Example #4 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Day </th>
+        <th scope="col"> Forecast </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> Mon <br><div class="sun"></div> </th>
+        <td style="--size: calc(28 / 30);"> <span class="data"> 28° </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Tue <div class="sun"></div> </th>
+        <td style="--size: calc(25 / 30);"> <span class="data"> 25° </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Wed <div class="sun"></div> </th>
+        <td style="--size: calc(23 / 30);"> <span class="data"> 23° </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Thu <div class="cloud"></div> </th>
+        <td style="--size: calc(16 / 30);"> <span class="data"> 16° </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Fri <div class="cloud"></div> </th>
+        <td style="--size: calc(14 / 30);"> <span class="data"> 14° </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Sat <div class="cloud"></div> </th>
+        <td style="--size: calc(18 / 30);"> <span class="data"> 18° </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Sun <div class="sun"></div> </th>
+        <td style="--size: calc(22 / 30);"> <span class="data"> 22° </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 ## Align Labels
 
-Lastly, play with the label text alignment. Use the `labels-align-start`, `labels-align-center` and `labels-align-end` classes.
+Lastly, play with the label text alignment. Use the following classes:
+
+* `labels-align-block-start`
+* `labels-align-block-center`
+* `labels-align-block-end`
+* `labels-align-inline-start`
+* `labels-align-inline-center`
+* `labels-align-inline-end`
+
+The alignment class use logical properties naming conventions to keep the chart flow-relative based on the page writing directions.
 
 ```html{1,13}
-<table class="charts-css column multiple show-labels labels-align-start">
+<table class="charts-css column multiple show-labels labels-align-inline-start">
   ...
 </table>
 ```
@@ -497,101 +500,99 @@ Lastly, play with the label text alignment. Use the `labels-align-start`, `label
 <code-example code-example-id="labels-example-5">
 <template v-slot:css-code>
 #labels-example-5 {
-  height: 200px;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-labels hide-data labels-align-start" id="labels-example-5">
-
-  <caption> Labels Example #5 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-      <th scope="col"> Progress 4 </th>
-      <th scope="col"> Progress 5 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--size: 0.1;"> <span class="data"> 10 </span> </td>
-      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="labels-example-5">
+  <table class="charts-css column multiple show-labels hide-data labels-align-inline-start">
+    <caption> Labels Example #5 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+        <th scope="col"> Progress 4 </th>
+        <th scope="col"> Progress 5 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--size: 0.1;"> <span class="data"> 10 </span> </td>
+        <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="labels-example-6">
 <template v-slot:css-code>
 #labels-example-6 {
-  height: 200px;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css column multiple show-labels hide-data labels-align-end" id="labels-example-6">
-
-  <caption> Labels Example #6 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-      <th scope="col"> Progress 4 </th>
-      <th scope="col"> Progress 5 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--size: 0.1;"> <span class="data"> 10 </span> </td>
-      <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
-      <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
-      <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="labels-example-6">
+  <table class="charts-css column multiple show-labels hide-data labels-align-inline-end">
+    <caption> Labels Example #6 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+        <th scope="col"> Progress 4 </th>
+        <th scope="col"> Progress 5 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--size: 0.1;"> <span class="data"> 10 </span> </td>
+        <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--size: 0.7;"> <span class="data"> 70 </span> </td>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-To override a specific label, use the `--labels-align` variable on `<th>` or `<tr>` elements.
+To override a specific label, use the `--labels-align-inline` or  `--labels-align-block` variables on `<th>` or `<tr>` elements.
+
+For example, use `labels-align-block-end` to align all the labels to the end on the block axis, and align a specific label to the start using `--labels-align-block: start` style.
 
 ```html{1,13}
-<table class="charts-css column show-labels labels-align-start">
+<table class="charts-css column show-labels labels-align-block-end">
 
   <tbody>
     <tr>
@@ -603,10 +604,93 @@ To override a specific label, use the `--labels-align` variable on `<th>` or `<t
       <td> Data </td>
     </tr>
     <tr>
-      <th scope="row" style="--labels-align: center"> Label </th>
+      <th scope="row" style="--labels-align-block: start"> Label </th>
+      <td> Data </td>
+    </tr>
+    <tr>
+      <th scope="row"> Label </th>
       <td> Data </td>
     </tr>
   </tbody>
 
 </table>
 ```
+
+<code-example code-example-id="labels-example-7">
+<template v-slot:css-code>
+#labels-example-7 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#labels-example-7 .column {
+  --labels-size: 3rem;
+}
+#labels-example-7 .column th {
+  background-color: rgba(255, 220, 200, 0.5);
+}
+</template>
+<template v-slot:html-code>
+<div id="labels-example-7">
+  <table class="charts-css column hide-data show-labels labels-align-block-end">
+    <caption> Labels Example #3 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Month </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> Jan </th>
+        <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Feb </th>
+        <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Mar </th>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="--labels-align-block: start;"> Apr </th>
+        <td style="--size: 1;"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> May </th>
+        <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jun </th>
+        <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Jul </th>
+        <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Aug </th>
+        <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Sep </th>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="--labels-align-block: start;"> Oct </th>
+        <td style="--size: 0.9;"> <span class="data"> 90 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Nov </th>
+        <td style="--size: 0.55;"> <span class="data"> 55 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> Dec </th>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>

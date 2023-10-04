@@ -16,216 +16,121 @@ To visualize your data with an area chart, the main `.charts-css` class should b
 </table>
 ```
 
-## Data
+## Wrapper
 
-When adding data, supply not only the data `--size` variable, but also the `--start` variable that indicates the starting point.
+It's recommended to wrap the chart with a wrapper element. This element is used not only to hold the chart components, but also for scoping the styles.
 
 ```html
-<table class="charts-css area" id="my-chart">
+<div id="my-chart">
 
-  <tbody>
-    <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
-    </tr>
-  </tbody>
+  <table class="charts-css area">
+    ...
+  </table>
 
-</table>
+  <ul class="charts-css legend">
+    ...
+  </ul>
+
+</div>
 ```
 
-<code-example code-example-id="area-example-1">
-<template v-slot:css-code>
-#area-example-1 {
-  height: 200px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-</template>
-<template v-slot:html-code>
-<table class="charts-css area hide-data" id="area-example-1">
-
-  <caption> Area Example #1 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $ 40K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $ 80K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $ 60K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $ 100K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $ 30K </span> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-## Dimensions
-
-To control the chart dimensions use regular CSS. Use media queries to set different dimensions for smaller devices.
+To set the chart dimensions, add some CSS:
 
 ```css
-#my-chart.area {
-  height: 200px;
-  max-width: 400px;
+#my-chart {
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
 }
-```
-
-```html
-<table class="charts-css area" id="my-chart">
+#my-chart .area {
   ...
-</table>
-```
-
-<code-example code-example-id="area-example-2">
-<template v-slot:css-code>
-#area-example-2 {
-  height: 200px;
-  max-width: 400px;
-  margin: 0 auto;
 }
-</template>
-<template v-slot:html-code>
-<table class="charts-css area" id="area-example-2">
-
-  <caption> Area Example #2 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--start: 0.2; --size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.4; --size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.8; --size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.6; --size: 1.0"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-## Orientation
-
-Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages). Use the `.reverse` class to reverse the orientation.
-
-```html
-<table class="charts-css area reverse">
+#my-chart .legend {
   ...
-</table>
-```
-
-<code-example code-example-id="area-example-3">
-<template v-slot:css-code>
-#area-example-3 {
-  height: 200px;
-  max-width: 400px;
-  margin: 0 auto;
 }
-</template>
-<template v-slot:html-code>
-<table class="charts-css area reverse" id="area-example-3">
-
-  <caption> Area Example #3 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--start: 0.2; --size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.4; --size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.8; --size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.6; --size: 1.0"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
+```
 
 ## Heading
 
 Add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default, the heading is hidden. To display the heading use the `.show-heading` class.
 
 ```html
-<table class="charts-css area show-heading">
-  <caption> Descriptive Chart Heading </caption>
-  ...
-</table>
+<div id="my-chart">
+
+  <table class="charts-css area show-heading">
+    <caption> Descriptive Area Chart Heading </caption>
+    ...
+  </table>
+
+</div>
 ```
 
-<code-example code-example-id="area-example-4">
+## Data
+
+To transform HTML tables into charts, you need to provide [data](../components/data/). The chart requires unit-less numbers, between `0` to `1`.
+
+```html{2}
+<tr>
+  <td> $ 40K </td>
+</tr>
+```
+
+Use the `--start` and `--end` variables to set the data. While `--end` is equivalent to `--size` in other chart types, `--start` indicates the starting point.
+
+```html{2}
+<tr>
+  <td style="--start: 0.2; --end: 0.4;"> $ 40K </td>
+</tr>
+```
+
+To help the framwork identify the text, wrap the content with a `<span class="data">` tag.
+
+```html{2}
+<tr>
+  <td style="--start: 0.2; --end: 0.4;"> <span class="data"> $ 40K </span> </td>
+</tr>
+```
+
+<code-example code-example-id="area-example-1">
 <template v-slot:css-code>
-#area-example-4 {
-  height: 200px;
+#area-example-1 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-1 .area tbody {
+  aspect-ratio: 21 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area show-heading" id="area-example-4">
-
-  <caption> Descriptive Chart Heading </caption>
-
-  <tbody>
-    <tr>
-      <td style="--start: 0.2; --size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.4; --size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.8; --size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.6; --size: 1.0"> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-1">
+  <table class="charts-css area hide-data">
+    <caption> Area Example #1 </caption>
+    <tbody>
+      <tr>
+        <td style="--start: 0.2; --end: 0.4"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 0.4; --end: 0.8"> <span class="data"> $ 80K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 0.8; --end: 0.6"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 0.6; --end: 1.0"> <span class="data"> $ 100K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 1.0; --end: 0.3"> <span class="data"> $ 30K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 ## Multiple Datasets
 
-Use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
+[Single dataset](../components/data/) have one `<td>` tag in each `<tr>`.
 
 ```html{2}
 <tr>
@@ -233,7 +138,7 @@ Use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
 </tr>
 ```
 
-Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<tr>`).
+[Multiple datasets](../components/datasets/) have several `<td>` tags in each `<tr>`.
 
 ```html{2-4}
 <tr>
@@ -243,7 +148,17 @@ Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<tr>`).
 </tr>
 ```
 
-But when using multiple datasets you should add the `.multiple` class.
+As any other data item, they should have the relevalt structure.
+
+```html{2-4}
+<tr>
+  <td style="--start: 0.2; --end: 0.4;"> <span class="data"> Data </span> </td>
+  <td style="--start: 0.4; --end: 0.6;"> <span class="data"> Data </span> </td>
+  <td style="--start: 0.6; --end: 0.8;"> <span class="data"> Data </span> </td>
+</tr>
+```
+
+When using multiple datasets you should add the `.multiple` class to let the framework apply different styles.
 
 ```html
 <table class="charts-css area multiple">
@@ -251,38 +166,40 @@ But when using multiple datasets you should add the `.multiple` class.
 </table>
 ```
 
-<code-example code-example-id="area-example-5">
+<code-example code-example-id="area-example-2">
 <template v-slot:css-code>
-#area-example-5 {
-  height: 200px;
+#area-example-2 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-2 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data" id="area-example-5">
-
-  <caption> Area Example #5 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-2">
+  <table class="charts-css area multiple hide-data">
+    <caption> Area Example #2 </caption>
+    <tbody>
+      <tr>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -309,205 +226,99 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
 
 <v-row>
 
-<code-example code-example-id="area-example-6">
+<code-example code-example-id="area-example-3">
 <template v-slot:css-code>
-#area-example-6 {
-  height: 200px;
+#area-example-3 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-3 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels" id="area-example-6">
-
-  <caption> Area Example #6 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-3">
+  <table class="charts-css area multiple hide-data show-labels">
+    <caption> Area Example #3 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="area-example-7">
+<code-example code-example-id="area-example-4">
 <template v-slot:css-code>
-#area-example-7 {
-  height: 200px;
+#area-example-4 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
-</template>
-<template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels reverse" id="area-example-7">
-
-  <caption> Area Example #7 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-</v-row>
-
-Some charts use long labels, others use short ones. To customize the label size use the `--labels-size` variable.
-
-```css
-#my-chart.area {
-  --labels-size: 3rem;
-}
-```
-
-<v-row>
-
-<code-example code-example-id="area-example-8">
-<template v-slot:css-code>
-#area-example-8 {
-  height: 200px;
-  max-width: 400px;
-  margin: 0 auto;
-  --labels-size: 3rem;
+#area-example-4 .area tbody {
+  aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels" id="area-example-8">
-
-  <caption> Area Example #8 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-<code-example code-example-id="area-example-9">
-<template v-slot:css-code>
-#area-example-9 {
-  height: 200px;
-  max-width: 400px;
-  margin: 0 auto;
-  --labels-size: 3rem;
-}
-</template>
-<template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels reverse" id="area-example-9">
-
-  <caption> Area Example #9 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-4">
+  <table class="charts-css area multiple hide-data show-labels reverse">
+    <caption> Area Example #7 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -529,97 +340,99 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
 
 <v-row>
 
-<code-example code-example-id="area-example-10">
+<code-example code-example-id="area-example-5">
 <template v-slot:css-code>
-#area-example-10 {
-  height: 200px;
+#area-example-5 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-5 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels" id="area-example-10">
-
-  <caption> Area Example #10 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-5">
+  <table class="charts-css area multiple hide-data show-labels">
+    <caption> Area Example #5 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="area-example-11">
+<code-example code-example-id="area-example-6">
 <template v-slot:css-code>
-#area-example-11 {
-  height: 200px;
+#area-example-6 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-6 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels show-primary-axis" id="area-example-11">
-
-  <caption> Area Example #11 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-6">
+  <table class="charts-css area multiple hide-data show-labels show-primary-axis">
+    <caption> Area Example #6 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -637,97 +450,99 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
 
 <v-row>
 
-<code-example code-example-id="area-example-12">
+<code-example code-example-id="area-example-7">
 <template v-slot:css-code>
-#area-example-12 {
-  height: 200px;
+#area-example-7 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-7 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels show-primary-axis show-4-secondary-axes" id="area-example-12">
-
-  <caption> Area Example #12 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-7">
+  <table class="charts-css area multiple hide-data show-labels show-primary-axis show-4-secondary-axes">
+    <caption> Area Example #7 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="area-example-13">
+<code-example code-example-id="area-example-8">
 <template v-slot:css-code>
-#area-example-13 {
-  height: 200px;
+#area-example-8 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-8 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels show-primary-axis show-10-secondary-axes" id="area-example-13">
-
-  <caption> Area Example #13 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-8">
+  <table class="charts-css area multiple hide-data show-labels show-primary-axis show-10-secondary-axes">
+    <caption> Area Example #8 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -745,107 +560,329 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
 
 <v-row>
 
-<code-example code-example-id="area-example-14">
+<code-example code-example-id="area-example-9">
 <template v-slot:css-code>
-#area-example-14 {
-  height: 200px;
+#area-example-9 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-9 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels show-primary-axis show-data-axes" id="area-example-14">
-
-  <caption> Area Example #14 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-9">
+  <table class="charts-css area multiple hide-data show-labels show-primary-axis show-data-axes">
+    <caption> Area Example #9 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="area-example-15">
+<code-example code-example-id="area-example-10">
 <template v-slot:css-code>
-#area-example-15 {
-  height: 200px;
+#area-example-10 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-10 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="area-example-15">
-
-  <caption> Area Example #15 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-10">
+  <table class="charts-css area multiple hide-data show-labels show-primary-axis show-4-secondary-axes show-data-axes">
+    <caption> Area Example #10 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 </v-row>
 
-## Reverse Order
+## Orientation
 
-You can [reverse the order of the elements](../components/reverse-order/) without changing the HTML markup.
+Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages).
 
-### Reverse Data Order
+### Reverse
+
+Use the `.reverse` class to reverse the orientation.
+
+```html
+<table class="charts-css area reverse">
+  ...
+</table>
+```
+
+<v-row>
+
+<code-example code-example-id="area-example-11">
+<template v-slot:css-code>
+#area-example-11 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#area-example-11 .area tbody {
+  aspect-ratio: 16 / 9;
+}
+</template>
+<template v-slot:html-code>
+<div id="area-example-11">
+  <table class="charts-css area multiple hide-data show-labels">
+    <caption> Area Example #11 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
+
+<code-example code-example-id="area-example-12">
+<template v-slot:css-code>
+#area-example-12 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#area-example-12 .area tbody {
+  aspect-ratio: 16 / 9;
+}
+</template>
+<template v-slot:html-code>
+<div id="area-example-12">
+  <table class="charts-css area multiple hide-data show-labels reverse">
+    <caption> Area Example #12 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
+
+</v-row>
+
+### Reverse Labels
+
+Use the `.reverse-labels` class to reverse the labels position.
+
+```html
+<table class="charts-css area reverse-labels">
+  ...
+</table>
+```
+
+<v-row>
+
+<code-example code-example-id="area-example-13">
+<template v-slot:css-code>
+#area-example-13 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#area-example-13 .area tbody {
+  aspect-ratio: 16 / 9;
+}
+</template>
+<template v-slot:html-code>
+<div id="area-example-13">
+  <table class="charts-css area multiple hide-data show-labels">
+    <caption> Area Example #13 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
+
+<code-example code-example-id="area-example-14">
+<template v-slot:css-code>
+#area-example-14 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#area-example-14 .area tbody {
+  aspect-ratio: 16 / 9;
+}
+</template>
+<template v-slot:html-code>
+<div id="area-example-14">
+  <table class="charts-css area multiple hide-data show-labels reverse-labels">
+    <caption> Area Example #14 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
+
+</v-row>
+
+### Reverse Data
 
 To reverse the data order use the `.reverse-data` class.
 
@@ -857,97 +894,99 @@ To reverse the data order use the `.reverse-data` class.
 
 <v-row>
 
-<code-example code-example-id="area-example-16">
+<code-example code-example-id="area-example-15">
 <template v-slot:css-code>
-#area-example-16 {
-  height: 200px;
+#area-example-15 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-15 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels" id="area-example-16">
-
-  <caption> Area Example #16 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-15">
+  <table class="charts-css area multiple hide-data show-labels">
+    <caption> Area Example #15 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="area-example-17">
+<code-example code-example-id="area-example-16">
 <template v-slot:css-code>
-#area-example-17 {
-  height: 200px;
+#area-example-16 {
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
+#area-example-16 .area tbody {
+  aspect-ratio: 16 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area multiple hide-data show-labels reverse-data" id="area-example-17">
-
-  <caption> Area Example #17 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1 </th>
-      <th scope="col"> Progress 2 </th>
-      <th scope="col"> Progress 3 </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--start:0.1; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.0; --size: 0.2;"> <span class="data"> 20 </span> </td>
-      <td style="--start:0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2010 </th>
-      <td style="--start:0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-      <td style="--start:0.2; --size: 0.5;"> <span class="data"> 50 </span> </td>
-      <td style="--start:0.4; --size: 0.1;"> <span class="data"> 10 </span> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--start:0.8; --size: 0.4;"> <span class="data"> 40 </span> </td>
-      <td style="--start:0.5; --size: 0.3;"> <span class="data"> 30 </span> </td>
-      <td style="--start:0.1; --size: 0.2;"> <span class="data"> 20 </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="area-example-16">
+  <table class="charts-css area multiple hide-data show-labels reverse-data">
+    <caption> Area Example #16 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1 </th>
+        <th scope="col"> Progress 2 </th>
+        <th scope="col"> Progress 3 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--start:0.1; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.0; --end: 0.2;"> <span class="data"> 20 </span> </td>
+        <td style="--start:0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2010 </th>
+        <td style="--start:0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+        <td style="--start:0.2; --end: 0.5;"> <span class="data"> 50 </span> </td>
+        <td style="--start:0.4; --end: 0.1;"> <span class="data"> 10 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--start:0.8; --end: 0.4;"> <span class="data"> 40 </span> </td>
+        <td style="--start:0.5; --end: 0.3;"> <span class="data"> 30 </span> </td>
+        <td style="--start:0.1; --end: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 

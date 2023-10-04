@@ -90,7 +90,7 @@ Result:
 
 ## Add Data
 
-To make the data available for use by **Chart.css**, it should be converted to CSS properties.
+To make the data available for use by **Charts.css**, it should be converted to CSS properties.
 
 The same table with CSS `--size` properties:
 
@@ -220,34 +220,32 @@ The biggest advantage this framework has to offer is the ability to [customize](
 
 Use either an `id` or a `class` attribute for your custom styles. In any case, you need to know basic concepts like CSS specificity, and know when one rule overrides the other.
 
-The `id` attribute can be applied to the `<table>` element:
-
-```html{1}
-<table class="charts-css bar ..." id="my-chart">
-  ...
-</table>
-```
-
-```css
-#my-chart {
-  ...
-}
-```
-
-Or add the `id` attribute to the wrapper element:
+The `id` attribute can be applied to a wrapper element:
 
 ```html{1}
 <div id="my-chart">
 
-  <table class="charts-css bar ...">
+  <table class="charts-css bar">
     ...
   </table>
+
+  <ul class="charts-css legend">
+    ...
+  </ul>
 
 </div>
 ```
 
 ```css
-#my-chart > .bar {
+#my-chart {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#my-chart .bar {
+  ...
+}
+#my-chart .legend {
   ...
 }
 ```

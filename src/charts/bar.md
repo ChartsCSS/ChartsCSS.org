@@ -17,153 +17,121 @@ To visualize your data with a bar chart, the main `.charts-css` class should be 
 </table>
 ```
 
-## Dimensions
+## Wrapper
 
-To control the chart dimensions use regular CSS. Use media queries to set different dimensions for smaller devices.
+It's recommended to wrap the chart with a wrapper element. This element is used not only to hold the chart components, but also for scoping the styles.
+
+```html
+<div id="my-chart">
+
+  <table class="charts-css bar">
+    ...
+  </table>
+
+  <ul class="charts-css legend">
+    ...
+  </ul>
+
+</div>
+```
+
+To set the chart dimensions, add some CSS:
 
 ```css
-#my-chart.bar {
-  height: 200px;
+#my-chart {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-```
-
-```html
-<table class="charts-css bar" id="my-chart">
+#my-chart .bar {
   ...
-</table>
-```
-
-<code-example code-example-id="bar-example-1">
-<template v-slot:css-code>
-#bar-example-1 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
 }
-</template>
-<template v-slot:html-code>
-<table class="charts-css bar" id="bar-example-1">
-
-  <caption> Bar Example #1 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-## Orientation
-
-Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages). Use the `.reverse` class to reverse the orientation.
-
-```html
-<table class="charts-css bar reverse">
+#my-chart .legend {
   ...
-</table>
-```
-
-<code-example code-example-id="bar-example-2">
-<template v-slot:css-code>
-#bar-example-2 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
 }
-</template>
-<template v-slot:html-code>
-<table class="charts-css bar reverse" id="bar-example-2">
-
-  <caption> Bar Example #2 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
+```
 
 ## Heading
 
 Add a [heading](../components/heading/) to your chart using the `<caption>` tag. By default, the heading is hidden. To display the heading use the `.show-heading` class.
 
 ```html
-<table class="charts-css bar show-heading">
-  <caption> Descriptive Chart Heading </caption>
-  ...
-</table>
+<div id="my-chart">
+
+  <table class="charts-css bar show-heading">
+    <caption> Descriptive Bar Chart Heading </caption>
+    ...
+  </table>
+
+</div>
 ```
 
-<code-example code-example-id="bar-example-3">
+## Data
+
+To transform HTML tables into charts, you need to provide [data](../components/data/). The chart requires unit-less numbers, between `0` to `1`.
+
+```html{2}
+<tr>
+  <td> $ 40K </td>
+</tr>
+```
+
+Use the `--size` variable to set the data.
+
+```html{2}
+<tr>
+  <td style="--size: 0.4"> $ 40K </td>
+</tr>
+```
+
+To help the framwork identify the text, wrap the content with a `<span class="data">` tag.
+
+```html{2}
+<tr>
+  <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+</tr>
+```
+
+<code-example code-example-id="bar-example-1">
 <template v-slot:css-code>
-#bar-example-3 {
-  height: 200px;
+#bar-example-1 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-1 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-heading" id="bar-example-3">
-
-  <caption> Descriptive Chart Heading </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-1">
+  <table class="charts-css bar hide-data">
+    <caption> Bar Example #1 </caption>
+    <tbody>
+      <tr>
+        <td style="--size: 0.2"> <span class="data"> $ 20K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.6"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.8"> <span class="data"> $ 80K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 1.0"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 ## Multiple Datasets
 
-Use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
+[Single dataset](../components/data/) have one `<td>` tag in each `<tr>`.
 
 ```html{2}
 <tr>
@@ -171,7 +139,7 @@ Use a [single dataset](../components/data/) (one `<td>` tag in each `<tr>`).
 </tr>
 ```
 
-Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<tr>`).
+[Multiple datasets](../components/datasets/) have several `<td>` tags in each `<tr>`.
 
 ```html{2-4}
 <tr>
@@ -181,7 +149,17 @@ Or [multiple datasets](../components/datasets/) (many `<td>` tags in `<tr>`).
 </tr>
 ```
 
-But when using multiple datasets you should add the `.multiple` class.
+As any other data item, they should have the relevalt structure.
+
+```html{2-4}
+<tr>
+  <td style="--size: 0.2"> <span class="data"> Data </span> </td>
+  <td style="--size: 0.4"> <span class="data"> Data </span> </td>
+  <td style="--size: 0.6"> <span class="data"> Data </span> </td>
+</tr>
+```
+
+When using multiple datasets you should add the `.multiple` class to let the framework apply different styles.
 
 ```html
 <table class="charts-css bar multiple">
@@ -191,72 +169,76 @@ But when using multiple datasets you should add the `.multiple` class.
 
 <v-row>
 
-<code-example code-example-id="bar-example-4">
+<code-example code-example-id="bar-example-2">
 <template v-slot:css-code>
-#bar-example-4 {
-  height: 200px;
+#bar-example-2 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-2 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar" id="bar-example-4">
-
-  <caption> Bar Example #4 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-2">
+  <table class="charts-css bar hide-data">
+    <caption> Bar Example #2 </caption>
+    <tbody>
+      <tr>
+        <td style="--size: 0.2"> <span class="data"> $ 20K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.4"> <span class="data"> $ 40K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.6"> <span class="data"> $ 60K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.8"> <span class="data"> $ 80K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 1.0"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="bar-example-5">
+<code-example code-example-id="bar-example-3">
 <template v-slot:css-code>
-#bar-example-5 {
-  height: 200px;
+#bar-example-3 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-3 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar multiple data-spacing-3" id="bar-example-5">
-
-  <caption> Bar Example #5 </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-3">
+  <table class="charts-css bar multiple hide-data data-spacing-3">
+    <caption> Bar Example #3 </caption>
+    <tbody>
+      <tr>
+        <td style="--size: 0.2;"> <span class="data"> $ 20K </span> </td>
+        <td style="--size: 0.4;"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: 0.6;"> <span class="data"> $ 600K </span> </td>
+        <td style="--size: 0.8;"> <span class="data"> $ 80K </span> </td>
+        <td style="--size: 1.0;"> <span class="data"> $ 100K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.2;"> <span class="data"> $ 20K </span> </td>
+        <td style="--size: 0.4;"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: 0.6;"> <span class="data"> $ 60K </span> </td>
+        <td style="--size: 0.8;"> <span class="data"> $ 80K </span> </td>
+        <td style="--size: 1.0;"> <span class="data"> $ 100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -285,205 +267,99 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
 
 <v-row>
 
-<code-example code-example-id="bar-example-6">
+<code-example code-example-id="bar-example-4">
 <template v-slot:css-code>
-#bar-example-6 {
-  height: 200px;
+#bar-example-4 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-4 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels" id="bar-example-6">
-
-  <caption> Bar Example #6 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-4">
+  <table class="charts-css bar show-labels">
+    <caption> Bar Example #4 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="bar-example-7">
+<code-example code-example-id="bar-example-5">
 <template v-slot:css-code>
-#bar-example-7 {
-  height: 200px;
+#bar-example-5 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
-</template>
-<template v-slot:html-code>
-<table class="charts-css bar show-labels reverse" id="bar-example-7">
-
-  <caption> Bar Example #7 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-</v-row>
-
-Some charts use long labels, others use short ones. To customize the label size use the `--labels-size` variable.
-
-```css
-#my-chart.bar {
-  --labels-size: 50px;
-}
-```
-
-<v-row>
-
-<code-example code-example-id="bar-example-8">
-<template v-slot:css-code>
-#bar-example-8 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
-  --labels-size: 50px;
+#bar-example-5 .bar tbody {
+  aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels" id="bar-example-8">
-
-  <caption> Bar Example #8 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
-</template>
-</code-example>
-
-<code-example code-example-id="bar-example-9">
-<template v-slot:css-code>
-#bar-example-9 {
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
-  --labels-size: 50px;
-}
-</template>
-<template v-slot:html-code>
-<table class="charts-css bar show-labels reverse" id="bar-example-9">
-
-  <caption> Bar Example #9 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-5">
+  <table class="charts-css bar show-labels reverse">
+    <caption> Bar Example #5 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -505,97 +381,99 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
 
 <v-row>
 
-<code-example code-example-id="bar-example-10">
+<code-example code-example-id="bar-example-6">
 <template v-slot:css-code>
-#bar-example-10 {
-  height: 200px;
+#bar-example-6 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-6 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels" id="bar-example-10">
-
-  <caption> Bar Example #10 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-6">
+  <table class="charts-css bar show-labels">
+    <caption> Bar Example #6 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="bar-example-11">
+<code-example code-example-id="bar-example-7">
 <template v-slot:css-code>
-#bar-example-11 {
-  height: 200px;
+#bar-example-7 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-7 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis" id="bar-example-11">
-
-  <caption> Bar Example #11 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-7">
+  <table class="charts-css bar show-labels show-primary-axis">
+    <caption> Bar Example #7 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -613,97 +491,99 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
 
 <v-row>
 
-<code-example code-example-id="bar-example-12">
+<code-example code-example-id="bar-example-8">
 <template v-slot:css-code>
-#bar-example-12 {
-  height: 200px;
+#bar-example-8 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-8 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes" id="bar-example-12">
-
-  <caption> Bar Example #12 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.25"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.5"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.125"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.75"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.25"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-8">
+  <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes">
+    <caption> Bar Example #8 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.25"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.5"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.125"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.75"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.25"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="bar-example-13">
+<code-example code-example-id="bar-example-9">
 <template v-slot:css-code>
-#bar-example-13 {
-  height: 200px;
+#bar-example-9 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-9 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis show-10-secondary-axes" id="bar-example-13">
-
-  <caption> Bar Example #13 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-9">
+  <table class="charts-css bar show-labels show-primary-axis show-10-secondary-axes">
+    <caption> Bar Example #9 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -721,97 +601,99 @@ Data axes are auto-generated based on the amount of rows (`<tr>` tags) in the ch
 
 <v-row>
 
-<code-example code-example-id="bar-example-14">
+<code-example code-example-id="bar-example-10">
 <template v-slot:css-code>
-#bar-example-14 {
-  height: 200px;
+#bar-example-10 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-10 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis show-data-axes" id="bar-example-14">
-
-  <caption> Bar Example #14 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.25"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.5"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.125"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.75"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.25"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-10">
+  <table class="charts-css bar show-labels show-primary-axis show-data-axes">
+    <caption> Bar Example #10 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.25"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.5"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.125"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.75"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.25"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="bar-example-15">
+<code-example code-example-id="bar-example-11">
 <template v-slot:css-code>
-#bar-example-15 {
-  height: 200px;
+#bar-example-11 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-11 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes" id="bar-example-15">
-
-  <caption> Bar Example #15 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-11">
+  <table class="charts-css bar show-labels show-primary-axis show-4-secondary-axes show-data-axes">
+    <caption> Bar Example #11 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -833,97 +715,99 @@ To add space between data items use the `.data-spacing-*` class.
 
 <v-row>
 
-<code-example code-example-id="bar-example-16">
+<code-example code-example-id="bar-example-12">
 <template v-slot:css-code>
-#bar-example-16 {
-  height: 200px;
+#bar-example-12 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-12 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis show-data-axes" id="bar-example-16">
-
-  <caption> Bar Example #16 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-12">
+  <table class="charts-css bar show-labels show-primary-axis show-data-axes">
+    <caption> Bar Example #12 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
-<code-example code-example-id="bar-example-17">
+<code-example code-example-id="bar-example-13">
 <template v-slot:css-code>
-#bar-example-17 {
-  height: 200px;
+#bar-example-13 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-13 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels show-primary-axis show-data-axes data-spacing-10" id="bar-example-17">
-
-  <caption> Bar Example #17 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-13">
+  <table class="charts-css bar show-labels show-primary-axis show-data-axes data-spacing-10">
+    <caption> Bar Example #13 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -941,107 +825,305 @@ To add space between data items use the `.datasets-spacing-*` class.
 
 <v-row>
 
-<code-example code-example-id="bar-example-18">
+<code-example code-example-id="bar-example-14">
 <template v-slot:css-code>
-#bar-example-18 {
-  height: 400px;
+#bar-example-14 {
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-14 .bar tbody {
+  aspect-ratio: 3 / 4;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels multiple show-primary-axis show-data-axes" id="bar-example-18">
+<div id="bar-example-14">
+  <table class="charts-css bar multiple show-labels show-primary-axis show-data-axes">
+    <caption> Bar Example #14 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1</th>
+        <th scope="col"> Progress 2</th>
+        <th scope="col"> Progress 3</th>
+        <th scope="col"> Progress 4</th>
+        <th scope="col"> Progress 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.5;"> </td>
+        <td style="--size: 1.0;"> </td>
+        <td style="--size: 0.7;"> </td>
+        <td style="--size: 0.4;"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.4;"> </td>
+        <td style="--size: 0.6;"> </td>
+        <td style="--size: 0.8;"> </td>
+        <td style="--size: 1.0;"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
 
-  <caption> Bar Example #18 </caption>
+<code-example code-example-id="bar-example-15">
+<template v-slot:css-code>
+#bar-example-15 {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#bar-example-15 .bar tbody {
+  aspect-ratio: 3 / 4;
+}
+</template>
+<template v-slot:html-code>
+<div id="bar-example-15">
+  <table class="charts-css bar multiple show-labels show-primary-axis show-data-axes datasets-spacing-10">
+    <caption> Bar Example #15 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1</th>
+        <th scope="col"> Progress 2</th>
+        <th scope="col"> Progress 3</th>
+        <th scope="col"> Progress 4</th>
+        <th scope="col"> Progress 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.5;"> </td>
+        <td style="--size: 1.0;"> </td>
+        <td style="--size: 0.7;"> </td>
+        <td style="--size: 0.4;"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.4;"> </td>
+        <td style="--size: 0.6;"> </td>
+        <td style="--size: 0.8;"> </td>
+        <td style="--size: 1.0;"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
 
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1</th>
-      <th scope="col"> Progress 2</th>
-      <th scope="col"> Progress 3</th>
-      <th scope="col"> Progress 4</th>
-      <th scope="col"> Progress 5</th>
-    </tr>
-  </thead>
+</v-row>
 
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.5;"> </td>
-      <td style="--size: 1.0;"> </td>
-      <td style="--size: 0.7;"> </td>
-      <td style="--size: 0.4;"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
+## Orientation
 
+Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages).
+
+### Reverse
+
+Use the `.reverse` class to reverse the orientation.
+
+```html
+<table class="charts-css bar reverse">
+  ...
 </table>
+```
+
+<v-row>
+
+<code-example code-example-id="bar-example-16">
+<template v-slot:css-code>
+#bar-example-16 {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#bar-example-16 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
+</template>
+<template v-slot:html-code>
+<div id="bar-example-16">
+  <table class="charts-css bar show-labels">
+    <caption> Bar Example #16 </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
+
+<code-example code-example-id="bar-example-17">
+<template v-slot:css-code>
+#bar-example-17 {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#bar-example-17 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
+</template>
+<template v-slot:html-code>
+<div id="bar-example-17">
+  <table class="charts-css bar show-labels reverse">
+    <caption> Bar Example #17 </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
+
+</v-row>
+
+### Reverse Labels
+
+Use the `.reverse-labels` class to reverse the labels position.
+
+```html
+<table class="charts-css bar reverse-labels">
+  ...
+</table>
+```
+
+<v-row>
+
+<code-example code-example-id="bar-example-18">
+<template v-slot:css-code>
+#bar-example-18 {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#bar-example-18 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
+</template>
+<template v-slot:html-code>
+<div id="bar-example-18">
+  <table class="charts-css bar show-labels">
+    <caption> Bar Example #18 </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="bar-example-19">
 <template v-slot:css-code>
 #bar-example-19 {
-  height: 400px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-19 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels multiple show-primary-axis show-data-axes datasets-spacing-10" id="bar-example-19">
-
-  <caption> Bar Example #19 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1</th>
-      <th scope="col"> Progress 2</th>
-      <th scope="col"> Progress 3</th>
-      <th scope="col"> Progress 4</th>
-      <th scope="col"> Progress 5</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.5;"> </td>
-      <td style="--size: 1.0;"> </td>
-      <td style="--size: 0.7;"> </td>
-      <td style="--size: 0.4;"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-19">
+  <table class="charts-css bar show-labels reverse-labels">
+    <caption> Bar Example #19 </caption>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 </v-row>
 
-## Reverse Order
-
-You can [reverse the order of the elements](../components/reverse-order/) without changing the HTML markup.
-
-### Reverse Data Order
+### Reverse Data
 
 To reverse the data order use the `.reverse-data` class.
 
@@ -1056,100 +1138,102 @@ To reverse the data order use the `.reverse-data` class.
 <code-example code-example-id="bar-example-20">
 <template v-slot:css-code>
 #bar-example-20 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-20 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels" id="bar-example-20">
-
-  <caption> Bar Example #20 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-20">
+  <table class="charts-css bar show-labels">
+    <caption> Bar Example #20 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="bar-example-21">
 <template v-slot:css-code>
 #bar-example-21 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-21 .bar tbody {
+  aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar show-labels reverse-data" id="bar-example-21">
-
-  <caption> Bar Example #21 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2016 </th>
-      <td style="--size: 0.2"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2017 </th>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2018 </th>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2019 </th>
-      <td style="--size: 0.8"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 1"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-21">
+  <table class="charts-css bar show-labels reverse-data">
+    <caption> Bar Example #21 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.8"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 1"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 </v-row>
 
-### Reverse Datasets Order
+### Reverse Datasets
 
 To reverse the datasets order use the `.reverse-datasets` class.
 
@@ -1164,100 +1248,102 @@ To reverse the datasets order use the `.reverse-datasets` class.
 <code-example code-example-id="bar-example-22">
 <template v-slot:css-code>
 #bar-example-22 {
-  height: 400px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-22 .bar tbody {
+  aspect-ratio: 3 / 4;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes" id="bar-example-22">
-
-  <caption> Bar Example #22 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1</th>
-      <th scope="col"> Progress 2</th>
-      <th scope="col"> Progress 3</th>
-      <th scope="col"> Progress 4</th>
-      <th scope="col"> Progress 5</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.5;"> </td>
-      <td style="--size: 1.0;"> </td>
-      <td style="--size: 0.7;"> </td>
-      <td style="--size: 0.4;"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-22">
+  <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes">
+    <caption> Bar Example #22 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1</th>
+        <th scope="col"> Progress 2</th>
+        <th scope="col"> Progress 3</th>
+        <th scope="col"> Progress 4</th>
+        <th scope="col"> Progress 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.5;"> </td>
+        <td style="--size: 1.0;"> </td>
+        <td style="--size: 0.7;"> </td>
+        <td style="--size: 0.4;"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.4;"> </td>
+        <td style="--size: 0.6;"> </td>
+        <td style="--size: 0.8;"> </td>
+        <td style="--size: 1.0;"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="bar-example-23">
 <template v-slot:css-code>
 #bar-example-23 {
-  height: 400px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-23 .bar tbody {
+  aspect-ratio: 3 / 4;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-datasets" id="bar-example-23">
-
-  <caption> Bar Example #23 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1</th>
-      <th scope="col"> Progress 2</th>
-      <th scope="col"> Progress 3</th>
-      <th scope="col"> Progress 4</th>
-      <th scope="col"> Progress 5</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.5;"> </td>
-      <td style="--size: 1.0;"> </td>
-      <td style="--size: 0.7;"> </td>
-      <td style="--size: 0.4;"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-23">
+  <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-datasets">
+    <caption> Bar Example #23 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1</th>
+        <th scope="col"> Progress 2</th>
+        <th scope="col"> Progress 3</th>
+        <th scope="col"> Progress 4</th>
+        <th scope="col"> Progress 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.5;"> </td>
+        <td style="--size: 1.0;"> </td>
+        <td style="--size: 0.7;"> </td>
+        <td style="--size: 0.4;"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.4;"> </td>
+        <td style="--size: 0.6;"> </td>
+        <td style="--size: 0.8;"> </td>
+        <td style="--size: 1.0;"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 </v-row>
 
-### Reverse Data & Datasets Order
+### Reverse Data & Datasets
 
 Combine the two classes to reverse the data order and the datasets order.
 
@@ -1272,94 +1358,96 @@ Combine the two classes to reverse the data order and the datasets order.
 <code-example code-example-id="bar-example-24">
 <template v-slot:css-code>
 #bar-example-24 {
-  height: 400px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-24 .bar tbody {
+  aspect-ratio: 3 / 4;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes" id="bar-example-24">
-
-  <caption> Bar Example #24 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1</th>
-      <th scope="col"> Progress 2</th>
-      <th scope="col"> Progress 3</th>
-      <th scope="col"> Progress 4</th>
-      <th scope="col"> Progress 5</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.5;"> </td>
-      <td style="--size: 1.0;"> </td>
-      <td style="--size: 0.7;"> </td>
-      <td style="--size: 0.4;"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-24">
+  <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes">
+    <caption> Bar Example #24 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1</th>
+        <th scope="col"> Progress 2</th>
+        <th scope="col"> Progress 3</th>
+        <th scope="col"> Progress 4</th>
+        <th scope="col"> Progress 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.5;"> </td>
+        <td style="--size: 1.0;"> </td>
+        <td style="--size: 0.7;"> </td>
+        <td style="--size: 0.4;"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.4;"> </td>
+        <td style="--size: 0.6;"> </td>
+        <td style="--size: 0.8;"> </td>
+        <td style="--size: 1.0;"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
 <code-example code-example-id="bar-example-25">
 <template v-slot:css-code>
 #bar-example-25 {
-  height: 400px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#bar-example-25 .bar tbody {
+  aspect-ratio: 3 / 4;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets" id="bar-example-25">
-
-  <caption> Bar Example #25 </caption>
-
-  <thead>
-    <tr>
-      <th scope="col"> Year </th>
-      <th scope="col"> Progress 1</th>
-      <th scope="col"> Progress 2</th>
-      <th scope="col"> Progress 3</th>
-      <th scope="col"> Progress 4</th>
-      <th scope="col"> Progress 5</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row"> 2000 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.5;"> </td>
-      <td style="--size: 1.0;"> </td>
-      <td style="--size: 0.7;"> </td>
-      <td style="--size: 0.4;"> </td>
-    </tr>
-    <tr>
-      <th scope="row"> 2020 </th>
-      <td style="--size: 0.2;"> </td>
-      <td style="--size: 0.4;"> </td>
-      <td style="--size: 0.6;"> </td>
-      <td style="--size: 0.8;"> </td>
-      <td style="--size: 1.0;"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="bar-example-25">
+  <table class="charts-css bar multiple show-labels data-spacing-10 show-primary-axis show-data-axes reverse-data reverse-datasets">
+    <caption> Bar Example #25 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress 1</th>
+        <th scope="col"> Progress 2</th>
+        <th scope="col"> Progress 3</th>
+        <th scope="col"> Progress 4</th>
+        <th scope="col"> Progress 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2000 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.5;"> </td>
+        <td style="--size: 1.0;"> </td>
+        <td style="--size: 0.7;"> </td>
+        <td style="--size: 0.4;"> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.2;"> </td>
+        <td style="--size: 0.4;"> </td>
+        <td style="--size: 0.6;"> </td>
+        <td style="--size: 0.8;"> </td>
+        <td style="--size: 1.0;"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 

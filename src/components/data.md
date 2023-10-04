@@ -39,35 +39,37 @@ To add data to the chart you simply need to add new `<td>` tags. It can be any t
 <code-example code-example-id="data-example-1">
 <template v-slot:css-code>
 #data-example-1 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#data-example-1 .column tbody {
+	aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css column" id="data-example-1">
-
-  <caption> Data Example #1 - Front End Developer Salary </caption>
-
-  <tbody>
-    <tr>
-      <td> $40K </td>
-    </tr>
-    <tr>
-      <td> $60K </td>
-    </tr>
-    <tr>
-      <td> $75K </td>
-    </tr>
-    <tr>
-      <td> $90K </td>
-    </tr>
-    <tr>
-      <td> $100K </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="data-example-1">
+  <table class="charts-css column">
+    <caption> Data Example #1 - Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <td> $40K </td>
+      </tr>
+      <tr>
+        <td> $60K </td>
+      </tr>
+      <tr>
+        <td> $75K </td>
+      </tr>
+      <tr>
+        <td> $90K </td>
+      </tr>
+      <tr>
+        <td> $100K </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -104,35 +106,37 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 <code-example code-example-id="data-example-2">
 <template v-slot:css-code>
 #data-example-2 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#data-example-2 .column tbody {
+	aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css column" id="data-example-2">
-
-  <caption> Data Example #2 - Front End Developer Salary </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: calc( 40 / 100 )"> $40K </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 60 / 100 )"> $60K </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 75 / 100 )"> $75K </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 90 / 100 )"> $90K </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 100 / 100 )"> $100K </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="data-example-2">
+  <table class="charts-css column">
+    <caption> Data Example #2 - Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <td style="--size: calc( 40 / 100 )"> $40K </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 60 / 100 )"> $60K </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 75 / 100 )"> $75K </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 90 / 100 )"> $90K </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 100 / 100 )"> $100K </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -171,35 +175,37 @@ Now, let's remove the raw data and see what happens.
 <code-example code-example-id="data-example-3">
 <template v-slot:css-code>
 #data-example-3 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#data-example-3 .column tbody {
+	aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css column" id="data-example-3">
-
-  <caption> Data Example #3 - Front End Developer Salary </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: 0.4"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.6"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.75"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 0.9"> </td>
-    </tr>
-    <tr>
-      <td style="--size: 1.0"> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="data-example-3">
+  <table class="charts-css column">
+    <caption> Data Example #3 - Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <td style="--size: 0.4"> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.6"> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.75"> </td>
+      </tr>
+      <tr>
+        <td style="--size: 0.9"> </td>
+      </tr>
+      <tr>
+        <td style="--size: 1.0"> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -238,35 +244,37 @@ The example above presents a significant problem. The solution is to add data to
 <code-example code-example-id="data-example-4">
 <template v-slot:css-code>
 #data-example-4 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#data-example-4 .column tbody {
+	aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css column hide-data" id="data-example-4">
-
-  <caption> Data Example #4 - Front End Developer Salary </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="data-example-4">
+  <table class="charts-css column hide-data">
+    <caption> Data Example #4 - Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -303,35 +311,37 @@ Another good practice is to hide the data, and show it when visitors are hover o
 <code-example code-example-id="data-example-5">
 <template v-slot:css-code>
 #data-example-5 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#data-example-5 .column tbody {
+	aspect-ratio: 4 / 3;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css column show-data-on-hover" id="data-example-5">
-
-  <caption> Data Example #5 - Front End Developer Salary </caption>
-
-  <tbody>
-    <tr>
-      <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
-    </tr>
-    <tr>
-      <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="data-example-5">
+  <table class="charts-css column show-data-on-hover">
+    <caption> Data Example #5 - Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <td style="--size: calc( 40 / 100 )"> <span class="data"> $40K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 60 / 100 )"> <span class="data"> $60K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 75 / 100 )"> <span class="data"> $75K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 90 / 100 )"> <span class="data"> $90K </span> </td>
+      </tr>
+      <tr>
+        <td style="--size: calc( 100 / 100 )"> <span class="data"> $100K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
@@ -369,35 +379,37 @@ Some chart types require not only the `--size` variable but also the `--start` v
 <code-example code-example-id="data-example-6">
 <template v-slot:css-code>
 #data-example-6 {
-  height: 200px;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
+#data-example-6 .area tbody {
+	aspect-ratio: 21 / 9;
+}
 </template>
 <template v-slot:html-code>
-<table class="charts-css area hide-data" id="data-example-6">
-
-  <caption> Data Example #6 - Front End Developer Salary </caption>
-
-  <tbody>
-    <tr>
-      <td style="--start: 0.2; --size: 0.4"> <span class="data"> $40K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.4; --size: 0.8"> <span class="data"> $80K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.8; --size: 0.6"> <span class="data"> $60K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 0.6; --size: 1.0"> <span class="data"> $100K </span> </td>
-    </tr>
-    <tr>
-      <td style="--start: 1.0; --size: 0.3"> <span class="data"> $30K </span> </td>
-    </tr>
-  </tbody>
-
-</table>
+<div id="data-example-6">
+  <table class="charts-css area hide-data">
+    <caption> Data Example #6 - Front End Developer Salary </caption>
+    <tbody>
+      <tr>
+        <td style="--start: 0.2; --size: 0.4"> <span class="data"> $40K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 0.4; --size: 0.8"> <span class="data"> $80K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 0.8; --size: 0.6"> <span class="data"> $60K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 0.6; --size: 1.0"> <span class="data"> $100K </span> </td>
+      </tr>
+      <tr>
+        <td style="--start: 1.0; --size: 0.3"> <span class="data"> $30K </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 </code-example>
 
