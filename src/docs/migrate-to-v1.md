@@ -1,6 +1,6 @@
 ---
 permalink: /docs/migrate-to-v1/
-next: ../../components
+next: ../../components/
 ---
 
 # Migrate to v1.0
