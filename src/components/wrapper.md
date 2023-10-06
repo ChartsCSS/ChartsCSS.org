@@ -111,21 +111,13 @@ Add your own elements to the chart and style them accordingly.
 ```html
 <div id="my-chart">
 
-  <table class="charts-css bar|column|area|line">
-    ...
-  </table>
+  <table class="charts-css bar|column|area|line"> ... </table>
 
-  <ul class="charts-css legend">
-    ...
-  </ul>
+  <ul class="charts-css legend"> ... </ul>
 
-  <div class="my-chart-element">
-    ...
-  </div>
+  <div class="first-custom-element"> ... </div>
 
-  <div class="another-custom-element">
-    ...
-  </div>
+  <div class="second-custom-element"> ... </div>
 
 </div>
 ```
