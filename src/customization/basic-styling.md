@@ -104,6 +104,17 @@ To control the backgrounds of different elements, use one of the following selec
 }
 ```
 
+Display your brand logo as a column chart background.
+
+```css
+#my-chart .column tbody {
+  background-image: url(path/to/your/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100px 100px;
+}
+```
+
 ### Aspect Ratio
 
 To control the chart width/height ratio, use one of the following selectors.
