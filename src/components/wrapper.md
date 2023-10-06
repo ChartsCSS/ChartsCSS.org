@@ -111,23 +111,15 @@ Add your own elements to the chart and style them accordingly.
 ```html
 <div id="my-chart">
 
-  <table class="charts-css bar|column|area|line">
-    ...
-  </table>
+  <table class="charts-css bar|column|area|line"> ... </table>
 
-  <ul class="charts-css legend">
-    ...
-  </ul>
+  <ul class="charts-css legend"> ... </ul>
 
-  <div class="my-chart-element">
-    ...
-  </div>
+  <div class="first-custom-element"> ... </div>
 
-  <div class="another-custom-element">
-    ...
-  </div>
+  <div class="second-custom-element"> ... </div>
 
 </div>
 ```
 
-For a concrete example, see how easy it is to add [axes titles](./axes/#axis-title) with custom HTML elements and some CSS magic.
+For a concrete example, you can incorporate [axes titles](./axes/#axis-title) by utilizing custom HTML elements combined with CSS wizardry. More intricate scenarios could involve [blending multiple charts](./../charts/mixed/) in a single wrapper, positioning them one on top of the other using CSS.
