@@ -130,4 +130,4 @@ Add your own elements to the chart and style them accordingly.
 </div>
 ```
 
-For a concrete example, see how easy it is to add [axes titles](./axes/#axis-title) with custom HTML elements and some CSS magic.
+For a concrete example, you can incorporate [axes titles](./axes/#axis-title) by utilizing custom HTML elements combined with CSS wizardry. More intricate scenarios could involve [blending multiple charts](./../charts/mixed/) in a single wrapper, positioning them one on top of the other using CSS.
