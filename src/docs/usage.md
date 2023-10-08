@@ -170,7 +170,7 @@ This has no effect on the table:
 
 </table>
 
-This is an expected behaviour. Search engines and screen readers should consume the table in its original form.
+This is an expected behavior. Search engines and screen readers should consume the table in its original form.
 
 ## Charts.css Utility Classes
 

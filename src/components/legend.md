@@ -9,9 +9,9 @@ Chart legends display the labels of the datasets as they appear in the chart.
 
 ## Legend Structure
 
-The legend is a separate component with a separate HTML tag. You have the freedom to position the legend wherever you want. Just like any other HTML tag. 
+The legend is a separate component with a separate HTML tag. You have the freedom to position the legend wherever you want. Just like any other HTML tag.
 
-Note that currently legends required to use of `<ul>` with `<li>` or `<ol>` with `<li>` tags. In future versions, you will have the freedom to use any HTML tag.
+Note that currently legends require the use of `<ul>` with `<li>` or `<ol>` with `<li>` tags. In future versions, you will have the freedom to use any HTML tag.
 
 ## Legend Position
 
@@ -109,7 +109,7 @@ Use the `.legend` class to style your chart legend.
 
 ## Legend Orientation
 
-By default, legend dataset labels are vertically aligned and positioned beside the chart. To aligning legend dataset labels horizontally, use the `.legend-inline` class. This is usually used to position the legend above or below the chart.
+By default, legend dataset labels are vertically aligned and positioned beside the chart. To align legend dataset labels horizontally, use the `.legend-inline` class. This is usually used to position the legend above or below the chart.
 
 ```html
 <ul class="charts-css legend legend-inline">
@@ -657,7 +657,7 @@ Use the `.legend-line` class to display a line shaped label.
 
 Change any aspect of the legend element using CSS. Simply target the CSS selector and apply your own style.
 
-For example, lets change the text color, the background color and add a box-shadow:
+For example, let's change the text color, the background color and add a box-shadow:
 
 ```css
 .legend {
