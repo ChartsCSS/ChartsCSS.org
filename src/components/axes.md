@@ -12,9 +12,9 @@ The axis system is a separate component and contains several parts. **By default
 
 ### Naming Conventions
 
-One of the frameworks philosophical guidelines is to use direction-free class names. This way it can support all languages out-of-the-box, including left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB) languages.
+One of the framework's philosophical guidelines is to use direction-free class names. This way it can support all languages out-of-the-box, including left-to-right (LTR), right-to-left (RTL) and top-to-bottom (TTB) languages.
 
-Class like `.show-x-axes` and `.show-y-axes` were deprecated early-on in favor of `.show-primary-axis`, `.show-*-secondary-axes` and `.show-data-axes`. 
+Class like `.show-x-axes` and `.show-y-axes` were deprecated early-on in favor of `.show-primary-axis`, `.show-*-secondary-axes` and `.show-data-axes`.
 
 ### Supported Axes
 
@@ -28,7 +28,7 @@ The **Charts.css** axis system supports 3 types of axes:
 
 The primary axis separates the labels from the data. To display the primary axis use the `.show-primary-axis` class.
 
-Note that in a bar chart the primary axis is horizontal, while in a column chart it is vertical. If this changes the label's position (before of after), the primary axis will change its position too.
+Note that in a bar chart the primary axis is horizontal, while in a column chart it is vertical. If this changes the label's position (before or after), the primary axis will change its position too.
 
 ```html
 <table class="charts-css bar show-labels show-primary-axis">
@@ -250,7 +250,7 @@ To customize the primary axis use the following CSS variables:
 
 ## Add Secondary Axes
 
-While the primary axis located between the labels and the data, the secondary axes located behind the chart data. The number of displayed axes can be controled using the `.show-*-secondary-axes` class. Replace the `*` in the class name, with any number `1`-`10`. For example, to display 4 secondary axes use the `.show-4-secondary-axes` class.
+While the primary axis is located between the labels and the data, the secondary axes are located behind the chart data. The number of displayed axes can be controlled using the `.show-*-secondary-axes` class. Replace the `*` in the class name, with any number `1`-`10`. For example, to display 4 secondary axes use the `.show-4-secondary-axes` class.
 
 ```html
 <table class="charts-css bar show-labels show-4-secondary-axes">

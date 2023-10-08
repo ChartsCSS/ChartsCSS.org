@@ -25,7 +25,7 @@ Class names should be intuitive and self-explanatory to make it easy to implemen
 
 ## Direction-Free Classes
 
-When naming classes we should consider RTL, LTR and BTT languages. Class names should not use direction names (top, bottom, right, left, vertical, horizontal etc.). Direction-free names like "start" & "end" are preferred.
+When naming classes we should consider right-to-left (RTL), left-to-right (LTR) and top-to-bottom (TTB) languages. Class names should not use direction names (top, bottom, right, left, vertical, horizontal etc.). Direction-free names like "start" & "end" are preferred.
 
 ## CSS Customization
 
@@ -37,4 +37,4 @@ The core project should not use JS. If it cannot be done using CSS, it won't be 
 
 ## Learn from the Community
 
-We highly encourage our users to customize their charts and share them with the community along with new methods, innovative techniques and advance use cases.
+We highly encourage our users to customize their charts and share them with the community along with new methods, innovative techniques and advanced use cases.

@@ -7,7 +7,7 @@ next: ./design-principles
 
 **Charts.css** is an open source project developed and maintained on [GitHub](https://github.com/ChartsCSS/charts.css).
 
-If you are a passionate frontend developer looking for a new open source project to contribute to, you are welcome to suggest new ideas and send pull request that improve and extend the framework.
+If you are a passionate frontend developer looking for a new open source project to contribute to, you are welcome to suggest new ideas and send pull requests that improve and extend the framework.
 
 ## Charts.css Development
 
