@@ -330,7 +330,7 @@ Stack items atop one another using a `.column` chart.
 
 ## Simple vs. Percentage
 
-To change the display from a simple stacked view to a percentage stacked view, change the `--size` property.
+To change the display from a simple stacked view to a percentage stacked view, change the `--size` variable.
 
 For a **simple view**, we divide by the total number we want to compare the group to:
 

@@ -90,9 +90,9 @@ Result:
 
 ## Add Data
 
-To make the data available for use by **Charts.css**, it should be converted to CSS properties.
+To make the data available for use by **Charts.css**, it should be converted to CSS variables.
 
-The same table with CSS `--size` properties:
+The same table with CSS `--size` variables:
 
 ```html{17-19,23-25,29-31}
 <table>
