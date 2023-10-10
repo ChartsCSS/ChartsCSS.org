@@ -37,6 +37,6 @@ The framework will implement new features and components, not necessarily in tha
 
 * **Build Tools** - Add more build tools.
 
-* **Name Spacing** - Use namespaces for classes ~~& properties~~ to prevent conflicts with other CSS frameworks.
+* **Name Spacing** - Use namespaces for classes ~~& variable~~ to prevent conflicts with other CSS frameworks.
 
 * **Component Prefixes** - Consider supporting component prefixes: `chart-axes:primary`, `chart-axes:*-secondary`, `chart-axes:data`, `chart-labels:show`, `chart-labels:align-end` etc.

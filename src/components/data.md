@@ -140,7 +140,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 </template>
 </code-example>
 
-**Note:** The `--size` property can be manually changed for each data item. But the values have to be unit-less numbers, between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
+**Note:** The `--size` variable can be manually changed for each data item. But the values have to be unit-less numbers, between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
 
 ## Raw data is not really required
 
