@@ -8,11 +8,11 @@ The orientation sets the direction of the chart components without changing the 
 
 ## Orientation System
 
-The orientation system is a core functionality which help you reorder chart elements with simple CSS utility classes.
+The orientation system is a core functionality which helps you reorder chart elements with simple CSS utility classes.
 
 ### Reordering Elements
 
-Generally speaking, **Charts.css** doesn't deal with data - it only styles the data by positioning different HTML element.
+Generally speaking, **Charts.css** doesn't deal with data - it only styles the data by positioning different HTML elements.
 
 To reorder elements you can simply change the HTML table structure. However, with large datasets it requires a lot of manual work. In these cases, **Charts.css** offers CSS utility classes that change the elements order without changing the HTML markup.
 
@@ -351,7 +351,7 @@ Area chart with a regular orientation and a reverse orientation:
 
 ## Reverse Labels
 
-Labels positioned along the chart primary axis. The primary axis depends on the page writing direction and whether the chart orientation is reversed on not.
+Labels positioned along the chart primary axis. The primary axis depends on the page writing direction and whether the chart orientation is reversed or not.
 
 Charts with reversed labels position the label where the data ends, rather where the data starts.
 
@@ -971,7 +971,7 @@ Area chart with a combination of reversed orientation and reversed labels:
 
 ### Population Pyramid Chart
 
-With the help of `.reverse-labels` class, it's now possible to create a "Population Pyramid Chart" (also known as "Age Structure Diagram"). By combining two bar charts with reversed labels side by side, one with regular the other with reversed orientation, you can get beautifull pyramid chart.
+With the help of `.reverse-labels` class, it's now possible to create a "Population Pyramid Chart" (also known as "Age Structure Diagram"). By combining two bar charts with reversed labels side by side, one with regular and the other with reversed orientation, you can get a beautiful pyramid chart.
 
 ```html
 <div id="population-pyramid-chart">
@@ -1131,7 +1131,7 @@ With the help of `.reverse-labels` class, it's now possible to create a "Populat
 </template>
 </code-example>
 
-To make it even more informative, each age group can be splitted to sub categories and display as [stacked chart](./stacked/).
+To make it even more informative, each age group can be splitted to sub categories and displayed as a [stacked chart](./stacked/).
 
 <code-example code-example-id="orientation-example-20">
 <template v-slot:css-code>

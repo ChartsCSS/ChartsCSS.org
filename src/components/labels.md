@@ -489,7 +489,7 @@ Lastly, play with the label text alignment. Use the following classes:
 * `labels-align-inline-center`
 * `labels-align-inline-end`
 
-The alignment class use logical properties naming conventions to keep the chart flow-relative based on the page writing directions.
+The alignment class uses logical properties naming conventions to keep the chart flow-relative based on the page writing directions.
 
 ```html{1,13}
 <table class="charts-css column multiple show-labels labels-align-inline-start">

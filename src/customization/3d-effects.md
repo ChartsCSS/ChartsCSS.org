@@ -91,7 +91,7 @@ To create 3D bars is pretty simple. It can be done using the CSS `box-shadow` pr
 </template>
 </code-example>
 
-Or by using `:before` and `:after` psedo-elements combined with the CSS `skew()` transformation:
+Or by using `:before` and `:after` pseudo-elements combined with the CSS `skew()` transformation:
 
 ```css
 #custom-effect .column .column tbody td {

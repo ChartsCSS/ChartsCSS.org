@@ -15,15 +15,17 @@ The full structure of a chart includes a wrapper `<div>` with inner components i
 <div id="my-chart">
 
   <table class="charts-css bar|column|area|line">
+    ...
   </table>
 
   <ul class="charts-css legend">
+    ...
   </ul>
 
 </div>
 ```
 
-Note that only the `<table>` is required. The wrapper elements and the legend are optional fields.
+Please note that only the `<table>` element is required. The wrapper elements and the legend are optional fields.
 
 | Type            | Field        | Element         |
 |:----------------|:-------------|:----------------|
@@ -31,66 +33,32 @@ Note that only the `<table>` is required. The wrapper elements and the legend ar
 | Chart Legend    | **Optional** | `<ul>` / `<ol>` |
 | Chart Data      | **Required** | `<table>`       |
 
-As of version 1.0.0, the new best practice is to add a wrapper element to all your charts.
+Although a wrapper div is not required, as of version 1.0.0 the new best practice is to add a wrapper element to all charts.
 
-## Data Table
+## Customizing the Wrapper
 
-To turn the data table into a chart, you need to add the `.charts-css` class to the `<table>` element itself:
-
-```html
-<table class="charts-css">
-  ...
-</table>
-```
-
-This class will reset, contain, pad and remove all other styles. But it won't transform the data table into a chart, yet.
-
-## Chart Classes
-
-To visualize the data you need to decide which [chart type](/charts/) you want to use and add the chart class after the main class. For example, to display a column chart we need to add the `.column` class.
-
-```html
-<table class="charts-css column">
-  ...
-</table>
-```
-
-To create a bar chart you need to add the `.bar` class.
-
-```html
-<table class="charts-css bar">
-  ...
-</table>
-```
-
-Only then add some inner components like [axes](/components/axes), [tooltips](/components/tooltips) etc.
-
-```html
-<table class="charts-css bar show-primary-axis show-4-secondary-axes show-data-axes">
-  ...
-</table>
-```
-
-## Customizing the Chart
-
-A simple customization will include the `height` and `width` of the chart.
+A simple customization will include custom width for the wrapper.
 
 ```css
-#my-chart .bar {
-  height: 300px;
-  width: 600px;
+#my-chart {
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
 }
 ```
 
-In addition, you can add any CSS to style the chart. For example, add your brand logo in the background.
+To customize chart components, use descendant combinators with the component selector.
 
 ```css
-#my-chart .bar {
-  background-image: url(path/to/your/logo.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100px 100px;
+#my-chart .legend {
+  ...
+}
+#my-chart .bar,
+#my-chart .column,
+#my-chart .area,
+#my-chart .line,
+#my-chart .pie {
+  ...
 }
 ```
 
@@ -99,19 +67,59 @@ In addition, you can add any CSS to style the chart. For example, add your brand
 Media queries can be used to set different dimensions for different screen sizes.
 
 ```css
-#my-chart .bar {
+#my-chart {
   max-width: 600px;
 }
 
 @media (min-width: 600px) {
-  #my-chart .bar {
+  #my-chart {
     max-width: 800px;
   }
 }
 
 @media (min-width: 1000px) {
-  #my-chart .bar {
+  #my-chart {
     max-width: 1000px;
   }
 }
 ```
+
+Alternatively, container queries can be used to style based on the size and layout of specific elements on the page. For example, you can position the legend and the chart side-by-side, and under a certain width to position them below each other.
+
+```css
+#my-chart {
+  container-name: chart;
+  container-type: inline-size;
+}
+
+#my-chart {
+  display: flex;
+  flex-direction: row;
+}
+
+@container charts (max-width: 600px) {
+  #my-chart {
+    flex-direction: column;
+  }
+}
+```
+
+## Additional Elements
+
+Add your own elements to the chart and style them accordingly.
+
+```html
+<div id="my-chart">
+
+  <table class="charts-css bar|column|area|line"> ... </table>
+
+  <ul class="charts-css legend"> ... </ul>
+
+  <div class="first-custom-element"> ... </div>
+
+  <div class="second-custom-element"> ... </div>
+
+</div>
+```
+
+For a concrete example, you can incorporate [axes titles](./axes/#axis-title) by utilizing custom HTML elements combined with CSS wizardry. More intricate scenarios could involve [blending multiple charts](./../charts/mixed/) in a single wrapper, positioning them one on top of the other using CSS.

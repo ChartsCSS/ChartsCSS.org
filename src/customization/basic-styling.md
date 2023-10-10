@@ -57,11 +57,11 @@ Use custom classes on the element you want to style, and apply custom styles onl
 
 ## Style Chart Elements
 
-To style specific chart elements or layers, use one of the HTML tag - `<caption>`, `<tbody>`, `<tr>`, `<th>` or `<td>`.
+To style specific chart elements or layers, use one of the HTML tags - `<caption>`, `<tbody>`, `<tr>`, `<th>` or `<td>`.
 
 ### Colors
 
-To control the color of different elements, simply use element selector.
+To control the color of different elements, simply use the element selector.
 
 ```css
 /* Heading */
@@ -101,6 +101,17 @@ To control the backgrounds of different elements, use one of the following selec
 #my-chart tbody th {
   background-color: deepskyblue;
   color: blue;
+}
+```
+
+Display your brand logo as a column chart background.
+
+```css
+#my-chart .column tbody {
+  background-image: url(path/to/your/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100px 100px;
 }
 ```
 

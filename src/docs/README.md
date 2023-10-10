@@ -34,7 +34,7 @@ There is no best solution, it all depends on your needs and the capabilities of 
 
 Should you abandon your current JS charting library? Not necessarily. Each library has its own advantages and use cases. You need to define your needs and find a solution that matches those needs.
 
-When should you consider migrating to **Charts.css**? Most users just need a simple chart to display your data. In these cases there is no need to load heavy JS libraries. For complex charts with special behaviours not covered by **Charts.css** you should search for JS alternatives. 
+When should you consider migrating to **Charts.css**? Most users just need a simple chart to display your data. In these cases there is no need to load heavy JS libraries. For complex charts with special behaviors not covered by **Charts.css** you should search for JS alternatives.
 
 ## Getting Started
 

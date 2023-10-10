@@ -140,7 +140,7 @@ Raw data without a visual representation has no meaning. As visual frameworks do
 </template>
 </code-example>
 
-**Note:** The `--size` variable can be manually changed for each data item. But the values have to be unit-less numbers, between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
+**Note:** The `--size` property can be manually changed for each data item. But the values have to be unitless numbers, between `0` to `1`. This way all chart types are covered as we multiply size value by `100%` or by `360deg` (depending on the chart type).
 
 ## Raw data is not really required
 
@@ -280,7 +280,7 @@ The example above presents a significant problem. The solution is to add data to
 
 ## Show Data on Hover
 
-Another good practice is to hide the data, and show it when visitors are hover over it. This is done using the `.show-data-on-hover` class.
+Another good practice is to hide the data, and show it only when hovering over it. This is done by wrapping the data with `<span class="data">` tag and applying `.show-data-on-hover` class to the wrapper.
 
 ```html{1,7,10,13,16,19}
 <table class="charts-css column show-data-on-hover">
@@ -415,6 +415,6 @@ Some chart types require not only the `--size` variable but also the `--start` v
 
 ## Size Variable 
 
-All `--size` variables should always be a unit-less number between `0` to `1`. Why unit-less? Because you should be able to change chart types without changing the unit in all your variables.
+All `--size` variables should always be a unitless number between `0` to `1`. Why unitless? Because you should be able to change chart types without changing the unit in all your variables.
 
 Rectangular charts use percentage as a unit of measurement while radial charts use degrees. To make it easier for users to switch between chart types, the framework deprecated units. Instead, it multiplies the `--size` by `100%` or by `360deg` depending on the chart type.

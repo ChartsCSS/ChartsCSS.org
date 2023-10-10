@@ -8,11 +8,11 @@ Chart colors help users distinguish between data items and datasets.
 
 ## Color System
 
-The default color system consist of ten repeating colors. With the help of CSS variables you can override the default colors to create custom themes. More advanced users may choose to create entirely new color systems based on unique design requirements.
+The default color system consists of ten repeating colors. With the help of CSS variables you can override the default colors to create custom themes. More advanced users may choose to create entirely new color systems based on unique design requirements.
 
 ### Default Colors
 
-The **Charts.css** color system consist of the following 10 colors:
+The **Charts.css** color system consists of the following 10 colors:
 
 <ul class="charts-css legend legend-rectangle" style="border: 0; padding: 0; padding-inline-start: 2rem">
   <li> rgba(240 50 50 / 75%) </li>
@@ -124,7 +124,7 @@ The most basic way to change colors is to use the `--color` variable, applying i
 
 ## Change Specific Colors
 
-To change specific element color, we need to apply the `--color` variable on a specific `<td>` tag. This way the inheritance rules only apply to that element. 
+To change the color of a specific element, we need to apply the `--color` variable on a specific `<td>` tag. This way the inheritance rules only apply to that element.
 
 ```html{3}
 <tr>
@@ -212,7 +212,7 @@ To change specific element color, we need to apply the `--color` variable on a s
 </template>
 </code-example>
 
-This method can be also be applied to all the `<td>` elements one by one.
+This method can also be applied to all the `<td>` elements one by one.
 
 ```html{3,7,11}
 <tr>
@@ -305,7 +305,7 @@ This method can be also be applied to all the `<td>` elements one by one.
 </template>
 </code-example>
 
-**Note:** With small data tables it's acceptable to override colors for each `<td>` element but with large tables it's a not recommended. Keep reading to learn how to [change global colors](#change-global-colors).
+**Note:** With small data tables it's acceptable to override colors for each `<td>` element but with large tables it's not recommended. Keep reading to learn how to [change global colors](#change-global-colors).
 
 ## Change Global Colors
 

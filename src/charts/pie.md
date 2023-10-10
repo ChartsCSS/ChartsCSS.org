@@ -67,7 +67,7 @@ Add a [heading](../components/heading/) to your chart using the `<caption>` tag.
 
 ## Data
 
-To transform HTML tables into charts, you need to provide [data](../components/data/). The chart requires unit-less numbers, between `0` to `1`.
+To transform HTML tables into charts, you need to provide [data](../components/data/). The chart requires unitless numbers, between `0` to `1`.
 
 ```html{2}
 <tr>
@@ -83,7 +83,7 @@ Use the `--start` and `--end` variables to set the data. While `--end` is equiva
 </tr>
 ```
 
-To help the framwork identify the text, wrap the content with a `<span class="data">` tag.
+To help the framework identify the text, wrap the content with a `<span class="data">` tag.
 
 ```html{2}
 <tr>

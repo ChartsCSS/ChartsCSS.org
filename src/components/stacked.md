@@ -18,7 +18,7 @@ There are two types of stacked charts:
 
 ## Using Stacked Charts
 
-By definition, stacked view can be applied only on multiple datasets (with `.multiple` class). A single dataset has nothing to stack.
+By definition, stacked views can be applied only on multiple datasets (with `.multiple` class). A single dataset has nothing to stack.
 
 To display a stacked view simply use the `.stacked` class.
 
@@ -30,7 +30,7 @@ To display a stacked view simply use the `.stacked` class.
 
 ## Stacked Bars
 
-Stack items side-by-side using `.bar` chart.
+Stack items side-by-side using a `.bar` chart.
 
 ```html
 <table class="charts-css bar multiple stacked">
@@ -178,7 +178,7 @@ Stack items side-by-side using `.bar` chart.
 
 ## Stacked Columns
 
-Stack items atop one another using `.column` chart.
+Stack items atop one another using a `.column` chart.
 
 ```html
 <table class="charts-css column multiple stacked">

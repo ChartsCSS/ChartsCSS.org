@@ -25,7 +25,7 @@ Simple data `<table>` with only the data:
 
 ### Data With Tooltips
 
-To add tooltips, simply add a `<span>` tag with a `.tooltip` class. 
+To add tooltips, simply add a `<span>` tag with a `.tooltip` class.
 
 ```html{5}
 <tr>
@@ -36,7 +36,7 @@ To add tooltips, simply add a `<span>` tag with a `.tooltip` class.
 </tr>
 ```
 
-Add tooltips to specific data as in the example above, or to all your data elements as shown bellow.
+Add tooltips to specific data as in the example above, or to all your data elements as shown below.
 
 ```html{3-5}
 <tr>

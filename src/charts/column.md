@@ -67,7 +67,7 @@ Add a [heading](../components/heading/) to your chart using the `<caption>` tag.
 
 ## Data
 
-To transform HTML tables into charts, you need to provide [data](../components/data/). The chart requires unit-less numbers, between `0` to `1`.
+To transform HTML tables into charts, you need to provide [data](../components/data/). The chart requires unitless numbers, between `0` to `1`.
 
 ```html{2}
 <tr>
@@ -83,7 +83,7 @@ Use the `--size` variable to set the data.
 </tr>
 ```
 
-To help the framwork identify the text, wrap the content with a `<span class="data">` tag.
+To help the framework identify the text, wrap the content with a `<span class="data">` tag.
 
 ```html{2}
 <tr>
@@ -148,7 +148,7 @@ To help the framwork identify the text, wrap the content with a `<span class="da
 </tr>
 ```
 
-As any other data item, they should have the relevalt structure.
+As any other data item, they should have the relevant structure.
 
 ```html{2-4}
 <tr>
@@ -924,7 +924,7 @@ To add space between data items use the `.datasets-spacing-*` class.
 
 ## Orientation
 
-Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LRT and RTL languages) and right-to-left (on TTM languages).
+Control the [chart orientation](../components/orientation/), or direction. The initial orientation is top-to-bottom (on LTR and RTL languages) and right-to-left (on TTM languages).
 
 ### Reverse
 

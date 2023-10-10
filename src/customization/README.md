@@ -57,7 +57,7 @@ We recommend adding the chart type to your selector. This way the custom style w
 }
 ```
 
-This is important because each chart type has its own structure and layout. You don't want unexpected side-effects when switching between charts types.
+This is important because each chart type has its own structure and layout. You don't want unexpected side-effects when switching between chart types.
 
 ## Basic Examples
 
