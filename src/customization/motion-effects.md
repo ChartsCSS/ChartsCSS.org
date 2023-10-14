@@ -289,3 +289,108 @@ Grayscale colors the chart when visitors hover over it:
 </div>
 </template>
 </code-example>
+
+## Scroll Effect
+
+Show only part of the data, and allow the user to scroll to view the rest of the data:
+
+```css
+#motion-effect {
+  --total-cells: 11;
+  --display-cells: 6;
+  --cell-size: 50px;
+
+  width: 100%;
+  max-width: calc( var( --cell-size ) * var( --display-cells ) );
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+#motion-effect .column {
+  aspect-ratio: auto;
+  height: 250px;
+  width: calc( var( --cell-size ) * var( --total-cells ) );
+}
+```
+
+<code-example code-example-id="motion-effect-example-5">
+<template v-slot:css-code>
+#motion-effect-example-5 {
+  --total-cells: 11;
+  --display-cells: 6;
+  --cell-size: 50px;
+  width: 100%;
+  max-width: calc( var( --cell-size ) * var( --display-cells ) );
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+#motion-effect-example-5 .column tbody {
+  aspect-ratio: auto;
+  height: 250px;
+  width: calc( var( --cell-size ) * var( --total-cells ) );
+}
+</template>
+<template v-slot:html-code>
+<div id="motion-effect-example-5">
+  <table class="charts-css column show-labels show-primary-axis show-4-secondary-axes show-data-axes hide-data">
+    <caption> Motion Effect Example #5 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2015 </th>
+        <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0;"> <span class="data"> 0 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2021 </th>
+        <td style="--size: 0.2;"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2022 </th>
+        <td style="--size: 0.4;"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2023 </th>
+        <td style="--size: 0.6;"> <span class="data"> 60 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2024 </th>
+        <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2025 </th>
+        <td style="--size: 1.0;"> <span class="data"> 100 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
