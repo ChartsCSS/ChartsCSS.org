@@ -73,7 +73,7 @@ To control the chart width/height ratio, use one of the following selectors.
 
 ```css
 #my-chart .bar tbody {
-  aspect-ratio: none;
+  aspect-ratio: auto;
 }
 
 #my-chart .column tbody {
@@ -138,5 +138,45 @@ Use custom classes on the element you want to style, and apply custom styles onl
 ```css
 .highlight {
   font-weight: bold;
+}
+```
+
+## Style with CSS Variables
+
+**Charts.css** offers several [custom CSS variables](../development/supported-features/#variables) to style different chart elements.
+
+Use CSS variables on different chart types.
+
+```css
+#my-chart .bar {
+  --color: red;
+  --labels-size: 150px;
+  --labels-align-inline: start;
+  --labels-align-block: center;
+}
+
+#my-chart .column {
+  --primary-axis-color: blue;
+  --primary-axis-width: 3px;
+}
+
+#my-chart .area {
+  --data-axes-color: grey;
+}
+
+#my-chart .line {
+  --line-size: 3px;
+  --color: black;
+  --labels-size: 3rem;
+}
+
+#my-chart .pie {
+  --primary-axis-color: blue;
+}
+
+#my-chart .legend {
+  --legend-border-width: 2px;
+  --legend-border-style: solid;
+  --legend-border-color: brown;
 }
 ```
