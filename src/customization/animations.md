@@ -32,8 +32,8 @@ Here is a basic example where the bars (`<td>` elements) jump every three second
   max-width: 300px;
   margin: 0 auto;
 }
-#animations-example-1 .column tbody {
-  aspect-ratio: 4 / 3;
+#animations-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 #animations-example-1 .column td {
   animation: jumping-bars 3s linear infinite;
@@ -91,11 +91,11 @@ Here is another simple example using labels (`<th>` elements) that spin every th
 
 ```css
 #animations-example .bar th {
-  animation: spin-labels 3s linear infinite;
+  animation: spin-labels 2s linear infinite;
 }
 @keyframes spin-labels {
   0%   { transform: rotateX(   0deg ); }
-  40%  { transform: rotateX( 360deg ); }
+  50%  { transform: rotateX( 360deg ); }
   100% { transform: rotateX( 360deg ); }
 }
 ```
@@ -114,11 +114,11 @@ Here is another simple example using labels (`<th>` elements) that spin every th
   line-height: 1.5;
 }
 #animations-example-2 .bar th {
-  animation: spin-labels 3s linear infinite;
+  animation: spin-labels 2s linear infinite;
 }
 @keyframes spin-labels {
   0%   { transform: rotateX(   0deg ); }
-  40%  { transform: rotateX( 360deg ); }
+  50%  { transform: rotateX( 360deg ); }
   100% { transform: rotateX( 360deg ); }
 }
 </template>
@@ -174,11 +174,11 @@ In this example, the bars rise from the bottom of the chart:
   z-index: 1;
 }
 #animations-example .column tbody td {
-  animation: moving-bars 4s linear infinite;
+  animation: moving-bars 2s linear infinite;
 }
 @keyframes moving-bars {
   0%  { transform: translateY( 100% ); }
-  15% { transform: translateY( 0 ); }
+  30% { transform: translateY( 0 ); }
 }
 ```
 
@@ -189,8 +189,10 @@ In this example, the bars rise from the bottom of the chart:
   max-width: 300px;
   margin: 0 auto;
 }
+#animations-example-3 .column {
+  --aspect-ratio: 4 / 3;
+}
 #animations-example-3 .column tbody {
-  aspect-ratio: 4 / 3;
   overflow-y: hidden; /* remove this to see how it works */
 }
 #animations-example-3 .column tbody th {
@@ -198,11 +200,11 @@ In this example, the bars rise from the bottom of the chart:
   z-index: 1;
 }
 #animations-example-3 .column tbody td {
-  animation: moving-bars 4s linear infinite;
+  animation: moving-bars 2s linear infinite;
 }
 @keyframes moving-bars {
   0%  { transform: translateY( 100% ); }
-  15% { transform: translateY( 0 ); }
+  30% { transform: translateY( 0 ); }
 }
 </template>
 <template v-slot:html-code>
@@ -247,11 +249,11 @@ The same can be done with less code using the CSS `scale()` transformation:
 ```css
 #animations-example .column tbody td {
   transform-origin: bottom;
-  animation: revealing-bars 4s linear infinite;
+  animation: revealing-bars 2s linear infinite;
 }
 @keyframes revealing-bars {
   0%  { transform: scaleY( 0 ); }
-  15% { transform: scaleY( 1 ); }
+  30% { transform: scaleY( 1 ); }
 }
 ```
 
@@ -262,16 +264,16 @@ The same can be done with less code using the CSS `scale()` transformation:
   max-width: 300px;
   margin: 0 auto;
 }
-#animations-example-4 .column tbody {
-  aspect-ratio: 4 / 3;
+#animations-example-4 .column {
+  --aspect-ratio: 4 / 3;
 }
 #animations-example-4 .column tbody td {
   transform-origin: bottom;
-  animation: revealing-bars 4s linear infinite;
+  animation: revealing-bars 2s linear infinite;
 }
 @keyframes revealing-bars {
   0%  { transform: scaleY( 0 ); }
-  15% { transform: scaleY( 1 ); }
+  30% { transform: scaleY( 1 ); }
 }
 </template>
 <template v-slot:html-code>
@@ -342,8 +344,8 @@ A useful example of highlighting individual items with animations:
   max-width: 350px;
   margin: 0 auto;
 }
-#animations-example-5 .column tbody {
-  aspect-ratio: 4 / 3;
+#animations-example-5 .column {
+  --aspect-ratio: 4 / 3;
 }
 #animations-example-5 .highlighted {
   animation: highlighted-bar 2s linear infinite;
@@ -422,8 +424,8 @@ Now lets animate colors with gradients:
   max-width: 350px;
   margin: 0 auto;
 }
-#animations-example-6 .column tbody {
-  aspect-ratio: 4 / 3;
+#animations-example-6 .column {
+  --aspect-ratio: 4 / 3;
 }
 #animations-example-6 .column td {
   background-image: linear-gradient(

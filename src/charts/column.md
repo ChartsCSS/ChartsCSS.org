@@ -98,8 +98,8 @@ To help the framework identify the text, wrap the content with a `<span class="d
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-1 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -175,8 +175,8 @@ When using multiple datasets you should add the `.multiple` class to let the fra
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-2 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-2 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -212,8 +212,8 @@ When using multiple datasets you should add the `.multiple` class to let the fra
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-3 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-3 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -273,8 +273,8 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-4 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-4 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -321,8 +321,8 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-5 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-5 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -387,8 +387,8 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-6 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-6 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -435,8 +435,8 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-7 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-7 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -497,8 +497,8 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-8 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-8 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -545,8 +545,8 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-9 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-9 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -607,8 +607,8 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-10 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-10 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -655,8 +655,8 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-11 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-11 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -721,8 +721,8 @@ To add space between data items use the `.data-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-12 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-12 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -769,8 +769,8 @@ To add space between data items use the `.data-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-13 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-13 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -831,8 +831,8 @@ To add space between data items use the `.datasets-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-14 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-14 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -879,8 +879,8 @@ To add space between data items use the `.datasets-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-15 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-15 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -945,8 +945,8 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-16 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-16 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -987,8 +987,8 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-17 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-17 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1043,8 +1043,8 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-18 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-18 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1085,8 +1085,8 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-19 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-19 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1141,8 +1141,8 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-20 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-20 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1189,8 +1189,8 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-21 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-21 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1251,8 +1251,8 @@ To reverse the datasets order use the `.reverse-datasets` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-22 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-22 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1299,8 +1299,8 @@ To reverse the datasets order use the `.reverse-datasets` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-23 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-23 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1361,8 +1361,8 @@ Combine the two classes to reverse the data order and the datasets order.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-24 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-24 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1409,8 +1409,8 @@ Combine the two classes to reverse the data order and the datasets order.
   max-width: 300px;
   margin: 0 auto;
 }
-#column-example-25 .column tbody {
-  aspect-ratio: 4 / 3;
+#column-example-25 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>

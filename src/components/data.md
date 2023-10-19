@@ -43,8 +43,8 @@ To add data to the chart you simply need to add new `<td>` tags. It can be any t
   max-width: 300px;
   margin: 0 auto;
 }
-#data-example-1 .column tbody {
-	aspect-ratio: 4 / 3;
+#data-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -110,8 +110,8 @@ Raw data without a visual representation has no meaning. As visual frameworks do
   max-width: 300px;
   margin: 0 auto;
 }
-#data-example-2 .column tbody {
-	aspect-ratio: 4 / 3;
+#data-example-2 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -179,8 +179,8 @@ Now, let's remove the raw data and see what happens.
   max-width: 300px;
   margin: 0 auto;
 }
-#data-example-3 .column tbody {
-	aspect-ratio: 4 / 3;
+#data-example-3 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -248,8 +248,8 @@ The example above presents a significant problem. The solution is to add data to
   max-width: 300px;
   margin: 0 auto;
 }
-#data-example-4 .column tbody {
-	aspect-ratio: 4 / 3;
+#data-example-4 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -315,8 +315,8 @@ Another good practice is to hide the data, and show it only when hovering over i
   max-width: 300px;
   margin: 0 auto;
 }
-#data-example-5 .column tbody {
-	aspect-ratio: 4 / 3;
+#data-example-5 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -383,8 +383,8 @@ Some chart types require not only the `--size` variable but also the `--start` v
   max-width: 300px;
   margin: 0 auto;
 }
-#data-example-6 .area tbody {
-	aspect-ratio: 21 / 9;
+#data-example-6 .area {
+  --aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>

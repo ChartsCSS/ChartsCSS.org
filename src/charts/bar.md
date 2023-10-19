@@ -99,8 +99,8 @@ To help the framework identify the text, wrap the content with a `<span class="d
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-1 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-1 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -176,8 +176,8 @@ When using multiple datasets you should add the `.multiple` class to let the fra
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-2 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-2 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -213,8 +213,8 @@ When using multiple datasets you should add the `.multiple` class to let the fra
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-3 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-3 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -274,8 +274,8 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-4 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-4 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -322,8 +322,8 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-5 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-5 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -388,8 +388,8 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-6 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-6 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -436,8 +436,8 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-7 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-7 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -498,8 +498,8 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-8 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-8 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -546,8 +546,8 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-9 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-9 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -608,8 +608,8 @@ Data axes are auto-generated based on the amount of rows (`<tr>` tags) in the ch
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-10 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-10 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -656,8 +656,8 @@ Data axes are auto-generated based on the amount of rows (`<tr>` tags) in the ch
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-11 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-11 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -722,8 +722,8 @@ To add space between data items use the `.data-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-12 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-12 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -770,8 +770,8 @@ To add space between data items use the `.data-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-13 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-13 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -832,8 +832,8 @@ To add space between data items use the `.datasets-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-14 .bar tbody {
-  aspect-ratio: 3 / 4;
+#bar-example-14 .bar {
+  --aspect-ratio: 3 / 4;
 }
 </template>
 <template v-slot:html-code>
@@ -880,8 +880,8 @@ To add space between data items use the `.datasets-spacing-*` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-15 .bar tbody {
-  aspect-ratio: 3 / 4;
+#bar-example-15 .bar {
+  --aspect-ratio: 3 / 4;
 }
 </template>
 <template v-slot:html-code>
@@ -946,8 +946,8 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-16 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-16 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -988,8 +988,8 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-17 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-17 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1044,8 +1044,8 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-18 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-18 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1086,8 +1086,8 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-19 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-19 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1142,8 +1142,8 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-20 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-20 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1190,8 +1190,8 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-21 .bar tbody {
-  aspect-ratio: 4 / 3;
+#bar-example-21 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -1252,8 +1252,8 @@ To reverse the datasets order use the `.reverse-datasets` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-22 .bar tbody {
-  aspect-ratio: 3 / 4;
+#bar-example-22 .bar {
+  --aspect-ratio: 3 / 4;
 }
 </template>
 <template v-slot:html-code>
@@ -1300,8 +1300,8 @@ To reverse the datasets order use the `.reverse-datasets` class.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-23 .bar tbody {
-  aspect-ratio: 3 / 4;
+#bar-example-23 .bar {
+  --aspect-ratio: 3 / 4;
 }
 </template>
 <template v-slot:html-code>
@@ -1362,8 +1362,8 @@ Combine the two classes to reverse the data order and the datasets order.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-24 .bar tbody {
-  aspect-ratio: 3 / 4;
+#bar-example-24 .bar {
+  --aspect-ratio: 3 / 4;
 }
 </template>
 <template v-slot:html-code>
@@ -1410,8 +1410,8 @@ Combine the two classes to reverse the data order and the datasets order.
   max-width: 300px;
   margin: 0 auto;
 }
-#bar-example-25 .bar tbody {
-  aspect-ratio: 3 / 4;
+#bar-example-25 .bar {
+  --aspect-ratio: 3 / 4;
 }
 </template>
 <template v-slot:html-code>

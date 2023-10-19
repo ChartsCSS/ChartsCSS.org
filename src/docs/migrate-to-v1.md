@@ -77,11 +77,19 @@ We strongly recommend adding [wrapper elements](./../components/wrapper/) when m
 
 **Breaking change!** Version 1.0.0 uses `aspect-ratio` on `<tbody>` element, making sure the chart always has a height even when you don't set a `height`. This change sets a proportional height based on the chart width.
 
-The change has the potential to change the height of existing charts. When migrating to 1.0, if the chart height is changed when you remove the `height` property, use `aspect-ratio` instead:
+The change has the potential to change the height of existing charts. When migrating from 0.x to 1.x versions, if the chart height is changed when you remove the `height` property, use `aspect-ratio` instead:
 
 ```css
 #my-chart .column tbody {
   aspect-ratio: 21 / 9;
+}
+```
+
+In version 1.1.0 and above, the `--aspect-ratio` variable was added to simplify [chart styling with CSS variables](../customization/basic-styling/#style-with-css-variables):
+
+```css
+#my-chart .column {
+  --aspect-ratio: 21 / 9;
 }
 ```
 
@@ -125,8 +133,8 @@ With this feature you can create **[Population Pyramid](./../components/orientat
   margin: 0 auto;
   display: flex;
 }
-#new-population-chart .bar tbody {
-  aspect-ratio: 1 / 1;
+#new-population-chart .bar {
+  --aspect-ratio: 1 / 1;
 }
 #new-population-chart .bar.male {
   --color: rgba(100, 210, 80, .75);

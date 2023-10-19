@@ -32,8 +32,8 @@ Change background color when the user hovers over data items:
   max-width: 300px;
   margin: 0 auto;
 }
-#motion-effect-example-1 .column tbody {
-  aspect-ratio: 4 / 3;
+#motion-effect-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 #motion-effect-example-1 .column tr {
   transition-duration: 0.3s;
@@ -104,8 +104,8 @@ Reverse opacity effect when hovering over datasets:
   max-width: 500px;
   margin: 0 auto;
 }
-#motion-effect-example-2 .column tbody {
-  aspect-ratio: 21 / 9;
+#motion-effect-example-2 .column {
+  --aspect-ratio: 21 / 9;
 }
 #motion-effect-example-2 .column td {
   transition-duration: 0.3s;
@@ -173,8 +173,8 @@ Scale the data when hovering over the data elements:
   max-width: 300px;
   margin: 0 auto;
 }
-#motion-effect-example-3 .column tbody {
-  aspect-ratio: 4 / 3;
+#motion-effect-example-3 .column {
+  --aspect-ratio: 4 / 3;
 }
 #motion-effect-example-3 .column td .data {
   transition-duration: 0.6s;
@@ -243,14 +243,12 @@ Grayscale colors the chart when visitors hover over it:
   margin: 0 auto;
 }
 #motion-effect-example-4 .column {
+  --aspect-ratio: 4 / 3;
   transition-duration: 1s;
   filter: grayscale(100%);
 }
 #motion-effect-example-4 .column:hover {
   filter: none;
-}
-#motion-effect-example-4 .column tbody {
-  aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -308,7 +306,7 @@ Show only part of the data, and allow the user to scroll to view the rest of the
   scrollbar-width: thin;
 }
 #motion-effect .column {
-  aspect-ratio: auto;
+  --aspect-ratio: auto;
   height: 250px;
   width: calc( var( --cell-size ) * var( --total-cells ) );
 }
@@ -328,8 +326,10 @@ Show only part of the data, and allow the user to scroll to view the rest of the
   scrollbar-gutter: stable;
   scrollbar-width: thin;
 }
+#motion-effect-example-5 .column {
+  --aspect-ratio: auto;
+}
 #motion-effect-example-5 .column tbody {
-  aspect-ratio: auto;
   height: 250px;
   width: calc( var( --cell-size ) * var( --total-cells ) );
 }

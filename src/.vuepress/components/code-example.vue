@@ -75,7 +75,7 @@ export default {
       let data = {
         "title": "Charts.css Example",
         "tags": ["charts.css", "charts", "chart"],
-        "css_external": "https://cdn.jsdelivr.net/npm/charts.css@1.0.1/dist/charts.min.css",
+        "css_external": "https://cdn.jsdelivr.net/npm/charts.css@1.1.0/dist/charts.min.css",
         "editors": "110",
         "html": this.html,
         "css": this.css,

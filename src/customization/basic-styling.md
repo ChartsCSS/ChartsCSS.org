@@ -72,24 +72,24 @@ Display your brand logo as a column chart background.
 To control the chart width/height ratio, use one of the following selectors.
 
 ```css
-#my-chart .bar tbody {
-  aspect-ratio: auto;
+#my-chart .bar {
+  --aspect-ratio: auto;
 }
 
-#my-chart .column tbody {
-  aspect-ratio: 21 / 9;
+#my-chart .column {
+  --aspect-ratio: 21 / 9;
 }
 
-#my-chart .area tbody {
-  aspect-ratio: 21 / 9;
+#my-chart .area {
+  --aspect-ratio: 21 / 9;
 }
 
-#my-chart .line tbody {
-  aspect-ratio: 21 / 9;
+#my-chart .line {
+  --aspect-ratio: 21 / 9;
 }
 
-#my-chart .pie tbody {
-  aspect-ratio: 1 / 1;
+#my-chart .pie {
+  --aspect-ratio: 1 / 1;
 }
 ```
 
@@ -156,21 +156,25 @@ Use CSS variables on different chart types.
 }
 
 #my-chart .column {
+  --aspect-ratio: 21 / 9;
   --primary-axis-color: blue;
   --primary-axis-width: 3px;
 }
 
 #my-chart .area {
+  --aspect-ratio: 16 / 9;
   --data-axes-color: grey;
 }
 
 #my-chart .line {
   --line-size: 3px;
   --color: black;
+  --aspect-ratio: 4 / 3;
   --labels-size: 3rem;
 }
 
 #my-chart .pie {
+  --aspect-ratio: 1 / 1;
   --primary-axis-color: blue;
 }
 

@@ -98,8 +98,8 @@ To help the framework identify the text, wrap the content with a `<span class="d
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-1 .area tbody {
-  aspect-ratio: 21 / 9;
+#area-example-1 .area {
+  --aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -173,8 +173,8 @@ When using multiple datasets you should add the `.multiple` class to let the fra
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-2 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-2 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -233,8 +233,8 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-3 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-3 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -281,8 +281,8 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-4 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-4 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -347,8 +347,8 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-5 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-5 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -395,8 +395,8 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-6 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-6 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -457,8 +457,8 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-7 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-7 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -505,8 +505,8 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-8 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-8 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -567,8 +567,8 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-9 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-9 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -615,8 +615,8 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-10 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-10 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -681,8 +681,8 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-11 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-11 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -729,8 +729,8 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-12 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-12 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -791,8 +791,8 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-13 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-13 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -839,8 +839,8 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-14 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-14 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -901,8 +901,8 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-15 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-15 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -949,8 +949,8 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#area-example-16 .area tbody {
-  aspect-ratio: 16 / 9;
+#area-example-16 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
