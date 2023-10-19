@@ -50,13 +50,11 @@ Stack items side-by-side using a `.bar` chart.
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
+  --aspect-ratio: 21 / 9;
 }
 #stacked-example-1 .bar caption {
   font-weight: bold;
   padding-block-end: 1rem;
-}
-#stacked-example-1 .bar tbody {
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -119,13 +117,11 @@ Stack items side-by-side using a `.bar` chart.
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
+  --aspect-ratio: 21 / 9;
 }
 #stacked-example-2 .bar caption {
   font-weight: bold;
   padding-block-end: 1rem;
-}
-#stacked-example-2 .bar tbody {
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -200,13 +196,11 @@ Stack items atop one another using a `.column` chart.
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
+  --aspect-ratio: 1 / 1;
 }
 #stacked-example-3 .column caption {
   font-weight: bold;
   padding-block-end: 1rem;
-}
-#stacked-example-3 .column tbody {
-  aspect-ratio: 1 / 1;
 }
 </template>
 <template v-slot:html-code>
@@ -269,13 +263,11 @@ Stack items atop one another using a `.column` chart.
   --color-2: rgba(255, 150, 0, 0.6);
   --color-3: rgba(255,  75, 0, 0.6);
   --color-4: rgba(255,   0, 0, 0.6);
+  --aspect-ratio: 1 / 1;
 }
 #stacked-example-4 .column caption {
   font-weight: bold;
   padding-block-end: 1rem;
-}
-#stacked-example-4 .column tbody {
-  aspect-ratio: 1 / 1;
 }
 </template>
 <template v-slot:html-code>

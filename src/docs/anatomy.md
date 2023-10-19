@@ -13,176 +13,174 @@ The following animation shows how the various elements are separated into layers
 <code-example code-example-id="anatomy-layers">
 <template v-slot:css-code>
 .layers-wrapper {
-	position: relative;
-	width: calc(100% * 0.42261826174); /* 100% * cos(65deg) */
-	width: 75%;
-	margin: 0 auto;
-	aspect-ratio: 1;
+  position: relative;
+  width: calc(100% * 0.42261826174); /* 100% * cos(65deg) */
+  width: 75%;
+  margin: 0 auto;
+  aspect-ratio: 1;
 }
 .layers-wrapper .charts-css {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	animation-name: animate_layers;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-	--labels-size: 40px !important;
+  --labels-size: 40px !important;
+  --aspect-ratio: 1.1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation-name: animate_layers;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .layers-wrapper .charts-css caption {
-	padding: 10px !important;
-}
-.layers-wrapper .charts-css tbody {
-	aspect-ratio: 1.1;
+  padding: 10px !important;
 }
 .layers-wrapper .charts-css:nth-child(1) {
-	--distance: -150px;
+  --distance: -150px;
 }
 .layers-wrapper .charts-css:nth-child(2) {
-	--distance: -50px;
+  --distance: -50px;
 }
 .layers-wrapper .charts-css:nth-child(3) {
-	--distance: 50px;
+  --distance: 50px;
 }
 .layers-wrapper .charts-css:nth-child(4) {
-	--distance: 150px;
+  --distance: 150px;
 }
 .layers-wrapper:hover .charts-css {
-	animation-play-state: paused;
+  animation-play-state: paused;
 }
 @keyframes animate_layers {
-	5% {
-		transform: rotateX(0) rotate(0) translateZ(0);
-		background-color: rgba(255, 255, 255, 0);
-		box-shadow: none;
-	}
-	20%{
-		transform: rotateX(65deg) rotate(45deg) translateZ(var(--distance));
-		background-color: rgba(0, 0, 0, 0.1);
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-	}
-	35% {
-		transform: rotateX(65deg) rotate(-135deg) translateZ(var(--distance));
-	}
-	65% {
-		transform: rotateX(65deg) rotate(135deg) translateZ(var(--distance));
-	}
-	80% {
-		transform: rotateX(65deg) rotate(-45deg) translateZ(var(--distance));
-		background-color: rgba(0, 0, 0, 0.1);
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-	}
-	95% {
-		transform: rotateX(0) rotate(0) translateZ(0);
-		background-color: rgba(0, 0, 0, 0);
-		box-shadow: none;
-	}
+  5% {
+    transform: rotateX(0) rotate(0) translateZ(0);
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+  20%{
+    transform: rotateX(65deg) rotate(45deg) translateZ(var(--distance));
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+  35% {
+    transform: rotateX(65deg) rotate(-135deg) translateZ(var(--distance));
+  }
+  65% {
+    transform: rotateX(65deg) rotate(135deg) translateZ(var(--distance));
+  }
+  80% {
+    transform: rotateX(65deg) rotate(-45deg) translateZ(var(--distance));
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+  95% {
+    transform: rotateX(0) rotate(0) translateZ(0);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+  }
 }
 </template>
 <template v-slot:html-code>
 <div class="layers-wrapper">
-	<table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes show-data-axes">
-		<caption> &nbsp; </caption>
-		<tbody>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="charts-css column show-heading show-labels data-spacing-15">
-		<caption> &nbsp; </caption>
-		<tbody>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0.2;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0.4;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0.6;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0.8;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 1;"></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="charts-css column show-heading show-labels">
-		<caption> &nbsp; </caption>
-		<tbody>
-			<tr>
-				<th> 2016 </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> 2017 </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> 2018 </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> 2019 </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> 2020 </th>
-				<td style="--size: 0;"></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="charts-css column show-heading">
-		<caption> Chart Heading </caption>
-		<tbody>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-			<tr>
-				<th> &nbsp; </th>
-				<td style="--size: 0;"></td>
-			</tr>
-		</tbody>
-	</table>
+  <table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes show-data-axes">
+    <caption> &nbsp; </caption>
+    <tbody>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="charts-css column show-heading show-labels data-spacing-15">
+    <caption> &nbsp; </caption>
+    <tbody>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0.2;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0.4;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0.6;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0.8;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 1;"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="charts-css column show-heading show-labels">
+    <caption> &nbsp; </caption>
+    <tbody>
+      <tr>
+        <th> 2016 </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> 2017 </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> 2018 </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> 2019 </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> 2020 </th>
+        <td style="--size: 0;"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="charts-css column show-heading">
+    <caption> Chart Heading </caption>
+    <tbody>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+      <tr>
+        <th> &nbsp; </th>
+        <td style="--size: 0;"></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 </template>
 </code-example>
@@ -248,13 +246,13 @@ With the help of CSS classes, the user will see the following chart:
 
 <code-example code-example-id="anatomy-simple-chart">
 <template v-slot:css-code>
-#anatomy-simple-chart .charts-css {
+#anatomy-simple-chart {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
-#anatomy-simple-chart .charts-css tbody {
-	aspect-ratio: 4 / 3;
+#anatomy-simple-chart .charts-css {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>

@@ -48,18 +48,22 @@ The first method to placing them on top of each other is using CSS position:
 ```css
 #my-stock-chart {
   position: relative;
-  aspect-ratio: 16 / 9;
   height: 250px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  background-color: #f6f6ff;
 }
-#my-stock-chart > table {
+#my-stock-chart .area,
+#my-stock-chart .line,
+#my-stock-chart .column {
   position: absolute;
   inset: 0;
 }
-#my-stock-chart > table.column tbody {
-  aspect-ratio: 12 / 1;
+#my-stock-chart .column {
+  --aspect-ratio: 12 / 1;
+}
+#my-stock-chart .column tbody {
   margin-block-start: auto;
 }
 ```
@@ -74,25 +78,28 @@ The first method to placing them on top of each other is using CSS position:
   margin: 0 auto;
   background-color: #f6f6ff;
 }
-#stock-chart-example-1 > table {
+#stock-chart-example-1 .area,
+#stock-chart-example-1 .line,
+#stock-chart-example-1 .column {
   position: absolute;
   inset: 0;
 }
-#stock-chart-example-1 > table.column tbody {
-  aspect-ratio: 12 / 1;
+#stock-chart-example-1 .column {
+  --aspect-ratio: 12 / 1;
+}
+#stock-chart-example-1 .column tbody {
   margin-block-start: auto;
 }
-/* Colors */
-#stock-chart-example-1 > table.area {
+#stock-chart-example-1 .area {
   --color: linear-gradient(#f30, #fff);
 }
-#stock-chart-example-1 > table.line {
+#stock-chart-example-1 .line {
   --color: #fc1;
 }
-#stock-chart-example-1 > table.column tr:nth-child(even) {
+#stock-chart-example-1 .column tr:nth-child(even) {
   --color: #e88;
 }
-#stock-chart-example-1 > table.column tr:nth-child(odd) {
+#stock-chart-example-1 .column tr:nth-child(odd) {
   --color: #8c8;
 }
 </template>
@@ -189,26 +196,26 @@ The same result can be achieved with CSS grid. The folowing example also include
     "data-1-axis  volume       data-2-axis"
     "primary-axis primary-axis primary-axis";
 }
-#my-chart > table.area,
-#my-chart > table.line {
+#my-chart .area,
+#my-chart .line {
   grid-area: stocks;
 }
-#my-chart > table.column {
+#my-chart .column {
+  --aspect-ratio: 12 / 1;
   grid-area: volume;
 }
-#my-chart > table.column tbody {
-  aspect-ratio: 12 / 1;
+#my-chart .column tbody {
   margin-block-start: auto;
 }
-#my-chart > .primary-axis {
+#my-chart .primary-axis {
   grid-area: primary-axis;
 }
-#my-chart > .data-1-axis {
+#my-chart .data-1-axis {
   grid-area: data-1-axis;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#my-chart > .data-2-axis {
+#my-chart .data-2-axis {
   grid-area: data-2-axis;
   writing-mode: tb-rl;
 }
@@ -229,40 +236,40 @@ The same result can be achieved with CSS grid. The folowing example also include
   background-color: #f6f6ff;
   width: 650px;
 }
-#stock-chart-example-2 > table.area,
-#stock-chart-example-2 > table.line {
+#stock-chart-example-2 .area,
+#stock-chart-example-2 .line {
   grid-area: stocks;
 }
-#stock-chart-example-2 > table.column {
+#stock-chart-example-2 .column {
+  --aspect-ratio: 12 / 1;
   grid-area: volume;
 }
-#stock-chart-example-2 > table.column tbody {
-  aspect-ratio: 12 / 1;
+#stock-chart-example-2 .column tbody {
   margin-block-start: auto;
 }
-#stock-chart-example-2 > .primary-axis {
+#stock-chart-example-2 .primary-axis {
   grid-area: primary-axis;
 }
-#stock-chart-example-2 > .data-1-axis {
+#stock-chart-example-2 .data-1-axis {
   grid-area: data-1-axis;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#stock-chart-example-2 > .data-2-axis {
+#stock-chart-example-2 .data-2-axis {
   grid-area: data-2-axis;
   writing-mode: tb-rl;
 }
 /* Colors */
-#stock-chart-example-2 > table.area {
+#stock-chart-example-2 .area {
   --color: linear-gradient(#99e, rgba(0, 0, 0, 0));
 }
-#stock-chart-example-2 > table.line {
+#stock-chart-example-2 .line {
   --color: #fc1;
 }
-#stock-chart-example-2 > table.column tr:nth-child(even) {
+#stock-chart-example-2 .column tr:nth-child(even) {
   --color: #e88;
 }
-#stock-chart-example-2 > table.column tr:nth-child(odd) {
+#stock-chart-example-2 .column tr:nth-child(odd) {
   --color: #8c8;
 }
 </template>

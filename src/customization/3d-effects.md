@@ -35,8 +35,8 @@ To create 3D bars is pretty simple. It can be done using the CSS `box-shadow` pr
   max-width: 300px;
   margin: 0 auto;
 }
-#effect-example-1 .column tbody {
-  aspect-ratio: 4 / 3;
+#effect-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 #effect-example-1 .column tbody td {
   margin-inline-start: 10px;
@@ -129,8 +129,8 @@ Or by using `:before` and `:after` pseudo-elements combined with the CSS `skew()
   max-width: 300px;
   margin: 0 auto;
 }
-#effect-example-2 .column tbody {
-  aspect-ratio: 4 / 3;
+#effect-example-2 .column {
+  --aspect-ratio: 4 / 3;
 }
 #effect-example-2 .column tbody td {
   margin-inline-start: 10px;
@@ -219,8 +219,8 @@ To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
   max-width: 300px;
   margin: 0 auto;
 }
-#effect-example-3 .column tbody {
-  aspect-ratio: 4 / 3;
+#effect-example-3 .column {
+  --aspect-ratio: 4 / 3;
 }
 #effect-example-3 .column tbody td {
   margin-inline-start: 20%;
@@ -303,11 +303,9 @@ Another way to make your chart look 3D is to tilt the entire `<table>` element u
   margin: 0 auto;
 }
 #effect-example-4 .column {
+  --aspect-ratio: 4 / 3;
   margin: 1.5rem auto;
   transform: skewY(20deg);
-}
-#effect-example-4 .column tbody {
-  aspect-ratio: 4 / 3;
 }
 #effect-example-4 .column tbody td {
   margin-inline-start: 10px;
@@ -390,11 +388,9 @@ Or tilt the cylinder bars the other way:
   margin: 0 auto;
 }
 #effect-example-5 .column {
+  --aspect-ratio: 4 / 3;
   margin: 1.5rem auto;
   transform: skewY(-8deg);
-}
-#effect-example-5 .column tbody {
-  aspect-ratio: 4 / 3;
 }
 #effect-example-5 .column tbody td {
   margin-inline-start: 20%;
@@ -473,6 +469,7 @@ Use the webkit reflect effect to highlight the chart:
   margin: 0 auto;
 }
 #effect-example-6 .column {
+  --aspect-ratio: 4 / 3;
   margin: 0 auto 100px;
   -webkit-box-reflect:
     below
@@ -485,9 +482,6 @@ Use the webkit reflect effect to highlight the chart:
       color-stop( 10%, transparent ),
       to( rgba( 255, 255, 255, 0.25 ) )
   );
-}
-#effect-example-6 .column tbody {
-  aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -555,8 +549,10 @@ Using shadows is another good way to create 3D effects:
   max-width: 400px;
   margin: 0 auto;
 }
+#effect-example-7 .column {
+  --aspect-ratio: 4 / 3;
+}
 #effect-example-7 .column tbody {
-  aspect-ratio: 4 / 3;
   padding: 30px;
   border-radius: 10px;
   box-shadow:

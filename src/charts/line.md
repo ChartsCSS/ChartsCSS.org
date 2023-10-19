@@ -98,9 +98,9 @@ To help the framework identify the text, wrap the content with a `<span class="d
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-1 .line tbody {
+#line-example-1 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -180,9 +180,9 @@ When using multiple datasets you should add the `.multiple` class to let the fra
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-2 .line tbody {
+#line-example-2 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -256,9 +256,9 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-3 .line tbody {
+#line-example-3 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -305,9 +305,9 @@ By default, labels are hidden. To display labels use the `.show-labels` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-4 .line tbody {
+#line-example-4 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -372,9 +372,9 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-5 .line tbody {
+#line-example-5 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -421,9 +421,9 @@ To add a primary axis, separating the labels from the data, use the `.show-prima
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-6 .line tbody {
+#line-example-6 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -484,9 +484,9 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-7 .line tbody {
+#line-example-7 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -533,9 +533,9 @@ To add secondary axes, located behind the chart data, use the `.show-*-secondary
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-8 .line tbody {
+#line-example-8 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -596,9 +596,9 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-9 .line tbody {
+#line-example-9 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -645,9 +645,9 @@ Data axes are auto-generated based on the amount of columns (`<tr>` tags) in the
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-10 .line tbody {
+#line-example-10 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -712,9 +712,9 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-11 .line tbody {
+#line-example-11 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -761,9 +761,9 @@ Use the `.reverse` class to reverse the orientation.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-12 .line tbody {
+#line-example-12 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -824,9 +824,9 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-13 .line tbody {
+#line-example-13 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -873,9 +873,9 @@ Use the `.reverse-labels` class to reverse the labels position.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-14 .line tbody {
+#line-example-14 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -936,9 +936,9 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-15 .line tbody {
+#line-example-15 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -985,9 +985,9 @@ To reverse the data order use the `.reverse-data` class.
   max-width: 400px;
   margin: 0 auto;
 }
-#line-example-16 .line tbody {
+#line-example-16 .line {
+  --aspect-ratio: 21 / 9;
   background-color: #f6f6f6;
-  aspect-ratio: 21 / 9;
 }
 </template>
 <template v-slot:html-code>

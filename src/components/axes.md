@@ -45,8 +45,8 @@ Note that in a bar chart the primary axis is horizontal, while in a column chart
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-1 .column tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -93,8 +93,8 @@ Note that in a bar chart the primary axis is horizontal, while in a column chart
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-2 .column tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-2 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -147,8 +147,8 @@ Note that in a bar chart the primary axis is horizontal, while in a column chart
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-3 .bar tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-3 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -195,8 +195,8 @@ Note that in a bar chart the primary axis is horizontal, while in a column chart
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-4 .bar tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-4 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -267,8 +267,8 @@ While the primary axis is located between the labels and the data, the secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-5 .column tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-5 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -315,8 +315,8 @@ While the primary axis is located between the labels and the data, the secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-6 .column tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-6 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -369,8 +369,8 @@ While the primary axis is located between the labels and the data, the secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-7 .bar tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-7 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -417,8 +417,8 @@ While the primary axis is located between the labels and the data, the secondary
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-8 .bar tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-8 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -489,8 +489,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefore data axes are
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-9 .column tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-9 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -537,8 +537,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefore data axes are
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-10 .column tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-10 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -591,8 +591,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefore data axes are
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-11 .bar tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-11 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -639,8 +639,8 @@ Data axes are based on the amount of rows (`<tr>` tags), therefore data axes are
   max-width: 300px;
   margin: 0 auto;
 }
-#axes-example-12 .bar tbody {
-  aspect-ratio: 4 / 3;
+#axes-example-12 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -721,18 +721,18 @@ To add informative axis titles use a [wrapper div](wrapper/#general-anatomy). Th
     "data-axis-1 chart data-axis-2"
     ". primary-axis .";
 }
-#my-chart > table {
+#my-chart .column {
   grid-area: chart;
 }
-#my-chart > .primary-axis {
+#my-chart .primary-axis {
   grid-area: primary-axis;
 }
-#my-chart > .data-axis-1 {
+#my-chart .data-axis-1 {
   grid-area: data-axis-1;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#my-chart > .data-axis-2 {
+#my-chart .data-axis-2 {
   grid-area: data-axis-2;
   writing-mode: tb-rl;
   transform: rotateZ(360deg);
@@ -755,18 +755,18 @@ To add informative axis titles use a [wrapper div](wrapper/#general-anatomy). Th
   max-width: 650px;
   margin: 0 auto;
 }
-#axes-example-13 > table {
+#axes-example-13 .column {
   grid-area: chart;
 }
-#axes-example-13 > .primary-axis {
+#axes-example-13 .primary-axis {
   grid-area: primary-axis;
 }
-#axes-example-13 > .data-axis-1 {
+#axes-example-13 .data-axis-1 {
   grid-area: data-axis-1;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#axes-example-13 > .data-axis-2 {
+#axes-example-13 .data-axis-2 {
   grid-area: data-axis-2;
   writing-mode: tb-rl;
   transform: rotateZ(360deg);

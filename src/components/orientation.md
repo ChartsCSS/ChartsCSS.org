@@ -54,8 +54,8 @@ Bar chart with a regular orientation and a reverse orientation:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-1 .bar tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-1 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -102,8 +102,8 @@ Bar chart with a regular orientation and a reverse orientation:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-2 .bar tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-2 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -156,8 +156,8 @@ Column chart with a regular orientation and a reverse orientation:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-3 .column tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-3 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -204,8 +204,8 @@ Column chart with a regular orientation and a reverse orientation:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-4 .column tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-4 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -258,8 +258,8 @@ Area chart with a regular orientation and a reverse orientation:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-5 .area tbody {
-  aspect-ratio: 16 / 9;
+#orientation-example-5 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -306,8 +306,8 @@ Area chart with a regular orientation and a reverse orientation:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-6 .area tbody {
-  aspect-ratio: 16 / 9;
+#orientation-example-6 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -374,8 +374,8 @@ Bar chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-7 .bar tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-7 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -422,8 +422,8 @@ Bar chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-8 .bar tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-8 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -474,8 +474,8 @@ Bar chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-9 .bar tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-9 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -522,8 +522,8 @@ Bar chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-10 .bar tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-10 .bar {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -576,8 +576,8 @@ Column chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-11 .column tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-11 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -624,8 +624,8 @@ Column chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-12 .column tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-12 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -676,8 +676,8 @@ Column chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-13 .column tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-13 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -724,8 +724,8 @@ Column chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-14 .column tbody {
-  aspect-ratio: 4 / 3;
+#orientation-example-14 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -778,8 +778,8 @@ Area chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-15 .area tbody {
-  aspect-ratio: 16 / 9;
+#orientation-example-15 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -826,8 +826,8 @@ Area chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-16 .area tbody {
-  aspect-ratio: 16 / 9;
+#orientation-example-16 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -878,8 +878,8 @@ Area chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-17 .area tbody {
-  aspect-ratio: 16 / 9;
+#orientation-example-17 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -926,8 +926,8 @@ Area chart with a combination of reversed orientation and reversed labels:
   max-width: 300px;
   margin: 0 auto;
 }
-#orientation-example-18 .area tbody {
-  aspect-ratio: 16 / 9;
+#orientation-example-18 .area {
+  --aspect-ratio: 16 / 9;
 }
 </template>
 <template v-slot:html-code>
@@ -994,8 +994,8 @@ With the help of `.reverse-labels` class, it's now possible to create a "Populat
   margin: 0 auto;
   display: flex;
 }
-#population-pyramid-chart .bar tbody {
-  aspect-ratio: 1 / 1;
+#population-pyramid-chart .bar {
+  --aspect-ratio: 1 / 1;
 }
 #population-pyramid-chart .bar.male {
   --color: rgba(100, 210, 80, .75);
@@ -1013,8 +1013,8 @@ With the help of `.reverse-labels` class, it's now possible to create a "Populat
   margin: 0 auto;
   display: flex;
 }
-#orientation-example-19 .bar tbody {
-  aspect-ratio: 1 / 1;
+#orientation-example-19 .bar {
+  --aspect-ratio: 1 / 1;
 }
 #orientation-example-19 .bar.male {
   --color: rgba(100, 210, 80, .75);
@@ -1141,8 +1141,8 @@ To make it even more informative, each age group can be splitted to sub categori
   margin: 0 auto;
   display: flex;
 }
-#orientation-example-20 .bar tbody {
-  aspect-ratio: 1 / 1;
+#orientation-example-20 .bar {
+  --aspect-ratio: 1 / 1;
 }
 #orientation-example-20 .bar.male {
   --color-1: rgba(90, 165, 255, .75);

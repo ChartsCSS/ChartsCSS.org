@@ -160,8 +160,8 @@ export default {
           { type: 'button', id: 'column', label: 'Column' },
           { type: 'button', id: 'area', label: 'Area' },
           { type: 'button', id: 'line', label: 'Line' },
-          { type: 'button', id: 'radial', label: 'Radial', disabled: 'disabled' },
           { type: 'button', id: 'pie', label: 'Pie', disabled: 'disabled' },
+          { type: 'button', id: 'radial', label: 'Radial', disabled: 'disabled' },
           { type: 'button', id: 'radar', label: 'Radar', disabled: 'disabled' },
           { type: 'button', id: 'polar', label: 'Polar', disabled: 'disabled' },
         ],
@@ -185,6 +185,7 @@ export default {
         orientation: [
           { type: 'legend', label: 'Orientation' },
           { type: 'button', id: 'reverse', label: 'Reverse', condition: [ 'bar', 'column', 'area', 'line' ] },
+          { type: 'button', id: 'reverse-labels', label: 'Reverse Labels', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'reverse-data', label: 'Reverse Data', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'reverse-datasets', label: 'Reverse Datasets', condition: [ 'multiple' ] },
         ],

@@ -37,8 +37,8 @@ Semantically speaking, any content on the page should have a heading. With `<tab
   max-width: 300px;
   margin: 0 auto;
 }
-#heading-example-1 .column tbody {
-	aspect-ratio: 4 / 3;
+#heading-example-1 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -85,8 +85,8 @@ Semantically speaking, any content on the page should have a heading. With `<tab
   max-width: 300px;
   margin: 0 auto;
 }
-#heading-example-2 .column tbody {
-	aspect-ratio: 4 / 3;
+#heading-example-2 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -141,8 +141,8 @@ Since the `<caption>` element is separated from the `<tbody>`, the chart proport
   max-width: 300px;
   margin: 0 auto;
 }
-#heading-example-3 .column tbody {
-	aspect-ratio: 4 / 3;
+#heading-example-3 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -189,8 +189,8 @@ Since the `<caption>` element is separated from the `<tbody>`, the chart proport
   max-width: 300px;
   margin: 0 auto;
 }
-#heading-example-4 .column tbody {
-	aspect-ratio: 4 / 3;
+#heading-example-4 .column {
+  --aspect-ratio: 4 / 3;
 }
 </template>
 <template v-slot:html-code>
@@ -262,8 +262,8 @@ Or regular CSS, targeting the chart `caption`:
   max-width: 300px;
   margin: 0 auto;
 }
-#heading-example-5 .column tbody {
-	aspect-ratio: 4 / 3;
+#heading-example-5 .column {
+  --aspect-ratio: 4 / 3;
 }
 #heading-example-5 .column caption {
   font-size: 1rem;
@@ -316,8 +316,8 @@ Or regular CSS, targeting the chart `caption`:
   max-width: 300px;
   margin: 0 auto;
 }
-#heading-example-6 .column tbody {
-	aspect-ratio: 4 / 3;
+#heading-example-6 .column {
+  --aspect-ratio: 4 / 3;
 }
 #heading-example-6 .column caption {
   padding-block: 10px;

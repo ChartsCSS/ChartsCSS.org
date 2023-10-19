@@ -11,7 +11,7 @@ module.exports = {
   description: 'CSS data visualization framework',
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@1.0.1/dist/charts.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/charts.css@1.1.0/dist/charts.min.css' }],
     ['link', { rel: 'icon', href: '/assets/img/logo.svg' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['link', { rel: 'mask-icon', href: '/assets/img/logo.svg', color: '#f57' }],
