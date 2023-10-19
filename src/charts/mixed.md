@@ -196,26 +196,26 @@ The same result can be achieved with CSS grid. The folowing example also include
     "data-1-axis  volume       data-2-axis"
     "primary-axis primary-axis primary-axis";
 }
-#my-chart > table.area,
-#my-chart > table.line {
+#my-chart .area,
+#my-chart .line {
   grid-area: stocks;
 }
-#my-chart > table.column {
+#my-chart .column {
   --aspect-ratio: 12 / 1;
   grid-area: volume;
 }
-#my-chart > table.column tbody {
+#my-chart .column tbody {
   margin-block-start: auto;
 }
-#my-chart > .primary-axis {
+#my-chart .primary-axis {
   grid-area: primary-axis;
 }
-#my-chart > .data-1-axis {
+#my-chart .data-1-axis {
   grid-area: data-1-axis;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#my-chart > .data-2-axis {
+#my-chart .data-2-axis {
   grid-area: data-2-axis;
   writing-mode: tb-rl;
 }
@@ -236,40 +236,40 @@ The same result can be achieved with CSS grid. The folowing example also include
   background-color: #f6f6ff;
   width: 650px;
 }
-#stock-chart-example-2 > table.area,
-#stock-chart-example-2 > table.line {
+#stock-chart-example-2 .area,
+#stock-chart-example-2 .line {
   grid-area: stocks;
 }
-#stock-chart-example-2 > table.column {
+#stock-chart-example-2 .column {
   --aspect-ratio: 12 / 1;
   grid-area: volume;
 }
-#stock-chart-example-2 > table.column tbody {
+#stock-chart-example-2 .column tbody {
   margin-block-start: auto;
 }
-#stock-chart-example-2 > .primary-axis {
+#stock-chart-example-2 .primary-axis {
   grid-area: primary-axis;
 }
-#stock-chart-example-2 > .data-1-axis {
+#stock-chart-example-2 .data-1-axis {
   grid-area: data-1-axis;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#stock-chart-example-2 > .data-2-axis {
+#stock-chart-example-2 .data-2-axis {
   grid-area: data-2-axis;
   writing-mode: tb-rl;
 }
 /* Colors */
-#stock-chart-example-2 > table.area {
+#stock-chart-example-2 .area {
   --color: linear-gradient(#99e, rgba(0, 0, 0, 0));
 }
-#stock-chart-example-2 > table.line {
+#stock-chart-example-2 .line {
   --color: #fc1;
 }
-#stock-chart-example-2 > table.column tr:nth-child(even) {
+#stock-chart-example-2 .column tr:nth-child(even) {
   --color: #e88;
 }
-#stock-chart-example-2 > table.column tr:nth-child(odd) {
+#stock-chart-example-2 .column tr:nth-child(odd) {
   --color: #8c8;
 }
 </template>

@@ -721,18 +721,18 @@ To add informative axis titles use a [wrapper div](wrapper/#general-anatomy). Th
     "data-axis-1 chart data-axis-2"
     ". primary-axis .";
 }
-#my-chart > table {
+#my-chart .column {
   grid-area: chart;
 }
-#my-chart > .primary-axis {
+#my-chart .primary-axis {
   grid-area: primary-axis;
 }
-#my-chart > .data-axis-1 {
+#my-chart .data-axis-1 {
   grid-area: data-axis-1;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#my-chart > .data-axis-2 {
+#my-chart .data-axis-2 {
   grid-area: data-axis-2;
   writing-mode: tb-rl;
   transform: rotateZ(360deg);
@@ -755,18 +755,18 @@ To add informative axis titles use a [wrapper div](wrapper/#general-anatomy). Th
   max-width: 650px;
   margin: 0 auto;
 }
-#axes-example-13 > table {
+#axes-example-13 .column {
   grid-area: chart;
 }
-#axes-example-13 > .primary-axis {
+#axes-example-13 .primary-axis {
   grid-area: primary-axis;
 }
-#axes-example-13 > .data-axis-1 {
+#axes-example-13 .data-axis-1 {
   grid-area: data-axis-1;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
 }
-#axes-example-13 > .data-axis-2 {
+#axes-example-13 .data-axis-2 {
   grid-area: data-axis-2;
   writing-mode: tb-rl;
   transform: rotateZ(360deg);
