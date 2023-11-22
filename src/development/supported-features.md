@@ -403,6 +403,12 @@ A list of supported CSS variables.
       <td> transparent </td>
     </tr>
     <tr>
+      <th> Data </th>
+      <td> <code>--data-position</code> </td>
+      <td> <code>&lt;content-position&gt;</code> </td>
+      <td>  </td>
+    </tr>
+    <tr>
       <th rowspan="3"> Labels </th>
       <td> <code>--labels-size</code> </td>
       <td> <code>&lt;length&gt;</code> </td>
