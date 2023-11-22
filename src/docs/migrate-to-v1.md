@@ -327,7 +327,7 @@ To control the [position alignment of the label](./../components/labels/#align-l
 
 ### Data Position
 
-Previously you couldn't control where the data will be displayed. It was fixed at the end of the row. Version 1.0.0 introduces additional CSS utility classes snd variables that help you customize the position of your data.
+Previously you couldn't control where the data will be displayed. It was fixed at the end of the row. Version 1.0.0 introduces additional CSS utility classes and variables that help you customize the position of your data.
 
 **New classes:**
 
