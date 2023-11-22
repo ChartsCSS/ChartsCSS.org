@@ -338,9 +338,13 @@ Previously you couldn't control where the data will be displayed. It was fixed a
 
 **New variables:**
 
-* `--data-position`
+* `--data-position: start;`
+* `--data-position: end;`
+* `--data-position: center;`
 
-Furthermore, when you have a very low or a very heigh value on your bar and column charts, the data seems out of position. Version 1.0.0 introduces new utility classes added either to the `<td>` element or to the `<span>` element wrapping the data. The new classes are:
+**Edge Cases:**
+
+When you have a very low or a very heigh value on your bar and column charts, the data seems out of position. Version 1.0.0 introduces new utility classes added either to the `<td>` element or to the `<span>` element wrapping the data. The new classes are:
 
 * `inside`
 * `outside`
