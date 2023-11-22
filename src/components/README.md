@@ -15,6 +15,7 @@ Components add additional visual elements using nothing but CSS classes. You con
 * [Heading](/components/heading/)
 * [Data](/components/data/)
 * [Datasets](/components/datasets/)
+* [Data Position](/components/data-position/)
 * [Labels](/components/labels/)
 * [Axes](/components/axes/)
 * [Spacing](/components/spacing/)
