@@ -90,7 +90,7 @@ Result:
 
 ## Add Data
 
-To make the data available for use by **Charts.css**, it should be converted to CSS variables.
+To make the data available for use by **Charts.css**, a data layer is added using CSS variables.
 
 The same table with CSS `--size` variables:
 
