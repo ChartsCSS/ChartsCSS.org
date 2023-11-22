@@ -633,7 +633,7 @@ Another good example is when the data positioned outside the column, and some co
 To fix this, use the `.inside` utility class as follows:
 
 ```html{1,5}
-<table class="charts-css column data-end">
+<table class="charts-css column data-outside">
   ...
   <tbody>
       <tr>
