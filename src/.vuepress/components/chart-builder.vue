@@ -24,6 +24,161 @@
 
       </fieldset>
 
+      <table :class="chartClass" v-if="( ! isMultiple ) && ( ! isStacked )">
+
+        <caption> Single Dataset Table </caption>
+
+        <thead>
+          <tr>
+            <th scope="col"> Month </th>
+            <th scope="col"> Progress </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row"> Jan </th>
+            <td style="--start: 0.0; --end: 0.3;"> <span class="data"> 30 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Feb </th>
+            <td style="--start: 0.3; --end: 0.5;"> <span class="data"> 50 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Mar </th>
+            <td style="--start: 0.5; --end: 0.8;"> <span class="data"> 80 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Apr </th>
+            <td style="--start: 0.8; --end: 1.0;"> <span class="data"> 100 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> May </th>
+            <td style="--start: 1.0; --end: 0.65;"> <span class="data"> 65 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Jun </th>
+            <td style="--start: 0.65; --end: 0.45;"> <span class="data"> 45 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Jul </th>
+            <td style="--start: 0.45; --end: 0.15;"> <span class="data"> 15 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Aug </th>
+            <td style="--start: 0.15; --end: 0.32;"> <span class="data"> 32 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Sep </th>
+            <td style="--start: 0.32; --end: 0.6;"> <span class="data"> 60 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Oct </th>
+            <td style="--start: 0.6; --end: 0.9;"> <span class="data"> 90 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Nov </th>
+            <td style="--start: 0.9; --end: 0.55;"> <span class="data"> 55 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> Dec </th>
+            <td style="--start: 0.55; --end: 0.4;"> <span class="data"> 40 </span> </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <table :class="chartClass" v-if="isMultiple">
+
+        <caption> Multiple Dataset Table </caption>
+
+        <thead>
+          <tr>
+            <th scope="col"> Year </th>
+            <th scope="col"> Progress 1 </th>
+            <th scope="col"> Progress 2 </th>
+            <th scope="col"> Progress 3 </th>
+            <th scope="col"> Progress 4 </th>
+            <th scope="col"> Progress 5 </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row"> 2000 </th>
+            <td style="--start: 0.4; --end: 0.2;"> <span class="data"> 20 </span> </td>
+            <td style="--start: 0.3; --end: 0.5;"> <span class="data"> 50 </span> </td>
+            <td style="--start: 0.2; --end: 1.0;"> <span class="data"> 100 </span> </td>
+            <td style="--start: 0.1; --end: 0.7;"> <span class="data"> 70 </span> </td>
+            <td style="--start: 0.0; --end: 0.4;"> <span class="data"> 40 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> 2010 </th>
+            <td style="--start: 0.2; --end: 0.9;"> <span class="data"> 90 </span> </td>
+            <td style="--start: 0.5; --end: 0.6;"> <span class="data"> 60 </span> </td>
+            <td style="--start: 1.0; --end: 0.4;"> <span class="data"> 40 </span> </td>
+            <td style="--start: 0.7; --end: 0.3;"> <span class="data"> 30 </span> </td>
+            <td style="--start: 0.4; --end: 0.2;"> <span class="data"> 20 </span> </td>
+          </tr>
+          <tr>
+            <th scope="row"> 2020 </th>
+            <td style="--start: 0.9; --end: 0.2;"> <span class="data"> 20 </span> </td>
+            <td style="--start: 0.6; --end: 0.4;"> <span class="data"> 40 </span> </td>
+            <td style="--start: 0.4; --end: 0.6;"> <span class="data"> 60 </span> </td>
+            <td style="--start: 0.3; --end: 0.1;"> <span class="data"> 10 </span> </td>
+            <td style="--start: 0.2; --end: 0.4;"> <span class="data"> 40 </span> </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <table :class="chartClass" v-if="isStacked">
+
+        <caption> Stacked Dataset Table </caption>
+
+        <thead>
+          <tr>
+            <th scope="col"> Continent </th>
+            <th scope="col"> #1 </th>
+            <th scope="col"> #2 </th>
+            <th scope="col"> #3 </th>
+            <th scope="col"> #4 </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row"> America </th>
+            <td style="--size: calc(50 / 150);"><span class="data"> 50$ </span></td>
+            <td style="--size: calc(50 / 150);"><span class="data"> 50$ </span></td>
+            <td style="--size: calc(30 / 150);"><span class="data"> 30$ </span></td>
+            <td style="--size: calc(20 / 150);"><span class="data"> 20$ </span></td>
+          </tr>
+          <tr>
+            <th scope="row"> Asia </th>
+            <td style="--size: calc(30 / 150);"><span class="data"> 30$ </span></td>
+            <td style="--size: calc(30 / 150);"><span class="data"> 30$ </span></td>
+            <td style="--size: calc(30 / 150);"><span class="data"> 30$ </span></td>
+            <td style="--size: calc(30 / 150);"><span class="data"> 30$ </span></td>
+          </tr>
+          <tr>
+            <th scope="row"> Europe </th>
+            <td style="--size: calc(40 / 150);"><span class="data"> 40$ </span></td>
+            <td style="--size: calc(25 / 150);"><span class="data"> 25$ </span></td>
+            <td style="--size: calc(45 / 150);"><span class="data"> 45$ </span></td>
+            <td style="--size: calc(30 / 150);"><span class="data"> 30$ </span></td>
+          </tr>
+          <tr>
+            <th scope="row"> Africa </th>
+            <td style="--size: calc(20 / 150);"><span class="data"> 20$ </span></td>
+            <td style="--size: calc(20 / 150);"><span class="data"> 20$ </span></td>
+            <td style="--size: calc(20 / 150);"><span class="data"> 20$ </span></td>
+            <td style="--size: calc(20 / 150);"><span class="data"> 20$ </span></td>
+          </tr>
+        </tbody>
+
+      </table>
+
       <fieldset class="chart-code">
         <legend>Chart code</legend>
         <code>
@@ -37,113 +192,6 @@
 
     </form>
 
-    <table :class="chartClass" v-if="isMultiple">
-
-      <caption> Multiple Dataset Table </caption>
-
-      <thead>
-        <tr>
-          <th scope="col"> Year </th>
-          <th scope="col"> Progress 1 </th>
-          <th scope="col"> Progress 2 </th>
-          <th scope="col"> Progress 3 </th>
-          <th scope="col"> Progress 4 </th>
-          <th scope="col"> Progress 5 </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th scope="row"> 2000 </th>
-          <td style="--start: 0.4; --size: 0.2;"> <span class="data"> 20 </span> </td>
-          <td style="--start: 0.3; --size: 0.5;"> <span class="data"> 50 </span> </td>
-          <td style="--start: 0.2; --size: 1.0;"> <span class="data"> 100 </span> </td>
-          <td style="--start: 0.1; --size: 0.7;"> <span class="data"> 70 </span> </td>
-          <td style="--start: 0.0; --size: 0.4;"> <span class="data"> 40 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> 2010 </th>
-          <td style="--start: 0.2; --size: 0.9;"> <span class="data"> 90 </span> </td>
-          <td style="--start: 0.5; --size: 0.6;"> <span class="data"> 60 </span> </td>
-          <td style="--start: 1.0; --size: 0.4;"> <span class="data"> 40 </span> </td>
-          <td style="--start: 0.7; --size: 0.3;"> <span class="data"> 30 </span> </td>
-          <td style="--start: 0.4; --size: 0.2;"> <span class="data"> 20 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> 2020 </th>
-          <td style="--start: 0.9; --size: 0.2;"> <span class="data"> 20 </span> </td>
-          <td style="--start: 0.6; --size: 0.4;"> <span class="data"> 40 </span> </td>
-          <td style="--start: 0.4; --size: 0.6;"> <span class="data"> 60 </span> </td>
-          <td style="--start: 0.3; --size: 0.1;"> <span class="data"> 10 </span> </td>
-          <td style="--start: 0.2; --size: 0.4;"> <span class="data"> 40 </span> </td>
-        </tr>
-      </tbody>
-
-    </table>
-
-    <table :class="chartClass" v-if="! isMultiple">
-
-      <caption> Single Dataset Table </caption>
-
-      <thead>
-        <tr>
-          <th scope="col"> Month </th>
-          <th scope="col"> Progress </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th scope="row"> Jan </th>
-          <td style="--start: 0.0; --size: 0.3;"> <span class="data"> 30 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Feb </th>
-          <td style="--start: 0.3; --size: 0.5;"> <span class="data"> 50 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Mar </th>
-          <td style="--start: 0.5; --size: 0.8;"> <span class="data"> 80 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Apr </th>
-          <td style="--start: 0.8; --size: 1.0;"> <span class="data"> 100 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> May </th>
-          <td style="--start: 1.0; --size: 0.65;"> <span class="data"> 65 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Jun </th>
-          <td style="--start: 0.65; --size: 0.45;"> <span class="data"> 45 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Jul </th>
-          <td style="--start: 0.45; --size: 0.15;"> <span class="data"> 15 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Aug </th>
-          <td style="--start: 0.15; --size: 0.32;"> <span class="data"> 32 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Sep </th>
-          <td style="--start: 0.32; --size: 0.6;"> <span class="data"> 60 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Oct </th>
-          <td style="--start: 0.6; --size: 0.9;"> <span class="data"> 90 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Nov </th>
-          <td style="--start: 0.9; --size: 0.55;"> <span class="data"> 55 </span> </td>
-        </tr>
-        <tr>
-          <th scope="row"> Dec </th>
-          <td style="--start: 0.55; --size: 0.4;"> <span class="data"> 40 </span> </td>
-        </tr>
-      </tbody>
-
-    </table>
   </div>
 </template>
 
@@ -165,14 +213,23 @@ export default {
           { type: 'button', id: 'radar', label: 'Radar', disabled: 'disabled' },
           { type: 'button', id: 'polar', label: 'Polar', disabled: 'disabled' },
         ],
-        multiple: [
+        dataset: [
           { type: 'legend', label: 'Datasets' },
+          { type: 'button', id: '', label: 'Single' },
           { type: 'button', id: 'multiple', label: 'Multiple' },
+          { type: 'button', id: 'multiple stacked', label: 'Stacked', condition: [ 'bar', 'column' ], disabled: 'disabled' },
         ],
         data: [
           { type: 'legend', label: 'Data' },
           { type: 'button', id: 'hide-data', label: 'Hide Data', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'show-data-on-hover', label: 'Show Data on Hover', condition: [ 'bar', 'column', 'area', 'line' ] },
+        ],
+        dataPosition: [
+          { type: 'legend', label: 'Data Position' },
+          { type: 'button', id: 'data-start', label: 'Data Start', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-center', label: 'Data Center', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-end', label: 'Data End', condition: [ 'bar', 'column' ] },
+          { type: 'button', id: 'data-outside', label: 'Data Outside', condition: [ 'bar', 'column' ] },
         ],
         heading: [
           { type: 'legend', label: 'Heading' },
@@ -187,7 +244,7 @@ export default {
           { type: 'button', id: 'reverse', label: 'Reverse', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'reverse-labels', label: 'Reverse Labels', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'reverse-data', label: 'Reverse Data', condition: [ 'bar', 'column', 'area', 'line' ] },
-          { type: 'button', id: 'reverse-datasets', label: 'Reverse Datasets', condition: [ 'multiple' ] },
+          { type: 'button', id: 'reverse-datasets', label: 'Reverse Datasets', condition: [ 'bar multiple', 'column multiple' ] },
         ],
         primaryAxis: [
           { type: 'legend', label: 'Primary Axis' },
@@ -199,6 +256,7 @@ export default {
         ],
         secondaryAxes: [
           { type: 'legend', label: 'Secondary Axes' },
+          { type: 'button', id: '', label: 'None', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'show-1-secondary-axes', label: '1', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'show-2-secondary-axes', label: '2', condition: [ 'bar', 'column', 'area', 'line' ] },
           { type: 'button', id: 'show-3-secondary-axes', label: '3', condition: [ 'bar', 'column', 'area', 'line' ] },
@@ -211,7 +269,8 @@ export default {
           { type: 'button', id: 'show-10-secondary-axes', label: '10', condition: [ 'bar', 'column', 'area', 'line' ] },
         ],
         dataSpacing: [
-          { type: 'legend', label: 'Data Spacing', condition: [ 'bar', 'column' ] },
+          { type: 'legend', label: 'Data Spacing' },
+          { type: 'button', id: '', label: 'None', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'data-spacing-1', label: '1', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'data-spacing-2', label: '2', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'data-spacing-3', label: '3', condition: [ 'bar', 'column' ] },
@@ -235,6 +294,7 @@ export default {
         ],
         datasetsSpacing: [
           { type: 'legend', label: 'Datasets Spacing' },
+          { type: 'button', id: '', label: 'None', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'datasets-spacing-1', label: '1', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'datasets-spacing-2', label: '2', condition: [ 'bar', 'column' ] },
           { type: 'button', id: 'datasets-spacing-3', label: '3', condition: [ 'bar', 'column' ] },
@@ -259,22 +319,26 @@ export default {
       },
       userData: {
         chartType: [''],
-        multiple: [],
+        dataset: [''],
         data: [],
+        dataPosition: [],
         heading: [],
         labels: [],
         orientation: [],
         primaryAxis: [],
         dataAxes: [],
-        secondaryAxes: [],
-        dataSpacing: [],
-        datasetsSpacing: [],
+        secondaryAxes: [''],
+        dataSpacing: [''],
+        datasetsSpacing: [''],
       },
     }
   },
   computed: {
     isMultiple() {
-      return this.userData.multiple.includes('multiple');
+      return this.userData.dataset.includes('multiple');
+    },
+    isStacked() {
+      return this.isMultiple && this.userData.dataset.includes('stacked');
     },
     chartClass() {
       let chartClass = '';
@@ -284,8 +348,9 @@ export default {
         : 'charts-css ' + this.userData.chartType;
 
       const elements = [
-        'multiple',
+        'dataset',
         'data',
+        'dataPosition',
         'heading',
         'labels',
         'orientation',
@@ -307,6 +372,36 @@ export default {
     toggleUserData(controlGroup, control) {
       if (controlGroup === 'chartType') {
         this.userData.chartType = [];
+        this.userData[controlGroup].push(control.id);
+        return;
+      }
+
+      if (controlGroup === 'dataset') {
+        this.userData.dataset = [];
+        this.userData[controlGroup].push(control.id);
+        return;
+      }
+
+      if (controlGroup === 'dataPosition') {
+        this.userData.dataPosition = [];
+        this.userData[controlGroup].push(control.id);
+        return;
+      }
+
+      if (controlGroup === 'secondaryAxes') {
+        this.userData.secondaryAxes = [];
+        this.userData[controlGroup].push(control.id);
+        return;
+      }
+
+      if (controlGroup === 'dataSpacing') {
+        this.userData.dataSpacing = [];
+        this.userData[controlGroup].push(control.id);
+        return;
+      }
+
+      if (controlGroup === 'datasetsSpacing') {
+        this.userData.datasetsSpacing = [];
         this.userData[controlGroup].push(control.id);
         return;
       }
@@ -337,13 +432,16 @@ export default {
   grid-template-columns: 110px 1fr 1fr;
   gap: 10px;
   grid-template-areas:
-    "chart-types multiple        data"
+    "chart-types data            data"
+    "chart-types dataPosition    dataPosition"
     "chart-types heading         labels"
     "chart-types orientation     orientation"
     "chart-types primaryAxis     dataAxes"
     "chart-types secondaryAxes   secondaryAxes"
-    "chart-types dataSpacing     dataSpacing"
-    "chart-types datasetsSpacing datasetsSpacing"
+    "dataset     secondaryAxes   secondaryAxes"
+    "dataset     dataSpacing     dataSpacing"
+    "dataset     datasetsSpacing datasetsSpacing"
+    "chartTable  chartTable      chartTable"
     "chartCode   chartCode       chartCode";
   margin-block-end: 40px;
 }
@@ -351,37 +449,43 @@ export default {
   grid-area: chart-types;
 }
 .chart-builder .controls fieldset:nth-of-type(2) {
-  grid-area: multiple;
+  grid-area: dataset;
 }
 .chart-builder .controls fieldset:nth-of-type(3) {
   grid-area: data;
 }
 .chart-builder .controls fieldset:nth-of-type(4) {
-  grid-area: heading;
+  grid-area: dataPosition;
 }
 .chart-builder .controls fieldset:nth-of-type(5) {
-  grid-area: labels;
+  grid-area: heading;
 }
 .chart-builder .controls fieldset:nth-of-type(6) {
-  grid-area: orientation;
+  grid-area: labels;
 }
 .chart-builder .controls fieldset:nth-of-type(7) {
-  grid-area: primaryAxis;
+  grid-area: orientation;
 }
 .chart-builder .controls fieldset:nth-of-type(8) {
-  grid-area: dataAxes;
+  grid-area: primaryAxis;
 }
 .chart-builder .controls fieldset:nth-of-type(9) {
-  grid-area: secondaryAxes;
+  grid-area: dataAxes;
 }
 .chart-builder .controls fieldset:nth-of-type(10) {
-  grid-area: dataSpacing;
+  grid-area: secondaryAxes;
 }
 .chart-builder .controls fieldset:nth-of-type(11) {
+  grid-area: dataSpacing;
+}
+.chart-builder .controls fieldset:nth-of-type(12) {
   grid-area: datasetsSpacing;
 }
 .chart-builder .controls fieldset.chart-code {
   grid-area: chartCode;
+}
+.chart-builder .controls table {
+  grid-area: chartTable;
 }
 .chart-builder .controls fieldset {
   display: flex;
@@ -427,7 +531,6 @@ export default {
 .chart-builder .controls button:active,
 .chart-builder .controls button.pressed {
   background-color: #a13;
-  box-shadow: 0 4px 4px #666;
 }
 .chart-builder .controls button[disabled] {
   color: #999;
@@ -453,7 +556,7 @@ export default {
   font-weight: bold;
 }
 .chart-builder table {
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .chart-builder table.charts-css {
   height: 250px;
