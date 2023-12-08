@@ -166,7 +166,7 @@ A list of components and their development status.
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>labels-align-block--center</code> </th>
+      <th scope="row"> <code>labels-align-block-center</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
@@ -177,7 +177,7 @@ A list of components and their development status.
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>labels-align-block--end</code> </th>
+      <th scope="row"> <code>labels-align-block-end</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
@@ -199,7 +199,7 @@ A list of components and their development status.
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>labels-align-inline--center</code> </th>
+      <th scope="row"> <code>labels-align-inline-center</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
@@ -210,7 +210,7 @@ A list of components and their development status.
       <td> <status-x /> </td>
     </tr>
     <tr>
-      <th scope="row"> <code>labels-align-inline--end</code> </th>
+      <th scope="row"> <code>labels-align-inline-end</code> </th>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
       <td> <status-v /> </td>
