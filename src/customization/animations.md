@@ -481,3 +481,78 @@ Now lets animate colors with gradients:
 </div>
 </template>
 </code-example>
+
+## Chart Animation
+
+Finally lets animate the chart:
+
+```css
+#animations-example .column {
+  animation: chart-animation 2s ease-out infinite;
+}
+@keyframes chart-animation {
+  0%   { transform: scale(1); }
+  20%  { transform: scaleY(0.95) scaleX(1.05); }
+  48%  { transform: scaleY(1.10) scaleX(0.90); }
+  68%  { transform: scaleY(0.98) scaleX(1.02); }
+  80%  { transform: scaleY(1.02) scaleX(0.98); }
+  100% { transform: scale(1); }
+}
+```
+
+<code-example code-example-id="animations-example-7">
+<template v-slot:css-code>
+#animations-example-7 {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+#animations-example-7 .column {
+  --aspect-ratio: 4 / 3;
+  animation: chart-animation 2s ease-out infinite;
+}
+@keyframes chart-animation {
+  0%   { transform: scale(1); }
+  20%  { transform: scaleY(0.95) scaleX(1.05); }
+  48%  { transform: scaleY(1.10) scaleX(0.90); }
+  68%  { transform: scaleY(0.98) scaleX(1.02); }
+  80%  { transform: scaleY(1.02) scaleX(0.98); }
+  100% { transform: scale(1); }
+}
+</template>
+<template v-slot:html-code>
+<div id="animations-example-7">
+  <table class="charts-css column show-labels hide-data data-spacing-5 show-primary-axis">
+    <caption> Animation Example #7 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size: 0.2"> <span class="data"> 20 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size: 0.4"> <span class="data"> 40 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size: 1.0"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size: 0.5"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size: 0.3"> <span class="data"> 30 </span> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</template>
+</code-example>
