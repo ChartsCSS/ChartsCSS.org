@@ -21,7 +21,7 @@ Planned development and the release of new chart types:
 
 * ~~**September 2023** - Pie chart.~~
 
-* **2023/2024** - Radial chart.
+* **2025** - Radial chart.
 
 * **TBD** - Polar Chart.
 
