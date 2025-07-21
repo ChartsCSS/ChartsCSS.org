@@ -206,8 +206,8 @@ To make the bars look like 3D cylinders, use the CSS  `border-radius` property:
   margin-inline-end: 20%;
   border-radius: 50% / 12px;
   background:
-    radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
-    radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+    radial-gradient(ellipse 50% 18px at top, lightgrey 20px, transparent 20px) top,
+    radial-gradient(ellipse 50% 18px at bottom, grey 20px, transparent 20px) bottom,
     linear-gradient(grey, darkgrey, lightgrey);
 }
 ```
@@ -373,8 +373,8 @@ Or tilt the cylinder bars the other way:
   margin-inline-end: 20%;
   border-radius: 50% / 12px;
   background:
-    radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
-    radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+    radial-gradient(ellipse 50% 18px at top, lightgrey 20px, transparent 20px) top,
+    radial-gradient(ellipse 50% 18px at bottom, grey 20px, transparent 20px) bottom,
     linear-gradient(grey, darkgrey, lightgrey);
   box-shadow: 2px  2px 5px grey;
 }
